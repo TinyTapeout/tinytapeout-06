@@ -1,0 +1,13 @@
+diff --git a/openlane/steps/tclstep.py b/openlane/steps/tclstep.py
+index d1f4fdb..5f50ced 100644
+--- a/openlane/steps/tclstep.py
++++ b/openlane/steps/tclstep.py
+@@ -156,6 +156,8 @@ class TclStep(Step):
+             filename = f"{self.config['DESIGN_NAME']}.{output.value.extension}"
+             env[f"SAVE_{output.name}"] = os.path.join(self.step_dir, filename)
+ 
++        if "MACROS" in env: del env["MACROS"] # Workaround for https://github.com/efabless/openlane2/issues/272
++
+         return env
+ 
+     @protected
