@@ -44,6 +44,9 @@ jobs:
             exit 1
           fi
 
+      - name: Generate hugo content
+        run: mkdir hugo && python ./tt/configure.py --build-hugo-content hugo
+
       - name: Archive PDF
         uses: actions/upload-artifact@v3
         with:
@@ -56,6 +59,12 @@ jobs:
         with:
           name: shuttle_index
           path: shuttle_index.json
+
+      - name: upload hugo content
+        uses: actions/upload-artifact@v3
+        with:
+          name: hugo_content
+          path: hugo
 
       - name: Prepare GitHub pages archive
         run: |
