@@ -1,10 +1,10 @@
 # Tiny Tapeout project information
 project:
-  title:        "TinyTapeout 05 Factory Test"      # Project title
+  title:        "TinyTapeout 06 Factory Test"      # Project title
   author:       "Sylvain Munaut"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Factory test module"      # One line description of what your project does
-  language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
@@ -12,42 +12,42 @@ project:
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_factory_test"
-
+  
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
-  source_files:
+  source_files:        
     - "tt_um_factory_test.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "sel / data_i[0]"
-  ui[1]: "data_i[1]"
-  ui[2]: "data_i[2]"
-  ui[3]: "data_i[3]"
-  ui[4]: "data_i[4]"
-  ui[5]: "data_i[5]"
-  ui[6]: "data_i[6]"
-  ui[7]: "data_i[7]"
+  ui[0]: "sel"
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
-  uo[0]: "data_o[0] (when sel=0) / counter_o[0] (when sel=1)"
-  uo[1]: "data_o[1] (when sel=0) / counter_o[1] (when sel=1)"
-  uo[2]: "data_o[2] (when sel=0) / counter_o[2] (when sel=1)"
-  uo[3]: "data_o[3] (when sel=0) / counter_o[3] (when sel=1)"
-  uo[4]: "data_o[4] (when sel=0) / counter_o[4] (when sel=1)"
-  uo[5]: "data_o[5] (when sel=0) / counter_o[5] (when sel=1)"
-  uo[6]: "data_o[6] (when sel=0) / counter_o[6] (when sel=1)"
-  uo[7]: "data_o[7] (when sel=0) / counter_o[7] (when sel=1)"
+  uo[0]: "data_o[0]"
+  uo[1]: "data_o[1]"
+  uo[2]: "data_o[2]"
+  uo[3]: "data_o[3]"
+  uo[4]: "data_o[4]"
+  uo[5]: "data_o[5]"
+  uo[6]: "data_o[6]"
+  uo[7]: "data_o[7]"
 
   # Bidirectional pins
-  uio[0]: "counter_o[0]"
-  uio[1]: "counter_o[1]"
-  uio[2]: "counter_o[2]"
-  uio[3]: "counter_o[3]"
-  uio[4]: "counter_o[4]"
-  uio[5]: "counter_o[5]"
-  uio[6]: "counter_o[6]"
-  uio[7]: "counter_o[7]"
+  uio[0]: "data_i[0] / counter_o[0]"
+  uio[1]: "data_i[1] / counter_o[1]"
+  uio[2]: "data_i[2] / counter_o[2]"
+  uio[3]: "data_i[3] / counter_o[3]"
+  uio[4]: "data_i[4] / counter_o[4]"
+  uio[5]: "data_i[5] / counter_o[5]"
+  uio[6]: "data_i[6] / counter_o[6]"
+  uio[7]: "data_i[7] / counter_o[7]"
 
 # Do not change!
 yaml_version: 6
