@@ -32,3 +32,81 @@ jobs:
         with:
           name: shuttle_index
           path: shuttle_index.json
+
+  precheck:
+    name: Run precheck
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      PDK_ROOT: '/home/runner/pdk'
+      PDK_VERSION: 'e0f692f46654d6c7c99fc70a0c94a080dab53571'
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        shell: bash
+        working-directory: tt/precheck
+        run: pip install -r requirements.txt
+
+      - name: Install Sky130 PDK
+        uses: TinyTapeout/volare-action@v1
+        with:
+          pdk_name: sky130
+          pdk_version: ${{ env.PDK_VERSION }}
+          pdk_root: ${{ env.PDK_ROOT }}
+
+      - name: Install Nix
+        uses: rikhuijzer/cache-install@v1.1.2
+        with:
+          key: nix-${{ hashFiles('precheck/default.nix') }}
+          nix_file: 'tt/precheck/default.nix'
+
+      - name: Build Nix packages
+        shell: bash
+        working-directory: tt/precheck
+        run: nix-build
+
+      - name: Get all project GDS files that have changed
+        id: changed-files
+        uses: tj-actions/changed-files@v42
+        with:
+          files: projects/tt_um_*/*.gds
+
+      - name: Run precheck
+        shell: bash
+        working-directory: tt/precheck
+        if: steps.changed-files.outputs.any_changed == 'true'
+        env:
+          GDS_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for gds_file in $GDS_FILES; do
+            nix-shell --run "python precheck.py --gds ${{ github.workspace }}/${gds_file}"
+          done
+
+      - name: Test Summary
+        uses: test-summary/action@v2
+        with:
+          paths: 'tt/precheck/reports/results.xml'
+        if: steps.changed-files.outputs.any_changed == 'true'
+
+      - name: Capture test results
+        shell: bash
+        working-directory: tt/precheck
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: cat reports/results.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload reports
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: precheck-reports
+          path: tt/precheck/reports
