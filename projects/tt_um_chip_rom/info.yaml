@@ -4,7 +4,7 @@ project:
   author:       "Uri Shaked"      # Your name
   discord:      "urish"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "ROM with information about the chip"      # One line description of what your project does
-  language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.

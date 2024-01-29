@@ -1,0 +1,17 @@
+
+62. Printing statistics.
+
+=== tt_um_chip_rom ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 24
+     sky130_fd_sc_hd__conb_1        24
+
+   Chip area for module '\tt_um_chip_rom': 90.086400
+
