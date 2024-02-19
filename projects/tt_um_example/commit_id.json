@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 e8c5040d",
+  "repo": "https://github.com/ThorKn/TT06_AudioChip_V2",
+  "commit": "69fe7deea157944008c278429c9b4ac8d5699f03",
+  "workflow_url": "https://github.com/ThorKn/TT06_AudioChip_V2/actions/runs/7957532100",
+  "sort_id": 1708348059933,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
