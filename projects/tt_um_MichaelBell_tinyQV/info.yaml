@@ -1,0 +1,65 @@
+# Tiny Tapeout project information
+project:
+  title:        "TinyQV Risc-V SoC"      # Project title
+  author:       "Michael Bell"      # Your name
+  discord:      "rebelmike"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A Risc-V SoC for Tiny Tapeout"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     64000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_MichaelBell_tinyQV"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "tinyQV/cpu/tinyqv.v"
+    - "tinyQV/cpu/alu.v"
+    - "tinyQV/cpu/core.v"
+    - "tinyQV/cpu/counter.v"
+    - "tinyQV/cpu/cpu.v"
+    - "tinyQV/cpu/decode.v"
+    - "tinyQV/cpu/mem_ctrl.v"
+    - "tinyQV/cpu/qspi_ctrl.v"
+    - "tinyQV/cpu/register.v"
+    - "tinyQV/peri/uart/uart_tx.v"
+    - "tinyQV/peri/uart/uart_rx.v"
+    - "tinyQV/peri/spi/spi.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Interrupt 0"
+  ui[1]: "Interrupt 1"
+  ui[2]: "SPI MISO"
+  ui[3]: "UART RX"
+  ui[4]: "GP in4"
+  ui[5]: "GP in5"
+  ui[6]: "GP in6"
+  ui[7]: "GP in7"
+
+  # Outputs
+  uo[0]: "SPI CS"
+  uo[1]: "SPI SCK"
+  uo[2]: "SPI MOSI"
+  uo[3]: "SPI DC"
+  uo[4]: "UART TX"
+  uo[5]: "UART RTS"
+  uo[6]: "GP out0"
+  uo[7]: "GP out1"
+
+  # Bidirectional pins
+  uio[0]: "Flash CS"
+  uio[1]: "SD0"
+  uio[2]: "SD1"
+  uio[3]: "SCK"
+  uio[4]: "SD2"
+  uio[5]: "SD3"
+  uio[6]: "RAM A CS"
+  uio[7]: "RAM B CS"
+
+# Do not change!
+yaml_version: 6
