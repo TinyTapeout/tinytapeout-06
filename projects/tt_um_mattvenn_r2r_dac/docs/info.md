@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-A simple 4 bit R2R DAC
+A simple 8 bit R2R DAC. Driven by an OpenLane generated sawtooth waveform generator.
 
 ## How to test
 
