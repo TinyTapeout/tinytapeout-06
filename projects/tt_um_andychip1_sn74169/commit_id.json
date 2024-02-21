@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 e8c5040d",
+  "repo": "https://github.com/andychip1/sn74169",
+  "commit": "fc5dafb77a2610838361c732dd601fa9fa64ef2b",
+  "workflow_url": "https://github.com/andychip1/sn74169/actions/runs/7983234992",
+  "sort_id": 1708483622940,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
