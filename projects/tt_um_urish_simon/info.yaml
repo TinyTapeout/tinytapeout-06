@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Simon Says game"      # Project title
+  author:       "Uri Shaked"      # Your name
+  discord:      "urish"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A simple memory game"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_urish_simon"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "simon.v"
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "btn1"
+  ui[1]: "btn2"
+  ui[2]: "btn3"
+  ui[3]: "btn4"
+  ui[4]: "seginv"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "led1"
+  uo[1]: "led2"
+  uo[2]: "led3"
+  uo[3]: "led4"
+  uo[4]: "speaker"
+  uo[5]: "dig1"
+  uo[6]: "dig2"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "seg_a"
+  uio[1]: "seg_b"
+  uio[2]: "seg_c"
+  uio[3]: "seg_d"
+  uio[4]: "seg_e"
+  uio[5]: "seg_f"
+  uio[6]: "seg_g"
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
