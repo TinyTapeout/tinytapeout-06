@@ -1,0 +1,26 @@
+
+62. Printing statistics.
+
+=== tt_um_faramire_gate_guesser ===
+
+   Number of wires:                 11
+   Number of wire bits:             46
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 27
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__buf_1          3
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__or2_2          1
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2         1
+
+   Chip area for module '\tt_um_faramire_gate_guesser': 141.385600
+

@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Gate Guesser"      # Project title
+  author:       "Fabio Ramirez Stern"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A very simple gate guessing game - which I/O is connected to what?"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_faramire_gate_guesser"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "guesser.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "switch0"
+  ui[1]: "switch1"
+  ui[2]: "switch2"
+  ui[3]: "switch3"
+  ui[4]: "switch4"
+  ui[5]: "switch5"
+  ui[6]: "switch6"
+  ui[7]: "switch7"
+
+  # Outputs
+  uo[0]: "gatey0"
+  uo[1]: "gatey1"
+  uo[2]: "gatey2"
+  uo[3]: "gatey3"
+  uo[4]: "gatey4"
+  uo[5]: "gatey5"
+  uo[6]: "gatey6"
+  uo[7]: "gatey7"
+
+  # Bidirectional pins
+  uio[0]: "switch8"
+  uio[1]: "switch9"
+  uio[2]: "switchA"
+  uio[3]: "switchB"
+  uio[4]: "switchC"
+  uio[5]: "switchD"
+  uio[6]: "switchE"
+  uio[7]: "switchF"
+
+# Do not change!
+yaml_version: 6
