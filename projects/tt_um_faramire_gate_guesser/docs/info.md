@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-The input pins are connected to a set of different logic gates, which lead to the outputs. Only one logic layer of combinatoric logic.
+The input and inout (used as inpputs) pins are connected to 8 different logic gates, which lead to the outputs. Only one logic layer of combinatoric logic.
 Each input is hooked up to only one gate.
 
 ## How to test
 
-No clock, enable or reset is used. As this is just one layer of combinatoric logic, you can simply check against a precalculated truth table.
+No clock, enable or reset is used. As this is just one layer of combinatoric logic, you can simply check against a precalculated truth table. To play, flip the inputs and observe the output until you recognise what it must be.
 
 ## External hardware
 
