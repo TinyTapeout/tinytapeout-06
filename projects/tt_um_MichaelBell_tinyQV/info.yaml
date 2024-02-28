@@ -48,8 +48,8 @@ pinout:
   uo[3]: "SPI DC"
   uo[4]: "UART TX"
   uo[5]: "UART RTS"
-  uo[6]: "GP out0"
-  uo[7]: "GP out1"
+  uo[6]: "GP out6"
+  uo[7]: "GP out7"
 
   # Bidirectional pins
   uio[0]: "Flash CS"
