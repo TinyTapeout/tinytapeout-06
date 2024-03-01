@@ -1,0 +1,65 @@
+# Tiny Tapeout project information
+project:
+  title:        "Wave Generator"      # Project title
+  author:       "Michael Mayr"      # Your name
+  discord:      "michael_mayr"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Generates various functions, such as a sine wave, a sawtooth wave, a triangular wave and a squared wave."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_mayrmichael_wave_generator"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_mayrmichael_wave_generator.v"
+    - "wave_generator.v"
+    - "strobe_generator.v"
+    - "sin_generator.v"
+    - "cordic_convergence.v"
+    - "cordic_iterative.v"
+    - "cordic_slice.v"
+    - "top_triangle_generator.v"
+    - "counter.v"
+    - "triangle_generator.v"
+    - "square_puls_generator.v"
+    - "spi_master_only_tx_single_cs.v"
+    - "spi_master_only_tx.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "parameter bit 0 (LSB)"
+  ui[1]: "parameter bit 1"
+  ui[2]: "parameter bit 2"
+  ui[3]: "parameter bit 3"
+  ui[4]: "parameter bit 4"
+  ui[5]: "parameter bit 5"
+  ui[6]: "parameter bit 6"
+  ui[7]: "parameter bit 7 (MSB)"
+
+  # Outputs
+  uo[0]: "output wave bit 0"
+  uo[1]: "output wave bit 1"
+  uo[2]: "output wave bit 2"
+  uo[3]: "output wave bit 3"
+  uo[4]: "output wave bit 4"
+  uo[5]: "output wave bit 5"
+  uo[6]: "output wave bit 6"
+  uo[7]: "output wave bit 7"
+
+  # Bidirectional pins
+  uio[0]: "(input) enable pin"
+  uio[1]: "(input) waveform bit 0 pin"
+  uio[2]: "(input) waveform bit 1 pin"
+  uio[3]: "(input) set phase pin"
+  uio[4]: "(input) set amplitude pin"
+  uio[5]: "(output) spi cs pin"
+  uio[6]: "(output) spi mosi pin"
+  uio[7]: "(output) spi clk pin"
+
+# Do not change!
+yaml_version: 6
