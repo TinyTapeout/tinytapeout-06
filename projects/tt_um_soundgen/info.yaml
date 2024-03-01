@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:        "soundgen"      # Project title
+  author:       "Yanik Drmla"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "plays prelude.wav in endless loop"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_soundgen"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - tt_um_soundgen.v
+    - dac.v
+    - prelude.v
+    - sine.v
+    - clkgen.v
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "nc"
+  ui[1]: "nc"
+  ui[2]: "nc"
+  ui[3]: "nc"
+  ui[4]: "nc"
+  ui[5]: "nc"
+  ui[6]: "nc"
+  ui[7]: "nc"
+
+  # Outputs
+  uo[0]: "nc"
+  uo[1]: "nc"
+  uo[2]: "nc"
+  uo[3]: "nc"
+  uo[4]: "nc"
+  uo[5]: "nc"
+  uo[6]: "nc"
+  uo[7]: "nc"
+
+  # Bidirectional pins
+  uio[0]: "nc"
+  uio[1]: "nc"
+  uio[2]: "nc"
+  uio[3]: "nc"
+  uio[4]: "nc"
+  uio[5]: "nc"
+  uio[6]: "pwm_pos"
+  uio[7]: "pwm_neg"
+
+# Do not change!
+yaml_version: 6
