@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "Temperature Sensor NG"      # Project title
+  author:       "Harald Pretl"      # Your name
+  discord:      "hpretl"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Temperature sensor synthesized from standard cells"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_hpretl_tt06_tempsens"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_hpretl_tt06_tempsens.v"
+    - "tempsens.v"
+    - "tempsens_ctrl.v"
+    - "tempsens_core.v"
+    - "tempsens_vdac.v"
+    - "tempsens_vdac_cell.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "DAC code [0]"
+  ui[1]: "DAC code [1]"
+  ui[2]: "DAC code [2]"
+  ui[3]: "DAC code [3]"
+  ui[4]: "DAC code [4]"
+  ui[5]: "DAC code [5]"
+  ui[6]: "output selection [0]"
+  ui[7]: "output selection [1]"
+
+  # Outputs
+  uo[0]: "out[0] or out[8] or out[16]"
+  uo[1]: "out[1] or out[9] or out[17]"
+  uo[2]: "out[2] or out[10] or out[18]"
+  uo[3]: "out[3] or out[11] or out[19]"
+  uo[4]: "out[4] or out[12]"
+  uo[5]: "out[5] or out[13]"
+  uo[6]: "out[6] or out[14]"
+  uo[7]: "out[7] or out[15]"
+
+  # Bidirectional pins
+  uio[0]: "debug sel [0]"
+  uio[1]: "debug sel [1]"
+  uio[2]: "debug sel [2]"
+  uio[3]: "debug sel [3]"
+  uio[4]: "debug out [0]"
+  uio[5]: "debug out [1]"
+  uio[6]: "debug out [2]"
+  uio[7]: "debug out [3]"
+
+# Do not change!
+yaml_version: 6
