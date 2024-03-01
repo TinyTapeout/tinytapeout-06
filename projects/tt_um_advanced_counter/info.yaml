@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "jku-tt06-advanced-counter"      # Project title
+  author:       "Martin Putz"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Multi-Digit Counter with changeable maximum values and carry over."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_advanced_counter"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_advanced_counter.v"
+    - "modeselect.v"
+    - "synchronizer.v"
+    - "decodeshift.v"
+    - "decoder.v"
+    - "counter.v"
+    - "input_trigger.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Button 0 In"
+  ui[1]: "Button 1 In"
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Digit 0 Out"
+  uo[1]: "Digit 1 Out"
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "Up-Down-Select In"
+  uio[1]: "Set-Carry In"
+  uio[2]: "Set-Max In"
+  uio[3]: "Refresh-Limits In"
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: "Shift-Clk Out"
+  uio[7]: "Not-Shift-Clk Out"
+
+# Do not change!
+yaml_version: 6
