@@ -1,0 +1,65 @@
+# Tiny Tapeout project information
+project:
+  title:        "Snake Game"      # Project title
+  author:       "Stefan Hirschböck"      # Your name
+  discord:      "histef"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Simple implementation of the game Snake with VGA Output"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25179000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_histefan_top"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - project.v
+    - vga_sync.v
+    - btn_debounce.v
+    - synchronizer.v
+    - draw_apple.v
+    - draw_border.v
+    - draw_snake.v
+    - collision.v
+    - rgb_select.v
+    - snake_control.v
+    - random_position.v
+    - snake_update_trigger.v
+    - snake.v
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "none"
+  ui[1]: "none"
+  ui[2]: "none"
+  ui[3]: "none"
+  ui[4]: "Right"
+  ui[5]: "Left"
+  ui[6]: "Down"
+  ui[7]: "Up"
+
+  # Outputs
+  uo[0]: "R1"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "vsync"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "hsync"
+
+  # Bidirectional pins
+  uio[0]: "none"
+  uio[1]: "none"
+  uio[2]: "none"
+  uio[3]: "none"
+  uio[4]: "none"
+  uio[5]: "none"
+  uio[6]: "none"
+  uio[7]: "none"
+
+# Do not change!
+yaml_version: 6
