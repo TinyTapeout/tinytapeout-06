@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "PI-Based Fan Controller"      # Project title
+  author:       "Dominik Brandstetter"         # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Temperature Based Fan Speed Controller"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_FanCTRL_DomnikBrandstetter"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_FanCTRL.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "ADC_BIT_0"
+  ui[1]: "ADC_BIT_1"
+  ui[2]: "ADC_BIT_2"
+  ui[3]: "ADC_BIT_3"
+  ui[4]: "SET_BIT_0"
+  ui[5]: "SET_BIT_1"
+  ui[6]: "SET_BIT_2"
+  ui[7]: "SET_BIT_3"
+
+  # Outputs
+  uo[0]: "segment_a"
+  uo[1]: "segment_b"
+  uo[2]: "segment_c"
+  uo[3]: "segment_d"
+  uo[4]: "segment_e"
+  uo[5]: "segment_f"
+  uo[6]: "segment_g"
+  uo[7]: "PWM Output"
+
+  # Bidirectional pins
+  uio[0]: "Controller_SET_BIT_0"
+  uio[1]: "Controller_SET_BIT_1"
+  uio[2]: "Controller_SET_BIT_2"
+  uio[3]: "Controller_SET_BIT_3"
+  uio[4]: "Controller_SIGN_BIT_4"
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
