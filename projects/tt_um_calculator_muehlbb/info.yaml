@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "16-bit calculator"      # Project title
+  author:       "Benedikt Muehlbachler"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "calculator using 16-bit ALU with 8-bit IO-data port reading/writing data"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_calculator_muehlbb"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_calculator_muehlbb.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "alu operation select bit 0"
+  ui[1]: "alu operation select bit 1"
+  ui[2]: "alu operation select bit 2"
+  ui[3]: "alu operation select bit 3"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "status bit 0 (wrong operation flag)"
+  uo[1]: "status bit 1 (zero flag)"
+  uo[2]: "status bit 2 (sign flag)"
+  uo[3]: "status bit 3 (carry flag)"
+  uo[4]: "status bit 4 (overflow flag)"
+  uo[5]: "counter bit 0"
+  uo[6]: "counter bit 1"
+  uo[7]: "counter bit 2"
+
+  # Bidirectional pins
+  uio[0]: "data port bit 0"
+  uio[1]: "data port bit 1"
+  uio[2]: "data port bit 2"
+  uio[3]: "data port bit 3"
+  uio[4]: "data port bit 4"
+  uio[5]: "data port bit 5"
+  uio[6]: "data port bit 6"
+  uio[7]: "data port bit 7"
+
+# Do not change!
+yaml_version: 6
