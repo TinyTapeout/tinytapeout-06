@@ -1,0 +1,8 @@
+{
+  "app": "custom_gds action",
+  "repo": "https://github.com/TinyTapeout/tt06-analog-loopback",
+  "commit": "b29b804fea2c72110bce1e56194a97c37bfcbf64",
+  "workflow_url": "https://github.com/TinyTapeout/tt06-analog-loopback/actions/runs/8146909336",
+  "sort_id": 1709586187668,
+  "analog": true
+}
