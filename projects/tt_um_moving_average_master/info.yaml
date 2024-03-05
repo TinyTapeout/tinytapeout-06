@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Moving average filter"      # Project title
+  author:       "Alexander Hofer"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "10-bit moving average filter designed to smooth input data streams."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_moving_average_master"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - tt_um_moving_average.v
+    - tt_um_moving_average_master.v
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Input for filter"
+  ui[1]: "Input for filter"
+  ui[2]: "Input for filter"
+  ui[3]: "Input for filter"
+  ui[4]: "Input for filter"
+  ui[5]: "Input for filter"
+  ui[6]: "Input for filter"
+  ui[7]: "Input for filter"
+
+  # Outputs
+  uo[0]: "Output for filter"
+  uo[1]: "Output for filter"
+  uo[2]: "Output for filter"
+  uo[3]: "Output for filter"
+  uo[4]: "Output for filter"
+  uo[5]: "Output for filter"
+  uo[6]: "Output for filter"
+  uo[7]: "Output for filter"
+
+  # Bidirectional pins
+  uio[0]: "Strobe input"
+  uio[1]: "Strobe output"
+  uio[2]: "Additional input bit"
+  uio[3]: "Additional input bit"
+  uio[4]: "Additional output bit"
+  uio[5]: "Additional output bit"
+  uio[6]: "Filter width input"
+  uio[7]: "Filter width input"
+
+# Do not change!
+yaml_version: 6
