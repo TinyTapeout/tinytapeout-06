@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 12c79b06",
+  "repo": "https://github.com/schandreas/tt06_spi_led",
+  "commit": "3e0afa5715ad8eae5cbb57fc302ba926b5b1e20f",
+  "workflow_url": "https://github.com/schandreas/tt06_spi_led/actions/runs/8146633097",
+  "sort_id": 1709639991788,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
