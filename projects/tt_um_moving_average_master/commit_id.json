@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 12c79b06",
+  "repo": "https://github.com/AlexHoferW23/jku-tt06-averagefilter",
+  "commit": "11bfa04aa8700c687b1a24be29b2cee7ca6896b7",
+  "workflow_url": "https://github.com/AlexHoferW23/jku-tt06-averagefilter/actions/runs/8153707016",
+  "sort_id": 1709639905968,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
