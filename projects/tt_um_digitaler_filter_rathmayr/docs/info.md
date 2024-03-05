@@ -9,24 +9,28 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Ziel dieses Projekts ist es, einen effizienten digitalen Filter zu entwerfen und zu implementieren, der in der Lage ist, unerwünschte Frequenzen aus einem digitalen Signal zu filtern.
+The goal of this project is to design and implement an efficient digital filter capable of filtering unwanted frequencies from a digital signal.
 
-Der FIR-Filter (Finite Impulse Response) zeichnet sich durch seine endliche Impulsantwort aus, die durch eine endliche Anzahl von Koeffizienten definiert wird. In diesem Fall werden lediglich zwei Koeffizienten verwendet, was den Entwurfsprozess vereinfacht und die Implementierung auf einem FPGA (Field-Programmable Gate Array) oder einem anderen digitalen Schaltkreis optimiert.
+The FIR filter (Finite Impulse Response) is characterized by its finite impulse response defined by a finite number of coefficients. In this case, only two coefficients are used, simplifying the design process and optimizing the implementation on an FPGA (Field-Programmable Gate Array) or another digital circuit.
 
-Die zwei Koeffizienten werden sorgfältig ausgewählt, um die gewünschte Frequenzantwort des Filters zu erreichen. Dabei ist es wichtig, die Anforderungen des Anwendungsfall zu berücksichtigen, sei es für Audioverarbeitung, Bildverarbeitung oder eine andere Anwendung im Bereich der Signalverarbeitung.
+The two coefficients are carefully selected to achieve the desired frequency response of the filter. It is essential to consider the requirements of the application, whether it be for audio processing, image processing, or any other signal processing application.
 
-Belegung der digitale Inputs und Outputs:
-- ui_in 8 bit Einganssignal 'x'
-- uio_in 8 bit Koeffizienten 'const\_h'
-- uo_out 8 bit Ausgangssignal 'y'
-- uio_out nicht verwendet!
-- uio_oe nicht verwendet!
+Assignment of digital inputs and outputs:
 
-Ursprünglich war die Programmierung des Filters mit vier Koeffizienten geplant, jedoch musste diese Ambition aufgrund von Kapazitätsbeschränkungen des Chips auf zwei Koeffizienten reduziert werden. Im Code sind entsprechende Ergänzungen für vier Koeffizienten auskommentiert, was die Möglichkeit einer zukünftigen Erweiterung des Programms gewährleistet. Um nun sämtliche Koeffizienten mit nur einem 8-Bit-Eingang einzulesen und in das entsprechende Register zu speichern, wurde eine Art Schieberegister implementiert. Jede neue Flanke des Clock-Signals ermöglicht es, einen neu eingelesenen Wert an der gewünschten Position im Register abzulegen. Sobald die maximale Anzahl an Plätzen im Register belegt ist, wird die Flag auf Low gesetzt und der Zähler zurückgesetzt. Das Eingangssignal wird ebenfalls mittels eines Schieberegisters eingelesen, indem der Wert im Register in jedem Schritt um eine Stelle verschoben wird. Nun zur eigentlichen Filteroperation: Die gewünschten Koeffizienten werden mit dem Eingangssignal multipliziert und nach jedem Schritt summiert. Dabei ist zu berücksichtigen, dass die beiden Register unterschiedliche Größen haben und daher angepasst werden müssen. Das gefilterte Eingangssignal wird als Ausgangssignal aus einem Ausschnitt der in der Summe gespeicherten Bitfolge ausgegeben. Diese Schritte gewährleisten eine präzise Signalverarbeitung und verdeutlichen die Anpassungsfähigkeit des Programms für potenzielle zukünftige Erweiterungen.
+- ui_in: 8-bit input signal 'x'
+- uio_in: 8-bit coefficients 'const_h'
+- uo_out: 8-bit output signal 'y'
+- uio_out: not used!
+- uio_oe: not used!
 
+Originally, the filter programming was planned with four coefficients, but due to chip capacity limitations, this ambition had to be reduced to two coefficients. The code includes comments for additional four-coefficient support, ensuring the possibility of future program expansion.
+
+To read all coefficients with just one 8-bit input and store them in the corresponding register, a shift register has been implemented. Each new clock signal edge allows storing a newly read value at the desired position in the register. Once the maximum number of positions in the register is occupied, the flag is set to low, and the counter is reset. The input signal is also read using a shift register by shifting the value in the register by one position in each step.
+
+Now, for the actual filter operation: the desired coefficients are multiplied with the input signal and summed after each step. It is important to note that the two registers have different sizes and need to be adjusted accordingly. The filtered input signal is output as the output signal from a section of the bit sequence stored in the sum. These steps ensure precise signal processing and demonstrate the program's adaptability for potential future expansions.
 ## How to test
 
-siehe Testbench.
+Refer to the Testbench.
 
 ## External hardware
 
