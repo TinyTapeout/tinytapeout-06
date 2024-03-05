@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 12c79b06",
+  "repo": "https://github.com/ThomasHadner/jku-tt06-pwm-analyzer-hadner",
+  "commit": "46d183d2daf2b75523dc087ece86bb4f2b82c7c4",
+  "workflow_url": "https://github.com/ThomasHadner/jku-tt06-pwm-analyzer-hadner/actions/runs/8149387919",
+  "sort_id": 1709639756829,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
