@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 12c79b06",
+  "repo": "https://github.com/PloeckiPhil/jku-tt06-drops",
+  "commit": "0cb131798b9b4d5e79a7810ff5a32167ce6e82b0",
+  "workflow_url": "https://github.com/PloeckiPhil/jku-tt06-drops/actions/runs/8175051350",
+  "sort_id": 1709805376370,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
