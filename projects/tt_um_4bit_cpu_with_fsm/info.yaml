@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "4-Bit CPU mit FSM"      # Project title
+  author:       "Jacqueline Gislai"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Mini CPU, that can do simple calculations and logic operations as well as storing and loading values and execute shifting operations"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_4bit_cpu_with_fsm"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_4bit_cpu_with_fsm.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "storage address Bit 0"
+  ui[1]: "storage address Bit 1"
+  ui[2]: "storage address Bit 2"
+  ui[3]: "storage address Bit 3"
+  ui[4]: "value of input data Bit 0"
+  ui[5]: "value of input data Bit 1"
+  ui[6]: "value of input data Bit 2"
+  ui[7]: "value of input data Bit 3"
+
+  # Outputs
+  uo[0]: "output data Bit 0"
+  uo[1]: "output data Bit 1"
+  uo[2]: "output data Bit 2"
+  uo[3]: "output data Bit 3"
+  uo[4]: "output data Bit 4"
+  uo[5]: "output data Bit 5"
+  uo[6]: "output data Bit 6"
+  uo[7]: "output data Bit 7"
+
+  # Bidirectional pins
+  uio[0]: "input write-access in storage"
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: "input Operation Code Bit 0"
+  uio[5]: "input Operation Code Bit 1"
+  uio[6]: "input Operation Code Bit 2"
+  uio[7]: "input Operation Code Bit 3"
+
+# Do not change!
+yaml_version: 6
