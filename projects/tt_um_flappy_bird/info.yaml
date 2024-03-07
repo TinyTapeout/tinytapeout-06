@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Flappy Bird"      # Project title
+  author:       "Robin Hohensinn"      # Your name
+  discord:      "ennstoi"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Flappy Bird"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_flappy_bird"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "get_input.v"
+    - "action.v"
+    - "display.v"
+    - "tt_um_flappy_bird.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "up-Button"
+  ui[1]: "down-Button"
+  ui[2]: "not used"
+  ui[3]: "not used"
+  ui[4]: "not used"
+  ui[5]: "not used"
+  ui[6]: "not used"
+  ui[7]: "not used"
+
+  # Outputs
+  uo[0]: "row of display-Matrix"
+  uo[1]: "row of display-Matrix"
+  uo[2]: "row of display-Matrix"
+  uo[3]: "row of display-Matrix"
+  uo[4]: "row of display-Matrix"
+  uo[5]: "row of display-Matrix"
+  uo[6]: "row of display-Matrix"
+  uo[7]: "row of display-Matrix"
+
+  # Bidirectional pins
+  uio[0]: "col of display-Matrix"
+  uio[1]: "col of display-Matrix"
+  uio[2]: "col of display-Matrix"
+  uio[3]: "col of display-Matrix"
+  uio[4]: "col of display-Matrix"
+  uio[5]: "col of display-Matrix"
+  uio[6]: "col of display-Matrix"
+  uio[7]: "col of display-Matrix"
+
+# Do not change!
+yaml_version: 6
