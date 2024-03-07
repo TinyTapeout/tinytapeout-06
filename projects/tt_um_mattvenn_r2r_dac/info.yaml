@@ -3,7 +3,7 @@ project:
   title:        "Analog 8bit R2R DAC"      # Project title
   author:       "Matt Venn"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A simple 8 bit DAC with a triangle waveform driver"      # One line description of what your project does
+  description:  "A simple 8 bit DAC with a sawtooth waveform driver"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -24,10 +24,10 @@ pinout:
   ui[1]: "bit 1"
   ui[2]: "bit 2"
   ui[3]: "bit 3"
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[4]: "bit 4"
+  ui[5]: "bit 5"
+  ui[6]: "bit 6"
+  ui[7]: "bit 7"
 
   # Outputs
   uo[0]: ""
@@ -40,8 +40,8 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
+  uio[0]: "external data"
+  uio[1]: "load divider"
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
