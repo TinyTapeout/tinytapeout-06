@@ -12,6 +12,7 @@ You can also include images in this folder and reference them in the markdown. E
 TinyQV is a small Risc-V SoC, implementing the RV32EC instruction set, with a couple of caveats:
 
 * Addresses are 28-bits
+* Program addresses are 24-bits
 * gp is hardcoded to 0x1000400, tp is hardcoded to 0x8000000.
 
 Instructions are read using QSPI from Flash, and a QSPI PSRAM is used for memory.  The QSPI clock and data lines are shared between the flash and the RAM, so only one can be accessed simultaneously.
@@ -28,16 +29,17 @@ The SoC includes a UART and an SPI controller.
 | 0x1000000 - 0x17FFFFF | RAM A |
 | 0x1800000 - 0x1FFFFFF | RAM B |
 | 0x8000000 - 0x8000007 | GPIO  |
-| 0x8000010 - 0x8000017 | UART |
+| 0x8000010 - 0x800001F | UART |
 | 0x8000020 - 0x8000027 | SPI |
 
 ### GPIO
 
 | Register | Address | Description |
 | -------- | ------- | ----------- |
-| OUT      | 0x8000000 (W) | Bits 6 and 7 control out6 and out7 |
+| OUT      | 0x8000000 (W) | Control out0-7, if the corresponding bit in SEL is high |
 | OUT      | 0x8000000 (R) | Reads the current state of out0-7 |
 | IN       | 0x8000004 (R) | Reads the current state of in0-7 |
+| SEL      | 0x800000C (R/W) | Enables general purpose output on the corresponding bit on out0-7 |
 
 ### UART
 
@@ -46,6 +48,13 @@ The SoC includes a UART and an SPI controller.
 | DATA     | 0x8000010 (W) | Transmits the byte |
 | DATA     | 0x8000010 (R) | Reads any received byte |
 | STATUS   | 0x8000014 (R) | Bit 0 indicates whether the UART TX is busy, bytes should not be written to the data register while this bit is set.  Bit 1 indicates whether a received byte is available to be read. |
+
+### Debug UART (Transmit only)
+
+| Register | Address | Description |
+| -------- | ------- | ----------- |
+| DATA     | 0x8000018 (W) | Transmits the byte |
+| STATUS   | 0x800001C (R) | Bit 0 indicates whether the UART TX is busy, bytes should not be written to the data register while this bit is set. |
 
 ### SPI
 
