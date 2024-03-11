@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 12c79b06",
+  "repo": "https://github.com/leyla224/jku-tt06-luckyCube",
+  "commit": "b485cb9bda590bb2bc9cca442b0d2e6c48299268",
+  "workflow_url": "https://github.com/leyla224/jku-tt06-luckyCube/actions/runs/8229410407",
+  "sort_id": 1710153294784,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
