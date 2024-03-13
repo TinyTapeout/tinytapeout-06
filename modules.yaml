@@ -1,5 +1,5 @@
 modules:
-# Hard coded module locations and power gated modules - other modules will be assigned dynamically
+# Hard coded module locations - other modules will be assigned dynamically
   - name: "chip_rom"
     x: 7
     y: 15

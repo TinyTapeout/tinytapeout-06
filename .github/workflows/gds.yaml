@@ -16,7 +16,7 @@ jobs:
     env:
       PYTHONIOENCODING: utf-8
       PDK_ROOT: /home/runner/pdk
-      TT_CONFIG: sky130of.yaml
+      TT_CONFIG: sky130.yaml
 
     # ubuntu
     runs-on: ubuntu-latest

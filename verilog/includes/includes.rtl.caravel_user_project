@@ -1,6 +1,4 @@
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/ol2/tt_top/openframe_project_wrapper.v
--v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/ol2/tt_top/openframe/vccd1_connection.v
--v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/ol2/tt_top/openframe/vssd1_connection.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_top.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_ctrl.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_mux.v

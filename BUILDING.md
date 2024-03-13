@@ -4,7 +4,7 @@
 
 ```bash
 export OPENLANE2_ROOT=~/openlane2
-export SKY130_PDK_VERSION=1341f54f5ce0c4955326297f235e4ace1eb6d419
+export SKY130_PDK_VERSION=bdc9412b3e468c102d01b7cf6337be06ec6e9c9a
 
 pip3 install volare
 volare enable --pdk sky130 $SKY130_PDK_VERSION
