@@ -1,6 +1,7 @@
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/ol2/tt_top/openframe_project_wrapper.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_top.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_ctrl.v
+-v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_gpio.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_mux.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/tt_user_module.v
 -v $(USER_PROJECT_VERILOG)/rtl/tt-multiplexer/rtl/prim_generic/tt_prim_buf.v

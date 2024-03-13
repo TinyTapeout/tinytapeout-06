@@ -15,32 +15,23 @@ module test_mux_tb(
 	input wire ctrl_ena
 );
 
-    // signals for user_project_wrapper
-    wire [`MPRJ_IO_PADS-1:0] io_in;
+    // signals for openframe_project_wrapper
+    reg  [`MPRJ_IO_PADS-1:0] io_in;
     wire [`MPRJ_IO_PADS-1:0] io_out;
     wire [`MPRJ_IO_PADS-1:0] io_oeb;
 
-    /* map inputs to user_project_wrapper signals
-    37:32 control
-    31:24 user in/out
-    23:16 user out
-    15:06 user in
-    05:04 clock
-    */
+    assign io_in[23:16]     = uio_in[7:0];
+    assign uio_out[7:0]     = io_out[23:16];
 
-    assign io_in[31:24]     = uio_in[7:0];
-    assign uio_out[7:0]     = io_out[31:24];
+	assign io_in[14]        = clk;
+	assign io_in[15]        = reset_n;
+    assign io_in[13]        = ui_in[7];
+    assign io_in[6:0]       = ui_in[6:0];
+    assign uo_out[7:0]      = io_out[31:24];
 
-	assign io_in[6]         = clk;
-	assign io_in[7]         = reset_n;
-    assign io_in[15:8]      = ui_in[7:0];
-    assign uo_out[7:0]      = io_out[23:16];
-
-    // copied from proto/tt_top_tb.v
-	assign io_in[36]        = ctrl_sel_rst_n;
-	assign io_in[34]        = ctrl_sel_inc;
-	assign io_in[32]        = ctrl_ena;
-
+	assign io_in[40]        = ctrl_sel_rst_n;
+	assign io_in[39]        = ctrl_sel_inc;
+	assign io_in[38]        = ctrl_ena;
 
     `ifdef SIM_ICARUS
     initial begin
@@ -64,9 +55,9 @@ module test_mux_tb(
     wire [43:0] gpio_dm1;
     wire [43:0] gpio_dm0;
 
-    assign gpio_in[37:0] = io_in;
-    assign io_out = gpio_out[37:0] & ~gpio_oeb[37:0] & gpio_dm2[37:0] & gpio_dm1[37:0];
-    assign io_oeb = gpio_oeb[37:0];
+    assign gpio_in = io_in;
+    assign io_out = gpio_out & ~gpio_oeb & gpio_dm2 & gpio_dm1;
+    assign io_oeb = gpio_oeb;
     wire [43:0] inp_ena = (gpio_dm0 | gpio_dm1 | gpio_dm2) & ~gpio_inp_dis;
 
     openframe_project_wrapper user_project_wrapper(
