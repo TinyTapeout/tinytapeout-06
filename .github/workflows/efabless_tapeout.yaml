@@ -1,0 +1,52 @@
+name: efabless_tapeout
+
+on:
+  workflow_dispatch:
+
+jobs:
+  efabless_tapeout:
+    env:
+      GIT_SSH_COMMAND: 'ssh -i ~/.id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v3
+        id: download_artifact
+        with:
+          workflow: gds.yaml
+          workflow_conclusion: success
+          name: efabless_submission
+          path: tinytapeout_submission
+      - name: Checkout repo
+        run: |
+          git config --global user.email "bot@tinytapeout.com"
+          git config --global user.name "Tiny Tapeout Bot"
+          touch ~/.id_ed25519
+          chmod 600 ~/.id_ed25519
+          echo "$EFABLESS_REPO_SSH_KEY" > ~/.id_ed25519
+          git clone ssh://git@repositories.efabless.com/urish/tinytapeout-06.git tt_efabless
+        env:
+          # To generate a new key: ssh-keygen -o -t ed25519 -C "bot@tinytapeout.com"
+          EFABLESS_REPO_SSH_KEY: ${{ secrets.EFABLESS_REPO_SSH_KEY }}
+      - name: Copy files
+        working-directory: tt_efabless
+        run: |
+          rm -rf gds lef lvs verilog README.md shuttle_index.json
+          cp -r ../tinytapeout_submission/* .
+      - name: Commit and push
+        working-directory: tt_efabless
+        run: |
+          COMMIT_BODY="\
+          run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ fromJSON(steps.download_artifact.outputs.artifacts)[0].workflow_run.id }}
+          commit: ${{ fromJSON(steps.download_artifact.outputs.artifacts)[0].workflow_run.head_sha }}
+          "
+
+          git add -A
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "update shuttle" -m "$COMMIT_BODY"
+          fi
+          echo ""
+          git log -1
+          git push
