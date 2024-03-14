@@ -31,14 +31,14 @@ jobs:
           path: mpw_precheck
 
       - name: Install Sky130 PDK
-        uses: TinyTapeout/volare-action@v1
+        uses: TinyTapeout/volare-action@v2
         with:
           pdk_name: sky130
           pdk_version: ${{ env.SKY130_PDK_VERSION }}
           pdk_root: ${{ env.PDK_ROOT }}
 
       - name: Download artifact (run id = ${{ github.event.workflow_run.id }})
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v3
         id: download_artifact
         with:
           workflow: gds.yaml
@@ -74,7 +74,7 @@ jobs:
           INPUT_DIRECTORY: ${{ github.workspace }}/tinytapeout-05
 
       - name: Upload precheck results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: precheck_results

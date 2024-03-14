@@ -22,19 +22,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
       - name: Install sky130A PDK
-        uses: TinyTapeOut/volare-action@v1
+        uses: TinyTapeOut/volare-action@v2
         with:
           pdk_version: ${{ env.SKY130_PDK_VERSION }}
           pdk_root: ${{ env.PDK_ROOT }}
 
       # Set Python up
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'pip'

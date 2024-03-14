@@ -23,7 +23,7 @@ jobs:
     steps:
       # need the repo checked out
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
@@ -31,7 +31,7 @@ jobs:
         run: cat .github/config/openlane.txt | tee -a $GITHUB_ENV
 
       - name: Checkout OpenLane 2 repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: efabless/openlane2
           path: openlane2
@@ -44,7 +44,7 @@ jobs:
 
       # Set Python up
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'pip'
@@ -53,15 +53,15 @@ jobs:
       - name: Update caravel configuration
         run: python ./tt/configure.py --update-shuttle
 
-      - uses: cachix/install-nix-action@v20
+      - uses: cachix/install-nix-action@v26
 
-      - uses: cachix/cachix-action@v12
+      - uses: cachix/cachix-action@v14
         with:
           name: openlane
           extraPullNames: openlane
 
       - name: Install Sky130 PDK
-        uses: TinyTapeout/volare-action@v1
+        uses: TinyTapeout/volare-action@v2
         with:
           pdk_name: sky130
           pdk_version: ${{ env.SKY130_PDK_VERSION }}
@@ -94,14 +94,14 @@ jobs:
 
       - name: upload GDS artifact
         if: success() || failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: GDS
           path: tt-multiplexer/ol2/tt_top/runs/RUN_*/*
 
       - name: upload macros artifact
         if: success() || failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macros
           path: |
@@ -112,20 +112,20 @@ jobs:
 
       - name: upload shuttle_index.json
         if: success() || failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: shuttle_index
           path: shuttle_index.json
 
       - name: upload Efabless submission directory
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: efabless_submission
           path: efabless
 
       # Install iverilog, cocotb (required for GL test)
       - name: install oss-cad-suite
-        uses: YosysHQ/setup-oss-cad-suite@v2
+        uses: YosysHQ/setup-oss-cad-suite@v3
         with:
           version: '2023-05-27'
           github-token: ${{ secrets.GITHUB_TOKEN }}

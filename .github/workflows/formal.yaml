@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
       - name: install oss-cad-suite (cocotb / iverilog)
-        uses: YosysHQ/setup-oss-cad-suite@v2
+        uses: YosysHQ/setup-oss-cad-suite@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
