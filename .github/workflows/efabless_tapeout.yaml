@@ -6,6 +6,7 @@ on:
 jobs:
   efabless_tapeout:
     env:
+      EFABLESS_REPO: ${{ vars.EFABLESS_REPO }}
       GIT_SSH_COMMAND: 'ssh -i ~/.id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no'
 
     runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
           touch ~/.id_ed25519
           chmod 600 ~/.id_ed25519
           echo "$EFABLESS_REPO_SSH_KEY" > ~/.id_ed25519
-          git clone ssh://git@repositories.efabless.com/urish/tinytapeout-06.git tt_efabless
+          git clone "$EFABLESS_REPO" tt_efabless
         env:
           # To generate a new key: ssh-keygen -o -t ed25519 -C "bot@tinytapeout.com"
           EFABLESS_REPO_SSH_KEY: ${{ secrets.EFABLESS_REPO_SSH_KEY }}
