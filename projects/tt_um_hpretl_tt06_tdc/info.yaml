@@ -22,9 +22,9 @@ project:
 pinout:
   # Inputs
   ui[0]: "Start signal of TDC (stop signal is clk)"
-  ui[1]: "n.u."
-  ui[2]: "n.u."
-  ui[3]: "n.u."
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
   ui[4]: "output select"
   ui[5]: "output select"
   ui[6]: "output select"
@@ -41,14 +41,14 @@ pinout:
   uo[7]: "Result MSB"
 
   # Bidirectional pins
-  uio[0]: "n.u."
-  uio[1]: "n.u."
-  uio[2]: "n.u."
-  uio[3]: "n.u."
-  uio[4]: "n.u."
-  uio[5]: "n.u."
-  uio[6]: "n.u."
-  uio[7]: "n.u."
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
