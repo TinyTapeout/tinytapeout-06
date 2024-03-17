@@ -10,7 +10,7 @@
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1197
+   Number of cells:               1198
      sky130_fd_sc_hd__a2111o_2      32
      sky130_fd_sc_hd__a221o_2       16
      sky130_fd_sc_hd__a22o_2         8
@@ -24,12 +24,12 @@
      sky130_fd_sc_hd__buf_2          1
      sky130_fd_sc_hd__conb_1        16
      sky130_fd_sc_hd__dfxtp_2      192
-     sky130_fd_sc_hd__inv_2        769
+     sky130_fd_sc_hd__inv_2        770
      sky130_fd_sc_hd__nor2_2         2
      sky130_fd_sc_hd__nor3_2         1
      sky130_fd_sc_hd__nor3b_2        3
      sky130_fd_sc_hd__o32a_2         8
      sky130_fd_sc_hd__or4_2          8
 
-   Chip area for module '\tt_um_hpretl_tt06_tdc': 8952.336000
+   Chip area for module '\tt_um_hpretl_tt06_tdc': 8956.089600
 
