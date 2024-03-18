@@ -1,0 +1,26 @@
+
+63. Printing statistics.
+
+=== tt_um_SteffenReith_PiMACTop ===
+
+   Number of wires:                115
+   Number of wire bits:            150
+   Number of public wires:          59
+   Number of public wire bits:      94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                131
+     sky130_fd_sc_hd__a21o_2        16
+     sky130_fd_sc_hd__a21oi_2       16
+     sky130_fd_sc_hd__and3_2        16
+     sky130_fd_sc_hd__buf_2          3
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__dfxtp_2       36
+     sky130_fd_sc_hd__nor2_2        12
+     sky130_fd_sc_hd__or2_2          4
+     sky130_fd_sc_hd__xnor2_2        4
+     sky130_fd_sc_hd__xor2_2         8
+
+   Chip area for module '\tt_um_SteffenReith_PiMACTop': 1536.473600
+
