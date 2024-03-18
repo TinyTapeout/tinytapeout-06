@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "spi_test"      # Project title
+  title:        "spi_pwm"      # Project title
   author:       "djuara"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "This is a PWM generator, spi controlled (2 different interfaces, just for testing)"      # One line description of what your project does
