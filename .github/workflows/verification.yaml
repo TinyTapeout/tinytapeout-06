@@ -36,7 +36,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
           cache: 'pip'
       - run: pip install -r tt/requirements.txt -r tt-multiplexer/py/requirements.txt -r verilog/dv/mux_ext/requirements.txt
 
