@@ -3,7 +3,7 @@ project:
   title:        "spi_pwm"      # Project title
   author:       "djuara"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "This is a PWM generator, spi controlled (2 different interfaces, just for testing)"      # One line description of what your project does
+  description:  "This is a PWM generator and 8-bit width IO, spi controlled (2 different interfaces, just for testing)."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -44,14 +44,14 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "IO0"
+  uio[1]: "IO1"
+  uio[2]: "IO2"
+  uio[3]: "IO3"
+  uio[4]: "IO4"
+  uio[5]: "IO5"
+  uio[6]: "IO6"
+  uio[7]: "IO7"
 
 # Do not change!
 yaml_version: 6

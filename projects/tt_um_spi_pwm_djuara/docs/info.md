@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This design is an SPI controlled PWM generator. Through registers we can configure number of ticks the PWM signal is ON and the cycle. Ticks are related to the system clk provided externally.
+This design is an SPI controlled PWM generator and 8-pin IO controller. IOs can be configure as output or input. Through registers we can configure number of ticks the PWM signal is ON and the cycle. Ticks are related to the system clk provided externally.
 
 ### Registers
 
@@ -21,8 +21,10 @@ This design is an SPI controlled PWM generator. Through registers we can configu
 |   TICKS_ON_MSB      |  0x03  | R/W  |  Ticks PWM signal is on MSB  |  0x82   |
 |   TICKS_CYCLES_LSB  |  0x04  | R/W  |  PWM period in ticks LSB     |  0x50   |
 |   TICKS_CYCLES_MSB  |  0x05  | R/W  |  PWM period in ticks MSB     |  0xC3   |
+|   IO_DIR            |  0x06  | R/W  |  Set the dir of each IO pin  |  0x00   |
+|   IO_VALUE          |  0x07  | R/W  |  Set the IO_output value     |  0x00   |
 
-Only 3 bits of address are taken into account for addressing, and if no register exist in address provided, 0xAA is read back.
+Only 3 bits of address are taken into account for addressing.
 
 When PWM is active, registers cannot be written.
 
@@ -32,7 +34,7 @@ This register is read only, it's value is 0x96.
 
 #### PWM_CTRL
 
-This register controls the PWM. Bit 0 control if it's on (Bit 0 set) or off (Bit 0 clear).
+This register controls the PWM. Bit 0 control if it's on (Bit 0 set) or off (Bit 0 clear). This register also contain the AND value of inputs ui_in[7] & ena in bit 7.
 
 #### TICKS_ON LSB and MSB
 
@@ -41,6 +43,14 @@ This two registers contains the number of ticks of the system clk that the PWM s
 #### TICKS_CYCLES LSB and MSB
 
 This two registers contains the period of the PWM signal in number of ticks of the system clk. It's a 16 bit wide value, separate in LSB and MSB.
+
+#### IO_DIR
+
+In this register each bits configure the direction of each io pin. Value 0 indicates input and value 1 indicate output
+
+#### IO_VALUE
+
+This register contain the value of the io pin. When read it reports the values of uio_in, when writes it sets the values of uio_out (depending on values set in IO_DIR).
 
 ### SPI Interfaces
 
