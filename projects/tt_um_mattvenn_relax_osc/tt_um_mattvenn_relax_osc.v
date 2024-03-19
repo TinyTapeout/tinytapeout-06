@@ -17,13 +17,13 @@ module tt_um_mattvenn_relax_osc (
 );
 
     osc osc(
-        .osc_out(ua[0]),
+        .osc_out(uo_out[0]),
+        .osc_a(ua[0]),
         .VDD(VPWR),
         .VSS(VGND)
         );
 
     // ties for the output enables
-    assign uo_out[0] = VGND;
     assign uo_out[1] = VGND;
     assign uo_out[2] = VGND;
     assign uo_out[3] = VGND;

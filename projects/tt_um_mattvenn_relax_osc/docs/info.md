@@ -17,5 +17,5 @@ An inverter after the oscillator makes a full swing square wave.
 
 ## How to test
 
-Measure the oscillator out on pin 0 (tbc, might cause issues due to the analog mux parasitics). Measure the square wave out on pin 1.
+Measure the oscillator out on pin 0 (tbc, might cause issues due to the analog mux parasitics). Measure the square wave out on digital output pin 0.
 

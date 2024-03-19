@@ -20,17 +20,17 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "bit 0"
-  ui[1]: "bit 1"
-  ui[2]: "bit 2"
-  ui[3]: "bit 3"
-  ui[4]: "bit 4"
-  ui[5]: "bit 5"
-  ui[6]: "bit 6"
-  ui[7]: "bit 7"
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
-  uo[0]: ""
+  uo[0]: "inverted output of oscillator"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
@@ -50,7 +50,7 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "oscillator output"
+  ua[0]: "analog oscillator output"
 
 # Do not change!
 yaml_version: 6
