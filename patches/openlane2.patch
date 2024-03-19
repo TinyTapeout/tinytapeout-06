@@ -1,5 +1,5 @@
 diff --git a/nix/magic.nix b/nix/magic.nix
-index 46181cc7..3a39e5a2 100644
+index 46181cc7..c1557b8 100644
 --- a/nix/magic.nix
 +++ b/nix/magic.nix
 @@ -44,13 +44,13 @@
@@ -7,14 +7,14 @@ index 46181cc7..3a39e5a2 100644
  clangStdenv.mkDerivation rec {
    name = "magic-vlsi";
 -  rev = "83ed73ac522c6bbd5900240c2d02e399820cbc26";
-+  rev = "cb73ebfab02e6eed32f08287b45522c61ef542f8";
++  rev = "bfd938b5e2321cf9a6c15f398fbc987b56fcc179";
  
    src = fetchFromGitHub {
      owner = "RTimothyEdwards";
      repo = "magic";
      inherit rev;
 -    sha256 = "sha256-iDEYgwtotCJ6gXcNaMohSPmHeYFCplKYD8SXwnNF3/E=";
-+    sha256 = "sha256-NH0CEEQd6PfXO/4+REwm45Xd5ySS0UwRmT5scnxGzmE=";
++    sha256 = "sha256-xNhPnNGoJ8YiG6NFeFhOuKTB56rQvggJugIvukao6U8=";
    };
  
    nativeBuildInputs = [python3 gnused];
