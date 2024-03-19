@@ -38,6 +38,7 @@ jobs:
           cp -r ../tinytapeout_submission/* .
       - name: Commit and push
         working-directory: tt_efabless
+        shell: bash
         run: |
           COMMIT_BODY="\
           run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ fromJSON(steps.download_artifact.outputs.artifacts)[0].workflow_run.id }}
