@@ -1,0 +1,71 @@
+# Tiny Tapeout project information
+project:
+  title:        "GOA - grogu on ASIC"
+  author:       "Simone Corbetta"
+  discord:      "scorbetta"
+  description:  "Single neuron w/ fixed-point arithmetic"
+  language:     "Verilog"
+  clock_hz:     25
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_scorbetta_goa"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "FIXED_POINT_ADD.v"
+    - "FIXED_POINT_ABS.v"
+    - "FIXED_POINT_MUL.v"
+    - "FIXED_POINT_CHANGE_SIGN.v"
+    - "FIXED_POINT_COMP.v"
+    - "FIXED_POINT_ACT_FUN.v"
+    - "RW_REG.v"
+    - "RO_REG.v"
+    - "REGPOOL.v"
+    - "D_FF_EN.v"
+    - "PISO_BUFFER.v"
+    - "SIPO_BUFFER.v"
+    - "SCI_SLAVE.v"
+    - "COUNTER.v"
+    - "EDGE_DETECTOR.v"
+    - "NEURON_CONTROL_ENGINE.v"
+    - "NEURON.v"
+    - "NEURON_WRAPPER.v"
+    - "tt_um_scorbetta_goa.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "FPGA clock"
+  ui[1]: "FPGA reset"
+  ui[2]: "SCI_CSN"
+  ui[3]: "SCI_REQ"
+  ui[4]: "Input value load-in"
+  ui[5]: "Input value"
+  ui[6]: "Output value shift-out"
+  ui[7]: "Neuron trigger"
+
+  # Outputs
+  uo[0]: "SCI_RESP"
+  uo[1]: "SCI_ACK"
+  uo[2]: "Output value"
+  uo[3]: "Neuron ready"
+  uo[4]: "Neuron done"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
