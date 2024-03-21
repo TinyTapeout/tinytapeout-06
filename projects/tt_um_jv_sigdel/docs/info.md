@@ -16,6 +16,8 @@ https://personalpages.hs-kempten.de/~vollratj/InEl/SigmaDelta_ADC_real.html
 A high level simulator:
 https://personalpages.hs-kempten.de/~vollratj/InEl/SigmaDelta.html
 
+![Tiny Tapeout Tile](TTsigdelFunktion.png "Tiny Tapeout Tile")
+
 ## How to test
 
 Add the RC network and apply a DC voltage at the input in0 and out5.
