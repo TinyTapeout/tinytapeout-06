@@ -105,6 +105,7 @@ jobs:
         with:
           name: macros
           path: |
+            tt-multiplexer/cfg/*.yaml
             tt-multiplexer/ol2/tt_top/gds/*
             tt-multiplexer/ol2/tt_top/lef/*
             tt-multiplexer/ol2/tt_top/spef/*
