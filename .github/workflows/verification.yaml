@@ -38,7 +38,7 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
-      - run: pip install -r tt/requirements.txt -r tt-multiplexer/py/requirements.txt -r verilog/dv/mux_ext/requirements.txt
+      - run: pip install -r tt/requirements.txt -r tt-multiplexer/py/requirements.txt -r verilog/dv/mux/requirements.txt
 
       - name: install iverilog
         run: sudo apt-get update && sudo apt-get install -y iverilog
