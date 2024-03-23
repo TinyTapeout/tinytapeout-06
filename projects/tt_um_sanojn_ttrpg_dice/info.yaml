@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "TTRPG Dice + simple I2C peripheral" # Project title
+  author:       "Jonas Nilsson"                      # Your name
+  discord:      "jonas_n"                            # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "TTRPG dice roller"                  # One line description of what your project does
+  language:     "Verilog"                            # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     32768                                # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_sanojn_ttrpg_dice"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "debouncer.v"
+    - "seg7_digitsonly.v"
+    - "i2c_slave.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Btn4"
+  ui[1]: "Btn6"
+  ui[2]: "Btn8"
+  ui[3]: "Btn10"
+  ui[4]: "Btn12"
+  ui[5]: "Btn20"
+  ui[6]: "Btn100"
+  ui[7]: "GPIO input"
+
+  # Outputs
+  uo[0]: "segA"
+  uo[1]: "segB"
+  uo[2]: "segC"
+  uo[3]: "segD"
+  uo[4]: "segE"
+  uo[5]: "segF"
+  uo[6]: "segG"
+  uo[7]: "DP"
+
+  # Bidirectional pins
+  uio[0]: "PWM capable GPIO pin (bidir)"
+  uio[1]: "SDA (bidir)"
+  uio[2]: "SCL (input)"
+  uio[3]: "1s digit common (output)"
+  uio[4]: "10s digit common (output)"
+  uio[5]: "Button polarity (input)"
+  uio[6]: "Segment polarity (input)"
+  uio[7]: "Common polarity (input)"
+
+# Do not change!
+yaml_version: 6
