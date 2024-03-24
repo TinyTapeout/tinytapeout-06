@@ -1,0 +1,49 @@
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /home/runner/work/tt06-dffram-example/tt06-dffram-example/runs/wokwi/tmp/610b63cf2ff24a319ed59f329424a5f9.lib ",
+   "modules": {
+      "\\tt_um_urish_dffram": {
+         "num_wires":         80,
+         "num_wire_bits":     115,
+         "num_pub_wires":     78,
+         "num_pub_wire_bits": 113,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         65,
+         "area":              678.150400,
+         "num_cells_by_type": {
+            "RAM32": 1,
+            "sky130_fd_sc_hd__and2_2": 2,
+            "sky130_fd_sc_hd__and3_2": 9,
+            "sky130_fd_sc_hd__and3b_2": 18,
+            "sky130_fd_sc_hd__buf_2": 16,
+            "sky130_fd_sc_hd__dfxtp_2": 2,
+            "sky130_fd_sc_hd__mux4_2": 8,
+            "sky130_fd_sc_hd__nor3b_2": 9
+         }
+      }
+   },
+      "design": {
+         "num_wires":         80,
+         "num_wire_bits":     115,
+         "num_pub_wires":     78,
+         "num_pub_wire_bits": 113,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         65,
+         "area":              678.150400,
+         "num_cells_by_type": {
+            "RAM32": 1,
+            "sky130_fd_sc_hd__and2_2": 2,
+            "sky130_fd_sc_hd__and3_2": 9,
+            "sky130_fd_sc_hd__and3b_2": 18,
+            "sky130_fd_sc_hd__buf_2": 16,
+            "sky130_fd_sc_hd__dfxtp_2": 2,
+            "sky130_fd_sc_hd__mux4_2": 8,
+            "sky130_fd_sc_hd__nor3b_2": 9
+         }
+      }
+}
+

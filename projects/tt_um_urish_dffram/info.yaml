@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "DFFRAM Example (128 bytes)"      # Project title
+  author:       "Uri Shaked"      # Your name
+  discord:      "urish"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "128 bytes DFFRAM module"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_urish_dffram"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "dffram.v"
+    - "RAM32.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "addr[0]"
+  ui[1]: "addr[1]"
+  ui[2]: "addr[2]"
+  ui[3]: "addr[3]"
+  ui[4]: "addr[4]"
+  ui[5]: "addr[5]"
+  ui[6]: "addr[6]"
+  ui[7]: "wen"
+
+  # Outputs
+  uo[0]: "out[0]"
+  uo[1]: "out[1]"
+  uo[2]: "out[2]"
+  uo[3]: "out[3]"
+  uo[4]: "out[4]"
+  uo[5]: "out[5]"
+  uo[6]: "out[6]"
+  uo[7]: "out[7]"
+
+  # Bidirectional pins
+  uio[0]: "in[0]"
+  uio[1]: "in[1]"
+  uio[2]: "in[2]"
+  uio[3]: "in[3]"
+  uio[4]: "in[4]"
+  uio[5]: "in[5]"
+  uio[6]: "in[6]"
+  uio[7]: "in[7]"
+
+# Do not change!
+yaml_version: 6
