@@ -4,9 +4,9 @@ project:
   title:        "PILIPINAS"      # Project title
   author:       "Alexander Co Abad and Dino Dominic Ligutan"      # Your name
   discord:      "alexandercoabad_25756"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "7-seg Display for PILIPINAS"      # based from https://tinytapeout.com/runs/tt03/159/?fbclid=IwAR2JO7mgSKudnxRfstHDvjSZOMuqeQt30wtzHv7B9tvykWhDZ_B5dTEksGg  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  description:  "7-seg Display for PILIPINASLASALLE"      # based from https://wokwi.com/projects/341279123277087315  
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     1       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -14,14 +14,14 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "Clock"
-  ui[1]: "reset"
-  ui[2]: "none"
-  ui[3]: "dp toggle"
-  ui[4]: "BCD bit 3"
-  ui[5]: "BCD bit 2"
-  ui[6]: "BCD bit 1"
-  ui[7]: "BCD bit 0"
+  ui[0]: "BCD Bit 3 (A)"
+  ui[1]: "BCD Bit 2 (A)"
+  ui[2]: "BCD Bit 1 (A)"
+  ui[3]: "BCD Bit 0 (A)"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: "Manual Input Mode"
 
   # Outputs
   uo[0]: "segment a"

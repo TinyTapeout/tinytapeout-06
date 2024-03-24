@@ -236,7 +236,6 @@
     [ "ttout:EXTOUT5", "sevseg1:F", "green", [ "h48", "v-67.2", "h48" ] ],
     [ "ttout:EXTOUT6", "sevseg1:G", "green", [ "h57.6", "v-68.04" ] ],
     [ "ttout:EXTOUT7", "sevseg1:DP", "green", [ "v28.8", "h105.6" ] ],
-    [ "pwr2:GND", "sevseg1:COM.1", "black", [ "h-76.8", "v-38.4" ] ],
     [ "sw2:1", "clock1:CLK", "blue", [ "h-19.2", "v-57.6" ] ],
     [ "sw1:1b", "ttin:EXTIN0", "green", [ "h0" ] ],
     [ "sw1:2b", "ttin:EXTIN1", "green", [ "h0" ] ],
@@ -439,7 +438,8 @@
       "green",
       [ "h-38.4", "v9.6", "h-211.2", "v-1584", "h-220.8", "v144" ]
     ],
-    [ "ttout:OUT7", "flipflop1:Q", "green", [ "h-9.6", "v1219.2", "h-1276.8", "v-1766.4" ] ]
+    [ "ttout:OUT7", "flipflop1:Q", "green", [ "h-9.6", "v1219.2", "h-1276.8", "v-1766.4" ] ],
+    [ "sevseg1:COM.1", "pwr2:GND", "black", [ "h0" ] ]
   ],
   "dependencies": {}
 }
