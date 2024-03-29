@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "i4004 for TinyTapeout"      # Project title
+  author:       "ISHI-KAI"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "i4004 for TinyTapeout by ISHI-KAI."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     741000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_noritsuna_i4004"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_noritsuna_i4004.v"
+    - "alu.v"
+    - "counter.v"
+    - "instruction_decode.v"
+    - "instruction_pointer.v"
+    - "scratchpad.v"
+    - "timing_io.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "data0_pad"
+  ui[1]: "data1_pad"
+  ui[2]: "data2_pad"
+  ui[3]: "data3_pad"
+  ui[4]: "clk1_pad"
+  ui[5]: "clk2_pad"
+  ui[6]: "poc_pad"
+  ui[7]: "test_pad"
+
+  # Outputs
+  uo[0]: "cmrom_pad"
+  uo[1]: "cmram0_pad"
+  uo[2]: "cmram1_pad"
+  uo[3]: "cmram2_pad"
+  uo[4]: "cmram3_pad"
+  uo[5]: "sync_pad"
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
