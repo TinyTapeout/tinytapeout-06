@@ -3,5 +3,6 @@
   "repo": "https://github.com/obriensp/tt06-spo-be8",
   "commit": "776530b1c81a0949bb4b9d523ca3638b7ae183eb",
   "workflow_url": "https://github.com/obriensp/tt06-spo-be8/actions/runs/8503153793",
-  "sort_id": 1711940641197
+  "sort_id": 1711940641197,
+  "skip": true
 }
