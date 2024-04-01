@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Retro Console"      # Project title
+  author:       "Toivo Henningsson"      # Your name
+  discord:      "possible_realities"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "8½ bit retro console with sprite and tile graphics + synth"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50350000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_toivoh_retro_console"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "ppu.v"
+    - "anemonesynth.v"
+    - "sb_io.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "R1"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "vsync"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "hsync"
+
+  # Bidirectional pins
+  uio[0]: "addr_out[0]"
+  uio[1]: "addr_out[1]"
+  uio[2]: "addr_out[2]"
+  uio[3]: "addr_out[3]"
+  uio[4]: "tx_out[0]"
+  uio[5]: "tx_out[1]"
+  uio[6]: "rx_in[0]"
+  uio[7]: "rx_in[1]"
+
+# Do not change!
+yaml_version: 6
