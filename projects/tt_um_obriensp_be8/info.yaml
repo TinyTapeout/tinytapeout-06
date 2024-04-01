@@ -62,7 +62,7 @@ pinout:
   uio[1]: ""
   uio[2]: "SCL"
   uio[3]: "SDA"
-  uio[4]: ""
+  uio[4]: "HALTED"
   uio[5]: ""
   uio[6]: ""
   uio[7]: ""
