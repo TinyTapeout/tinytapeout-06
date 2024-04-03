@@ -1,9 +1,9 @@
 {
-  "app": "Tiny Tapeout tt06 e3fac0ab",
+  "app": "Tiny Tapeout tt06 b544d27d",
   "repo": "https://github.com/JVollrath/tt06_jv_sigdel_v",
-  "commit": "d609c4fb20c9691705a088ad9dde067fd171415a",
-  "workflow_url": "https://github.com/JVollrath/tt06_jv_sigdel_v/actions/runs/8395755848",
+  "commit": "6725319ea7d73496fad411689efb281ca0485f81",
+  "workflow_url": "https://github.com/JVollrath/tt06_jv_sigdel_v/actions/runs/8537922080",
   "sort_id": 1710957554982,
-  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
-  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
 }
