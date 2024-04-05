@@ -1,0 +1,61 @@
+# Tiny Tapeout project information (Old format, because I like to have things pass through git)
+project:
+  title:        "Fast Readout Image Sensor Prototype"      # Project title
+  author:       "Devin Atkin"      # Your name
+  discord:      "devinatkin"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This Project Pretends to be an Image Sensor, It's not an Image Sensor"      # One line description of what your project does
+  language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  clock_hz:     50000       # Clock frequency in Hz (or 0 if not applicable)
+  picture: "docs/Logo.png" # A picture of your project, relative to the info.yaml file
+  
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_devinatkin_fastreadout"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_devinatkin_fastreadout.v"
+    - "frequency_counter.v"
+    - "frequency_module.v"
+    - "shift_register.v"
+    - "repeated_add_multiplier.v"
+    - "output_parallel_to_serial.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "DATA_IN1"
+  ui[1]: "RCLK_1"
+  ui[2]: "LOAD_1"
+  ui[3]: "DATA_IN2"
+  ui[4]: "RCLK_2"
+  ui[5]: "LOAD_2"
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "DATA_BUS_COL_OUT[0]"
+  uo[1]: "DATA_BUS_COL_OUT[1]"
+  uo[2]: "DATA_BUS_COL_OUT[2]"
+  uo[3]: "DATA_BUS_COL_OUT[3]"
+  uo[4]: "DATA_BUS_COL_OUT[4]"
+  uo[5]: "DATA_BUS_COL_OUT[5]"
+  uo[6]: "DATA_BUS_COL_OUT[6]"
+  uo[7]: "DATA_BUS_COL_OUT[7]"
+
+  # Bidirectional pins
+  uio[0]: "DATA_BUS_ROW_IN[0]"
+  uio[1]: "DATA_BUS_ROW_IN[1]"
+  uio[2]: "DATA_BUS_ROW_IN[2]"
+  uio[3]: "DATA_BUS_ROW_IN[3]"
+  uio[4]: "DATA_BUS_ROW_IN[4]"
+  uio[5]: "DATA_BUS_ROW_IN[5]"
+  uio[6]: "DATA_BUS_ROW_IN[6]"
+  uio[7]: "DATA_BUS_ROW_IN[7]"
+
+
+
+# Do not change!
+yaml_version: 6
