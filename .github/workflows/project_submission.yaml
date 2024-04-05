@@ -47,7 +47,7 @@ jobs:
           submodules: recursive
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -65,7 +65,7 @@ jobs:
           pdk_root: ${{ env.PDK_ROOT }}
 
       - name: Install Nix
-        uses: rikhuijzer/cache-install@v1.1.2
+        uses: rikhuijzer/cache-install@v1.1.4
         with:
           key: nix-${{ hashFiles('precheck/default.nix') }}
           nix_file: 'tt/precheck/default.nix'
@@ -93,7 +93,7 @@ jobs:
           done
 
       - name: Test Summary
-        uses: test-summary/action@v2
+        uses: test-summary/action@v2.3
         with:
           paths: 'tt/precheck/reports/results.xml'
         if: steps.changed-files.outputs.any_changed == 'true'
@@ -106,7 +106,7 @@ jobs:
 
       - name: Upload reports
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: precheck-reports
           path: tt/precheck/reports
