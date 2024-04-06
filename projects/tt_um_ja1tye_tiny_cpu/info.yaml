@@ -31,7 +31,7 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
+  ui[0]: "MISO input from SPI Flash/PSRAM"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -41,24 +41,24 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "SCLK output to SPI Flash/PSRAM"
+  uo[1]: "CS output to SPI Flash"
+  uo[2]: "CS output to PSRAM"
+  uo[3]: "MOSI output to SPI Flash/PSRAM"
+  uo[4]: "SCLK output for debugging"
+  uo[5]: "MOSI output for debugging"
+  uo[6]: "CS output for debugging"
+  uo[7]: "Fetch cycle indicator pulse for debbuging"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "General purpose I/O"
+  uio[1]: "General purpose I/O"
+  uio[2]: "General purpose I/O"
+  uio[3]: "General purpose I/O"
+  uio[4]: "General purpose output"
+  uio[5]: "General purpose output"
+  uio[6]: "General purpose output"
+  uio[7]: "General purpose output"
 
 # Do not change!
 yaml_version: 6
