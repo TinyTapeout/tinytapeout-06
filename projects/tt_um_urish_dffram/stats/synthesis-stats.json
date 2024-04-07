@@ -1,6 +1,6 @@
 {
    "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
-   "invocation": "stat -json -liberty /home/runner/work/tt06-dffram-example/tt06-dffram-example/runs/wokwi/tmp/610b63cf2ff24a319ed59f329424a5f9.lib ",
+   "invocation": "stat -json -liberty /home/runner/work/tt06-dffram-example/tt06-dffram-example/runs/wokwi/tmp/e9f83532b6b34de88e6f35522009c63d.lib ",
    "modules": {
       "\\tt_um_urish_dffram": {
          "num_wires":         80,
