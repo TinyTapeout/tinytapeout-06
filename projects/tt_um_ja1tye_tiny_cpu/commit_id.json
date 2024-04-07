@@ -1,8 +1,8 @@
 {
   "app": "Tiny Tapeout tt06 1ebe1ef2",
   "repo": "https://github.com/JA1TYE/tt06-TYE-tiny-cpu",
-  "commit": "0c28d5ae9c3d7ece20bb1d3fa887ef081994632b",
-  "workflow_url": "https://github.com/JA1TYE/tt06-TYE-tiny-cpu/actions/runs/8582282555",
+  "commit": "2ec2b60802fe26e69dd5f7876f728b76c60eac66",
+  "workflow_url": "https://github.com/JA1TYE/tt06-TYE-tiny-cpu/actions/runs/8586298974",
   "sort_id": 1712413754800,
   "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
   "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
