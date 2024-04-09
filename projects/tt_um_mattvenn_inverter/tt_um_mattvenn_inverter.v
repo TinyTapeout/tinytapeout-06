@@ -19,8 +19,8 @@ module tt_um_mattvenn_inverter (
     inverter inverter (
         .VDD(VPWR),
         .VSS(VGND),
-        .IN(ua[0]),
-        .OUT(ua[1])
+        .OUT(ua[0]),
+        .IN(ua[1])
         );
 
     // ties for the output enables
