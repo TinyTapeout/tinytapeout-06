@@ -15,8 +15,8 @@ project:
 pinout:
   # Inputs
   ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
+  ui[1]: "data_in"
+  ui[2]: "load_en"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -24,14 +24,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "r25_val"
+  uo[1]: "r26_val"
+  uo[2]: "r27_val"
+  uo[3]: "r28_val"
+  uo[4]: "r29_val"
+  uo[5]: "r30_val"
+  uo[6]: "r31_val"
+  uo[7]: "r32_val_LSFR_out"
 
   # Bidirectional pins
   uio[0]: ""
