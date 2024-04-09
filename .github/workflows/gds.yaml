@@ -36,11 +36,6 @@ jobs:
           repository: efabless/openlane2
           path: openlane2
           ref: ${{ env.OPENLANE_TAG }}
-      
-      - name: Patch OpenLane 2 repo
-        working-directory: openlane2
-        run:
-          git apply ../patches/openlane2.patch
 
       # Set Python up
       - name: setup python
