@@ -1,0 +1,49 @@
+
+66. Printing statistics.
+
+=== tt_um_ian_keypad_controller ===
+
+   Number of wires:                190
+   Number of wire bits:            225
+   Number of public wires:          49
+   Number of public wire bits:      84
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                206
+     sky130_fd_sc_hd__a21bo_2        1
+     sky130_fd_sc_hd__a21o_2         7
+     sky130_fd_sc_hd__a21oi_2        2
+     sky130_fd_sc_hd__a22o_2         5
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__a31o_2         2
+     sky130_fd_sc_hd__a32o_2         1
+     sky130_fd_sc_hd__and2_2        33
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3_2         5
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__and4_2         4
+     sky130_fd_sc_hd__and4bb_2       1
+     sky130_fd_sc_hd__buf_1         39
+     sky130_fd_sc_hd__conb_1        11
+     sky130_fd_sc_hd__dfrtp_2        7
+     sky130_fd_sc_hd__dfxtp_2       36
+     sky130_fd_sc_hd__inv_2          7
+     sky130_fd_sc_hd__nand2_2        6
+     sky130_fd_sc_hd__nand4b_2       1
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__o211a_2        2
+     sky130_fd_sc_hd__o21a_2         4
+     sky130_fd_sc_hd__o21ai_2        3
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o41a_2         3
+     sky130_fd_sc_hd__or2_2          5
+     sky130_fd_sc_hd__or3_2          3
+     sky130_fd_sc_hd__or4_2          5
+     sky130_fd_sc_hd__or4b_2         4
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2         2
+
+   Chip area for module '\tt_um_ian_keypad_controller': 2083.248000
+
