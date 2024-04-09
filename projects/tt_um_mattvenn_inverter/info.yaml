@@ -2,7 +2,7 @@
 project:
   title:        "Double Inverter"      # Project title
   author:       "Matt Venn"      # Your name
-  discord:      "matt venn"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  discord:      "mattvenn"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A little inverter followed by a bigger one"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
@@ -50,8 +50,8 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "input"
-  ua[1]: "output"
+  ua[0]: "output"
+  ua[1]: "input"
 
 # Do not change!
 yaml_version: 6

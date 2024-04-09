@@ -15,7 +15,7 @@ My adding a primary, smaller inverter in front, I get much faster rise times on 
 
 ## How to test
 
-Apply a pulse to analog pin 0 and see it replicated on analog pin 1.
+Apply a pulse to analog pin 1 and see it replicated on analog pin 0.
 
 ## External hardware
 
