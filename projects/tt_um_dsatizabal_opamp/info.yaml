@@ -1,0 +1,61 @@
+# Tiny Tapeout project information
+project:
+  title:        "Simple FET OpAmp with Sky130."      # Project title
+  author:       "Diego Satizabal"      # Your name
+  discord:      "diegosatizabal"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A simple FET OpAmp, credits to Fulgor Foundation as I used Diegos and Julias design as a base available at https://github.com/diegohernando/caravel_fulgor_opamp/tree/master/xschem"      # One line description of what your project does
+  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_dsatizabal_opamp"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "UNUSED"
+  ui[1]: "UNUSED"
+  ui[2]: "UNUSED"
+  ui[3]: "UNUSED"
+  ui[4]: "UNUSED"
+  ui[5]: "UNUSED"
+  ui[6]: "UNUSED"
+  ui[7]: "UNUSED"
+
+  # Outputs
+  uo[0]: "UNUSED"
+  uo[1]: "UNUSED"
+  uo[2]: "UNUSED"
+  uo[3]: "UNUSED"
+  uo[4]: "UNUSED"
+  uo[5]: "UNUSED"
+  uo[6]: "UNUSED"
+  uo[7]: "UNUSED"
+
+  # Bidirectional pins
+  uio[0]: "UNUSED"
+  uio[1]: "UNUSED"
+  uio[2]: "UNUSED"
+  uio[3]: "UNUSED"
+  uio[4]: "UNUSED"
+  uio[5]: "UNUSED"
+  uio[6]: "UNUSED"
+  uio[7]: "UNUSED"
+
+  # Analog pins - you can add more if you use them, up to 6.
+  # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
+  # The first pins is always ua[0], and the pin numbers must be sequential.
+  ua[0]: "ZEF"
+  ua[1]: "V-"
+  ua[2]: "V+"
+  ua[3]: "Vout"
+
+# Do not change!
+yaml_version: 6
