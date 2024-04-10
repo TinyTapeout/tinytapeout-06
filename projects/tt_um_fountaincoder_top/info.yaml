@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "multimac"      # Project title
+  author:       "Jonny Edwards"      # Your name
+  discord:      "fountaincoder_93870"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "a multi use multi-hit dot product accelerator"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_fountaincoder_top"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "deltamadd.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "index[0]"
+  ui[1]: "index[1]"
+  ui[2]: "index[2]"
+  ui[3]: "index[3]"
+  ui[4]: "data[0]"
+  ui[5]: "data[1]"
+  ui[6]: "data[2]"
+  ui[7]: "data[3]"
+
+  # Outputs
+  uo[0]: "out[0]"
+  uo[1]: "out[1]"
+  uo[2]: "out[2]"
+  uo[3]: "out[3]"
+  uo[4]: "out[4]"
+  uo[5]: "out[5]"
+  uo[6]: "out[6]"
+  uo[7]: "out[7]"
+
+  # Bidirectional pins
+  uio[0]: "out[8]"
+  uio[1]: "out[9]"
+  uio[2]: "out[10]"
+  uio[3]: "out[11]"
+  uio[4]: "instruction [0]"
+  uio[5]: "instruction [1]"
+  uio[6]: "load"
+  uio[7]: "run"
+
+# Do not change!
+yaml_version: 6
