@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/beaprog/tt06-LFSR",
+  "commit": "6a13e77d09ec0688b49ff4fbef1ab92875824f73",
+  "workflow_url": "https://github.com/beaprog/tt06-LFSR/actions/runs/8647236145",
+  "sort_id": 1712841578430,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
