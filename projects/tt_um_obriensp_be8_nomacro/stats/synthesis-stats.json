@@ -1,6 +1,6 @@
 {
    "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
-   "invocation": "stat -json -liberty /home/runner/work/tt06-spo-be8-nomacro/tt06-spo-be8-nomacro/runs/wokwi/tmp/31fa0fcf0b6b4eedaae8a85f8a3e8f73.lib ",
+   "invocation": "stat -json -liberty /home/runner/work/tt06-spo-be8-nomacro/tt06-spo-be8-nomacro/runs/wokwi/tmp/07a40744fd2243fabaa4bd6685a3b6c9.lib ",
    "modules": {
       "\\tt_um_obriensp_be8_nomacro": {
          "num_wires":         1047,
