@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "easy PAL"      # Project title
+  author:       "Matthias Musch"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This is a simple PAL device with shift-register based (re)configuration" # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_MATTHIAS_M_PAL_TOP_WRAPPER"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files: 
+    - "project.v"     
+    - "PAL.v"
+    - "stride.v"
+    - "crosspoint.v"
+    - "reduce_and.v"
+    - "reduce_or.v"
+    - "sr.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Combinatorial input 0"
+  ui[1]: "Combinatorial input 1"
+  ui[2]: "Combinatorial input 2"
+  ui[3]: "Combinatorial input 3"
+  ui[4]: "Combinatorial input 4"
+  ui[5]: "Combinatorial input 5"
+  ui[6]: "Combinatorial input 6"
+  ui[7]: "Combinatorial input 7"
+
+  # Outputs
+  uo[0]: "Combinatorial output 0"
+  uo[1]: "Combinatorial output 1"
+  uo[2]: "Combinatorial output 2"
+  uo[3]: "Combinatorial output 3"
+  uo[4]: "Combinatorial output 3"
+  uo[5]: "unused - tied to 0"
+  uo[6]: "unused - tied to 0"
+  uo[7]: "unused - tied to 0"
+
+  # Bidirectional pins
+  uio[0]: "Config pin: This pin is used to apply the config bit that will be shifted in on a rising clock edge."
+  uio[1]: "Enable pin: If HIGH (1) the result of the logic function is applied to all outputs."
+  uio[2]: "Clock pin: Used for the shift register to sample in the [config pin] data (see uio[0])."
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+# Do not change!
+yaml_version: 6
