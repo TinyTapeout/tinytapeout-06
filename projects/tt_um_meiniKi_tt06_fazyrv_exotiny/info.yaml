@@ -1,0 +1,51 @@
+# Tiny Tapeout project information
+project:
+  title:        "FazyRV-ExoTiny"      # Project title
+  author:       "Meinhard Kissich"    # Your name
+  discord:      ""                    # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A minimal SoC based on FazyRV that uses external QSPI ROM and RAM."
+  language:     "SystemVerilog"
+  clock_hz:     50000000
+
+  # A single tile is about 167x108 uM.
+  tiles: "2x2"
+
+  top_module:  "tt_um_meiniKi_tt06_fazyrv_exotiny"
+
+  source_files:
+    - "../build/exotiny_preproc.v"
+    - "tt_um_meiniKi_tt06_fazyrv_exotiny.sv"
+
+pinout:
+  # Inputs
+  ui[0]: "General purpose input (GPI) 0."
+  ui[1]: "General purpose input (GPI) 1."
+  ui[2]: "General purpose input (GPI) 2."
+  ui[3]: "General purpose input (GPI) 3."
+  ui[4]: "General purpose input (GPI) 4."
+  ui[5]: "General purpose input (GPI) 5."
+  ui[6]: "General purpose input (GPI) 6."
+  ui[7]: "(User) SPI SDI."
+
+  # Outputs
+  uo[0]: "General purpose output (GPO) 0."
+  uo[1]: "General purpose output (GPO) 1."
+  uo[2]: "General purpose output (GPO) 2."
+  uo[3]: "General purpose output (GPO) 3."
+  uo[4]: "General purpose output (GPO) 4."
+  uo[5]: "General purpose output (GPO) 5."
+  uo[6]: "(User) SPI SCK."
+  uo[7]: "(User) SPI SDO."
+
+  # Bidirectional pins
+  uio[0]: "QSPI ROM chip select (low active)."
+  uio[1]: "QSPI ROM/RAM SDO[0]."
+  uio[2]: "QSPI ROM/RAM SDO[1]."
+  uio[3]: "QSPI ROM/RAM SCK."
+  uio[4]: "QSPI ROM/RAM SDO[2]."
+  uio[5]: "QSPI ROM/RAM SDO[3]."
+  uio[6]: "QSPI RAM chip select (low active)."
+  uio[7]: "NC."
+
+# Do not change!
+yaml_version: 6
