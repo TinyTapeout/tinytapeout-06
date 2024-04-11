@@ -1,0 +1,72 @@
+# Tiny Tapeout project information
+project:
+  title:        "8-bit CPU with Debugger"      # Project title
+  author:       "Sean Patrick O'Brien"      # Your name
+  discord:      "seanpatrickobrien."      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "8-bit CPU with debugger accessible via I2C"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_obriensp_be8_nomacro"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "tt_top.v"
+    - "cpu/alu.v"
+    - "cpu/bus_mux.v"
+    - "cpu/control.v"
+    - "cpu/core.v"
+    - "cpu/datapath.v"
+    - "cpu/full_adder.v"
+    - "cpu/microcode.v"
+    - "cpu/pc.v"
+    - "cpu/ram.v"
+    - "cpu/RAM8.v"
+    - "cpu/register.v"
+    - "cpu/register4.v"
+    - "debugger/cpu_access.v"
+    - "debugger/debugger_apb.v"
+    - "debugger/debugger_microcode.v"
+    - "debugger/status_reg.v"
+    - "i2c/i2c_slave.v"
+    - "i2c/i2c_to_apb.v"
+    - "i2c/I2C.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Input Port"
+  ui[1]: "Input Port"
+  ui[2]: "Input Port"
+  ui[3]: "Input Port"
+  ui[4]: "Input Port"
+  ui[5]: "Input Port"
+  ui[6]: "Input Port"
+  ui[7]: "Input Port"
+
+  # Outputs
+  uo[0]: "Output Port"
+  uo[1]: "Output Port"
+  uo[2]: "Output Port"
+  uo[3]: "Output Port"
+  uo[4]: "Output Port"
+  uo[5]: "Output Port"
+  uo[6]: "Output Port"
+  uo[7]: "Output Port"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: "SCL"
+  uio[3]: "SDA"
+  uio[4]: "HALTED"
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
