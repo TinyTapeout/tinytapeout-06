@@ -2,7 +2,7 @@
 # Tiny Tapeout project information
 project:  # design a Linear feedback shift register.
   title: "10-bit Linear feedback shift register"  # Project title
-  author: "Shivam Bhardwaj, Sachin Sharma and Ambika Prasad Shah"  # Your name
+  author: "Shivam Bhardwaj, Sachin Sharma, Pankaj Lodhi and Ambika Prasad Shah"  # Your name
   discord: "ICResQ Lab"  # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description: "This Verilog module implements a 10-bit Linear Feedback Shift Register (LFSR) for generating pseudo-random sequences with clock and reset inputs."  # One line description of what your project does
   language: "Verilog"  # other examples include SystemVerilog, Amaranth, VHDL, etc
