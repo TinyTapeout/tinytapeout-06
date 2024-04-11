@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "8-bit CPU with Debugger"      # Project title
+  title:        "8-bit CPU with Debugger (Lite)"      # Project title
   author:       "Sean Patrick O'Brien"      # Your name
   discord:      "seanpatrickobrien."      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "8-bit CPU with debugger accessible via I2C"      # One line description of what your project does
