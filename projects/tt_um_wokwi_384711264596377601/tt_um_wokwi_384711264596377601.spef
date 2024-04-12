@@ -1,9 +1,9 @@
 *SPEF "ieee 1481-1999"
 *DESIGN "tt_um_wokwi_384711264596377601"
-*DATE "11:11:11 Fri 11 11, 1111"
-*VENDOR "OpenRCX"
-*PROGRAM "Parallel Extraction"
-*VERSION "1.0"
+*DATE "12:36:17 Wednesday April 10, 2024"
+*VENDOR "The OpenROAD Project"
+*PROGRAM "OpenROAD"
+*VERSION "0889970d1790a2617e69f253221b8bd7626e51dc"
 *DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
 *DIVIDER /
 *DELIMITER :
@@ -33,24 +33,24 @@
 *19 uio_in[5]
 *20 uio_in[6]
 *21 uio_in[7]
-*22 net18
-*23 net19
-*24 net3
-*25 net4
-*26 net5
-*27 net6
-*28 net7
-*29 net8
-*30 net9
-*31 net10
-*32 net11
-*33 net12
-*34 net13
-*35 net14
-*36 net15
-*37 net16
+*22 net14
+*23 net15
+*24 net16
+*25 net17
+*26 net18
+*27 net19
+*28 net3
+*29 net4
+*30 net5
+*31 net6
+*32 net7
+*33 net8
+*34 net9
+*35 net10
+*36 net11
+*37 net12
 *38 uo_out[0]
-*39 net17
+*39 net13
 *40 uo_out[2]
 *41 uo_out[3]
 *42 uo_out[4]
@@ -1866,223 +1866,222 @@ uo_out[7] O
 *D_NET *22 0.000421985
 *CONN
 *P uio_oe[0] O
-*I *1773:LO O *D sky130_fd_sc_hd__conb_1
+*I *1769:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[0] 0.000192333
-2 *1773:LO 0.000192333
+2 *1769:LO 0.000192333
 3 uio_oe[0] uio_oe[1] 1.86598e-05
 4 uio_oe[0] uio_out[7] 1.86598e-05
 *RES
-1 *1773:LO uio_oe[0] 21.905 
+1 *1769:LO uio_oe[0] 21.905 
 *END
 
 *D_NET *23 0.000433806
 *CONN
 *P uio_oe[1] O
-*I *1774:LO O *D sky130_fd_sc_hd__conb_1
+*I *1770:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[1] 0.000201641
-2 *1774:LO 0.000201641
+2 *1770:LO 0.000201641
 3 uio_oe[1] uio_oe[2] 1.18636e-05
 4 uio_oe[1] uio_oe[3] 0
 5 uio_oe[0] uio_oe[1] 1.86598e-05
 *RES
-1 *1774:LO uio_oe[1] 21.905 
+1 *1770:LO uio_oe[1] 21.905 
 *END
 
 *D_NET *24 0.000587065
 *CONN
 *P uio_oe[2] O
-*I *1775:LO O *D sky130_fd_sc_hd__conb_1
+*I *1771:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[2] 0.000280854
-2 *1775:LO 0.000280854
+2 *1771:LO 0.000280854
 3 uio_oe[2] uio_oe[3] 1.34925e-05
 4 uio_oe[1] uio_oe[2] 1.18636e-05
 *RES
-1 *1775:LO uio_oe[2] 23.477 
+1 *1771:LO uio_oe[2] 23.477 
 *END
 
 *D_NET *25 0.000421802
 *CONN
 *P uio_oe[3] O
-*I *1776:LO O *D sky130_fd_sc_hd__conb_1
+*I *1772:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[3] 0.000194825
-2 *1776:LO 0.000194825
+2 *1772:LO 0.000194825
 3 uio_oe[3] uio_oe[4] 1.86598e-05
 4 uio_oe[1] uio_oe[3] 0
 5 uio_oe[2] uio_oe[3] 1.34925e-05
 *RES
-1 *1776:LO uio_oe[3] 21.905 
+1 *1772:LO uio_oe[3] 21.905 
 *END
 
 *D_NET *26 0.000528164
 *CONN
 *P uio_oe[4] O
-*I *1777:LO O *D sky130_fd_sc_hd__conb_1
+*I *1773:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[4] 0.000245422
-2 *1777:LO 0.000245422
+2 *1773:LO 0.000245422
 3 uio_oe[4] uio_oe[5] 1.86598e-05
 4 uio_oe[3] uio_oe[4] 1.86598e-05
 *RES
-1 *1777:LO uio_oe[4] 22.0491 
+1 *1773:LO uio_oe[4] 22.0491 
 *END
 
 *D_NET *27 0.000421985
 *CONN
 *P uio_oe[5] O
-*I *1778:LO O *D sky130_fd_sc_hd__conb_1
+*I *1774:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[5] 0.000192333
-2 *1778:LO 0.000192333
+2 *1774:LO 0.000192333
 3 uio_oe[5] uio_oe[6] 1.86598e-05
 4 uio_oe[4] uio_oe[5] 1.86598e-05
 *RES
-1 *1778:LO uio_oe[5] 21.905 
+1 *1774:LO uio_oe[5] 21.905 
 *END
 
 *D_NET *28 0.000421985
 *CONN
 *P uio_oe[6] O
-*I *1779:LO O *D sky130_fd_sc_hd__conb_1
+*I *1775:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[6] 0.000192333
-2 *1779:LO 0.000192333
+2 *1775:LO 0.000192333
 3 uio_oe[6] uio_oe[7] 1.86598e-05
 4 uio_oe[5] uio_oe[6] 1.86598e-05
 *RES
-1 *1779:LO uio_oe[6] 21.905 
+1 *1775:LO uio_oe[6] 21.905 
 *END
 
 *D_NET *29 0.00042066
 *CONN
 *P uio_oe[7] O
-*I *1780:LO O *D sky130_fd_sc_hd__conb_1
+*I *1776:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_oe[7] 0.000201
-2 *1780:LO 0.000201
+2 *1776:LO 0.000201
 3 uio_oe[6] uio_oe[7] 1.86598e-05
 *RES
-1 *1780:LO uio_oe[7] 21.905 
+1 *1776:LO uio_oe[7] 21.905 
 *END
 
 *D_NET *30 0.000423328
 *CONN
 *P uio_out[0] O
-*I *1781:LO O *D sky130_fd_sc_hd__conb_1
+*I *1777:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[0] 0.000193171
-2 *1781:LO 0.000193171
+2 *1777:LO 0.000193171
 3 uio_out[0] uio_out[1] 1.86598e-05
 4 uio_out[0] uo_out[7] 1.83266e-05
 *RES
-1 *1781:LO uio_out[0] 21.905 
+1 *1777:LO uio_out[0] 21.905 
 *END
 
 *D_NET *31 0.000421985
 *CONN
 *P uio_out[1] O
-*I *1765:LO O *D sky130_fd_sc_hd__conb_1
+*I *1778:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[1] 0.000192333
-2 *1765:LO 0.000192333
+2 *1778:LO 0.000192333
 3 uio_out[1] uio_out[2] 1.86598e-05
 4 uio_out[0] uio_out[1] 1.86598e-05
 *RES
-1 *1765:LO uio_out[1] 21.905 
+1 *1778:LO uio_out[1] 21.905 
 *END
 
 *D_NET *32 0.000421985
 *CONN
 *P uio_out[2] O
-*I *1766:LO O *D sky130_fd_sc_hd__conb_1
+*I *1779:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[2] 0.000192333
-2 *1766:LO 0.000192333
+2 *1779:LO 0.000192333
 3 uio_out[2] uio_out[3] 1.86598e-05
 4 uio_out[1] uio_out[2] 1.86598e-05
 *RES
-1 *1766:LO uio_out[2] 21.905 
+1 *1779:LO uio_out[2] 21.905 
 *END
 
 *D_NET *33 0.000421985
 *CONN
 *P uio_out[3] O
-*I *1767:LO O *D sky130_fd_sc_hd__conb_1
+*I *1780:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[3] 0.000192333
-2 *1767:LO 0.000192333
+2 *1780:LO 0.000192333
 3 uio_out[3] uio_out[4] 1.86598e-05
 4 uio_out[2] uio_out[3] 1.86598e-05
 *RES
-1 *1767:LO uio_out[3] 21.905 
+1 *1780:LO uio_out[3] 21.905 
 *END
 
 *D_NET *34 0.000435914
 *CONN
 *P uio_out[4] O
-*I *1768:LO O *D sky130_fd_sc_hd__conb_1
+*I *1781:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[4] 0.000202695
-2 *1768:LO 0.000202695
+2 *1781:LO 0.000202695
 3 uio_out[4] uio_out[5] 1.18636e-05
 4 uio_out[4] uio_out[6] 0
 5 uio_out[3] uio_out[4] 1.86598e-05
 *RES
-1 *1768:LO uio_out[4] 21.905 
+1 *1781:LO uio_out[4] 21.905 
 *END
 
 *D_NET *35 0.000550342
 *CONN
 *P uio_out[5] O
-*I *1769:LO O *D sky130_fd_sc_hd__conb_1
+*I *1765:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[5] 0.000262493
-2 *1769:LO 0.000262493
+2 *1765:LO 0.000262493
 3 uio_out[5] uio_out[6] 1.34925e-05
 4 uio_out[4] uio_out[5] 1.18636e-05
 *RES
-1 *1769:LO uio_out[5] 22.5497 
+1 *1765:LO uio_out[5] 22.5497 
 *END
 
 *D_NET *36 0.000421684
 *CONN
 *P uio_out[6] O
-*I *1770:LO O *D sky130_fd_sc_hd__conb_1
+*I *1766:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[6] 0.000194766
-2 *1770:LO 0.000194766
+2 *1766:LO 0.000194766
 3 uio_out[6] uio_out[7] 1.86598e-05
 4 uio_out[4] uio_out[6] 0
 5 uio_out[5] uio_out[6] 1.34925e-05
 *RES
-1 *1770:LO uio_out[6] 21.905 
+1 *1766:LO uio_out[6] 21.905 
 *END
 
 *D_NET *37 0.000421985
 *CONN
 *P uio_out[7] O
-*I *1771:LO O *D sky130_fd_sc_hd__conb_1
+*I *1767:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uio_out[7] 0.000192333
-2 *1771:LO 0.000192333
+2 *1767:LO 0.000192333
 3 uio_oe[0] uio_out[7] 1.86598e-05
 4 uio_out[6] uio_out[7] 1.86598e-05
 *RES
-1 *1771:LO uio_out[7] 21.905 
+1 *1767:LO uio_out[7] 21.905 
 *END
 
-*D_NET *38 0.000466223
+*D_NET *38 0.000426173
 *CONN
 *P uo_out[0] O
 *I *1756:X O *D sky130_fd_sc_hd__buf_2
 *CAP
-1 uo_out[0] 0.000190219
-2 *1756:X 0.000190219
+1 uo_out[0] 0.000203756
+2 *1756:X 0.000203756
 3 uo_out[0] uo_out[1] 1.86598e-05
-4 uo_out[0] *49:24 6.71264e-05
 *RES
 1 *1756:X uo_out[0] 21.905 
 *END
@@ -2090,16 +2089,15 @@ uo_out[7] O
 *D_NET *39 0.000434871
 *CONN
 *P uo_out[1] O
-*I *1772:LO O *D sky130_fd_sc_hd__conb_1
+*I *1768:LO O *D sky130_fd_sc_hd__conb_1
 *CAP
 1 uo_out[1] 0.000202174
-2 *1772:LO 0.000202174
+2 *1768:LO 0.000202174
 3 uo_out[1] uo_out[2] 1.18636e-05
 4 uo_out[1] uo_out[3] 0
-5 uo_out[1] *49:24 0
-6 uo_out[0] uo_out[1] 1.86598e-05
+5 uo_out[0] uo_out[1] 1.86598e-05
 *RES
-1 *1772:LO uo_out[1] 21.905 
+1 *1768:LO uo_out[1] 21.905 
 *END
 
 *D_NET *40 0.000414096
@@ -2216,7 +2214,7 @@ uo_out[7] O
 1 *1764:X *1754:A 26.5464 
 *END
 
-*D_NET *49 0.00831568
+*D_NET *49 0.00618918
 *CONN
 *I *1756:A I *D sky130_fd_sc_hd__buf_2
 *I *1757:A I *D sky130_fd_sc_hd__buf_2
@@ -2234,29 +2232,25 @@ uo_out[7] O
 5 *1760:A 0
 6 *1761:A 0
 7 *1762:A 3.18784e-05
-8 *1755:X 0.00272115
-9 *49:34 0.000230898
-10 *49:32 0.000422479
-11 *49:30 0.000398039
-12 *49:28 0.000408473
-13 *49:26 0.000633729
-14 *49:24 0.000540299
-15 *49:14 0.00286161
-16 uo_out[0] *49:24 6.71264e-05
-17 uo_out[1] *49:24 0
+8 *1755:X 0.00183192
+9 *49:16 0.000230898
+10 *49:14 0.000422479
+11 *49:12 0.000398039
+12 *49:10 0.000408473
+13 *49:8 0.000633729
+14 *49:6 0.00223176
 *RES
-1 *1755:X *49:14 49.9786 
-2 *49:14 *49:24 11.6071 
-3 *49:24 *49:26 6.69643 
-4 *49:26 *49:28 3.82143 
-5 *49:28 *49:30 3 
-6 *49:30 *49:32 3.82143 
-7 *49:32 *49:34 3.41071 
-8 *49:34 *1762:A 9.83571 
-9 *49:34 *1761:A 9.3 
-10 *49:32 *1760:A 9.3 
-11 *49:30 *1759:A 9.3 
-12 *49:28 *1758:A 9.3 
-13 *49:26 *1757:A 9.3 
-14 *49:24 *1756:A 9.3 
+1 *1755:X *49:6 39.8179 
+2 *49:6 *49:8 6.69643 
+3 *49:8 *49:10 3.82143 
+4 *49:10 *49:12 3 
+5 *49:12 *49:14 3.82143 
+6 *49:14 *49:16 3.41071 
+7 *49:16 *1762:A 9.83571 
+8 *49:16 *1761:A 9.3 
+9 *49:14 *1760:A 9.3 
+10 *49:12 *1759:A 9.3 
+11 *49:10 *1758:A 9.3 
+12 *49:8 *1757:A 9.3 
+13 *49:6 *1756:A 9.3 
 *END
