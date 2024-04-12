@@ -11,6 +11,8 @@ You can also include images in this folder and reference them in the markdown. E
 
 This is a FIFO that can pass data asynchronously across clock domains. This was a project I created when I was first learning logic design, and it took me a couple weeks to settle on a design that I felt was clean and reusable.
 
+The FIFO can hold 32 4-bit values, or 16 bytes. So use them wisely and greatly!
+
 The original design can be found at [https://github.com/KennethWilke/sv-cdc-fifo](https://github.com/KennethWilke/sv-cdc-fifo)
 
 The architecture of this design was influenced by
@@ -20,10 +22,12 @@ written by Clifford E. Cummings of
 
 ## How to test
 
-Abandon all hope, ye who enter...
+Hold `write_reset` and `read_reset` LOW while running the clock for a bit to reset, then raise to initialize the module.
 
-I need to write this!
+### Writing to the FIFO
 
-## External hardware
+Prepare your data on the 4-bit `write_data` bus, ensure the `full` state is low and then raise `write_increment` for 1 cycle of `write_clock` to write data into the FIFO memory.
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+### Reading from the FIFO
+
+The FIFO will present the current output on the `read_data` bus. If `empty` is low, this output should be valid and you can acknowledge receive of this vallue by raising `read_increment` for 1 cycle of `read_clock`.
