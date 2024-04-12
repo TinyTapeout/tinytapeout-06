@@ -1,5 +1,5 @@
 
-64. Printing statistics.
+65. Printing statistics.
 
 === tt_um_rgbled_decoder ===
 
