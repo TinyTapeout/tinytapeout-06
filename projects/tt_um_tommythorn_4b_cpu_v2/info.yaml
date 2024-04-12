@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Silly 4b CPU v2"
+  author:       "Tommy Thorn"
+  discord:      "tommythorn"
+  description:  "A trivial little 4b CPU in the style of the PDP-8, 2nd try"
+  language:     "Verilog"
+  clock_hz:     50       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_tommythorn_4b_cpu_v2"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "tt_um_tommythorn_4b_cpu_v2.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "clock"
+  ui[1]: "cmd[0]"
+  ui[2]: "cmd[1]"
+  ui[3]: ""
+  ui[4]: "cmdarg[0]"
+  ui[5]: "cmdarg[1]"
+  ui[6]: "cmdarg[2]"
+  ui[7]: "cmdarg[3]"
+
+  # Outputs
+  uo[0]: "acc[0]"
+  uo[1]: "acc[1]"
+  uo[2]: "acc[2]"
+  uo[3]: "acc[3]"
+  uo[4]: "pc[0]"
+  uo[5]: "pc[1]"
+  uo[6]: "pc[2]"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
