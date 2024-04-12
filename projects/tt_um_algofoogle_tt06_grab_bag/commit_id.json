@@ -4,5 +4,6 @@
   "commit": "a37dc14d50dd8c3c5718fd637a4f20bc9f4a5cb0",
   "workflow_url": "https://github.com/algofoogle/tt06-grab-bag/actions/runs/8648073610",
   "sort_id": 1712844710415,
-  "analog": true
+  "analog": true,
+  "skip": true
 }
