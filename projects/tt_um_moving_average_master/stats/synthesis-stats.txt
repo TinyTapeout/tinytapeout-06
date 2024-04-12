@@ -1,69 +1,72 @@
 
-63. Printing statistics.
+64. Printing statistics.
 
 === tt_um_moving_average_master ===
 
-   Number of wires:               1121
-   Number of wire bits:           1156
+   Number of wires:               1113
+   Number of wire bits:           1148
    Number of public wires:         231
    Number of public wire bits:     266
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1137
-     sky130_fd_sc_hd__a2111o_2       2
-     sky130_fd_sc_hd__a2111oi_2      1
-     sky130_fd_sc_hd__a211o_2       11
+   Number of cells:               1129
+     sky130_fd_sc_hd__a211o_2       10
      sky130_fd_sc_hd__a211oi_2       1
-     sky130_fd_sc_hd__a21bo_2        3
-     sky130_fd_sc_hd__a21boi_2       2
-     sky130_fd_sc_hd__a21o_2        23
-     sky130_fd_sc_hd__a21oi_2       23
-     sky130_fd_sc_hd__a221o_2       17
-     sky130_fd_sc_hd__a22o_2        35
-     sky130_fd_sc_hd__a31o_2        14
-     sky130_fd_sc_hd__a32o_2         3
-     sky130_fd_sc_hd__and2_2        18
-     sky130_fd_sc_hd__and2b_2       19
-     sky130_fd_sc_hd__and3_2         9
-     sky130_fd_sc_hd__and3b_2        3
-     sky130_fd_sc_hd__and4_2         6
+     sky130_fd_sc_hd__a21bo_2        4
+     sky130_fd_sc_hd__a21boi_2       4
+     sky130_fd_sc_hd__a21o_2        17
+     sky130_fd_sc_hd__a21oi_2       22
+     sky130_fd_sc_hd__a221o_2       15
+     sky130_fd_sc_hd__a221oi_2       1
+     sky130_fd_sc_hd__a22o_2        33
+     sky130_fd_sc_hd__a22oi_2        2
+     sky130_fd_sc_hd__a2bb2o_2       4
+     sky130_fd_sc_hd__a311o_2        3
+     sky130_fd_sc_hd__a311oi_2       1
+     sky130_fd_sc_hd__a31o_2        18
+     sky130_fd_sc_hd__a31oi_2        2
+     sky130_fd_sc_hd__a32o_2         2
+     sky130_fd_sc_hd__a41o_2         1
+     sky130_fd_sc_hd__and2_2        19
+     sky130_fd_sc_hd__and2b_2        7
+     sky130_fd_sc_hd__and3_2        21
+     sky130_fd_sc_hd__and3b_2        4
+     sky130_fd_sc_hd__and4_2         5
      sky130_fd_sc_hd__and4b_2        2
-     sky130_fd_sc_hd__buf_1        226
+     sky130_fd_sc_hd__buf_1        220
      sky130_fd_sc_hd__buf_2          1
      sky130_fd_sc_hd__conb_1        13
      sky130_fd_sc_hd__dfrtp_2      233
-     sky130_fd_sc_hd__inv_2         14
-     sky130_fd_sc_hd__mux2_2       203
-     sky130_fd_sc_hd__nand2_2       42
-     sky130_fd_sc_hd__nand2b_2       2
-     sky130_fd_sc_hd__nand4_2        1
-     sky130_fd_sc_hd__nor2_2        37
-     sky130_fd_sc_hd__nor2b_2        2
-     sky130_fd_sc_hd__nor3_2         1
-     sky130_fd_sc_hd__nor3b_2        4
-     sky130_fd_sc_hd__nor4_2         1
-     sky130_fd_sc_hd__o211a_2        2
+     sky130_fd_sc_hd__inv_2         16
+     sky130_fd_sc_hd__mux2_2       199
+     sky130_fd_sc_hd__nand2_2       43
+     sky130_fd_sc_hd__nand2b_2       3
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nor2_2        31
+     sky130_fd_sc_hd__nor2b_2        3
+     sky130_fd_sc_hd__nor3b_2        2
+     sky130_fd_sc_hd__o211a_2        3
      sky130_fd_sc_hd__o211ai_2       1
-     sky130_fd_sc_hd__o21a_2        19
-     sky130_fd_sc_hd__o21ai_2        8
-     sky130_fd_sc_hd__o21ba_2        6
-     sky130_fd_sc_hd__o21bai_2       4
-     sky130_fd_sc_hd__o221a_2        6
-     sky130_fd_sc_hd__o22a_2         9
-     sky130_fd_sc_hd__o22ai_2        1
-     sky130_fd_sc_hd__o2bb2a_2       2
-     sky130_fd_sc_hd__o311a_2        1
-     sky130_fd_sc_hd__o311ai_2       1
-     sky130_fd_sc_hd__o31a_2         4
-     sky130_fd_sc_hd__o31ai_2        1
-     sky130_fd_sc_hd__o32a_2         3
-     sky130_fd_sc_hd__or2_2         54
-     sky130_fd_sc_hd__or2b_2         9
+     sky130_fd_sc_hd__o21a_2        26
+     sky130_fd_sc_hd__o21ai_2       12
+     sky130_fd_sc_hd__o21ba_2        4
+     sky130_fd_sc_hd__o21bai_2       2
+     sky130_fd_sc_hd__o221a_2        5
+     sky130_fd_sc_hd__o22a_2        11
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__o311a_2        2
+     sky130_fd_sc_hd__o31a_2         3
+     sky130_fd_sc_hd__o31ai_2        2
+     sky130_fd_sc_hd__o32a_2         2
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2         48
+     sky130_fd_sc_hd__or2b_2         5
      sky130_fd_sc_hd__or3_2          3
      sky130_fd_sc_hd__or3b_2         3
-     sky130_fd_sc_hd__xnor2_2       22
-     sky130_fd_sc_hd__xor2_2         6
+     sky130_fd_sc_hd__or4_2          1
+     sky130_fd_sc_hd__xnor2_2       23
+     sky130_fd_sc_hd__xor2_2         7
 
-   Chip area for module '\tt_um_moving_average_master': 13376.579200
+   Chip area for module '\tt_um_moving_average_master': 13344.048000
 
