@@ -1,9 +1,9 @@
 {
-  "app": "Tiny Tapeout tt06 b544d27d",
+  "app": "Tiny Tapeout tt06 d9a6d620",
   "repo": "https://github.com/scorbetta/tt06-scorbetta-goa",
   "commit": "0206e8503731efd8848b47a48e6e03e5778bc27c",
-  "workflow_url": "https://github.com/scorbetta/tt06-scorbetta-goa/actions/runs/8523560553",
+  "workflow_url": "https://github.com/scorbetta/tt06-scorbetta-goa/actions/runs/8662433685",
   "sort_id": 1711018340303,
-  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
-  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
 }
