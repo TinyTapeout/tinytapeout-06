@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "tt06-MinMCU-RV32E"   # Project title
+  title:        "tt06-RV32E_MinMCU"   # Project title
   author:       "Weihao Liu"          # Your name
   discord:      "weihao.dev"          # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Microcontroller RV32E implementation. Supports inputs, outputs, GPIOs, UART and SPI."      # One line description of what your project does
