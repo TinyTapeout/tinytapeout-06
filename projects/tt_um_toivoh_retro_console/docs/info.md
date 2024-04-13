@@ -7,8 +7,46 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-How it works
-============
+## What it is
+
+AnemoneGrafx-8 is a retro console containing
+- a PPU for VGA graphics output
+- an analog emulation polysynth for sound output
+
+The design is intended to work together with the RP2040 microcontroller on the Tiny Tapeout 06 Demo Board, the RP2040 providing
+- RAM emulation
+- Connections to the outside world for the console (except VGA output)
+- The CPU to drive the console
+
+Features:
+- PPU:
+  - 320x240 @60 fps VGA output (actually 640x480 @60 VGA)
+    - Some lower resolutions are also supported, useful if the design can not be clocked at 50.35 MHz
+  - 16 color palette, choosing from 256 possible colors
+  - Two independently scrolling tile planes
+    - 8x8 pixel tiles
+    - color mode selectable per tile:
+      - 2 bits per pixel, using 4 subpalettes (selectable per tile)
+      - 4 bits per pixel, halved horizontal resolution (4x8 stretched to 8x8 pixels)
+  - 64 simultaneous sprites (more can be displayed at once with some Copper tricks)
+    - mode selectable per sprite:
+      - 16x8, 2 bits per pixel using 4 subpalettes (selectable per sprite)
+      - 8x8, 4 bits per pixel
+    - up to 4 sprites can be loaded and overlapping at the same pixel
+      - more sprites can be visible on same scan line as long as they are not too cramped together
+  - Simple Copper-like function for register control synchronized to pixel timing
+    - write PPU registers
+    - wait for x/y coordinate
+- AnemoneSynth:
+  - 16 bit 96 kHz output
+  - 4 voices, each with
+    - Two oscillators
+      - Option to let the sub-oscillator generate noise
+    - Three waveform generators with choice of sawtooth, triangle, pulse waves with 4 different duty cycles, 2 bit sawooth and triangle
+    - 2nd order low pass filter
+      - Sweepable volume, cutoff frequency, and resonance
+
+## How it works
 
 The console consists of two parts:
 - The PPU generates a stream of pixels that can be output as a VGA signals, based tile graphics, map, and sprite data read from memory, and the contents of the palette registers.
@@ -17,8 +55,7 @@ The console consists of two parts:
 		- adding the contributions for four 96 kHz samples from the voice to internal buffers in one go
 	- outputting each 96 kHz sample once it has received contributions from each voice
 
-PPU
----
+### PPU
 
 	                index
 	                depth,
@@ -44,19 +81,19 @@ The PPU uses 4 clock cycles to generate each pixel, which is duplicated into two
 
 Many of the registers and memories in the PPU are implemented as shift registers for compactness.
 
-### The read unit
+#### The read unit
 The read unit transmits a sequence of 16 bit addresses, and expects to recieve the corresponding 16 bit data word after a fixed delay. In this way, it can address a 128 kB address space. The delay is set so that the tile map unit can request tilemap data, and receive it just in time to use it to request pixel data four pixels later.
 The read unit transmits 4 address bits per cycle through the `addr_out` pins, and recieves 4 data bits per cycle through the `data_in` pins, completing one 16 bit read every _serial cycle_, which corresponds to one pixel or four clock cycles.
 
 The tile map unit has the highest priority, followed by the copper, and finally the sprite unit, which is expected to have enough buffering to be able to wait for access. The tile map unit will only make accesses on every other serial cycle on average, and the copper at most once every few cycles, but they can both be disabled to give more bandwidth to the sprite unit.
 
-### The tile map unit
+#### The tile map unit
 The tile map unit handles two independently scrolling tile planes, each composed of 8x8 pixel tiles.
 The two planes get read priority on alternating serial cycles.
 Each plane sends a read every four serial cycles, alternating between reading tile map data and the corresponding pixel data for the line.
 The pixel data for each plane (16 bits) is stored in a shift register and gradually shifted out until the register can be quickly refilled. The sequencing of the refill operation is adjusted to provide one extra pixel of delay in case the pixel data arrives one pixel early (as it might have to do since the plane only gets read priority every other cycle).
 
-### The sprite unit
+#### The sprite unit
 The sprite unit is the most complex part of the PPU. It works with a list of 64 sprites, and has 4 sprite buffers that can load sprite data for the current scan line. Once the final x coordinate of a sprite has passed, the corresponding sprite buffer can be reused to load a new sprite on the same line, as long as there is time to load the data before it should be displayed.
 
 Sprite data is stored in memory in two structures:
@@ -75,8 +112,7 @@ Each succeeding step has higher priority to access memory, but will only be acti
 
 Pixel data for each sprite buffer is stored in a 32 bit shift register, and gradually shifted out as needed. If sprite pixels are loaded after the sprite should start to be displayed, the shift register will catch up as fast as it can before starting to provide pixels to be displayed. This will cause the leftmost pixels of the sprite to disappear (or all of them, if too many sprites are crowded too close).
 
-Synth
------
+### Synth
 
                     phase              phase
 	main oscillator ---->    linear    ---->  waveform  ---> State variable ---> FIR downsampling ---> output buffer
@@ -104,13 +140,11 @@ To choose which steps, the phase value is bit reversed and compared to the manti
 
 Each time a voice is switched in, five sweep values are read from memory to decide if the two frequencies and 3 control periods for the state variable filters (see https://github.com/toivoh/tt05-synth) should be swept up or down. A similar approach is used as above, with a clock divider for the exponent part of the sweep rate, and bit reversing the swept value to decide whether to take a small or a big step.
 
-How to test
-===========
+## How to test
 
 TODO
 
-External hardware
-=================
+## External hardware
 
 A PMOD for VGA is needed for video output, that can accept VGA output according to https://tinytapeout.com/specs/pinouts/#vga-output.
 Means of sound output is TBD, a PMOD for I2S might be needed (if so, haven't decided which one to use yet).
