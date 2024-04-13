@@ -4,7 +4,7 @@ project:
   title:        "Tiny_Tapeout_6_Frank"      # Project title
   author:       "Frank Hellmann"            # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Clock Divider Test"             # One line description of what your project does
+  description:  "7Seg Around the Clock / FH display"             # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0   # Clock frequency in Hz (or 0 if not applicable)
 
