@@ -12,6 +12,8 @@ The MCU has the following peripherals:
 
 There is only 1 SPI controller in the design and this controller is used to interface with program memory and RAM. This SPI controller can be configured to interface with other SPI peripherals too.
 
+Tested with Lattice ice40-HX8K breakout board at 24MHz clock.
+
 ## Pin allocation
 
 PIN | UI_IN | UO_OUT | UIO
