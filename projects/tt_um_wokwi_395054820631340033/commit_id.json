@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/jpdasilva/tinytapeout-workshop",
+  "commit": "a3dfb9f8d32265becf3c0fafaa4c7116ad519724",
+  "workflow_url": "https://github.com/jpdasilva/tinytapeout-workshop/actions/runs/8673951165",
+  "sort_id": 1713016479910,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
