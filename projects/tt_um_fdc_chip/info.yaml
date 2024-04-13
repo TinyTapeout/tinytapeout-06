@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "Frequency to digital converters (asynchronous and synchronous)"      # Project title
+  author:       "Eduardo Holguin"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This chip combines asynchronous and synchronous frequency-to-digital converters, offering two options in a single package."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_fdc_chip"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_FDC_chip.v"
+    - "chip.v"
+    - "FDC_sincronico.v"
+    - "FDC_asincrono.v"
+    - "demux.v"
+    - "ripple_counter.v"
+    - "reg_file.v"
+    - "ff_d_fdc.v"
+    - "counter.v"
+    - "register.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "selec"
+  ui[1]: "clk_ref"
+  ui[2]: "VCO"
+  ui[3]: "reset"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "out[0]"
+  uo[1]: "out[1]"
+  uo[2]: "out[2]"
+  uo[3]: "out[3]"
+  uo[4]: "out[4]"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
