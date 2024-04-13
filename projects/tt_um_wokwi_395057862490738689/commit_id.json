@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/s1Pu11i/tt6_testsubmit_cju",
+  "commit": "202f46a33c83dbe8ce2b72fba27fce6d9e6c8cc0",
+  "workflow_url": "https://github.com/s1Pu11i/tt6_testsubmit_cju/actions/runs/8674114273",
+  "sort_id": 1713017865826,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
