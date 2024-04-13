@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/splinedrive/KianV-RV32IMA-RISC-V-uLinux-SoC",
+  "commit": "70facbbd14b78b76a96913c6e0e7190ca77ed816",
+  "workflow_url": "https://github.com/splinedrive/KianV-RV32IMA-RISC-V-uLinux-SoC/actions/runs/8672163680",
+  "sort_id": 1713002922410,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}

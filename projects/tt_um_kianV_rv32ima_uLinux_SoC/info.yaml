@@ -1,0 +1,88 @@
+# Tiny Tapeout project information
+project:
+  title:        "KianV uLinux SoC"      # Project title
+  author:       "Hirosh Dabui"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A RISC-V ASIC that can boot μLinux."      # One line description of what your project does
+  language:     "verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "8x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_kianV_rv32ima_uLinux_SoC"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+  source_files:
+    - "spi.v"
+    - "divider.v"
+    - "rx_uart.v"
+    - "defines_soc.vh"
+    - "csr_exception_handler.v"
+    - "riscv_defines.vh"
+    - "rv32_amo_opcodes.vh"
+    - "design_elements.v"
+    - "fifo.v"
+    - "mcause.vh"
+    - "soc.v"
+    - "alu_decoder.v"
+    - "datapath_unit.v"
+    - "extend.v"
+    - "load_alignment.v"
+    - "alu.v"
+    - "csr_utilities.vh"
+    - "qqspi.v"
+    - "load_decoder.v"
+    - "riscv_priv_csr_status.vh"
+    - "multiplier_decoder.v"
+    - "csr_decoder.v"
+    - "clint.v"
+    - "register_file.v"
+    - "misa.vh"
+    - "tx_uart.v"
+    - "tt_um_kianV_rv32ima_uLinux_SoC.v"
+    - "main_fsm.v"
+    - "divider_decoder.v"
+    - "multiplier_extension_decoder.v"
+    - "multiplier.v"
+    - "store_alignment.v"
+    - "store_decoder.v"
+    - "control_unit.v"
+    - "kianv_harris_mc_edition.v"
+
+pinout:
+  # Inputs
+  ui[0]: "uart_rx"
+  ui[1]: "spi_sio1_so_miso0"
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "spi_cen0"
+  uo[1]: "spi_sclk0"
+  uo[2]: "spi_sio0_si_mosi0"
+  uo[3]: "led[0]"
+  uo[4]: "uart_tx"
+  uo[5]: "led[1]"
+  uo[6]: "led[2]"
+  uo[7]: "led[3]"
+
+  # Bidirectional pins
+  uio[0]: "ce0 flash"
+  uio[1]: "sio0"
+  uio[2]: "sio1"
+  uio[3]: "sck"
+  uio[4]: "sd2"
+  uio[5]: "sd3"
+  uio[6]: "cs1 psram"
+  uio[7]: "always high"
+
+# Do not change!
+yaml_version: 6
+
