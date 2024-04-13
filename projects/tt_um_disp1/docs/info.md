@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-test
+I just copied [Uri's project](https://wokwi.com/projects/347069718502310484) and messed around with its verilog
 
 ## How to test
 
-test
+Connect 0-7 outputd to LCD pins: D4 D5 D6 D7 E 
 
 ## External hardware
 
-test
+Character LCD
