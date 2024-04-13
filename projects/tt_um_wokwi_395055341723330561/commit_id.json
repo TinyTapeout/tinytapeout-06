@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/Inne-Lemstra/HaD_chip_workshop",
+  "commit": "d5365a42fd4a38dd2bcea98b4561d81fd520a136",
+  "workflow_url": "https://github.com/Inne-Lemstra/HaD_chip_workshop/actions/runs/8673990303",
+  "sort_id": 1713016719850,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
