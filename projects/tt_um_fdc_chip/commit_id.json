@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/EduHolg/FDC_chip",
+  "commit": "d3279a5521e4e9e34c48c8815fae9ce8b2140421",
+  "workflow_url": "https://github.com/EduHolg/FDC_chip/actions/runs/8670266733",
+  "sort_id": 1712974380807,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
