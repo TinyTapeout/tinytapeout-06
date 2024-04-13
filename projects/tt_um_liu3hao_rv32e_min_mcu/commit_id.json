@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/liu3hao/tt06-rv32e_minmcu",
+  "commit": "14614ddb50c1cd16b2294439bf17c30ddd0a8fb0",
+  "workflow_url": "https://github.com/liu3hao/tt06-rv32e_minmcu/actions/runs/8672296185",
+  "sort_id": 1712998706034,
+  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
+  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+}
