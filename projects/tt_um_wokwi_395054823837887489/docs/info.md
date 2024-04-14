@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-It doesn't
+Pull IN0 high, dice will roll. Release and it will stop.
 
 ## How to test
 
@@ -17,4 +17,4 @@ Please don't
 
 ## External hardware
 
-nope
+7seg display mapped a-g to OUT0-6, a button to VCC on IN0
