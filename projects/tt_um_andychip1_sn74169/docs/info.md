@@ -13,7 +13,24 @@ Verilog model of the SN74169.
 
 ## How to test
 
-Observe load, count up, count down, and inhibit functions.
+ui_in[3:0] = A[3:0] 4b parallel load
+
+ui_in[4] = ENPB
+
+ui_in[5] = ENTB
+
+ui_in[6] = LOADB
+
+ui_in[7] = UP/DOWNB
+
+uo_out[3:0] = Q[3:0] 4b output
+
+uo_out[4] = RCOB
+
+uo_out[5] = !ui_in[0]  - for debugging
+
+clk = system clock
+
 
 ## External hardware
 
