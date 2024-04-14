@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/dsatizabal/tt06-fet-opamp",
-  "commit": "c94f1e291a6038388a7acccee5711fcbd0aa4095",
-  "workflow_url": "https://github.com/dsatizabal/tt06-fet-opamp/actions/runs/8637003646",
+  "commit": "890a19d100083028a0317d6e8c352f96e13d118a",
+  "workflow_url": "https://github.com/dsatizabal/tt06-fet-opamp/actions/runs/8680977058",
   "sort_id": 1712778994955,
   "analog": true
 }

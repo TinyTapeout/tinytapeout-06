@@ -20,34 +20,34 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "UNUSED"
-  ui[1]: "UNUSED"
-  ui[2]: "UNUSED"
-  ui[3]: "UNUSED"
-  ui[4]: "UNUSED"
-  ui[5]: "UNUSED"
-  ui[6]: "UNUSED"
-  ui[7]: "UNUSED"
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
-  uo[0]: "UNUSED"
-  uo[1]: "UNUSED"
-  uo[2]: "UNUSED"
-  uo[3]: "UNUSED"
-  uo[4]: "UNUSED"
-  uo[5]: "UNUSED"
-  uo[6]: "UNUSED"
-  uo[7]: "UNUSED"
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "UNUSED"
-  uio[1]: "UNUSED"
-  uio[2]: "UNUSED"
-  uio[3]: "UNUSED"
-  uio[4]: "UNUSED"
-  uio[5]: "UNUSED"
-  uio[6]: "UNUSED"
-  uio[7]: "UNUSED"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
