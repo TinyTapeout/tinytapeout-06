@@ -12,10 +12,19 @@ You can also include images in this folder and reference them in the markdown. E
 This is a simple ``Hello World`` project for Chisel. It is a simple counter with 7-segment display output.
 And a Morse code generator writing out ``hello world`` in Morse code.
 
+
+The project displays a counter on the 7-segment display.
+It also writes our ``hello world`` in Morse on the DP of the 7-segment display.
+Furthermore, it also playes the Morse with PWM on the BIDIR PMOD, connected to
+a PmodAMP2.
+
+To better see the Morse code, the counter display can be disabled with
+switch 0.
+
 ## How to test
 
-Currently we use cocotb, this shall change to ChiselTest
+Currently, we use cocotb, this shall change to ChiselTest
 
 ## External hardware
 
-Audio PMOD for audio output
+Audio PMOD (PmodAMP2) for audio output on the lower row of the BIDIR PMOD.
