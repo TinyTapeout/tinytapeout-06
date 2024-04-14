@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395142547244224513       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "EFAB Demo 2"      # Project title
+  author:       "Anton Maurovic"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Displays 'EFAB' on 7seg display"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     2       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "run"
+  ui[1]: ""
+  ui[2]: "state_init[0]"
+  ui[3]: "state_init[1]"
+  ui[4]: "state_init[2]"
+  ui[5]: "state_init[3]"
+  ui[6]: ""
+  ui[7]: "no_blink"
+
+  # Outputs
+  uo[0]: "a"
+  uo[1]: "b"
+  uo[2]: "c"
+  uo[3]: "d"
+  uo[4]: "e"
+  uo[5]: "f"
+  uo[6]: "g"
+  uo[7]: "dot"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
