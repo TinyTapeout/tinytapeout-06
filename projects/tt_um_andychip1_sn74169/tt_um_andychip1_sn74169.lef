@@ -129,7 +129,7 @@ MACRO tt_um_andychip1_sn74169
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 125.430 110.520 125.730 111.520 ;
@@ -435,7 +435,7 @@ MACRO tt_um_andychip1_sn74169
       LAYER li1 ;
         RECT 2.760 2.635 158.240 108.885 ;
       LAYER met1 ;
-        RECT 2.760 2.480 159.040 109.440 ;
+        RECT 2.760 2.480 159.040 109.780 ;
       LAYER met2 ;
         RECT 4.230 2.535 159.010 110.005 ;
       LAYER met3 ;
