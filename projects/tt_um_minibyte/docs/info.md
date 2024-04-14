@@ -79,13 +79,14 @@ Upon reset, the device will be initialized with all registers cleared out to 0. 
 
 ### Instruction Set
 
-The Minibyte CPU has 3 format types for its instructions. The instruction memory is chunked into bytes, with some instructions only occupying a single byte for their operand, while the others consume 2 bytes for an opcode and a following operand
+The Minibyte CPU has 4 format types for its instructions. The instruction memory is chunked into bytes, with some instructions only occupying a single byte, while others consume 2 bytes for an opcode and a following operand
 
 | Type               | Length      | Desc |
 | ------------------ | -------     | ------- |
-| Basic              | 8 - bits    | IR with no operand |
-| Immediate Operand  | 16 - bits   | IR with an operand containing immediate operand data |
-| Direct Operand     | 16 - bits   | IR with an operand containing an address in memory where operand data resides |
+| Inherent           | 8 - bits    | IR with no operand |
+| Immediate          | 16 - bits   | IR with an operand containing DATA |
+| Direct             | 16 - bits   | IR with an operand containing an ADDRESS |
+| Indirect           | 16 - bits   | IR with an operand containing an ADDRESS that points to another ADDRESS |
 
 As a visual reference, here is how we would expect a basic program to look in memory. Please note that all programs start executing from address 0x00 as shown.
 
@@ -93,11 +94,11 @@ As a visual reference, here is how we would expect a basic program to look in me
 
 This program adds the numbers 0x05 and 0x03 together, and then loops back to the starting IP of 0x00
 
-#### Basic IR:
+#### Inherent IR:
 
-| Type               | OP[7:0]   |
-| ------------------ | -------   |
-| Basic              | IR OPCODE |
+| Type                  | OP[7:0]   |
+| --------------------- | -------   |
+| Inherent              | IR OPCODE |
 
 #### Immediate/Direct IR:
 
@@ -105,6 +106,7 @@ This program adds the numbers 0x05 and 0x03 together, and then loops back to the
 | ------------------ | -------   | -------          |
 | Immediate          | IR OPCODE | OPERAND DATA     |
 | Direct             | IR OPCODE | OPERAND ADDRESS  |
+| Indirect           | IR OPCODE | OPERAND ADDRESS  |
 
 ####
 
@@ -115,8 +117,8 @@ This program adds the numbers 0x05 and 0x03 together, and then loops back to the
 | NOP        | 0x00  | N/A       | N/A      | No Operation                                                                       |
 | LDA_IMM    | 0x01  | Immediate | N/A      | Load A with immediate operand data                                                 |
 | LDA_DIR    | 0x02  | Direct    | N/A      | Load A with the data stored at the operand address                                 |
-| STA_IMM    | 0x03  | Immediate | N/A      | Store A at the operand address                                                     |
-| STA_DIR    | 0x04  | Direct    | N/A      | Store A at the address contained at the operand address                            |
+| STA_DIR    | 0x03  | Direct    | N/A      | Store A at the operand address                                                     |
+| STA_IND    | 0x04  | Indirect  | N/A      | Store A at the address contained at the operand address                            |
 | ADD_IMM    | 0x05  | Immediate | N/A      | Add the immediate operand data to A                                                |
 | ADD_DIR    | 0x06  | Direct    | N/A      | Add the data stored at the operand address to A                                    |
 | SUB_IMM    | 0x07  | Immediate | N/A      | Subtract the immediate operand data from A                                         |
@@ -139,26 +141,27 @@ This program adds the numbers 0x05 and 0x03 together, and then loops back to the
 | RSL_DIR    | 0x18  | Direct    | N/A      | Rotate A left by the data stored at the operand address                            |
 | RSR_IMM    | 0x19  | Immediate | N/A      | Rotate A right by the immediate operand data                                       |
 | RSR_DIR    | 0x1A  | Direct    | N/A      | Rotate A right by the data stored at the operand address                           |
-| JMP_IMM    | 0x1B  | Immediate | N/A      | Jump PC to the address specified by the immediate operand                          |
-| JMP_DIR    | 0x1C  | Direct    | N/A      | Jump PC to the address stored at the operand address                               |
-| BNE_IMM    | 0x1D  | Immediate | Z=CLEAR  | Jump PC (if ALU z flag is clear) to the address specified by the immediate operand |
-| BNE_DIR    | 0x1E  | Direct    | Z=CLEAR  | Jump PC (if ALU z flag is clear) to the address stored at the operand address      |
-| BEQ_IMM    | 0x1F  | Immediate | Z=SET    | Jump PC (if ALU z flag is set) to the address specified by the immediate operand   |
-| BEQ_DIR    | 0x20  | Direct    | Z=SET    | Jump PC (if ALU z flag is set) to the address stored at the operand address        |
-| BPL_IMM    | 0x21  | Immediate | N=CLEAR  | Jump PC (if ALU n flag is clear) to the address specified by the immediate operand |
-| BPL_DIR    | 0x22  | Direct    | N=CLEAR  | Jump PC (if ALU n flag is clear) to the address stored at the operand address      |
-| BMI_IMM    | 0x23  | Immediate | N=SET    | Jump PC (if ALU n flag is set) to the address specified by the immediate operand   |
-| BMI_DIR    | 0x24  | Direct    | N=SET    | Jump PC (if ALU n flag is set) to the address stored at the operand address        |
+| JMP_DIR    | 0x1B  | Direct    | N/A      | Jump PC to the address specified by the operand                                    |
+| JMP_IND    | 0x1C  | Indirect  | N/A      | Jump PC to the address stored at the operand address                               |
+| BNE_DIR    | 0x1D  | Direct    | Z==CLEAR | Jump PC (if ALU z flag is clear) to the address specified by the operand           |
+| BNE_IND    | 0x1E  | Indirect  | Z==CLEAR | Jump PC (if ALU z flag is clear) to the address stored at the operand address      |
+| BEQ_DIR    | 0x1F  | Direct    | Z==SET   | Jump PC (if ALU z flag is set) to the address specified by the operand             |
+| BEQ_IND    | 0x20  | Indirect  | Z==SET   | Jump PC (if ALU z flag is set) to the address stored at the operand address        |
+| BPL_DIR    | 0x21  | Direct    | N==CLEAR | Jump PC (if ALU n flag is clear) to the address specified by the operand           |
+| BPL_IND    | 0x22  | Indirect  | N==CLEAR | Jump PC (if ALU n flag is clear) to the address stored at the operand address      |
+| BMI_DIR    | 0x23  | Direct    | N==SET   | Jump PC (if ALU n flag is set) to the address specified by the operand             |
+| BMI_IND    | 0x24  | Indirect  | N==SET   | Jump PC (if ALU n flag is set) to the address stored at the operand address        |
 
 ### DFT Features
 
-The Minibyte CPU has a few DFT features that should prove helpful on live silicon debug/testing
+The Minibyte CPU has a few DFT features that should prove helpful on live silicon debug/testing. All functions are enabled by an active high signal, so ui_in[7:0] should be tied to zero during normal operation
 
-| ui_in Bit   | Feature          |
-| ---------   | -------          |
-| ui_in [7:4] | Unused           |
-| ui_in [3]   | Enable Demo ROM  |
-| ui_in [2:0] | Debug Out Select |
+| ui_in Bit   | Feature                         |
+| ---------   | -------                         |
+| ui_in [7:5] | Unused                          |
+| ui_in [4]   | Enable Demo ROM                 |
+| ui_in [3]   | Halt Control Unit on Next Fetch |
+| ui_in [2:0] | Debug Out Select                |
 
 The CPU has an extra mux between the normal addr out mux and the uo_out pins. To leverage this ui_in [2:0] can be used to select a debug signal to output on the uo_out[6:0] pins.
 
@@ -189,7 +192,7 @@ To run the test suite, cd into the ./test directory of the project and run "make
 
 The easiest way to test the Minibyte CPU on live silicon is to use the built-in Demo ROM
 
-To enable the Demo ROM, make sure that ui_in[3] is held high on reset, and remains high while the program runs
+To enable the Demo ROM, make sure that ui_in[4] is held high on reset, and remains high while the program runs
 
 The Demo ROM will run the following program
 
@@ -213,14 +216,14 @@ The Demo ROM will run the following program
         }
 
 
-To capture the output of the program with LEDs, it is recommended to add a D-Flip Flop on the output of the data buss (uio[7:0]). See External Hardware section below for more details
+To capture the output of the program with LEDs, it is recommended to add a D-Flip Flop (such as a 74x273 series chip) on the output of the data buss (uio[7:0]). See External Hardware section below for more details
 
 ## External hardware
 
 ### Demo Setup
 ![Demo Schematic](demo_setup.png)
 
-Something like the above schematic is recommended to run the Demo ROM. Note that we should use an inverter as shown on the CLK of the DFF, as we want data to be latched when WE falls back to 0 (after the data has had time to set up and make its way out of the chip). Please also note that you will probably need to run the CPU at a fairly low CLK frequency in order to see any LED activity with the naked eye.
+Something like the above schematic is recommended to run the Demo ROM. Note that we should use an inverter (like a 74x04 series chip) as shown on the CLK of the DFF, as we want data to be latched when WE falls back to 0 (after the data has had time to set up and make its way out of the chip). Please also note that you will probably need to run the CPU at a fairly low CLK frequency in order to see any LED activity with the naked eye.
 
 ### Other Setups
 
