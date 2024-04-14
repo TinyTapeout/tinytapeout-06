@@ -1,9 +1,9 @@
 {
-  "app": "Tiny Tapeout tt06 ca190609",
+  "app": "Tiny Tapeout tt06 d5153c3f",
   "repo": "https://github.com/iic-jku/jku-tt06-tdc-v2",
   "commit": "bcbf8005357ad638f9322f2670529f496db173e8",
-  "workflow_url": "https://github.com/iic-jku/jku-tt06-tdc-v2/actions/runs/8490559671",
+  "workflow_url": "https://github.com/iic-jku/jku-tt06-tdc-v2/actions/runs/8679868973",
   "sort_id": 1711752637164,
-  "openlane_version": "OpenLane f691c8c0712ca6c6645e3fd548985b3cbcf08c78",
-  "pdk_version": "open_pdks e0f692f46654d6c7c99fc70a0c94a080dab53571"
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
 }
