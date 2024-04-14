@@ -1,0 +1,51 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+#  wokwi_id:     395134712676183041       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "Inverters"      # Project title
+  author:       "James Meech"      # Your name
+  discord:      "Meechy"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A set of inverters"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  top_module:  "tt_um_wokwi_395134712676183041"
+  source_files:        
+    - "project.v"
+    - "cells.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "D Flip Flop Input"
+  ui[1]: "Inverter 1 input"
+  ui[2]: "Inverter 2 input"
+  ui[3]: "Inverter 3 input"
+  ui[4]: "Inverter 4 input"
+  ui[5]: "Inverter 5 input"
+  ui[6]: "Inverter 6 input, also the output enable for all bidirectional pins connected to inverter inputs"
+  ui[7]: "Inverter 7 input, also the output enable for all bidirectional pins connected to inverter output"
+
+  # Outputs
+  uo[0]: "D Flip Flop output"
+  uo[1]: "Inverter 1 output"
+  uo[2]: "Inverter 2 output"
+  uo[3]: "Inverter 3 output"
+  uo[4]: "Inverter 4 output"
+  uo[5]: "Inverter 5 output"
+  uo[6]: "Inverter 6 output"
+  uo[7]: "Inverter 7 output"
+
+  # Bidirectional pins
+  uio[0]: "Bidirectional inverter 1 input"
+  uio[1]: "Bidirectional inverter 1 output"
+  uio[2]: "Bidirectional inverter 2 input"
+  uio[3]: "Bidirectional inverter 2 output"
+  uio[4]: "Bidirectional inverter 3 input"
+  uio[5]: "Bidirectional inverter 3 output"
+  uio[6]: "Bidirectional inverter 4 input"
+  uio[7]: "Bidirectional inverter 4 output"
+
+# Do not change!
+yaml_version: 6
