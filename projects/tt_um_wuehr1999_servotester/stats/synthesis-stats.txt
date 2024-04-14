@@ -30,7 +30,8 @@
      sky130_fd_sc_hd__and4_2         5
      sky130_fd_sc_hd__and4bb_2       1
      sky130_fd_sc_hd__buf_1         37
-     sky130_fd_sc_hd__conb_1        23
+     sky130_fd_sc_hd__buf_2          8
+     sky130_fd_sc_hd__conb_1        15
      sky130_fd_sc_hd__dfxtp_2       50
      sky130_fd_sc_hd__inv_2         12
      sky130_fd_sc_hd__mux2_2         1
@@ -56,5 +57,5 @@
      sky130_fd_sc_hd__xnor2_2        1
      sky130_fd_sc_hd__xor2_2         1
 
-   Chip area for module '\tt_um_wuehr1999_servotester': 2788.924800
+   Chip area for module '\tt_um_wuehr1999_servotester': 2798.934400
 
