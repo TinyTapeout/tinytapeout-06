@@ -3,7 +3,7 @@ project:
   title:        "Chisel Hello World"      # Project title
   author:       "Martin Schoeberl"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A Chisel Hello World with Counting and Morse Code (planned)"      # One line description of what your project does
+  description:  "A Chisel Hello World with Counting on the 7-segment display and showing/playing Morse Code of hello world"      # One line description of what your project does
   language:     "Chisel" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
