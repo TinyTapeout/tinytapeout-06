@@ -1,0 +1,72 @@
+# Tiny Tapeout project information
+project:
+  title:        "LISA SOC (128 bytes)"
+  author:       "Ken Pettit"
+  discord:      "busy_courgette_50064"
+  description:  "8-Bit Microcontroller SOC with 128 bytes DFFRAM module"
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     20000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "6x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_lisa"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "tt_um_lisa.v"
+    - "RAM32.v"
+    - "lisa_core.v"
+    - "lisa_dbg.v"
+    - "lisa_div.v"
+    - "lisa_periph.v"
+    - "lisa_io_mux.v"
+    - "lisa_qqspi.v"
+    - "lisa_qspi_controller.v"
+    - "lisa_rx8n.v"
+    - "lisa_tx8n.v"
+    - "lisa_i2c.v"
+    - "debug_ctrl.v"
+    - "debug_autobaud.v"
+    - "debug_brg.v"
+    - "debug_regs.v"
+    - "data_cache.v"
+    - "inst_cache.v"
+    - "i2c_master_byte_ctrl.v"
+    - "i2c_master_bit_ctrl.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "pa_in[0]/baud_div[0]"
+  ui[1]: "pa_in[1]/baud_div[1]"
+  ui[2]: "pa_in[2]/baud_div[2]"
+  ui[3]: "pa_in[3]/baud_div[3]/rx"
+  ui[4]: "pa_in[4]/baud_div[4]"
+  ui[5]: "pa_in[5]/baud_div[5]"
+  ui[6]: "pa_in[6]/baud_div[6]"
+  ui[7]: "pa_in[7]/baud_set"
+
+  # Outputs
+  uo[0]: "pa_out[0]"
+  uo[1]: "pa_out[1]"
+  uo[2]: "pa_out[2]"
+  uo[3]: "pa_out[3]"
+  uo[4]: "pa_out[4]/tx"
+  uo[5]: "pa_out[5]"
+  uo[6]: "pa_out[6]"
+  uo[7]: "pa_out[7]/baud_clk"
+
+  # Bidirectional pins
+  uio[0]: "ce0/ce_latch"
+  uio[1]: "mosi/dq1/ce0"
+  uio[2]: "miso/dq2/ce1"
+  uio[3]: "sclk"
+  uio[4]: "rx  /pb_io[0]/scl/sda"
+  uio[5]: "tx  /pb_io[1]/sda/scl"
+  uio[6]: "scl /pb_io[2]/dq2/rx"
+  uio[7]: "sda/pb_io[3]/dq3"
+
+# Do not change!
+yaml_version: 6
