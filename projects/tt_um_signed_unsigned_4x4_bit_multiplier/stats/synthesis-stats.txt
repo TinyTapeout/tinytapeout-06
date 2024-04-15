@@ -1,0 +1,39 @@
+
+64. Printing statistics.
+
+=== tt_um_signed_unsigned_4x4_bit_multiplier ===
+
+   Number of wires:                 83
+   Number of wire bits:            118
+   Number of public wires:          16
+   Number of public wire bits:      51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 99
+     sky130_fd_sc_hd__a21bo_2        3
+     sky130_fd_sc_hd__a21o_2         4
+     sky130_fd_sc_hd__a21oi_2        3
+     sky130_fd_sc_hd__a221o_2        1
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__a31o_2         2
+     sky130_fd_sc_hd__a32o_2         1
+     sky130_fd_sc_hd__and2_2         3
+     sky130_fd_sc_hd__and3_2         4
+     sky130_fd_sc_hd__buf_1          2
+     sky130_fd_sc_hd__buf_2          8
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__nand2_2       16
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nor2_2         3
+     sky130_fd_sc_hd__o21a_2         1
+     sky130_fd_sc_hd__o21ai_2        4
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__or2_2          5
+     sky130_fd_sc_hd__or3_2          2
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__xnor2_2        7
+     sky130_fd_sc_hd__xor2_2        10
+
+   Chip area for module '\tt_um_signed_unsigned_4x4_bit_multiplier': 817.033600
+
