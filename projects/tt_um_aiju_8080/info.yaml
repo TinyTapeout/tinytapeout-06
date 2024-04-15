@@ -22,9 +22,9 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
+  ui[0]: "bus_handshake_ack"
+  ui[1]: "debug_req"
+  ui[2]: "int_req"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -32,24 +32,24 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "bus_handshake_req"
+  uo[1]: "bus_state[0]"
+  uo[2]: "bus_state[1]"
+  uo[3]: "bus_io"
+  uo[4]: "cpu_fetch"
+  uo[5]: "cpu_in_debug"
+  uo[6]: "cpu_halted"
+  uo[7]: "cpu_int_ack"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "data_bus[0]"
+  uio[1]: "data_bus[1]"
+  uio[2]: "data_bus[2]"
+  uio[3]: "data_bus[3]"
+  uio[4]: "data_bus[4]"
+  uio[5]: "data_bus[5]"
+  uio[6]: "data_bus[6]"
+  uio[7]: "data_bus[7]"
 
 # Do not change!
 yaml_version: 6
