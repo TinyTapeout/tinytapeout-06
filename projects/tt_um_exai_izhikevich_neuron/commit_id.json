@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d5153c3f",
+  "repo": "https://github.com/existential-ai/izhekevich_neuron",
+  "commit": "c0b418b98f8480823f41390261b1ec48fbd74d2f",
+  "workflow_url": "https://github.com/existential-ai/izhekevich_neuron/actions/runs/8688920354",
+  "sort_id": 1713184119052,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}

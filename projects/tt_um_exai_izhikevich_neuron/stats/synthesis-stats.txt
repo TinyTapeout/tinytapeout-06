@@ -1,0 +1,81 @@
+
+63. Printing statistics.
+
+=== tt_um_exai_izhikevich_neuron ===
+
+   Number of wires:               2580
+   Number of wire bits:           2615
+   Number of public wires:          61
+   Number of public wire bits:      96
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2596
+     sky130_fd_sc_hd__a2111oi_2      1
+     sky130_fd_sc_hd__a211o_2       30
+     sky130_fd_sc_hd__a211oi_2      12
+     sky130_fd_sc_hd__a21bo_2       34
+     sky130_fd_sc_hd__a21boi_2      15
+     sky130_fd_sc_hd__a21o_2       133
+     sky130_fd_sc_hd__a21oi_2      122
+     sky130_fd_sc_hd__a221o_2       15
+     sky130_fd_sc_hd__a22o_2        61
+     sky130_fd_sc_hd__a22oi_2        7
+     sky130_fd_sc_hd__a2bb2o_2       6
+     sky130_fd_sc_hd__a311o_2        3
+     sky130_fd_sc_hd__a311oi_2       2
+     sky130_fd_sc_hd__a31o_2        45
+     sky130_fd_sc_hd__a31oi_2        6
+     sky130_fd_sc_hd__a32o_2         8
+     sky130_fd_sc_hd__a32oi_2        1
+     sky130_fd_sc_hd__and2_2       120
+     sky130_fd_sc_hd__and2b_2       60
+     sky130_fd_sc_hd__and3_2        67
+     sky130_fd_sc_hd__and3b_2        5
+     sky130_fd_sc_hd__and4_2        23
+     sky130_fd_sc_hd__and4bb_2       1
+     sky130_fd_sc_hd__buf_1        124
+     sky130_fd_sc_hd__buf_2         16
+     sky130_fd_sc_hd__conb_1         8
+     sky130_fd_sc_hd__dfxtp_2       53
+     sky130_fd_sc_hd__inv_2         56
+     sky130_fd_sc_hd__mux2_2        33
+     sky130_fd_sc_hd__mux4_2        22
+     sky130_fd_sc_hd__nand2_2      232
+     sky130_fd_sc_hd__nand2b_2       3
+     sky130_fd_sc_hd__nand3_2       67
+     sky130_fd_sc_hd__nand3b_2       6
+     sky130_fd_sc_hd__nand4_2       15
+     sky130_fd_sc_hd__nor2_2       213
+     sky130_fd_sc_hd__nor2b_2        1
+     sky130_fd_sc_hd__nor3_2        20
+     sky130_fd_sc_hd__nor3b_2        1
+     sky130_fd_sc_hd__nor4_2         3
+     sky130_fd_sc_hd__o2111a_2       1
+     sky130_fd_sc_hd__o2111ai_2      1
+     sky130_fd_sc_hd__o211a_2       22
+     sky130_fd_sc_hd__o211ai_2      17
+     sky130_fd_sc_hd__o21a_2        99
+     sky130_fd_sc_hd__o21ai_2       71
+     sky130_fd_sc_hd__o21ba_2       16
+     sky130_fd_sc_hd__o21bai_2      18
+     sky130_fd_sc_hd__o221a_2        4
+     sky130_fd_sc_hd__o221ai_2       1
+     sky130_fd_sc_hd__o22a_2        10
+     sky130_fd_sc_hd__o2bb2a_2       9
+     sky130_fd_sc_hd__o311a_2        5
+     sky130_fd_sc_hd__o31a_2        10
+     sky130_fd_sc_hd__o31ai_2        2
+     sky130_fd_sc_hd__o32a_2         1
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2        117
+     sky130_fd_sc_hd__or2b_2        72
+     sky130_fd_sc_hd__or3_2         36
+     sky130_fd_sc_hd__or3b_2        15
+     sky130_fd_sc_hd__or4_2          2
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__xnor2_2      258
+     sky130_fd_sc_hd__xor2_2       157
+
+   Chip area for module '\tt_um_exai_izhikevich_neuron': 25100.323200
+
