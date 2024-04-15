@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d5153c3f",
+  "repo": "https://github.com/schoeberl/tt06-lipsi",
+  "commit": "9f85676dfb8be0bb1ce16978da9a805158a5b03f",
+  "workflow_url": "https://github.com/schoeberl/tt06-lipsi/actions/runs/8696012345",
+  "sort_id": 1713215658629,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
