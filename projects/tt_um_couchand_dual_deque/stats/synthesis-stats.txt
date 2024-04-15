@@ -1,0 +1,62 @@
+
+64. Printing statistics.
+
+=== tt_um_couchand_dual_deque ===
+
+   Number of wires:               1077
+   Number of wire bits:           1112
+   Number of public wires:         221
+   Number of public wire bits:     256
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1093
+     sky130_fd_sc_hd__a2111o_2       7
+     sky130_fd_sc_hd__a211o_2       21
+     sky130_fd_sc_hd__a21bo_2        2
+     sky130_fd_sc_hd__a21o_2         2
+     sky130_fd_sc_hd__a21oi_2       12
+     sky130_fd_sc_hd__a221o_2        2
+     sky130_fd_sc_hd__a221oi_2       1
+     sky130_fd_sc_hd__a22o_2        65
+     sky130_fd_sc_hd__a31o_2        49
+     sky130_fd_sc_hd__a32o_2         8
+     sky130_fd_sc_hd__a41o_2         1
+     sky130_fd_sc_hd__and2_2        88
+     sky130_fd_sc_hd__and3_2        58
+     sky130_fd_sc_hd__and3b_2        5
+     sky130_fd_sc_hd__and4_2         6
+     sky130_fd_sc_hd__buf_1        160
+     sky130_fd_sc_hd__buf_2          4
+     sky130_fd_sc_hd__conb_1        12
+     sky130_fd_sc_hd__dfxtp_2      211
+     sky130_fd_sc_hd__inv_2         16
+     sky130_fd_sc_hd__mux2_1         1
+     sky130_fd_sc_hd__mux2_2       185
+     sky130_fd_sc_hd__mux4_2        16
+     sky130_fd_sc_hd__nand2_2       23
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nand3b_2       2
+     sky130_fd_sc_hd__nor2_2        25
+     sky130_fd_sc_hd__nor2b_2        2
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__nor3b_2        1
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o211a_2       23
+     sky130_fd_sc_hd__o21a_2         3
+     sky130_fd_sc_hd__o21ai_2        5
+     sky130_fd_sc_hd__o221a_2        2
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__o31a_2         2
+     sky130_fd_sc_hd__o32a_2         2
+     sky130_fd_sc_hd__or2_2         30
+     sky130_fd_sc_hd__or2b_2         4
+     sky130_fd_sc_hd__or3_2          3
+     sky130_fd_sc_hd__or3b_2         5
+     sky130_fd_sc_hd__or4_2          4
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__xnor2_2       16
+     sky130_fd_sc_hd__xor2_2         4
+
+   Chip area for module '\tt_um_couchand_dual_deque': 11955.216000
+
