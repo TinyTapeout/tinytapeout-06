@@ -23,7 +23,7 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
+  ui[0]: "switch on 7-segment"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -33,24 +33,24 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "segment a"
+  uo[1]: "segment b"
+  uo[2]: "segment c"
+  uo[3]: "segment d"
+  uo[4]: "segment e"
+  uo[5]: "segment f"
+  uo[6]: "segment g"
+  uo[7]: "dot: morse out"
 
   # Bidirectional pins
   uio[0]: ""
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
+  uio[4]: "audio"
+  uio[5]: "gain"
   uio[6]: ""
-  uio[7]: ""
+  uio[7]: "nshutdown"
 
 # Do not change!
 yaml_version: 6
