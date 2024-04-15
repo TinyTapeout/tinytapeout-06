@@ -206,9 +206,9 @@
     {
       "type": "wokwi-text",
       "id": "text6",
-      "top": -1132.8,
-      "left": 1113.6,
-      "attrs": { "text": "Keypad Decoder\n=============" }
+      "top": -1104,
+      "left": 316.8,
+      "attrs": { "text": "Keypad Decoder v1.1" }
     },
     {
       "type": "wokwi-text",
@@ -286,8 +286,8 @@
     {
       "type": "wokwi-text",
       "id": "text20",
-      "top": 96,
-      "left": 57.6,
+      "top": 441.6,
+      "left": 48,
       "attrs": { "text": "Ring Counter 1/4-bit" }
     },
     { "type": "wokwi-gate-or-2", "id": "or1", "top": -297.6, "left": 1948.8, "attrs": {} },
@@ -396,8 +396,8 @@
     {
       "type": "wokwi-text",
       "id": "text21",
-      "top": -384,
-      "left": 1497.6,
+      "top": -393.6,
+      "left": 1449.6,
       "attrs": { "text": "LCD Encoder 16-bit to 7-seg." }
     },
     {
@@ -414,11 +414,15 @@
       "left": -249.6,
       "attrs": { "text": "Clock > 100Hz " }
     },
-    { "type": "wokwi-mux-2", "id": "mux17", "top": -24, "left": -24, "rotate": 90, "attrs": {} },
-    { "type": "wokwi-vcc", "id": "pwr3", "top": -85.64, "left": 28.8, "attrs": {} },
-    { "type": "wokwi-gnd", "id": "gnd2", "top": -94.6, "left": 9.4, "rotate": 180, "attrs": {} },
     { "type": "wokwi-gnd", "id": "gnd4", "top": 432, "left": 201, "attrs": {} },
-    { "type": "wokwi-gnd", "id": "gnd6", "top": 1036.8, "left": 757.8, "attrs": {} }
+    { "type": "wokwi-flip-flop-d", "id": "flop17", "top": 38.4, "left": 67.2, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text23",
+      "top": 0,
+      "left": 67.2,
+      "attrs": { "text": "Synch Reset" }
+    }
   ],
   "connections": [
     [ "ttout:EXTOUT0", "sevseg1:A", "green", [ "h21.01", "v-28.8", "h96" ] ],
@@ -689,30 +693,29 @@
     [ "pwr1:GND", "or22:A", "black", [ "v-307.2", "h470.4", "v57.6" ] ],
     [ "pwr1:GND", "or16:A", "black", [ "v-307.2", "h614.4", "v96" ] ],
     [ "ttin:EXTRST_N", "btn2:1.l", "orange", [ "h-19.2", "v-681.6" ] ],
-    [ "ttin:RST_N", "mux17:SEL", "orange", [ "h0" ] ],
-    [ "mux17:OUT", "flop21:S", "#8f4814", [ "v0" ] ],
-    [ "pwr3:VCC", "mux17:A", "red", [ "v0" ] ],
-    [ "gnd2:GND", "mux17:B", "black", [ "v0" ] ],
     [ "gnd4:GND", "flop24:S", "black", [ "v0" ] ],
     [ "gnd4:GND", "flop23:S", "black", [ "v0" ] ],
     [ "gnd4:GND", "flop22:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop16:S", "black", [ "v-76.8" ] ],
-    [ "gnd6:GND", "flop15:S", "black", [ "v-163.2", "h28.8" ] ],
-    [ "gnd6:GND", "flop14:S", "black", [ "v-249.6" ] ],
-    [ "gnd6:GND", "flop13:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop12:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop11:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop10:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop9:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop8:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop7:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop6:S", "black", [ "v0" ] ],
-    [ "gnd6:GND", "flop5:S", "black", [ "v0" ] ],
     [ "flop5:S", "flop4:S", "black", [ "v0", "h-28.8", "v-86.4" ] ],
     [ "flop4:S", "flop3:S", "black", [ "v0", "h-28.8", "v-86.4" ] ],
     [ "flop3:S", "flop2:S", "black", [ "v0", "h-28.8", "v-86.4" ] ],
-    [ "flop2:S", "flop1:S", "black", [ "v0", "h-28.8", "v-86.4" ] ],
-    [ "flop21:R", "gnd4:GND", "black", [ "h0" ] ]
+    [ "flop2:S", "flop1:S", "black", [ "h-28.8", "v-86.4" ] ],
+    [ "flop21:R", "gnd4:GND", "black", [ "h0" ] ],
+    [ "flop1:S", "pwr1:GND", "black", [ "v-28.8", "h249.6" ] ],
+    [ "flop5:S", "flop6:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop6:S", "flop7:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop7:S", "flop8:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop8:S", "flop9:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop9:S", "flop10:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop10:S", "flop11:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop11:S", "flop12:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop12:S", "flop13:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop13:S", "flop14:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop14:S", "flop15:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "flop15:S", "flop16:S", "black", [ "v0", "h-28.8", "v86.4" ] ],
+    [ "ttin:RST_N", "flop17:D", "orange", [ "h48", "v240" ] ],
+    [ "flop17:NOTQ", "flop21:S", "#8f4814", [ "v0", "v28.8", "h-48" ] ],
+    [ "ttin:CLK", "flop17:CLK", "blue", [ "h67.2", "v268.8" ] ]
   ],
   "dependencies": {}
 }

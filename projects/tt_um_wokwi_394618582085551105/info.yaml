@@ -4,7 +4,7 @@ project:
   title:        "Keypad Decoder"
   author:       "Slobodan Vrkacevic"
   discord:      ""
-  description:  "Detects pressed key in 4x4 keypad matrix, and displays it on 7-seg. display"
+  description:  "A simple controller that detects a pressed key in 4x4 keypad matrix, and displays it on 7-seg. display"
   language:     "Wokwi"
   clock_hz:     1000       # Clock frequency in Hz (or 0 if not applicable)
 
