@@ -1,31 +1,54 @@
 
-63. Printing statistics.
+64. Printing statistics.
 
 === tt_um_nubcore_default_tape ===
 
-   Number of wires:                 38
-   Number of wire bits:             73
-   Number of public wires:           8
-   Number of public wire bits:      43
+   Number of wires:                191
+   Number of wire bits:            226
+   Number of public wires:          36
+   Number of public wire bits:      71
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 54
-     sky130_fd_sc_hd__a21bo_2        1
+   Number of cells:                207
+     sky130_fd_sc_hd__a2111o_2       2
+     sky130_fd_sc_hd__a2111oi_2      1
+     sky130_fd_sc_hd__a21boi_2       2
+     sky130_fd_sc_hd__a21o_2         7
+     sky130_fd_sc_hd__a21oi_2        3
+     sky130_fd_sc_hd__a22oi_2        1
      sky130_fd_sc_hd__a31o_2         2
      sky130_fd_sc_hd__a31oi_2        1
-     sky130_fd_sc_hd__and2_2         4
-     sky130_fd_sc_hd__and2b_2        2
-     sky130_fd_sc_hd__buf_1          1
-     sky130_fd_sc_hd__conb_1        16
-     sky130_fd_sc_hd__nand2_2        6
-     sky130_fd_sc_hd__nor2_2         5
+     sky130_fd_sc_hd__and2_2         9
+     sky130_fd_sc_hd__and2b_2        3
+     sky130_fd_sc_hd__and3_2        11
+     sky130_fd_sc_hd__and3b_2       14
+     sky130_fd_sc_hd__and4_2         9
+     sky130_fd_sc_hd__buf_1         22
+     sky130_fd_sc_hd__buf_2          8
+     sky130_fd_sc_hd__conb_1         9
+     sky130_fd_sc_hd__dfxtp_2       35
+     sky130_fd_sc_hd__inv_2          5
+     sky130_fd_sc_hd__nand2_2        8
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nor2_2        11
+     sky130_fd_sc_hd__nor4_2         1
      sky130_fd_sc_hd__o211a_2        1
-     sky130_fd_sc_hd__o21a_2         1
-     sky130_fd_sc_hd__o31a_2         1
-     sky130_fd_sc_hd__or2_2          4
-     sky130_fd_sc_hd__xnor2_2        5
-     sky130_fd_sc_hd__xor2_2         4
+     sky130_fd_sc_hd__o21a_2         3
+     sky130_fd_sc_hd__o21ai_2       10
+     sky130_fd_sc_hd__o21ba_2        2
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o32a_2         1
+     sky130_fd_sc_hd__or2_2          8
+     sky130_fd_sc_hd__or3_2          2
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__or4_2          5
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__or4bb_2        1
+     sky130_fd_sc_hd__xnor2_2        2
+     sky130_fd_sc_hd__xor2_2         1
 
-   Chip area for module '\tt_um_nubcore_default_tape': 420.403200
+   Chip area for module '\tt_um_nubcore_default_tape': 2045.712000
 
