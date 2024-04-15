@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Lipsi: Probably the Smallest Processor in the World"      # Project title
+  author:       "Martin Schoeberl"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A tiny 8-bit accumulator based microprocssor."      # One line description of what your project does
+  language:     "Chisel" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Change the example and make it unique by including your github username.
+  # tt_um_example will fail as name on submission. Change to something unique.
+  top_module:  "tt_um_lipsi_schoeberl"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line.
+  # For Chisel designs this is easy, as there is only one Verilg file to list, which contains all the Chisel generated Verilog.
+  source_files:        
+    - "tt_um_lipsi_schoeberl.v"
+    - "ChiselTop.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "input for Lipsi, also switch of blinking LED"
+  ui[1]: "input for Lipsi"
+  ui[2]: "input for Lipsi"
+  ui[3]: "input for Lipsi"
+  ui[4]: "input for Lipsi"
+  ui[5]: "input for Lipsi"
+  ui[6]: "input for Lipsi"
+  ui[7]: "input for Lipsi"
+
+  # Outputs
+  uo[0]: "segment a"
+  uo[1]: "segment b"
+  uo[2]: "segment c"
+  uo[3]: "segment d"
+  uo[4]: "segment e"
+  uo[5]: "segment f"
+  uo[6]: "segment g"
+  uo[7]: "dp (blinking)"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
