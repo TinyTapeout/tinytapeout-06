@@ -3,22 +3,27 @@
 
 === tt_um_wokwi_395054564978002945 ===
 
-   Number of wires:                 15
-   Number of wire bits:             50
-   Number of public wires:          13
-   Number of public wire bits:      48
+   Number of wires:                 90
+   Number of wire bits:            125
+   Number of public wires:          38
+   Number of public wire bits:      73
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 31
-     sky130_fd_sc_hd__buf_1          2
-     sky130_fd_sc_hd__buf_2          7
-     sky130_fd_sc_hd__conb_1        17
-     sky130_fd_sc_hd__dfxtp_2        1
-     sky130_fd_sc_hd__inv_2          1
-     sky130_fd_sc_hd__mux2_2         1
-     sky130_fd_sc_hd__or2_2          1
-     sky130_fd_sc_hd__xor2_2         1
+   Number of cells:                106
+     sky130_fd_sc_hd__a211o_2        3
+     sky130_fd_sc_hd__a21o_2         4
+     sky130_fd_sc_hd__a221o_2        1
+     sky130_fd_sc_hd__a22o_2         4
+     sky130_fd_sc_hd__and2_2         3
+     sky130_fd_sc_hd__buf_1         23
+     sky130_fd_sc_hd__buf_2         10
+     sky130_fd_sc_hd__conb_1        14
+     sky130_fd_sc_hd__dfrtp_2        4
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__dfxtp_2       19
+     sky130_fd_sc_hd__mux2_2        19
+     sky130_fd_sc_hd__or4_2          1
 
-   Chip area for module '\tt_um_wokwi_395054564978002945': 165.158400
+   Chip area for module '\tt_um_wokwi_395054564978002945': 1086.041600
 

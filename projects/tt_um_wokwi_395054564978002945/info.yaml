@@ -1,12 +1,12 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
   wokwi_id:     395054564978002945       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        "Temporary submission"      # Project title
+  title:        "Bestagon LED matrix driver"      # Project title
   author:       "Marijn"      # Your name
   discord:      "x3ex3e"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Show rotating ring on 7 segment display"      # One line description of what your project does
+  description:  "Driver for a hexagonal charlieplexed LED matrix"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     1       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     1000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -14,8 +14,8 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
+  ui[0]: "Data"
+  ui[1]: "Display Enable"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
@@ -24,21 +24,21 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "7 segment pin 1"
-  uo[1]: "7 segment pin 2"
-  uo[2]: "7 segment pin 3"
-  uo[3]: "7 segment pin 4"
-  uo[4]: "7 segment pin 5"
-  uo[5]: "7 segment pin 6"
-  uo[6]: "7 segment pin 7"
-  uo[7]: "7 segment pin 8"
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
+  uio[0]: "Display pin 0"
+  uio[1]: "Display pin 1"
+  uio[2]: "Display pin 2"
+  uio[3]: "Display pin 3"
+  uio[4]: "Display pin 4"
   uio[5]: ""
   uio[6]: ""
   uio[7]: ""
