@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d5153c3f",
+  "repo": "https://github.com/ariz207/tt06-CRC8bit",
+  "commit": "acd23874bb303a1e10af76384f4440b059229244",
+  "workflow_url": "https://github.com/ariz207/tt06-CRC8bit/actions/runs/8700054588",
+  "sort_id": 1713242798753,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
