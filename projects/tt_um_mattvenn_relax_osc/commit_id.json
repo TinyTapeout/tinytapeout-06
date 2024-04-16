@@ -4,5 +4,6 @@
   "commit": "c9d33202885a2581394b9330d4db29b1c41844dc",
   "workflow_url": "https://github.com/mattvenn/tt06-analog-relax-osc/actions/runs/8527564283",
   "sort_id": 1710837629335,
-  "analog": true
+  "analog": true,
+  "skip": true
 }
