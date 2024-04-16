@@ -52,7 +52,7 @@ pinout:
   uio[4]: "cs ram"
   uio[5]: ""
   uio[6]: ""
-  uio[7]: ""
+  uio[7]: "24 addressing bit mode"
 
 # Do not change!
 yaml_version: 6
