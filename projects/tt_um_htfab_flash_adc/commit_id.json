@@ -1,0 +1,8 @@
+{
+  "app": "custom_gds action",
+  "repo": "https://github.com/htfab/flash-adc",
+  "commit": "312eb07e26847df21e06ecef99efba540aa4ea6c",
+  "workflow_url": "https://github.com/htfab/flash-adc/actions/runs/8720611875",
+  "sort_id": 1713348731755,
+  "analog": true
+}
