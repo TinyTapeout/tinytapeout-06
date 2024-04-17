@@ -9,14 +9,23 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-So far this is just a plain and bog-standard CMOS inverter... maybe a bit on the big side.
+So far this is pretty basic:
+
+*   A big-standard CMOS inverter... maybe a bit on the large side.
+*   A simple R2R DAC.
 
 
 ## How to test
 
-Provide a digital input on `ui_in[0]`.
+For the CMOS inverter:
 
-Expect to see the inverse output on `uo_out[0]` but also on `ua[0]`.
+1.  Provide a digital input on `ui_in[0]`.
+2.  Expect to see the inverse output on `uo_out[0]` but also on `ua[0]`.
+
+For the R2R DAC:
+
+1.  All of the `uio_in` (bidirectional) inputs go into the R2R DAC.
+2.  Its output is on `ua[1]`.
 
 
 ## External hardware

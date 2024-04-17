@@ -27,6 +27,20 @@ module tt_um_algofoogle_tt06_grab_bag(
         .Y      (Y)
     );
 
+    r2r r2r(
+        .d0     (uio_in[0]),
+        .d1     (uio_in[1]),
+        .d2     (uio_in[2]),
+        .d3     (uio_in[3]),
+        .d4     (uio_in[4]),
+        .d5     (uio_in[5]),
+        .d6     (uio_in[6]),
+        .d7     (uio_in[7]),
+        .aout   (ua[1]),
+        .GND    (VGND),
+        .VSUB   (VGND)
+    );
+
     // Tie other digital outputs to VGND, so they don't float:
 
     //assign uo_out [7:1] = {7{VGND}};
