@@ -45,7 +45,7 @@ jobs:
           run_id: ${{ github.event.workflow_run.id }}
           workflow_conclusion: success
           name: efabless_submission
-          path: tinytapeout-05
+          path: tinytapeout-submission
 
       - name: Run precheck (run id = ${{ fromJSON(steps.download_artifact.outputs.artifacts)[0].workflow_run.id }})
         working-directory: mpw_precheck
@@ -71,11 +71,11 @@ jobs:
             oeb
           # Skipped checks: magic_drc (it's very slow)
           PDK_PATH: ${{ env.PDK_ROOT }}/sky130A
-          INPUT_DIRECTORY: ${{ github.workspace }}/tinytapeout-05
+          INPUT_DIRECTORY: ${{ github.workspace }}/tinytapeout-submission
 
       - name: Upload precheck results
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: precheck_results
-          path: tinytapeout-05/precheck_results
+          path: tinytapeout-submission/precheck_results
