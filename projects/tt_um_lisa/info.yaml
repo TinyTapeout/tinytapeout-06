@@ -49,24 +49,24 @@ pinout:
   ui[7]: "pa_in[7]/baud_set"
 
   # Outputs
-  uo[0]: "pa_out[0]"
-  uo[1]: "pa_out[1]"
-  uo[2]: "pa_out[2]"
-  uo[3]: "pa_out[3]"
-  uo[4]: "pa_out[4]/tx"
-  uo[5]: "pa_out[5]"
-  uo[6]: "pa_out[6]"
-  uo[7]: "pa_out[7]/baud_clk"
+  uo[0]: "pb_out[0]"
+  uo[1]: "pb_out[1]"
+  uo[2]: "pb_out[2]"
+  uo[3]: "pb_out[3]"
+  uo[4]: "pb_out[4]/tx"
+  uo[5]: "pb_out[5]"
+  uo[6]: "pb_out[6]"
+  uo[7]: "pb_out[7]/baud_clk"
 
   # Bidirectional pins
   uio[0]: "ce0/ce_latch"
   uio[1]: "mosi/dq1/ce0"
   uio[2]: "miso/dq2/ce1"
   uio[3]: "sclk"
-  uio[4]: "rx  /pb_io[0]/scl/sda"
-  uio[5]: "tx  /pb_io[1]/sda/scl"
-  uio[6]: "scl /pb_io[2]/dq2/rx"
-  uio[7]: "sda/pb_io[3]/dq3"
+  uio[4]: "rx  /pc_io[0]/scl/sda"
+  uio[5]: "tx  /pc_io[1]/sda/scl"
+  uio[6]: "scl /pc_io[2]/dq2/rx"
+  uio[7]: "sda/pc_io[3]/dq3"
 
 # Do not change!
 yaml_version: 6
