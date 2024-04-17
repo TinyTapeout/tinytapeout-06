@@ -44,15 +44,16 @@ The following is a block diagram of the project:
       * SPI/QSPI programmability (single/quad, port location, CE selects)
    - (Q)SPI interface for instruction fetch
    - Onboard 128 Byte RAM for DATA / DATA CACHE
-   - Data bus CACHE controller with 4 32-byte CACHE lines
+   - Data bus CACHE controller with 8 16-byte CACHE lines
    - Instruction CACHE with a single 4-instruction CACHE line
    - 16-bit programmable timer (with pre-divide)
    - Debug UART available to LISA core also
-   - 8-bit Input and Output port (PORTA)
-   - 4-bit BIDIR port (PORTB)
+   - 8-bit Input port (PORTA)
+   - 8-bit Output port (PORTB)
+   - 4-bit BIDIR port (PORTC)
    - I2C Master controller
    - Hardware 8x8 integer multiplier
-   - Hardware 16/8 divider
+   - Hardware 16/8 or 16/16 integer divider
    - Programmable I/O mux for maximum flexibility of I/O usage.
                                                                          
 It uses a 32x32 1RW [DFFRAM](https://github.com/AUCOHL/DFFRAM) macro to implement a 128 bytes (1 kilobit) RAM module.
