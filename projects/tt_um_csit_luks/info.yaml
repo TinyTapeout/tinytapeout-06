@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "CSIT-Luks"      # Project title
+  author:       "CSIT Team (Jan Furlan, Jurica Gašpar, Marko Marinović, Tin Sorić, Ivan Štignedec, Dino Terman, Jurica Kundrata)"      # Your name
+  discord:      "jk_2102"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Camera lighting settings recommender."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_csit_luks"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_csit_luks.v"
+    - "rotational_encoder/rotational_encoder.v"
+    - "seven_seg/seven_seg.v"
+    - "fsm/fsm.v"
+    - "spi_flash/spi_flash.v"
+    - "spi_sensor/spi_sensor.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "A (rot_encoder)"
+  ui[1]: "B (rot_encoder)"
+  ui[2]: "PB (rot_encoder)"
+  ui[3]: "MISO (spi_flash)"
+  ui[4]: "MISO (spi_sensor)"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "a (seven_seg)"
+  uo[1]: "b (seven_seg)"
+  uo[2]: "c (seven_seg)"
+  uo[3]: "d (seven_seg)"
+  uo[4]: "e (seven_seg)"
+  uo[5]: "f (seven_seg)"
+  uo[6]: "g (seven_seg)"
+  uo[7]: "dp (seven_seg)"
+
+  # Bidirectional pins
+  uio[0]: "an[0] (seven_seg)"
+  uio[1]: "an[1] (seven_seg)"
+  uio[2]: "an[2] (seven_seg)"
+  uio[3]: "an[3] (seven_seg)"
+  uio[4]: "SCLK (spi_flash, spi_sensor)"
+  uio[5]: "SS (spi_flash)"
+  uio[6]: "SS (spi_sensor)"
+  uio[7]: "MOSI (spi_flash)"
+
+# Do not change!
+yaml_version: 6
