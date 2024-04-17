@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project:
   title:        "Universal Motor and Actuator Controller"      # Project title
-  author:       "Dinçer Gökcen, Ethem Buğra Arslan, Batu Cem Özyurt"      # Your name
+  author:       "Assoc. Prof. Dinçer Gökcen, Ethem Buğra Arslan, Batu Cem Özyurt"      # Your name
   discord:      "batucem"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "bldc motor controller and autotuner for controller by MNS lab"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "4x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -17,7 +17,6 @@ project:
   source_files:        
     - "project.v"
     - "bldc_esc.v"
-    - "Divided_Clock.v"
     - "Divider32bit.v"
     - "I2C_SLAVE_4.v"
     - "pid_tuner.v"
