@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 eed83093",
+  "repo": "https://github.com/icarislab/tt06_trivium-prng_cu",
+  "commit": "e830c0c56964fb2a6cf743a52d4e2f4b68c579bc",
+  "workflow_url": "https://github.com/icarislab/tt06_trivium-prng_cu/actions/runs/8713810906",
+  "sort_id": 1713373559240,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
