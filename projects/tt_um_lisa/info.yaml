@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project:
-  title:        "LISA SOC (128 bytes)"
+  title:        "LISA 8-Bit Microcontroller"
   author:       "Ken Pettit"
   discord:      "busy_courgette_50064"
   description:  "8-Bit Microcontroller SOC with 128 bytes DFFRAM module"
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     20000000       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     22000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "6x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -31,7 +31,7 @@ project:
     - "debug_autobaud.v"
     - "debug_brg.v"
     - "debug_regs.v"
-    - "data_cache.v"
+    - "data_cache8.v"
     - "inst_cache.v"
     - "i2c_master_byte_ctrl.v"
     - "i2c_master_bit_ctrl.v"
