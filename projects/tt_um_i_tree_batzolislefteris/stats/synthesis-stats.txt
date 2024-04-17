@@ -3,33 +3,40 @@
 
 === tt_um_i_tree_batzolislefteris ===
 
-   Number of wires:                126
-   Number of wire bits:            161
-   Number of public wires:          42
-   Number of public wire bits:      77
+   Number of wires:                201
+   Number of wire bits:            236
+   Number of public wires:          55
+   Number of public wire bits:      90
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                142
+   Number of cells:                217
      sky130_fd_sc_hd__a211oi_2       1
-     sky130_fd_sc_hd__a21o_2         3
-     sky130_fd_sc_hd__a21oi_2        1
-     sky130_fd_sc_hd__a31o_2         1
-     sky130_fd_sc_hd__a32o_2         1
-     sky130_fd_sc_hd__and4bb_2       2
-     sky130_fd_sc_hd__buf_1         25
+     sky130_fd_sc_hd__a21o_2         2
+     sky130_fd_sc_hd__a22o_2        12
+     sky130_fd_sc_hd__a32o_2         2
+     sky130_fd_sc_hd__and2_2         4
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and4bb_2       1
+     sky130_fd_sc_hd__buf_1         37
      sky130_fd_sc_hd__buf_2          1
      sky130_fd_sc_hd__conb_1        23
-     sky130_fd_sc_hd__dfrtp_2       34
-     sky130_fd_sc_hd__inv_2          5
-     sky130_fd_sc_hd__mux2_2        32
-     sky130_fd_sc_hd__nand2_2        3
+     sky130_fd_sc_hd__dfrtp_2       47
+     sky130_fd_sc_hd__inv_2         39
+     sky130_fd_sc_hd__mux2_2        25
+     sky130_fd_sc_hd__nand2_2        4
+     sky130_fd_sc_hd__nand3_2        1
      sky130_fd_sc_hd__nor2_2         2
-     sky130_fd_sc_hd__nor2b_2        1
-     sky130_fd_sc_hd__o21ai_2        1
-     sky130_fd_sc_hd__or4_2          2
-     sky130_fd_sc_hd__or4b_2         2
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o211a_2        2
+     sky130_fd_sc_hd__o21ba_2        2
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__or2_2          3
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__or4_2          1
      sky130_fd_sc_hd__xnor2_2        2
 
-   Chip area for module '\tt_um_i_tree_batzolislefteris': 1669.100800
+   Chip area for module '\tt_um_i_tree_batzolislefteris': 2318.473600
 
