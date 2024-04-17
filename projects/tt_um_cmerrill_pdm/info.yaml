@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Parallel / SPI modulation tester"      # Project title
+  author:       "Chris Merrill"      # Your name
+  discord:      "notspelledright"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "PDM/PWM/PFM waveform output based on digital data in"      # One line description of what your project does
+  language:     "Amaranth" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_cmerrill_pdm"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "DAC Parallel Input, bit 0"
+  ui[1]: "DAC Parallel Input, bit 1"
+  ui[2]: "DAC Parallel Input, bit 2"
+  ui[3]: "DAC Parallel Input, bit 3"
+  ui[4]: "DAC Parallel Input, bit 4"
+  ui[5]: "DAC Parallel Input, bit 5"
+  ui[6]: "DAC Parallel Input, bit 6"
+  ui[7]: "DAC Parallel Input, bit 7"
+
+  # Outputs
+  uo[0]: "PDM Waveform Output"
+  uo[1]: ""
+  uo[2]: "PFM Output, Single cycle pulse"
+  uo[3]: "PFM Output, 50% duty cycle"
+  uo[4]: "PWM Waveformn Output"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "CLK_DIV[0]"
+  uio[1]: "CLK_DIV[1]"
+  uio[2]: "CLK_DIV[2]"
+  uio[3]: "CLK_DIV[3]"
+  uio[4]: "SPI CS_L / Parallel Latch"
+  uio[5]: "SPI SCLK"
+  uio[6]: "SPI SDI"
+  uio[7]: "Parallel/SPI Select (0 => Parallel, 1 => SPI)"
+
+# Do not change!
+yaml_version: 6
