@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395414987024660481       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "HELP for tinyTapeout"      # Project title
+  author:       "Ariella Eliassaf"      # Your name
+  discord:      "ariella_e"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Use 7segment to show 'HELP'"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "seg_a"
+  uo[1]: "seg_b"
+  uo[2]: "seg_c"
+  uo[3]: "seg_d"
+  uo[4]: "seg_e"
+  uo[5]: "seg_f"
+  uo[6]: "seg_g"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
