@@ -27,8 +27,8 @@ pinout:
   ui[1]: "left player down"
   ui[2]: "right player up"
   ui[3]: "right player down"
-  ui[4]: ""
-  ui[5]: ""
+  ui[4]: "engage left player AI"
+  ui[5]: "engage right player AI"
   ui[6]: ""
   ui[7]: ""
 
@@ -43,9 +43,9 @@ pinout:
   uo[7]: "h-sync"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
+  uio[0]: "state[0]"
+  uio[1]: "state[1]"
+  uio[2]: "state[2]"
   uio[3]: ""
   uio[4]: ""
   uio[5]: ""
