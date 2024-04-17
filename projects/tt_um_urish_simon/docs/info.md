@@ -12,7 +12,7 @@ add a new color at the end of the sequence, and move to the next turn.
 
 The game continues until the user has made a mistake. Then a game over sound is played, and the game restarts.
 
-Check out the online simulation at https://wokwi.com/projects/371755521090136065 (including wiring diagram).
+Check out the online simulation at https://wokwi.com/projects/395431892849488897 (including wiring diagram).
 
 ## How to test
 
