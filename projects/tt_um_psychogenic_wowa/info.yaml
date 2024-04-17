@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title:        "WoWA"      # Project title
+  author:       "Pat Deegan"      # Your name
+  discord:      "psychogenic"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Is it really the World Worst ADC?  Maybe it'll be a wow-ADC instead... we'll see!"      # One line description of what your project does
+  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_psychogenic_wowa"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "reset"
+  ui[1]: "enable calibrations"
+  ui[2]: "enable comparator"
+  ui[3]: "use external threshold"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "result bit 0"
+  uo[1]: "result bit 1"
+  uo[2]: "result bit 2"
+  uo[3]: "result bit 3"
+  uo[4]: "result bit 4"
+  uo[5]: "result bit 5"
+  uo[6]: "result bit 6"
+  uo[7]: "result bit 7"
+
+  # Bidirectional pins
+  uio[0]: "result ready"
+  uio[1]: "0"
+  uio[2]: "0"
+  uio[3]: "0"
+  uio[4]: "1"
+  uio[5]: "1"
+  uio[6]: "1"
+  uio[7]: "1"
+
+  # Analog pins - you can add more if you use them, up to 6.
+  # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
+  # The first pins is always ua[0], and the pin numbers must be sequential.
+  ua[0]: "Comparator out"
+  ua[1]: "p3 opamp out"
+  ua[2]: "p3 opamp plus"
+  ua[3]: "p3 opamp minus/ext threshold for comp"
+  ua[4]: "Analog input to ADC"
+  ua[5]: "Matt's DAC output"
+
+# Do not change!
+yaml_version: 6
