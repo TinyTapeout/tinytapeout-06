@@ -227,8 +227,136 @@ Available registers:
 
 ## Using the PPU
 The PPU is almost completely controlled through the VRAM (video RAM) contents.
-The copper is restarted when a new frame begins, and starts to read instructions at address `0xfffe`.
+The copper is restarted when a new frame begins, and starts to read instructions at address `0xfffe`. Copper instructions can write PPU registers; using the copper is the only way to write and initialize these registers.
 
+The PPU registers in turn control the display of tile planes and sprites.
+
+### PPU registers
+The PPU has 32 PPU registers, which control different aspects of its operation.
+Each register has up to 9 bits. The registers are laid out as follows:
+
+	Address Category    Contents
+	                      8    7    6    5    4    3    2    1    0
+	 0 - 15 pal0-pal15 | r2   r1   rb0  g2   g1   g0   b2   b1  | X |
+	16      scroll     |      scroll_x0                             |
+	17      .          |  X | scroll_y0                             |
+	18      .          |      scroll_x1                             |
+	19      .          |  X | scroll_y1                             |
+	20      copper_ctrl|      cmp_x                                 |
+	21      .          |      cmp_y                                 |
+	22      .          |      jump_lsb                              |
+	23      .          |      jump_msb                              |
+	24      base_addr  |      base_sorted                           |
+	25      .          |      base_oam                              |
+	26      .          |      base_map1    |      base_map0     | X |
+	27      .          |      X            |b_tile_s | b_tile_p | X |
+	28      gfxmode1   |      r_xe_hsync             | r_x0_fp      |
+	29      gfxmode2   |vpol|hpol|  vsel   |      r_x0_bp           |
+	30      gfxmode3   |      r_xe_active                           |
+	31      displaymask|      X       |lspr|lpl1|lpl0|dspr|dpl1|dpl0|
+
+where `X` means that the bit(s) in question are ignored.
+
+Initial values:
+- The `gfxmode` registers are initialized to `320x240` output (640x480 VGA output; pixels are always doubled in both directions before VGA output).
+- The `displaymask` register is initialized to load and display sprites as well as both tile planes (initial value `0b111111`).
+- The other registers, except the `copper_ctrl` category, need to be initialized after reset.
+
+Each PPU register is described in the appropriate section:
+- Palette (`pal0-pal15`)
+- Tile planes (`scroll`, `base_map0`, `base_map1`, `b_tile_p`, `lpl0`, `lpl1`, `dpl0`, `dpl1`)
+- Sprites (`base_sorted`, `base_oam`, `b_tile_s`, `lspr`, `dspr`)
+- Copper (`copper_ctrl`)
+- Graphics mode `gfxmode1-gfxmode3`)
+
+### Palette
+The PPU has a palette of 16 colors, each specified by 8 bits, which map to a 9 bit RGB333 color according to
+
+	R = {r2, r1, rb0}
+	G = {g2, g1, g0}
+	B = {b2, b1, rb0}
+
+where the least significant bit is shared between the red and blue channels.
+Each palette color is set by writing the corresponding `palN` register. The instant when a palette color register is written, its color value will be used to display the current pixel if it is inside the active display area.
+
+Tile and sprite graphics typically use 2 bits per pixel. They have a 4 bit `pal` attribute that specifies the mapping from tile pixels to paletter colors according to:
+
+    pal     color 0     color 1     color 2     color 3
+      
+      0           0           1           2           3
+      4           4           5           6           7
+      8           8           9          10          11
+     12          12          13          14          15
+      
+      2           2           3           4           5
+      6           6           7           8           9
+     10          10          11          12          13
+     14          14          15           0           1
+      
+      1           0           4           8          12
+      5           1           5           9          13
+      9           2           6          10          14
+     13           3           7          11          15
+      
+      3           8          12           1           5
+      7           9          13           2           6
+     11          10          14           3           7
+      
+     15 ---------------- 16 color mode ----------------
+
+_Note that color 0 is transparent unless the `always_opaque` bit of the sprite/tile is set._
+If no tile or sprite covers a given pixel, palette color 0 is used as background color.
+
+In 16 color mode, two horizontally consecutive 2 bit pixels are used to form one 4 bit pixel.
+- For 16 color tiles, each pixel is twice as wide to preserve the same total width.
+- 16 color sprites are half as wide (8 pixels instead of 16).
+
+### Tile graphic format
+Tile planes and sprites are based on 8x8 pixel graphic tiles with 2 bits/pixel.
+Each graphic tile is stored in 8 consecutive 16 bit words; one per line.
+Within each line, the first pixel is stored in the bottom two bits, then the next pixel, and so on.
+
+### Tile planes
+The PPU supports two independently scrolling tile planes. Plane 0 is in front of plane 1.
+Four `display_mask` bits control the behavior of the tile planes:
+- When `dpl0` (`dpl1`) is cleared, plane 0 (1) is not displayed.
+- When `lpl0` (`lpl1`) is cleared, no data for plane 0 (1) is loaded.
+
+If a planes is not to be displayed, its `lplN` bit can be cleared to free up more read bandwidth for the sprites and copper. The plane's `lplN` bit should be set at least 16 pixels before the plane should be displayed.
+
+The VRAM addresses used for the tile planes are
+
+	plane_tiles_base = b_tile_p  << 14
+	map0_base        = base_map0 << 12
+	map1_base        = base_map1 << 12
+
+The `scroll` registers specify the scroll position of the respective plane (TODO: describe offset).
+
+The tile map for each plane is 64x64 tiles, and is stored row by row.
+Each map entry is 16 bits:
+
+	  15 - 12        11         10   -   0
+	| pal     | always_opaque | tile_index |
+
+where the tile is read from word address
+
+	tile_addr = plane_tiles_base + (tile_index << 3)
+
+### Sprites
+Each sprite can be 16x8 pixels (4 color) or 8x8 pixels (16 color).
+The PPU supports up to 64 simultaneous sprites in oam memory, but only 4 can overlap at the same time. Once a sprite is done for the scan line, the PPU can load a new sprite into the same slot, to display later on the same scan line, but it takes a number of pixels (partially depending on how much memory traffic is used by the tile planes and the copper.) More than 64 sprites can be displayed in a single frame by using the copper to change base addresses mid frame.
+
+Two `display_mask` bits control the behavior of the sprite display:
+- When `dspr` is cleared, no sprites are displayed.
+- When `lspr` is cleared, no data for sprites is loaded.
+
+It will take some time `lspr` is set before new sprites are completely loaded and can be displayed.
+
+The VRAM addresses used for sprite display are
+
+	sprite_tiles_base = b_tile_s << 14
+	sorted_base       = base_sorted << 6
+	oam_base          = base_oam    << 7
 
 
 ## How to test
