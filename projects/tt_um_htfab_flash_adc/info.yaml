@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "Flash ADC"      # Project title
+  author:       "htfab"      # Your name
+  discord:      "h.tamas"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "4-bit flash ADC with binary encoder"      # One line description of what your project does
+  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_htfab_flash_adc"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "debug encoder (skip ADC)"
+  ui[1]: "debug ADC (skip encoder)"
+  ui[2]: "unary selector bit 0"
+  ui[3]: "unary selector bit 1"
+  ui[4]: "(debug mode only)"
+  ui[5]: "(debug mode only)"
+  ui[6]: "(debug mode only)"
+  ui[7]: "(debug mode only)"
+
+  # Outputs
+  uo[0]: "binary bit 0"
+  uo[1]: "binary bit 1"
+  uo[2]: "binary bit 2"
+  uo[3]: "binary bit 3"
+  uo[4]: "unary bit 1"
+  uo[5]: "unary bit 5"
+  uo[6]: "unary bit 9"
+  uo[7]: "unary bit 13"
+
+  # Bidirectional pins
+  uio[0]: "xor of unary bits 0, 4, 8, 12"
+  uio[1]: "xor of unary bits 1, 5, 9, 13"
+  uio[2]: "xor of unary bits 2, 6, 10, 14"
+  uio[3]: "xor of unary bits 3, 7, 11"
+  uio[4]: "unary bit 4*sel"
+  uio[5]: "unary bit 4*sel+1"
+  uio[6]: "unary bit 4*sel+2"
+  uio[7]: "unary bit 4*sel+3"
+
+  # Analog pins - you can add more if you use them, up to 6.
+  # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
+  # The first pins is always ua[0], and the pin numbers must be sequential.
+  ua[0]: "ADC input"
+
+# Do not change!
+yaml_version: 6
