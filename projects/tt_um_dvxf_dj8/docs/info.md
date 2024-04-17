@@ -26,7 +26,7 @@ DJ8 is a 8-bit CPU, originally developped for XCS10XL featuring:
 
 | From | To | Description
 |--|--|--|
-| 0x2000 | 0x1fff | External RAM (32 bytes)
+| 0x2000 | 0x3fff | External RAM (32 bytes)
 | 0x4000 | 0x5fff | External Flash ROM (16KB)
 
 ## Pinout
@@ -54,7 +54,7 @@ All other registers are set to 0x80.
 
 An internal test ROM is included for easy testing on the TT06 demo board, no external hardware needed. It shows a rotating indicator on the 7-segment display. Its speed can be changed with DIP switches, the internal delay loop is entirely deactivated when all switches are reset.
 
-To jump to the internal test ROM, set DIP8 = 0, DIP7 = 1 and reset the CPU. That way, the CPU sees a "JMP GH" instruction on the bus when it fetches the first instruction, and jumps to GH. At reset time GH = 0x8080 which is in internal test ROM area.
+To jump to the internal test ROM, set DIP8 = 0, DIP7 = 1 and reset the CPU. That way, the CPU sees a ***JMP GH*** instruction on the bus when it fetches the first instruction, and jumps to GH. At reset time GH = 0x8080 which is in internal test ROM area.
 
 # External hardware
 
