@@ -140,6 +140,97 @@ To choose which steps, the phase value is bit reversed and compared to the manti
 
 Each time a voice is switched in, five sweep values are read from memory to decide if the two frequencies and 3 control periods for the state variable filters (see https://github.com/toivoh/tt05-synth) should be swept up or down. A similar approach is used as above, with a clock divider for the exponent part of the sweep rate, and bit reversing the swept value to decide whether to take a small or a big step.
 
+## IO interfaces
+AnemoneGrafx-8 has four interfaces:
+- VGA output `uo` / `(R1, G1, B1, vsync, R0, G0, B0, hsync)`
+- Read-only memory interface `(addr_out[3:0], data_in[3:0])` for the PPU
+- Memory/host interface `(tx_out[1:0], rx_in[1:0])` for the synth, system control, and vblank events
+	- `rx_in[1:0] = uio[7:6]` can be remapped to `rx_in_alt[1:0] = ui[5:4]` to free up `uio[7:6]` for use as outputs
+- Additional video outputs `(Gm1_active_out, RBm1_pixelclk_out)`. Can output either
+	- Additional lower `RGB` bits to avoid having to dither the VGA output
+	- Active signal and pixel clock, useful for e g HDMI output
+
+Additionally
+- `data_in[0]` is sampled into `cfg[0]` as long as `rst_n` is high to choose the output mode
+	- `cfg[0] = 0`: `uio[7:6]` is used to input `rx_in[1:0]`,
+	- `cfg[0] = 1`: `uio[7:6]` is used to output `{RBm1_pixelclk_out, Gm1_active_out}`.
+- When the PPU is in reset (due to `rst_n` or `ppu_rst_n`), `addr_out` loops back the values from `data_in`, delayed by two register stages.
+
+### VGA output
+The VGA output follows the [Tiny VGA pinout](https://tinytapeout.com/specs/pinouts/#vga-output), giving two bits per channel.
+The PPU works with 8 bit color:
+
+	R = {R1, R0, RBm1}
+	G = {G1, G0, Gm1}
+	B = {B1, B0, RBm1}
+
+where the least significant bit it is identical between the red and blue channel.
+By default, dithering is used to reduce the output to 6 bit color (two bits per channel).
+Dithering can be disabled, and the low order color bits `{RBm1, Gm1}` be output on `{RBm1_pixelclk_out, Gm1_active_out}`.
+
+The other output option for `(Gm1_active_out, RBm1_pixelclk_out)` is to output the `active` and `pixelclk` signals:
+- `active` is high when the current RGB output pixel is in the active display area.
+- `pixelclk` has one period per VGA pixel (two clock cycles), and is high during the second clock cycle that the VGA pixel is valid.
+
+### Read-only memory interface
+The PPU uses the read-only memory interface to read video RAM. The interface handles only reads, but video RAM may be updated by means external to the console (and needs to, to make the output image change!).
+
+Each read sends a 16 bit word address and receives the 16 bit word at that address, allowing the PPU to access 128 kB of data.
+A read occurs during a _serial cycle_, or 4 clock cycles. As soon as one serial cycle is finished, the next one begins.
+
+The address `addr[15:0]` for one read is sent during the serial cycle in order of lowest bits to highest:
+
+	addr_out[3:0] = addr[3:0]   // cycle 0
+	addr_out[3:0] = addr[7:4]   // cycle 1
+	addr_out[3:0] = addr[11:8]  // cycle 2
+	addr_out[3:0] = addr[15:12] // cycle 3
+
+The corresponding `data[15:0]` should be sent in the same order to `data_out[3:0]` with a specific delay that is approximately three serial cycles (TODO: describe the exact delay needed!).
+The `data_in` to `addr_out` loopback function has been provided to help calibrate the required data delay.
+
+To respond correctly to reads requests, one must know when a serial cycle starts.
+This accomplished by an initial synchronization step:
+- After reset, `addr_pins` start at zero.
+- During the first serial cycle, a fixed address of `0x8421` is transmitted, and the corresponding data is discarded
+
+### Memory / host interface
+The memory / host interface is used to send a number of types messages and responses.
+It uses start bits to allow each side to initiate a message when appropriate, subsequent bits are sent on subsequent clock cycles.
+`tx_out` and `rx_in` are expected to remain low when no messages are sent.
+
+`tx_out[1:0]` is used for messages from the console:
+- a message is initiated with one cycle of `tx_out[1:0] = 1` (low bit set, high bit clear),
+- during the next cycle, `tx_out[1:0]` contains the 2 bit _tx header_, specifying the message type,
+- during the following 8 cycles, a 16 bit payload is sent through `tx_out[1:0]`, from lowest bits to highest.
+
+`rx_in[1:0]` is used for messages to the console:
+- a message is initiated with one cycle when `rx_in[1:0] != 0`, specifying the _rx header_, i e, the message type
+- during the following 8 cycles, a 16 bit payload is sent through `rx_in[1:0]`, from lowest bits to highest.
+
+TX message types:
+- 0: Context switch: Store payload into state vector, return the replaced state value (rx header=1), increment state pointer.
+- 1: Sample out: Payload is the next output sample from the synth, 16 bit signed.
+- 2: Read: Payload is address, return corresponding data (rx header=2).
+- 3: Vblank event. Payload should be ignored.
+
+The state pointer should wrap after 36 words.
+
+RX message types:
+- 1: Context switch response.
+- 2: Read response.
+- 3: Write register. Top byte of payload is register address, bottom is data value.
+
+Available registers:
+- 0: `sample_credits` (initial value 1)
+- 1: `sbio_credits` (initial value 1)
+- 2: `ppu_ctrl` (initial value `0b01011`)
+
+## Using the PPU
+The PPU is almost completely controlled through the VRAM (video RAM) contents.
+The copper is restarted when a new frame begins, and starts to read instructions at address `0xfffe`.
+
+
+
 ## How to test
 
 TODO
