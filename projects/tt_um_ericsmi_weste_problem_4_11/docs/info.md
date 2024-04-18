@@ -11,10 +11,10 @@ Consider four designs of a 6-input AND gate shown below. Develop an expression f
 
 ![](and-gate-designs.png)
 
-For this problem H is a measure of the amount of capacitance the AND gate
-needs to drive divided by the input capacitance of the structure.  So H=20 means the output capacitance is the same as 20 inverters.
+For this problem, H measures the capacitance the AND gate
+needs to drive.   It's the output capacitance divided by the input capacitance of one inverter. So H=20 means the output capacitance is the same as 20 inverters.
 
-For an example of when this could occur, consider this AND gate as a row decoder and H is the number of columns. 
+For an example of when this could occur, consider this AND gate as a row decoder, and H is the number of columns. 
 
 ## The Theory of Logical Effort
 
@@ -30,12 +30,12 @@ D = G * H + P
 
 | Variable | Name | Description |
 | -------- | ------- | ------- |
-| H | Electrical Effort | The amount of output capacitance this gate needs to drive relative to the input capacitance |
-| G | Logical Effort | This is a rough measure of the complexity of the gate.  One can think of it as the amount of input capacitance relative to an inverter with equal drive strength, or the amount of drive strength when the input capacitance is the same as an inverter, or the slope of the fanout line.  More "complex" gates will have higher logic efforts.  |
-| P | Parasitic Delay | The amount of output capacitance of this gate relative to the output capacitance of an inverter of the same strength.  More complex gates have more output capacitance. |
-| D | Stage Delay | The delay of this stage relative to the delay of one inverter |
+| H | Electrical Effort | The amount of output capacitance this gate needs to drive relative to the input capacitance of an inverter. |
+| G | Logical Effort | Logical Effort is a rough measure of the gate's complexity. It can be thought of as the amount of input capacitance relative to an inverter with equal drive strength, the amount of drive strength when the input capacitance is the same as an inverter, or the slope of the fanout line. More "complex" gates will have higher logic efforts.  |
+| P | Parasitic Delay | Parasitic delay measures the output capacitance of this gate relative to the output capacitance of an inverter of the same strength. More complex gates have more output capacitance. |
+| D | Stage Delay | The delay of this stage relative to the delay of one inverter. |
 
-There are a number of possilble issues with the linear delay model (Weste & Harris covers this) but critically, it ignores wires.  It's known to work well enough for 0.25u processes and above, where wire loading is less significant relative to the delay and loading of the transistors themselves.  We'll see how well it works at 130nm for Sky130A in the TinyTapeout/OpenLane flow, where placement desensity is not particularly high. 
+The linear delay model has several possible issues (Weste & Harris covers this), but critically, it ignores wires. It's known to work well enough for 0.25u processes and above, where wire loading is less significant relative to the delay and loading of the transistors themselves. We'll see how well it works at 130nm for Sky130A in the TinyTapeout/OpenLane flow, where placement density is not particularly high. 
 
 
 ## What I implemented
@@ -46,7 +46,7 @@ There are a number of possilble issues with the linear delay model (Weste & Harr
 
 ## How I determined the drive values
 
-The key is to notice when we increase the drive of one cell we increase the load on the previous cell.  This changes the electrical effort of that cell.  So for part D we end up with the following chain
+The key is to notice that when we increase the drive of one cell, we increase the load on the previous cell. This changes the electrical effort of that cell. So, for part D we end up with the following chain
 
 ![](and-gate-designs-dx.png)
 
@@ -54,9 +54,9 @@ There are equations one can use to optimize this but I just used mathematica bec
 
 ![](SolveForDrive.png)
 
-Then I just used the cell with the nearest drive from the library.   
+Then I just used the cell with the nearest drive from the library and checked the result was within one inverter delay of the optimal value.   
 
-This is roughly equivalent to what ABC does in the OpenLane flow after mapping.   Do keep in mind that although ABC can optimize drive it can't modify structure. As we can see choice of structure does have implications on performance, even after drive is optimized. 
+This procedure is roughly equivalent to what ABC does in the OpenLane flow after mapping. Remember that although ABC can optimize drive, it can't modify structure. As we can see, the choice of structure does have implications on performance, even after the drive is optimized. 
 
 ## Calculated delays with optimized drive
 
@@ -71,9 +71,9 @@ These are in units of one inverter delay which is about 70pS in Sky130A.
 
 ## What is drive?
 
-This is essentially putting multiple gates in parallel to increase the amount of current the newly fashioned compound gate can output. The drive number tells you how many gates are in parallel. This allows it to drive larger load capacitances with higher dv/dt at the cost of input capacitance, area and power. 
+Drive counts the number of equivalent parallel gates to increase the output current the resulting compound gate. More gates in parallel allows sourcing larger load capacitances with higher dv/dt at the cost of input capacitance, area, and power. 
 
-It's nicer to use an integrated cell for the parallel gates because the layout engineer can do things to minimize wire loading and output capacitance of the overall structure. 
+Opting for an integrated cell for the parallel gates is a practical choice. It empowers the layout engineer to implement strategies that effectively minimize wire loading and output capacitance of the overall structure, thereby enhancing the gate's performance. 
 
 See the various incarnations of nand2 in Sky130A for an example. 
 
