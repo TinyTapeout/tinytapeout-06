@@ -2,7 +2,7 @@
   "app": "Tiny Tapeout tt06 c74b14ac",
   "repo": "https://github.com/devinatkin/tt06-fastreadout",
   "commit": "3304c13567f167b9e856332b249de98ed436d53c",
-  "workflow_url": "https://github.com/devinatkin/tt06-fastreadout/actions/runs/8743474380",
+  "workflow_url": "https://github.com/devinatkin/tt06-fastreadout/actions/runs/8743717805",
   "sort_id": 1712354785013,
   "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
   "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
