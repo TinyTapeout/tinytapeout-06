@@ -1,0 +1,55 @@
+# Tiny Tapeout project information
+project:
+  title:        "MULDIV unit (8-bit signed/unsigned)"      # Project title
+  author:       "Darryl Miles"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Combinational Multiply and Divide Unit (signed and unsigned)"      # One line description of what your project does
+  language:     "SpinalHDL" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_dlmiles_muldiv8"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "top_tt_um_dlmiles_muldiv8.v"
+    - "pdk_sky130/sky130_fd_sc_hd__dlrtp.v"
+    - "TT06MULDIV8Top.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Data0 see docs"
+  ui[1]: "Data1 see docs"
+  ui[2]: "Data2 see docs"
+  ui[3]: "Data3 see docs"
+  ui[4]: "Data4 see docs"
+  ui[5]: "Data5 see docs"
+  ui[6]: "Data6 see docs"
+  ui[7]: "Data7 see docs"
+
+  # Outputs
+  uo[0]: "Result0 see docs"
+  uo[1]: "Result1 see docs"
+  uo[2]: "Result2 see docs"
+  uo[3]: "Result3 see docs"
+  uo[4]: "Result4 see docs"
+  uo[5]: "Result5 see docs"
+  uo[6]: "Result6 see docs"
+  uo[7]: "Result7 see docs"
+
+  # Bidirectional pins
+  uio[0]: "Addr bit0 HI=1/lo=0 mux of Data and Result (input only)"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "Result mux registered=1/immediate=0 (input only)"
+  uio[4]: "DIV error overflow (output only)"
+  uio[5]: "DIV error divide-by-zero (output only)"
+  uio[6]: "OPSIGNED mode (input only)"
+  uio[7]: "MULDIV mode (input only)"
+
+# Do not change!
+yaml_version: 6
