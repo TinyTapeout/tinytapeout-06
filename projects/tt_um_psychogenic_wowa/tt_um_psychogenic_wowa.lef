@@ -1,3 +1,7 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO tt_um_psychogenic_wowa
   CLASS BLOCK ;
   FOREIGN tt_um_psychogenic_wowa ;
