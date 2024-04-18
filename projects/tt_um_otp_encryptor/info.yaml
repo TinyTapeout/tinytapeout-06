@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "TT06 OTP Encryptor"      # Project title
+  author:       " , Aimee Kang, Alexander Schaefer"      # Your name
+  discord:      " , aimz25, skadoosh.03"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Encryption and Decryption Unit through Utilization of Psuedorandom One Time Pads"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_otp_encryptor"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_otp_encryptor.v"
+    - "LFSR_PRNG.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "data[0]"
+  ui[1]: "data[1]"
+  ui[2]: "data[2]"
+  ui[3]: "data[3]"
+  ui[4]: "data[4]"
+  ui[5]: "data[5]"
+  ui[6]: "data[6]"
+  ui[7]: "data[7]"
+
+  # Outputs
+  uo[0]: "out[0]"
+  uo[1]: "out[1]"
+  uo[2]: "out[2]"
+  uo[3]: "out[3]"
+  uo[4]: "out[4]"
+  uo[5]: "out[5]"
+  uo[6]: "out[6]"
+  uo[7]: "out[7]"
+
+  # Bidirectional pins
+  uio[0]: "decrypt"
+  uio[1]: "r_num[0]"
+  uio[2]: "r_num[1]"
+  uio[3]: "r_num[2]"
+  uio[4]: "index_out[0]"
+  uio[5]: "index_out[1]"
+  uio[6]: "index_out[2]"
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
