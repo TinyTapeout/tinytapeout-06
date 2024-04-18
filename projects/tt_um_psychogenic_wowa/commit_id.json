@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/psychogenic/tt06-analog-wowa",
-  "commit": "7360f853e08a978854c20254506754d442f25b6d",
-  "workflow_url": "https://github.com/psychogenic/tt06-analog-wowa/actions/runs/8733504025",
+  "commit": "ebc5df15a0b0461089430ea681c2ec85dd7ca3a9",
+  "workflow_url": "https://github.com/psychogenic/tt06-analog-wowa/actions/runs/8744699471",
   "sort_id": 1713383743500,
   "analog": true
 }
