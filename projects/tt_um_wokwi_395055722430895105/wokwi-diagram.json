@@ -44,7 +44,8 @@
     { "type": "wokwi-flip-flop-dsr", "id": "flop17", "top": -326.4, "left": 739.2, "attrs": {} },
     { "type": "wokwi-flip-flop-dsr", "id": "flop18", "top": -326.4, "left": 854.4, "attrs": {} },
     { "type": "wokwi-flip-flop-dsr", "id": "flop19", "top": -326.4, "left": 1008, "attrs": {} },
-    { "type": "wokwi-flip-flop-dsr", "id": "flop20", "top": -326.4, "left": 1123.2, "attrs": {} }
+    { "type": "wokwi-flip-flop-dsr", "id": "flop20", "top": -326.4, "left": 1123.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -288, "left": 1285.8, "attrs": {} }
   ],
   "connections": [
     [ "flop10:Q", "flop11:D", "green", [ "v0" ] ],
@@ -92,7 +93,17 @@
     [ "flop18:Q", "ttout:OUT5", "green", [ "v0" ] ],
     [ "flop19:Q", "ttout:OUT6", "green", [ "v0" ] ],
     [ "flop20:Q", "ttout:OUT7", "green", [ "v0" ] ],
-    [ "flop17:CLK", "ttin:CLK", "green", [ "h0", "v38.4" ] ]
+    [ "flop17:CLK", "ttin:CLK", "green", [ "h0", "v38.4" ] ],
+    [ "gnd1:GND", "flop20:S", "black", [ "v-67.2", "h-124.8", "v-9.6" ] ],
+    [ "gnd1:GND", "flop19:S", "black", [ "v-67.2", "h-240" ] ],
+    [ "gnd1:GND", "flop18:S", "black", [ "v-67.2", "h-374.4" ] ],
+    [ "gnd1:GND", "flop17:S", "black", [ "v-67.2", "h-508.8" ] ],
+    [ "gnd1:GND", "flop16:S", "black", [ "v-67.2", "h-576" ] ],
+    [ "gnd1:GND", "flop15:S", "black", [ "v-67.2", "h-710.4" ] ],
+    [ "gnd1:GND", "flop14:S", "black", [ "v-67.2", "h-844.8" ] ],
+    [ "gnd1:GND", "flop12:S", "black", [ "v-67.2", "h-940.8" ] ],
+    [ "gnd1:GND", "flop11:S", "black", [ "v-67.2", "h-1075.2" ] ],
+    [ "gnd1:GND", "flop10:S", "black", [ "v-67.2", "h-1142.4" ] ]
   ],
   "dependencies": {}
 }
