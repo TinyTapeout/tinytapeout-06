@@ -9,14 +9,16 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This is simple pipelined multiply and accumulate unit to compute a*b+c using SpinalHDL as a generator. 
+This circuit is a simple pipelined multiply and accumulate unit to compute a*b+c using SpinalHDL as a generator. 
 
-This circuit uses the classic textbook method of multiplication with base 2. So if the numbers a and b 
-are multiplied, the sum of the version of a shifted to the left by i bits must be summed up 
+It uses the classic textbook method of multiplication with base 2. So if the numbers a and b 
+are multiplied, the sum of the version of argument a shifted to the left by i bits must be summed up 
 if and only if the ith bit of b is 1.
 
 These bit products, i.e. (a << i) * b(i), are determined in the individual stages of the pipeline 
 and the result is calculated step by step.
+
+The full code can be found at https://github.com/SteffenReith/PiMAC
 
 ## How to test
 
@@ -25,4 +27,5 @@ Simply feed a, b, and c as 4 bit unsigned integer into the unit. The latency is 
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+No external hardware it needed.
+
