@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "ef_smsdac"      # Project title
+  author:       "Eric Fogleman"      # Your name
+  discord:      "ejfogleman"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "8-bit segmented mismatch-shaping R2R DAC"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ejfogleman_smsdac"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_ejfogleman_smsdac.v"
+    - "ef_smsdac_top.v"
+    - "ef_smsdac_sync.v"
+    - "ef_smsdac_reg.v"
+    - "ef_smsdac_mse.v"
+    - "ef_smsdac_mse_sb.v"
+    - "ef_smsdac_lfsr10_7.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "d_in[0]"
+  ui[1]: "d_in[1]"
+  ui[2]: "d_in[2]"
+  ui[3]: "d_in[3]"
+  ui[4]: "d_in[4]"
+  ui[5]: "d_in[5]"
+  ui[6]: "d_in[6]"
+  ui[7]: "d_in[8]"
+
+  # Outputs
+  uo[0]: "d_out_0[0]"
+  uo[1]: "d_out_0[1]"
+  uo[2]: "d_out_1[0]"
+  uo[3]: "d_out_1[1]"
+  uo[4]: "d_out_2[0]"
+  uo[5]: "d_out_2[1]"
+  uo[6]: "d_out_3[0]"
+  uo[7]: "d_out_3[1]"
+
+  # Bidirectional pins
+  uio[0]: "nc"
+  uio[1]: "nc"
+  uio[2]: "nc"
+  uio[3]: "nc"
+  uio[4]: "nc"
+  uio[5]: "nc"
+  uio[6]: "nc"
+  uio[7]: "nc"
+
+# Do not change!
+yaml_version: 6
