@@ -1,0 +1,62 @@
+
+63. Printing statistics.
+
+=== tt_um_faramire_stopwatch ===
+
+   Number of wires:                479
+   Number of wire bits:            514
+   Number of public wires:         112
+   Number of public wire bits:     147
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                495
+     sky130_fd_sc_hd__a211o_2        3
+     sky130_fd_sc_hd__a211oi_2       1
+     sky130_fd_sc_hd__a21boi_2       3
+     sky130_fd_sc_hd__a21o_2        14
+     sky130_fd_sc_hd__a21oi_2        9
+     sky130_fd_sc_hd__a221o_2        5
+     sky130_fd_sc_hd__a221oi_2       1
+     sky130_fd_sc_hd__a22o_2        15
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__a31o_2        20
+     sky130_fd_sc_hd__a31oi_2        1
+     sky130_fd_sc_hd__a32o_2         6
+     sky130_fd_sc_hd__and2_2        19
+     sky130_fd_sc_hd__and2b_2        2
+     sky130_fd_sc_hd__and3_2        28
+     sky130_fd_sc_hd__and3b_2        9
+     sky130_fd_sc_hd__and4_2         2
+     sky130_fd_sc_hd__buf_1         58
+     sky130_fd_sc_hd__buf_2          5
+     sky130_fd_sc_hd__conb_1        20
+     sky130_fd_sc_hd__dfxtp_2      103
+     sky130_fd_sc_hd__inv_2         19
+     sky130_fd_sc_hd__mux2_2        31
+     sky130_fd_sc_hd__nand2_2       24
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nor2_2        17
+     sky130_fd_sc_hd__nor3_2         3
+     sky130_fd_sc_hd__nor3b_2        2
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o2111a_2       1
+     sky130_fd_sc_hd__o211a_2       10
+     sky130_fd_sc_hd__o21a_2         5
+     sky130_fd_sc_hd__o21ai_2       11
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o2bb2a_2       3
+     sky130_fd_sc_hd__o311a_2        4
+     sky130_fd_sc_hd__o31a_2         5
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2         16
+     sky130_fd_sc_hd__or3_2          6
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__or4_2          2
+     sky130_fd_sc_hd__or4b_2         2
+
+   Chip area for module '\tt_um_faramire_stopwatch': 5148.688000
+
