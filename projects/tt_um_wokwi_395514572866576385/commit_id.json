@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 c74b14ac",
+  "repo": "https://github.com/Beird0/TT06_Parity-Generator",
+  "commit": "1e09bd4c09764893418204b776bbb30214255dfc",
+  "workflow_url": "https://github.com/Beird0/TT06_Parity-Generator/actions/runs/8742718865",
+  "sort_id": 1713464710322,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
