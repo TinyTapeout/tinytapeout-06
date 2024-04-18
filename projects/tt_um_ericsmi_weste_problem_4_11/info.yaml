@@ -1,0 +1,55 @@
+# Tiny Tapeout project information
+project:
+  title:        "Measurement of CMOS VLSI Design Problem 4.11"  
+  author:       "Eric Smith "    
+  discord:      "ericsmith8798"   
+  description:  "Measure the delay of each design in the problem with varying load.  See project Readme for details."      
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # 0 
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ericsmi_weste_problem_4_11"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "osc.v"
+    - "and.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "sel[0]"
+  ui[1]: "sel[1]"
+  ui[2]: "sel[2]"
+  ui[3]: "sel[3]"
+  ui[4]: "h[0]"
+  ui[5]: "h[1]"
+  ui[6]: "h[2]"
+  ui[7]: "ntest"
+
+  # Outputs
+  uo[0]: "b[0]"
+  uo[1]: "b[1]"
+  uo[2]: "b[2]"
+  uo[3]: "b[3]"
+  uo[4]: "&(A[5:0])"
+  uo[5]: "ntest"
+  uo[6]: "count"
+  uo[7]: "overflow"
+
+  # Bidirectional pins
+  uio[0]: "a[0]"
+  uio[1]: "a[1]"
+  uio[2]: "a[2]"
+  uio[3]: "a[3]"
+  uio[4]: "a[4]"
+  uio[5]: "a[5]"
+  uio[6]: "a[6]"
+  uio[7]: "a[7]"
+
+# Do not change!
+yaml_version: 6

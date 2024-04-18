@@ -1,0 +1,423 @@
+
+65. Printing statistics.
+
+=== ring_osc_part_a_h1 ===
+
+   Number of wires:                 19
+   Number of wire bits:             26
+   Number of public wires:          14
+   Number of public wire bits:      21
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 16
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1          6
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand4_1        3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand4_1 is unknown!
+
+   Chip area for module '\ring_osc_part_a_h1': 56.304000
+
+=== ring_osc_part_a_h20 ===
+
+   Number of wires:                 76
+   Number of wire bits:             83
+   Number of public wires:          71
+   Number of public wire bits:      78
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 73
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         60
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__inv_4          3
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand4_1        3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand4_1 is unknown!
+
+   Chip area for module '\ring_osc_part_a_h20': 75.072000
+
+=== ring_osc_part_a_h5 ===
+
+   Number of wires:                 31
+   Number of wire bits:             38
+   Number of public wires:          26
+   Number of public wire bits:      33
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 28
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         15
+     sky130_fd_sc_hd__inv_2          4
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand4_1        3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand4_1 is unknown!
+
+   Chip area for module '\ring_osc_part_a_h5': 67.564800
+
+=== ring_osc_part_b_h1 ===
+
+   Number of wires:                 22
+   Number of wire bits:             29
+   Number of public wires:          17
+   Number of public wire bits:      24
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 19
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1          3
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand3_1        6
+     sky130_fd_sc_hd__nor2_1         3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nor2_1 is unknown!
+
+   Chip area for module '\ring_osc_part_b_h1': 56.304000
+
+=== ring_osc_part_b_h20 ===
+
+   Number of wires:                 79
+   Number of wire bits:             86
+   Number of public wires:          74
+   Number of public wire bits:      81
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 76
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         60
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand3_1        6
+     sky130_fd_sc_hd__nor2_4         3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+
+   Chip area for module '\ring_osc_part_b_h20': 90.086400
+
+=== ring_osc_part_b_h5 ===
+
+   Number of wires:                 34
+   Number of wire bits:             41
+   Number of public wires:          29
+   Number of public wire bits:      36
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 31
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         15
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand3_1        6
+     sky130_fd_sc_hd__nor2_2         3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+
+   Chip area for module '\ring_osc_part_b_h5': 75.072000
+
+=== ring_osc_part_c_h1 ===
+
+   Number of wires:                 25
+   Number of wire bits:             32
+   Number of public wires:          20
+   Number of public wire bits:      27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 22
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1          3
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_1        9
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor3_1         3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nor3_1 is unknown!
+
+   Chip area for module '\ring_osc_part_c_h1': 56.304000
+
+=== ring_osc_part_c_h20 ===
+
+   Number of wires:                 82
+   Number of wire bits:             89
+   Number of public wires:          77
+   Number of public wire bits:      84
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 79
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         60
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_1        9
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor3_4         3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+   Chip area for module '\ring_osc_part_c_h20': 105.100800
+
+=== ring_osc_part_c_h5 ===
+
+   Number of wires:                 37
+   Number of wire bits:             44
+   Number of public wires:          32
+   Number of public wire bits:      39
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 34
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         15
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_1        9
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor3_2         3
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+   Chip area for module '\ring_osc_part_c_h5': 86.332800
+
+=== ring_osc_part_d_h1 ===
+
+   Number of wires:                 31
+   Number of wire bits:             38
+   Number of public wires:          26
+   Number of public wire bits:      33
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 28
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         12
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_1        3
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand3_1        6
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+
+   Chip area for module '\ring_osc_part_d_h1': 56.304000
+
+=== ring_osc_part_d_h20 ===
+
+   Number of wires:                 88
+   Number of wire bits:             95
+   Number of public wires:          83
+   Number of public wire bits:      90
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 85
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         66
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__inv_6          3
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_2        4
+     sky130_fd_sc_hd__nand3_1        6
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+
+   Chip area for module '\ring_osc_part_d_h20': 101.347200
+
+=== ring_osc_part_d_h5 ===
+
+   Number of wires:                 43
+   Number of wire bits:             50
+   Number of public wires:          38
+   Number of public wire bits:      45
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 40
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__inv_1         21
+     sky130_fd_sc_hd__inv_2          4
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_1        3
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand3_1        6
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+
+   Chip area for module '\ring_osc_part_d_h5': 67.564800
+
+=== tt_um_ericsmi_weste_problem_4_11 ===
+
+   Number of wires:                 65
+   Number of wire bits:            100
+   Number of public wires:          30
+   Number of public wire bits:      65
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 81
+     ring_osc_part_a_h1              1
+     ring_osc_part_a_h20             1
+     ring_osc_part_a_h5              1
+     ring_osc_part_b_h1              1
+     ring_osc_part_b_h20             1
+     ring_osc_part_b_h5              1
+     ring_osc_part_c_h1              1
+     ring_osc_part_c_h20             1
+     ring_osc_part_c_h5              1
+     ring_osc_part_d_h1              1
+     ring_osc_part_d_h20             1
+     ring_osc_part_d_h5              1
+     sky130_fd_sc_hd__and2_2        14
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__and4_2         1
+     sky130_fd_sc_hd__buf_1         20
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__conb_1        17
+     sky130_fd_sc_hd__dfrtp_2        5
+     sky130_fd_sc_hd__inv_2          5
+     sky130_fd_sc_hd__or3_2          4
+     sky130_fd_sc_hd__or4_2          1
+
+   Area for cell type \ring_osc_part_a_h1 is unknown!
+   Area for cell type \ring_osc_part_a_h5 is unknown!
+   Area for cell type \ring_osc_part_a_h20 is unknown!
+   Area for cell type \ring_osc_part_b_h1 is unknown!
+   Area for cell type \ring_osc_part_b_h5 is unknown!
+   Area for cell type \ring_osc_part_b_h20 is unknown!
+   Area for cell type \ring_osc_part_c_h1 is unknown!
+   Area for cell type \ring_osc_part_c_h5 is unknown!
+   Area for cell type \ring_osc_part_c_h20 is unknown!
+   Area for cell type \ring_osc_part_d_h1 is unknown!
+   Area for cell type \ring_osc_part_d_h5 is unknown!
+   Area for cell type \ring_osc_part_d_h20 is unknown!
+
+   Chip area for module '\tt_um_ericsmi_weste_problem_4_11': 455.436800
+
+=== design hierarchy ===
+
+   tt_um_ericsmi_weste_problem_4_11      1
+     ring_osc_part_a_h1              1
+     ring_osc_part_a_h20             1
+     ring_osc_part_a_h5              1
+     ring_osc_part_b_h1              1
+     ring_osc_part_b_h20             1
+     ring_osc_part_b_h5              1
+     ring_osc_part_c_h1              1
+     ring_osc_part_c_h20             1
+     ring_osc_part_c_h5              1
+     ring_osc_part_d_h1              1
+     ring_osc_part_d_h20             1
+     ring_osc_part_d_h5              1
+
+   Number of wires:                632
+   Number of wire bits:            751
+   Number of public wires:         537
+   Number of public wire bits:     656
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                600
+     sky130_fd_sc_hd__a21boi_2      12
+     sky130_fd_sc_hd__a21oi_2       12
+     sky130_fd_sc_hd__a311o_2       12
+     sky130_fd_sc_hd__and2_2        14
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__and4_2         1
+     sky130_fd_sc_hd__buf_1         32
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__conb_1        17
+     sky130_fd_sc_hd__dfrtp_2        5
+     sky130_fd_sc_hd__inv_1        336
+     sky130_fd_sc_hd__inv_2         23
+     sky130_fd_sc_hd__inv_4          3
+     sky130_fd_sc_hd__inv_6          3
+     sky130_fd_sc_hd__mux2_2        12
+     sky130_fd_sc_hd__nand2_1       33
+     sky130_fd_sc_hd__nand2_2       15
+     sky130_fd_sc_hd__nand3_1       36
+     sky130_fd_sc_hd__nand4_1        9
+     sky130_fd_sc_hd__nor2_1         3
+     sky130_fd_sc_hd__nor2_2         3
+     sky130_fd_sc_hd__nor2_4         3
+     sky130_fd_sc_hd__nor3_1         3
+     sky130_fd_sc_hd__nor3_2         3
+     sky130_fd_sc_hd__nor3_4         3
+     sky130_fd_sc_hd__or3_2          4
+     sky130_fd_sc_hd__or4_2          1
+
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand3_1 is unknown!
+
+   Chip area for top module '\tt_um_ericsmi_weste_problem_4_11': 1348.793600
+
