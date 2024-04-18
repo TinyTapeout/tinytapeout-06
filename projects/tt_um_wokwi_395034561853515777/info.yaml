@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395034561853515777      # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "2 bit Binary Calculator"      # Project title
+  author:       "Nikhil Jindal"      # Your name
+  discord:      "nikhiljindal_"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This is a 2 bit calculator that can multiply, subtract or even add 2 bit binary numbers."      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "A0"
+  ui[1]: "A1"
+  ui[2]: "B0"
+  ui[3]: "B1"
+  ui[4]: "Multiply"
+  ui[5]: "Sum"
+  ui[6]: "Subtract"
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "a"
+  uo[1]: "b"
+  uo[2]: "c"
+  uo[3]: "d"
+  uo[4]: "e"
+  uo[5]: "f"
+  uo[6]: "g"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
