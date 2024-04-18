@@ -1,0 +1,51 @@
+
+67. Printing statistics.
+
+=== tt_um_dlmiles_muldiv8_sky130faha ===
+
+   Number of wires:                895
+   Number of wire bits:            930
+   Number of public wires:         605
+   Number of public wire bits:     640
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                719
+     sky130_fd_sc_hd__a211o_2        8
+     sky130_fd_sc_hd__a21o_2        15
+     sky130_fd_sc_hd__a221o_2       16
+     sky130_fd_sc_hd__a22o_2         7
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__a31o_2         9
+     sky130_fd_sc_hd__and2_2        91
+     sky130_fd_sc_hd__and2b_2        4
+     sky130_fd_sc_hd__and3_2        11
+     sky130_fd_sc_hd__buf_1        150
+     sky130_fd_sc_hd__buf_2          2
+     sky130_fd_sc_hd__conb_1        41
+     sky130_fd_sc_hd__dfxtp_2       18
+     sky130_fd_sc_hd__dlrtp_1       16
+     sky130_fd_sc_hd__fa_1         162
+     sky130_fd_sc_hd__ha_1          30
+     sky130_fd_sc_hd__inv_2         11
+     sky130_fd_sc_hd__mux2_2        57
+     sky130_fd_sc_hd__nand2_2        2
+     sky130_fd_sc_hd__nor2_2         3
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__o211a_2        1
+     sky130_fd_sc_hd__o21a_2         9
+     sky130_fd_sc_hd__o22a_2         2
+     sky130_fd_sc_hd__o311a_2        2
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__or2_2          9
+     sky130_fd_sc_hd__or2b_2         8
+     sky130_fd_sc_hd__or4_2          1
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__xnor2_2       23
+     sky130_fd_sc_hd__xor2_2         7
+
+   Area for cell type \sky130_fd_sc_hd__dlrtp_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__ha_1 is unknown!
+
+   Chip area for module '\tt_um_dlmiles_muldiv8_sky130faha': 7204.409600
+
