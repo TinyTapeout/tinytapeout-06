@@ -16,6 +16,7 @@ Add 8 LED's to the Output's and connect a Servo Signal to Input 0
 
 ## External hardware
 8 LED's and resistors. (If your LED's need more Output Power then the Chip can provide, use a driver)
+Maybe the resistors can have a low value, because the LED's are only ON when the Servo Signal is HIGH. So the maximum is 20% duty cicle.
 
 ## How to use
 Add 8 LED's to the Output's and connect a Servo Signal to Input 0
