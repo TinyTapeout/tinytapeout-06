@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d5153c3f",
+  "repo": "https://github.com/kelvinutp/bcd-2-7segment-decoder",
+  "commit": "e454fa7be63dfa8a75c6dde7cbe1d6466e660f2d",
+  "workflow_url": "https://github.com/kelvinutp/bcd-2-7segment-decoder/actions/runs/8699935440",
+  "sort_id": 1713402049532,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
