@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Every flipflop is one letter of "HELP" (from top to buttom) the last flip flop darkens all 7 segmets  
+Every flipflop is one letter of "HELP" (from top to buttom) the last flip flop darkens all 7 segments.  
 
 ## How to test
 
-push the reset button and enjoy
+push the reset button and enjoy.
 
 ## External hardware
 
-none
+none.
