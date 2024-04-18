@@ -1,0 +1,26 @@
+
+63. Printing statistics.
+
+=== tt_um_tommythorn_ncl_lfsr ===
+
+   Number of wires:                 28
+   Number of wire bits:             63
+   Number of public wires:          21
+   Number of public wire bits:      56
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 44
+     sky130_fd_sc_hd__and2b_2        3
+     sky130_fd_sc_hd__buf_1          7
+     sky130_fd_sc_hd__buf_2          5
+     sky130_fd_sc_hd__conb_1        19
+     sky130_fd_sc_hd__maj3_1         5
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__or2_2          1
+     sky130_fd_sc_hd__or2b_2         3
+
+   Area for cell type \sky130_fd_sc_hd__maj3_1 is unknown!
+
+   Chip area for module '\tt_um_tommythorn_ncl_lfsr': 187.680000
+
