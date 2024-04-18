@@ -16,13 +16,32 @@ module tt_um_argunda_tiny_opamp (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    p3_opamp p3_opamp(
+    wire vbias_i;
+
+
+    opamp opamp0(
 	.VDD(VPWR),
 	.VSS(VGND),
+	.VBIAS(vbias_i),
 	.VOUT(ua[0]),
 	.PLUS(ua[1]),
 	.MINUS(ua[2])
 	);
+    
+    opamp opamp1(
+	.VDD(VPWR),
+	.VSS(VGND),
+	.VBIAS(vbias_i),
+	.VOUT(ua[3]),
+	.PLUS(ua[4]),
+	.MINUS(ua[5])
+	);
+
+    vbias_resistor vbias_resistor(
+	.VDD(VPWR),
+	.VSS(VGND),
+	.VBIAS(vbias_i)
+    );
 
     // ties for the output enables
     assign uo_out[0] = VGND;
