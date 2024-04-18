@@ -1,0 +1,48 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395055455727667201       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "Hardware Trojan Part II"      # Project title
+  author:       "Jeremy Hong"      # Your name
+  discord:      "Hongseleco"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Pseudorandom number generator with and without hardware trojan"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000       # Clock frequency in Hz (or 0 if not applicable)
+
+  how_it_works: "This pseudorandom number generator (PRNG) is compromised of scan flip-flops (SFF) and XOR gates. There are two PRNGs in this design, a PRNG with and without a hardware trojans"
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Scan Enable"
+  ui[1]: "ScanIn 1"
+  ui[2]: "ScanIn 2"
+  ui[3]: "ScanIn 3"
+  ui[4]: "ScanIn 4"
+  ui[5]: "ScanIn 5"
+  ui[6]: "ScanIn 6"
+  ui[7]: "ScanIn 7"
+
+  # Outputs
+  uo[0]: "PRNG 1 output Trojan Free"
+  uo[1]: "PRNG 2 output trojan inserted"
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "Input, ScanIn 8"
+  uio[1]: "Input, ScanIn 9"
+  uio[2]: "Input, ScanIn 10"
+  uio[3]: "Input, External Trojan Trigger"
+  uio[4]: "Output, single inverter test"
+  uio[5]: "Input, single inverter test"
+  uio[6]: "Input, 8 inverters test"
+  uio[7]: "Output, 8 inverters test"
+
+# Do not change!
+yaml_version: 6
