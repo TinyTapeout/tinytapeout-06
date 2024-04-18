@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
-  title:        "ASG"      # Project title
-  author:       "Steffen Reith"      # Your name
+  title:        "ASG"               # Project title
+  author:       "Steffen Reith"     # Your name
   discord:      "steffenreith"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "An Alternating Step Generator to generate (pseudo)random bit with huge period length"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
