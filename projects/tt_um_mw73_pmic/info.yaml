@@ -1,0 +1,98 @@
+--- 
+# Tiny Tapeout project information
+project:
+  title:        "Power Management IC"     
+  author:       "Matthew Wong"      
+  discord:      ""      
+  description:  "Creates a half bridge PWM duel output from ADC input"     
+  language:     "Verilog" 
+  clock_hz:     10000000      
+  wokwi_id:    0        
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  
+
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_mw73_pmic"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_mw73_pmic.v"
+    - "pmic.v"
+    - "pwm.v"
+    - "slow_clk.v"
+    
+# Do not change!
+yaml_version: 6
+    
+documentation: 
+  author:       "Matt Wong" 
+  title:        "Power Management IC"
+  language:     "Verilog"
+  description:  "Creates a half bridge PWM duel output from ADC input"     
+
+# Longer description of how the project works. You can use standard markdown format.
+how_it_works: |
+      This uses a set of state machines to generate 2 ADC controlled pwms. 
+      
+      A heartbeat signal periodically pings the ADC to update the pwm's duty cycle. 
+      
+      The heartbeat sends the conversion start (convStart) high signal to begin the conversion. The ADC sets up 
+      and then replies with a busy high when the ADC is ready to be read. When the busy high is read, the Asic responds with a read and chip select 
+      (rd_cs) which are tied together. When the ADC receives the rd_cs low, the parallel 8bit conversion is sent to the Asic. See AD7819YNZ datasheet 
+      for details on ADC conversion. The conversion is Mode 2.
+      
+      After the ADC is read, the duel pwms' duty cycles are updated. 0 is the min voltage and 255 is the max voltage. The duel pwms are 180 deg out of
+      phase and should never overlap. Otherwise this could lead to shoot-thru which could destroy the FETs. A dead zone was built into the state machine 
+      to prevent this overlap.
+      
+
+# Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+how_to_test:  |
+      After reset, the syncRectifierLs and syncRectifierHs outputs will produce a pwm signal based on the 8bit parallel ADC input.
+      You need to build the circuit shown in the white paper pdf. See the "doc_link" section below. You could also just hook up an oscilloscope to 
+      the syncRectifierLs and syncRectifierHs and see the 180 deg out of phase square waves.
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "adcVoltage[0]"
+  ui[1]: "adcVoltage[1]"
+  ui[2]: "adcVoltage[2]"
+  ui[3]: "adcVoltage[3]"
+  ui[4]: "adcVoltage[4]"
+  ui[5]: "adcVoltage[5]"
+  ui[6]: "adcVoltage[6]"
+  ui[7]: "adcVoltage[7]"
+
+  # Outputs
+  uo[0]: "convStart"
+  uo[1]: "rd_cs"
+  uo[2]: "syncRectifierLs"
+  uo[3]: "syncRectifierHs"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "busy"
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+
+
+# The following fields are optional
+  tag:          "timer, test"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
+  external_hw:  "AD7819YNZ, MCP1400"      # Describe any external hardware needed
+  discord:      "Matt Wong"      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
+  doc_link:     "white paper"      # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     10000000       # Clock frequency in Hz (if required)
+  picture:      ""      # relative path to a picture in your repository (must be 512kb or less)
