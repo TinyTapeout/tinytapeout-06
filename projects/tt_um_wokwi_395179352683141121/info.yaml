@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395179352683141121       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "Combination Lock"      # Project title
+  author:       "Eric Cheng"      # Your name
+  discord:      "_ericc_"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "4-bit combination lock with a maximum of 3 attempts per lock and a master reset"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Set"
+  ui[1]: "Pswd[0]"
+  ui[2]: "Pswd[1]"
+  ui[3]: "Pswd[2]"
+  ui[4]: "Pswd[3]"
+  ui[5]: "Enter"
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "CurrPswd[0]"
+  uo[1]: "CurrPswd[0]"
+  uo[2]: "CurrPswd[0]"
+  uo[3]: "CurrPswd[0]"
+  uo[4]: "Unlocked"
+  uo[5]: "PinLocked"
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
