@@ -46,14 +46,14 @@ pinout:
   uo[7]: "d_out_3[1]"
 
   # Bidirectional pins
-  uio[0]: "nc"
-  uio[1]: "nc"
-  uio[2]: "nc"
-  uio[3]: "nc"
-  uio[4]: "nc"
-  uio[5]: "nc"
-  uio[6]: "nc"
-  uio[7]: "nc"
+  uio[0]: "en_enc"
+  uio[1]: "en_dith"
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: "ena_and_rst_n"
 
 # Do not change!
 yaml_version: 6

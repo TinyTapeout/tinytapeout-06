@@ -3,38 +3,40 @@
 
 === tt_um_ejfogleman_smsdac ===
 
-   Number of wires:                107
-   Number of wire bits:            142
-   Number of public wires:          45
-   Number of public wire bits:      80
+   Number of wires:                153
+   Number of wire bits:            188
+   Number of public wires:          56
+   Number of public wire bits:      91
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                123
-     sky130_fd_sc_hd__a211o_2        1
-     sky130_fd_sc_hd__a21boi_2       1
-     sky130_fd_sc_hd__a21o_2         2
-     sky130_fd_sc_hd__a21oi_2        3
-     sky130_fd_sc_hd__and2_2         4
+   Number of cells:                169
+     sky130_fd_sc_hd__a21o_2         3
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a31o_2         5
+     sky130_fd_sc_hd__and2_2         3
      sky130_fd_sc_hd__and2b_2        3
-     sky130_fd_sc_hd__and3_2         1
-     sky130_fd_sc_hd__and3b_2        1
-     sky130_fd_sc_hd__buf_1         11
-     sky130_fd_sc_hd__conb_1        16
-     sky130_fd_sc_hd__dfrtp_2       38
-     sky130_fd_sc_hd__inv_2          4
-     sky130_fd_sc_hd__mux2_2         2
-     sky130_fd_sc_hd__nand2_2        5
-     sky130_fd_sc_hd__nor2_2         9
-     sky130_fd_sc_hd__o21a_2         4
-     sky130_fd_sc_hd__o21ai_2        1
+     sky130_fd_sc_hd__and3_2         3
+     sky130_fd_sc_hd__buf_1         15
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__conb_1        15
+     sky130_fd_sc_hd__dfrtp_2       47
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__inv_2          7
+     sky130_fd_sc_hd__mux2_2        17
+     sky130_fd_sc_hd__nand2_2       10
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nor2_2         5
+     sky130_fd_sc_hd__o21a_2         2
+     sky130_fd_sc_hd__o21ai_2        4
      sky130_fd_sc_hd__o21ba_2        1
-     sky130_fd_sc_hd__o21bai_2       1
-     sky130_fd_sc_hd__or2_2          8
-     sky130_fd_sc_hd__or2b_2         2
-     sky130_fd_sc_hd__or3b_2         1
-     sky130_fd_sc_hd__xnor2_2        3
-     sky130_fd_sc_hd__xor2_2         1
+     sky130_fd_sc_hd__o22a_2         2
+     sky130_fd_sc_hd__o31a_2         3
+     sky130_fd_sc_hd__or2_2          4
+     sky130_fd_sc_hd__or3_2          1
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__xnor2_2        5
+     sky130_fd_sc_hd__xor2_2         7
 
-   Chip area for module '\tt_um_ejfogleman_smsdac': 1570.256000
+   Chip area for module '\tt_um_ejfogleman_smsdac': 2218.377600
 

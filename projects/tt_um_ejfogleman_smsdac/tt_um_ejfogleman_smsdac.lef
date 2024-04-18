@@ -59,6 +59,7 @@ MACRO tt_um_ejfogleman_smsdac
   PIN ena
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met4 ;
         RECT 158.550 110.520 158.850 111.520 ;
@@ -67,7 +68,7 @@ MACRO tt_um_ejfogleman_smsdac
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met4 ;
         RECT 151.190 110.520 151.490 111.520 ;
@@ -148,6 +149,7 @@ MACRO tt_um_ejfogleman_smsdac
   PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 118.070 110.520 118.370 111.520 ;
@@ -156,6 +158,7 @@ MACRO tt_um_ejfogleman_smsdac
   PIN uio_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 114.390 110.520 114.690 111.520 ;
@@ -332,6 +335,7 @@ MACRO tt_um_ejfogleman_smsdac
   PIN uio_out[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
     PORT
       LAYER met4 ;
         RECT 33.430 110.520 33.730 111.520 ;
@@ -481,7 +485,8 @@ MACRO tt_um_ejfogleman_smsdac
         RECT 144.530 110.120 147.110 111.170 ;
         RECT 148.210 110.120 150.790 111.170 ;
         RECT 151.890 110.120 154.470 111.170 ;
-        RECT 3.975 109.440 155.185 110.120 ;
+        RECT 155.570 110.120 158.150 111.170 ;
+        RECT 3.975 109.440 158.850 110.120 ;
         RECT 3.975 96.055 20.995 109.440 ;
         RECT 23.395 96.055 40.430 109.440 ;
         RECT 42.830 96.055 59.865 109.440 ;
@@ -489,7 +494,7 @@ MACRO tt_um_ejfogleman_smsdac
         RECT 81.700 96.055 98.735 109.440 ;
         RECT 101.135 96.055 118.170 109.440 ;
         RECT 120.570 96.055 137.605 109.440 ;
-        RECT 140.005 96.055 155.185 109.440 ;
+        RECT 140.005 96.055 157.040 109.440 ;
   END
 END tt_um_ejfogleman_smsdac
 END LIBRARY
