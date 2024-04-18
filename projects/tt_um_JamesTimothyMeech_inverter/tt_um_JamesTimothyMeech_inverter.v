@@ -23,6 +23,13 @@ inverter inverter (
     .IN(ua[5])
     );
 
+analog_mux analog_mux (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[0]),
+    .bus(ua[0])
+    );
+
 assign uo_out[0] = VGND;
 assign uo_out[1] = VGND;
 assign uo_out[2] = VGND;
