@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "SiliconJackets_Systolic_Array"      # Project title
+  author:       "SiliconJackets"      # Your name
+  discord:      "n/a"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "a tiny systolic array capable of row stationary operation"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_SJ"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files: 
+    - "tt_um_SJ.sv"    
+    - "top.sv"
+    - "topLevelControl.sv"
+    - "PE.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "readA[0]"
+  ui[1]: "readA[1]"
+  ui[2]: "readA[2]"
+  ui[3]: "readA[3]"
+  ui[4]: "readA[4]"
+  ui[5]: "readA[5]"
+  ui[6]: "readA[6]"
+  ui[7]: "readA[7]"
+
+  # Outputs
+  uo[0]: "write[0]"
+  uo[1]: "write[1]"
+  uo[2]: "write[2]"
+  uo[3]: "write[3]"
+  uo[4]: "write[4]"
+  uo[5]: "write[5]"
+  uo[6]: "write[6]"
+  uo[7]: "write[7]"
+
+  # Bidirectional pins
+  uio[0]: "readB[0]"
+  uio[1]: "readB[1]"
+  uio[2]: "readB[2]"
+  uio[3]: "readB[3]"
+  uio[4]: "readB[4]"
+  uio[5]: "readB[5]"
+  uio[6]: "readB[6]"
+  uio[7]: "readB[7]"
+
+# Do not change!
+yaml_version: 6
