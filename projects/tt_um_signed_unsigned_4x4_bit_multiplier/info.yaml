@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Signed Unsigned multiplyer"      # Project title
-  author:       "Ole Moller"      # Your name
+  author:       "Ole Henrik Moller"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Do a 4x4 multiplication "      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
@@ -21,27 +21,27 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "multiplicand"
-  ui[1]: "multiplicand"
-  ui[2]: "multiplicand"
-  ui[3]: "multiplicand"
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "multiplicand[0]"
+  ui[1]: "multiplicand[1]"
+  ui[2]: "multiplicand[2]"
+  ui[3]: "multiplicand[3]"
+  ui[4]: "multiplier[0]"
+  ui[5]: "multiplier[1]"
+  ui[6]: "multiplier[2]"
+  ui[7]: "multiplier[3]"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "product[0]"
+  uo[1]: "product[1]"
+  uo[2]: "product[2]"
+  uo[3]: "product[3]"
+  uo[4]: "product[4]"
+  uo[5]: "product[5]"
+  uo[6]: "product[6]"
+  uo[7]: "product[7]"
 
   # Bidirectional pins
-  uio[0]: ""
+  uio[0]: "signed_mode"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
