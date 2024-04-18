@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 c74b14ac",
+  "repo": "https://github.com/tommythorn/tt06-ncl-lfsr",
+  "commit": "2d96cda23468d727c453a917afd512b3a38b71be",
+  "workflow_url": "https://github.com/tommythorn/tt06-ncl-lfsr/actions/runs/8744366614",
+  "sort_id": 1713472850990,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
