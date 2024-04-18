@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "ef_smsdac"      # Project title
+  title:        "8-bit DEM R2R DAC"      # Project title
   author:       "Eric Fogleman"      # Your name
   discord:      "ejfogleman"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "8-bit segmented mismatch-shaping R2R DAC"      # One line description of what your project does
