@@ -1,0 +1,47 @@
+
+63. Printing statistics.
+
+=== tt_um_3515_sequenceDetector ===
+
+   Number of wires:                 85
+   Number of wire bits:            120
+   Number of public wires:          13
+   Number of public wire bits:      48
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                101
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a21oi_2        2
+     sky130_fd_sc_hd__a31o_2         3
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and4_2         2
+     sky130_fd_sc_hd__buf_1          8
+     sky130_fd_sc_hd__buf_2          8
+     sky130_fd_sc_hd__conb_1         8
+     sky130_fd_sc_hd__dfxtp_2       13
+     sky130_fd_sc_hd__inv_2          4
+     sky130_fd_sc_hd__mux2_2         3
+     sky130_fd_sc_hd__nand2_2        5
+     sky130_fd_sc_hd__nand4_2        2
+     sky130_fd_sc_hd__nor2_2         3
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__o211a_2        4
+     sky130_fd_sc_hd__o21a_2         2
+     sky130_fd_sc_hd__o21ai_2        4
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__o311ai_2       1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__o31ai_2        2
+     sky130_fd_sc_hd__or2_2          5
+     sky130_fd_sc_hd__or2b_2         2
+     sky130_fd_sc_hd__or3_2          6
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__or4_2          4
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__or4bb_2        1
+
+   Chip area for module '\tt_um_3515_sequenceDetector': 929.641600
+
