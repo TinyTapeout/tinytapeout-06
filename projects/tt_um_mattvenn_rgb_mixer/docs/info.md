@@ -15,6 +15,8 @@ Debounce the inputs, drive an encoder module, and output a PWM signal for each e
 
 Twist each encoder and the LEDs attached to the outputs should change in brightness.
 
+By setting the debug port to 0, 1 or 2, the internal value of each encoder is output on the bidirectional outputs.
+
 ## External hardware
 
 Use 3 digital encoders attached to the first 6 inputs.

@@ -30,8 +30,8 @@ pinout:
   ui[3]: "enc1 b"
   ui[4]: "enc2 a"
   ui[5]: "enc2 b"
-  ui[6]: ""
-  ui[7]: ""
+  ui[6]: "debug bit 0"
+  ui[7]: "debug bit 1"
 
   # Outputs
   uo[0]: "pwm0"
@@ -44,14 +44,14 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "encoder bit 0"
+  uio[1]: "encoder bit 1"
+  uio[2]: "encoder bit 2"
+  uio[3]: "encoder bit 3"
+  uio[4]: "encoder bit 4"
+  uio[5]: "encoder bit 5"
+  uio[6]: "encoder bit 6"
+  uio[7]: "encoder bit 7"
 
 # Do not change!
 yaml_version: 6
