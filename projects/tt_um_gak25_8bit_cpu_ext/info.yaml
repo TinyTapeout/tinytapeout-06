@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Most minimal extension of friend's 'CPU In a Week' in a day"      # Project title
+  author:       "Gregory Kollmer"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "8-bit Single-Cycle CPU"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_gak25_8bit_cpu_ext"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt06-gak25-8bit-cpu-ext.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Register 1 (R1) Address bit 0"
+  ui[1]: "Register 1 (R1) Address bit 1"
+  ui[2]: "Register 1 (R1) Address bit 2"
+  ui[3]: "Register 1 (R1) Address bit 3"
+  ui[4]: "Instruction ISA Opcode bit 0"
+  ui[5]: "Instruction ISA Opcode bit 1"
+  ui[6]: "Instruction ISA Opcode bit 2"
+  ui[7]: "Instruction ISA Opcode bit 3"
+
+  # Outputs
+  uo[0]: "Data out bit 0 (either register data / Processor stat)"
+  uo[1]: "Data out bit 1 (either register data / 0)"
+  uo[2]: "Data out bit 2 (either register data / 0)"
+  uo[3]: "Data out bit 3 (either register data / 0)"
+  uo[4]: "Data out bit 4 (either register data / 0)"
+  uo[5]: "Data out bit 5 (either register data / 0)"
+  uo[6]: "Data out bit 6 (either register data / 0)"
+  uo[7]: "Data out bit 7 (either register data / 0)"
+
+  # Bidirectional pins
+  uio[0]: "Data in bit 0 / Register 3 (R3) Address bit 0"
+  uio[1]: "Data in bit 1 / Register 3 (R3) Address bit 1"
+  uio[2]: "Data in bit 2 / Register 3 (R3) Address bit 2"
+  uio[3]: "Data in bit 3 / Register 3 (R3) Address bit 3"
+  uio[4]: "Data in bit 4 / Register 2 (R2) Address bit 0"
+  uio[5]: "Data in bit 5 / Register 2 (R2) Address bit 1"
+  uio[6]: "Data in bit 6 / Register 2 (R2) Address bit 2"
+  uio[7]: "Data in bit 7 / Register 2 (R2) Address bit 3"
+
+# Do not change!
+yaml_version: 6
