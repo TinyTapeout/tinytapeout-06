@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Universal gates"  # Project title
+  author:       "htfab"            # Your name
+  discord:      "h.tamas"          # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A modern take on 74-series chips"      # One line description of what your project does
+  language:     "Verilog"          # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0                  # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_wokwi_395614106833794049"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_wokwi_395614106833794049.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "a"
+  ui[1]: "b"
+  ui[2]: "c"
+  ui[3]: "d"
+  ui[4]: "e"
+  ui[5]: "f"
+  ui[6]: "g"
+  ui[7]: "h"
+
+  # Outputs
+  uo[0]: "i"
+  uo[1]: "j"
+  uo[2]: "k"
+  uo[3]: "l"
+  uo[4]: "m"
+  uo[5]: "n"
+  uo[6]: "o"
+  uo[7]: "p"
+
+  # Bidirectional pins
+  uio[0]: "u21(a..d)"
+  uio[1]: "u31(a..f)"
+  uio[2]: "u22(a..f).1"
+  uio[3]: "u22(a..f).2"
+  uio[4]: "u41(a..j)"
+  uio[5]: "nand(e, f)"
+  uio[6]: "u21(g..j)"
+  uio[7]: "u31(k..p)"
+
+# Do not change!
+yaml_version: 6
