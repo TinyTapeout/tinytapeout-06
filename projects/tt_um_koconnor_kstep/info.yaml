@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "kstep"      # Project title
+  author:       "Kevin OConnor"      # Your name
+  discord:      "kevin_oconnor"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Generate step/dir pulses for stepper motor drivers"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_koconnor_kstep"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "spiwb.v"
+    - "pincfg.v"
+    - "moveq.v"
+    - "schedstep.v"
+    - "clockcounter.v"
+    - "busdispatch.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "step"
+  uo[1]: "dir"
+  uo[2]: "other2"
+  uo[3]: "other3"
+  uo[4]: "other4"
+  uo[5]: "other5"
+  uo[6]: "other6"
+  uo[7]: "other7"
+
+  # Bidirectional pins
+  uio[0]: "spi_cs"
+  uio[1]: "spi_mosi"
+  uio[2]: "spi_miso"
+  uio[3]: "spi_sclk"
+  uio[4]: "signal_irq"
+  uio[5]: "signal_shutdown"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
