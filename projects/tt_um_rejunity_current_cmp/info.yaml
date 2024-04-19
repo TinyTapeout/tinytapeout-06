@@ -3,7 +3,7 @@ project:
   title:        "Analog Current Comparator"      # Project title
   author:       "Renaldas Zioma"      # Your name
   discord:      "rzioma"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "An analog current comparator with currents formed by summing up digital inputs"      # One line description of what your project does
+  description:  "An analog current comparator with Excitatory (+) and Inhibitory (-) currents formed by summing up digital inputs"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -20,14 +20,14 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "current A"
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "Inhibitory current bit"
+  ui[1]: "Inhibitory current bit"
+  ui[2]: "Inhibitory current bit"
+  ui[3]: "Inhibitory current bit"
+  ui[4]: "Inhibitory current bit"
+  ui[5]: "Inhibitory current bit"
+  ui[6]: "Inhibitory current bit"
+  ui[7]: "Inhibitory current bit"
 
   # Outputs
   uo[0]: ""
@@ -40,20 +40,22 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "current B"
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "Excitatory current bit"
+  uio[1]: "Excitatory current bit"
+  uio[2]: "Excitatory current bit"
+  uio[3]: "Excitatory current bit"
+  uio[4]: "Excitatory current bit"
+  uio[5]: "Excitatory current bit"
+  uio[6]: "Excitatory current bit"
+  uio[7]: "Excitatory current bit"
 
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
   # The first pins is always ua[0], and the pin numbers must be sequential.
-  ua[0]: "Comparator output"
-  ua[1]: "Comparator input"
+  ua[0]: "Main comparator output"
+  ua[1]: "Summed currents (debug)"
+  ua[2]: "2nd comparator input (debug)"
+  ua[3]: "2nd comparator output (debug)"
 
 # Do not change!
 yaml_version: 6
