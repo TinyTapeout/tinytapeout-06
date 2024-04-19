@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "USB CDC device"      # Project title
+  title:        "Two ports USB CDC device"      # Project title
   author:       "Maximo Balestrini"      # Your name
   discord:      "mbalestrini"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "USB CDC device"      # One line description of what your project does
+  description:  "USB CDC device with two ports each with a different application"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     48000000       # Clock frequency in Hz (or 0 if not applicable)
 
