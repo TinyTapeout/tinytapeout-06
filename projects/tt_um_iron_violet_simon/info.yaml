@@ -25,22 +25,22 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "ui[0]"
-  ui[1]: "ui[1]"
-  ui[2]: "ui[2]"
-  ui[3]: "ui[3]"
-  ui[4]: "ui[4]"
-  ui[5]: "ui[5]"
+  ui[0]: "Red Button"
+  ui[1]: "Yellow Button"
+  ui[2]: "Green Button"
+  ui[3]: "Blue Button"
+  ui[4]: "Start Game"
+  ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: "uo[0]"
-  uo[1]: "uo[1]"
-  uo[2]: "uo[2]"
-  uo[3]: "uo[3]"
-  uo[4]: "uo[4]"
-  uo[5]: "uo[5]"
+  uo[0]: "Red Lamp"
+  uo[1]: "Yellow Lamp"
+  uo[2]: "Green Lamp"
+  uo[3]: "Blue Lamp"
+  uo[4]: ""
+  uo[5]: ""
   uo[6]: ""
   uo[7]: ""
 
