@@ -5,7 +5,7 @@ project:
   discord:      "locochoco"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Implementation of a Brainf*ck processor in hardware"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -17,9 +17,11 @@ project:
   source_files:        
     - "project.v"
     - "dff.v"
+    - "dff14.v"
     - "mux2.v"
     - "mux4.v"
     - "is_zero.v"
+    - "is_zero14.v"
     - "signal.v"
     - "alu.v"
     - "fsm.v"
@@ -37,14 +39,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "Addr_0"
-  uo[1]: "Addr_1"
-  uo[2]: "Addr_2"
-  uo[3]: "Addr_3"
-  uo[4]: "Addr_4"
-  uo[5]: "Addr_5"
-  uo[6]: "Addr_6"
-  uo[7]: "Addr_7"
+  uo[0]: "Write"
+  uo[1]: "Addr"
+  uo[2]: "Instr_Addr"
+  uo[3]: "PC_Ext_8"
+  uo[4]: "PC_Ext_9"
+  uo[5]: "PC_Ext_10"
+  uo[6]: "PC_Ext_11"
+  uo[7]: "PC_Ext_12"
 
   # Bidirectional pins
   uio[0]: "Data_0"
