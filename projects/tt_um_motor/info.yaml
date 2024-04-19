@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "motor a pasos"      # Project title
+  author:       "Alan Tavira"      # Your name
+  discord:      "AlanTavira"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Motor a pasos con base de tiempo para control de velocidad, cambio de sentido de giro y de tipo de paso "      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_motor"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_motor.v"
+    - "motor_a_pasos.v"
+    - "base_tiempo_4vel.v"
+    
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: "CLK"
+  ui[2]: "RST"
+  ui[3]: "select[0]"
+  ui[4]: "select[1]"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: "I4"
+  uo[3]: "I3"
+  uo[4]: "I2"
+  uo[5]: "I1"
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: "paso"
+  uio[5]: "sentido"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
