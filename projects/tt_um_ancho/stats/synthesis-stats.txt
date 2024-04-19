@@ -1,0 +1,29 @@
+
+64. Printing statistics.
+
+=== tt_um_ancho ===
+
+   Number of wires:                 38
+   Number of wire bits:             73
+   Number of public wires:          14
+   Number of public wire bits:      49
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 54
+     sky130_fd_sc_hd__a21oi_2        3
+     sky130_fd_sc_hd__a22o_2         2
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__and4_2         1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__conb_1        23
+     sky130_fd_sc_hd__dfrtp_2        6
+     sky130_fd_sc_hd__inv_2          9
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__o21a_2         3
+     sky130_fd_sc_hd__o22a_2         1
+
+   Chip area for module '\tt_um_ancho': 409.142400
+
