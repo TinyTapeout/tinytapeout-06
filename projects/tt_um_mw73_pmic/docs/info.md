@@ -25,7 +25,7 @@ to prevent this overlap.
 ## How to use
 
 After reset, the syncRectifierLs and syncRectifierHs outputs will produce a pwm signal based on the 8bit parallel ADC input.
-You need to build the circuit shown in the white paper pdf. You could also just hook up an oscilloscope to 
+You need to build the circuit shown in the PMIC.png. You could also just hook up an oscilloscope to 
 the syncRectifierLs and syncRectifierHs and see the 180 deg out of phase square waves.
 
 ## External hardware
