@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "3-bit ALU"      # Project title
+  author:       "José Raña Gámez"      # Your name
+  discord:      "JoseKaisen"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This device is a 3-bit ALU that generates 5 operations in parallel. The operations that the ALU performs are: addition, subtraction, multiplication, division and modulo operation. The device has 2 inputs; A[3-bit] and B[3-bit] along with a 3-bit selector (Selector[3-bit]). It also has a single 6-bit output (OutPut[6-bit]). In the end, the design entails 15 pins in total; 9 input and 6 output pins. The operation of this ALU is simple: At input A and B, the values ​​are set using switches, for example, A= 111 and B=101. To obtain the 5 different results through the different 5 operations that the ALU performs, the 3-bit selector (Selector[3-bits]) is used, therefore, using 3 switches we will place the result that we want to observe at the output." # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ALU"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "ALU_3bits_Top.v"
+    - "ALU_ArithmeticOperators.v"
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "First bit for input 'A'(input of 3-bits)"
+  ui[1]: "Second bit for input 'A'(input of 3-bits)"
+  ui[2]: "Third bit for input 'A'(input of 3-bits)"
+  ui[3]: "First bit for input 'B'(input of 3-bits)"
+  ui[4]: "Second bit for input 'B'(input of 3-bits)"
+  ui[5]: "Third bit for input 'B'(input of 3-bits)"
+  ui[6]: "Unused input bit"
+  ui[7]: "Unused input bit"
+
+  # Outputs
+  uo[0]: "First bit for output 'Leds'(output of 6-bits)"
+  uo[1]: "Second bit for output 'Leds'(output of 6-bits)"
+  uo[2]: "Third bit for output 'Leds'(output of 6-bits)"
+  uo[3]: "Fourth bit for output 'Leds'(output of 6-bits)"
+  uo[4]: "Fifth bit for output 'Leds'(output of 6-bits)"
+  uo[5]: "Sixth bit for output 'Leds'(output of 6-bits)"
+  uo[6]: "Unused output bit"
+  uo[7]: "Unused output bit"
+
+  # Bidirectional pins
+  uio[0]: "First bit for input 'ctrl'(input of 3-bits)"
+  uio[1]: "Second bit for input 'ctrl'(input of 3-bits)"
+  uio[2]: "Third bit for input 'ctrl'(input of 3-bits)"
+  uio[3]: "Unused bidirectional I/O bit"
+  uio[4]: "Unused bidirectional I/O bit"
+  uio[5]: "Unused bidirectional I/O bit"
+  uio[6]: "Unused bidirectional I/O bit"
+  uio[7]: "Unused bidirectional I/O bit"
+
+# Do not change!
+yaml_version: 6

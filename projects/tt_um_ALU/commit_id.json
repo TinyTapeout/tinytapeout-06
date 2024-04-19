@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/JoseKaisen/ALU_3bits",
+  "commit": "aef5319d47e2f6644e4df935d932ae1136e0cc20",
+  "workflow_url": "https://github.com/JoseKaisen/ALU_3bits/actions/runs/8655310910",
+  "sort_id": 1713486562280,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
