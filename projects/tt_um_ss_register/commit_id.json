@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/CarlosVel17/Serie_Serie",
+  "commit": "e466ce784e3d46f27b75b3a08f28f3a77f01499c",
+  "workflow_url": "https://github.com/CarlosVel17/Serie_Serie/actions/runs/8671254718",
+  "sort_id": 1713487867067,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}

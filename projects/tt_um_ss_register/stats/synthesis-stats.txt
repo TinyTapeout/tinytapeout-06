@@ -1,0 +1,21 @@
+
+64. Printing statistics.
+
+=== tt_um_ss_register ===
+
+   Number of wires:                 26
+   Number of wire bits:             61
+   Number of public wires:          13
+   Number of public wire bits:      48
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 42
+     sky130_fd_sc_hd__buf_1          5
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__conb_1        23
+     sky130_fd_sc_hd__dfrtp_2        4
+     sky130_fd_sc_hd__mux2_2         9
+
+   Chip area for module '\tt_um_ss_register': 316.553600
+
