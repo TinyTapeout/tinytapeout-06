@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395567106413190145       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "4-Bit Full Adder and Subtractor with Hardware Trojan"      # Project title
+  author:       "Jeremy Hong"      # Your name
+  discord:      "Hongseleco"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Externally triggered hardware trojan in a 4-bit full adder and subtractor"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     100000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Add/Subtract"
+  ui[1]: "A0"
+  ui[2]: "B0"
+  ui[3]: "A1"
+  ui[4]: "B1"
+  ui[5]: "A2"
+  ui[6]: "B2"
+  ui[7]: "A3"
+
+  # Outputs
+  uo[0]: "7 Segment Display"
+  uo[1]: "7 Segment Display"
+  uo[2]: "7 Segment Display"
+  uo[3]: "7 Segment Display"
+  uo[4]: "7 Segment Display"
+  uo[5]: "7 Segment Display"
+  uo[6]: "7 Segment Display"
+  uo[7]: "7 Segment Display"
+
+  # Bidirectional pins
+  uio[0]: "Input - B3"
+  uio[1]: "Input - Hardware Trojan Trigger"
+  uio[2]: "Output - LFSR 1"
+  uio[3]: "Output - LFSR 2"
+  uio[4]: "Output - LFSR 3"
+  uio[5]: "Input - LFSR 3"
+  uio[6]: "Input - LFSR 4"
+  uio[7]: "Output - LFSR 7"
+
+# Do not change!
+yaml_version: 6
