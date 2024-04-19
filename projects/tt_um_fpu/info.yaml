@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project: 
+  title:        "Dgrid_FPU"                            # Project title
+  author:       "Aravind-Prasad-Abhinav-Prakash"       # Your name
+  discord:      ""                                     # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "4 Input FPU for MAC at 40MHZ"         # One line description of what your project does
+  language:     "Verilog"                              # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     40000000                               # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "4x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_fpu"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_fpu.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Bit 0 Input"
+  ui[1]: "Bit 1 Input"
+  ui[2]: "Bit 2 Input"
+  ui[3]: "Bit 3 Input"
+  ui[4]: "Bit 4 Input"
+  ui[5]: "Bit 5 Input"
+  ui[6]: "Bit 6 Input"
+  ui[7]: "Bit 7 Input"
+
+  # Outputs
+  uo[0]: "Bit 0 Output"
+  uo[1]: "Bit 1 Output"
+  uo[2]: "Bit 2 Output"
+  uo[3]: "Bit 3 Output"
+  uo[4]: "Bit 4 Output"
+  uo[5]: "Bit 5 Output"
+  uo[6]: "Bit 6 Output"
+  uo[7]: "Bit 7 Output"
+
+  # Bidirectional pins
+  uio[0]: "Output used as valid Signal"
+  uio[1]: "Output used as valid Signal"
+  uio[2]: "Output used as valid Signal"
+  uio[3]: "Output used as valid Signal"
+  uio[4]: "0"
+  uio[5]: "0"
+  uio[6]: "0"
+  uio[7]: "0"
+
+# Do not change!
+yaml_version: 6
