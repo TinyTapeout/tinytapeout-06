@@ -13,27 +13,26 @@
    Number of cells:                112
      sky130_fd_sc_hd__a211o_2        1
      sky130_fd_sc_hd__a21bo_2        1
-     sky130_fd_sc_hd__a21o_2         2
-     sky130_fd_sc_hd__a21oi_2        4
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a22oi_2        1
      sky130_fd_sc_hd__and2_2         2
-     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__and3_2         2
      sky130_fd_sc_hd__buf_1          3
      sky130_fd_sc_hd__buf_2         14
      sky130_fd_sc_hd__conb_1        10
      sky130_fd_sc_hd__dfxtp_2       32
      sky130_fd_sc_hd__inv_2          4
      sky130_fd_sc_hd__mux2_2         1
-     sky130_fd_sc_hd__nand2_2        5
-     sky130_fd_sc_hd__nor2_2         2
-     sky130_fd_sc_hd__o21ai_2        1
-     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__nand2_2        6
+     sky130_fd_sc_hd__nor2_2         3
+     sky130_fd_sc_hd__o21ai_2        2
      sky130_fd_sc_hd__or2_2          4
      sky130_fd_sc_hd__or2b_2         1
      sky130_fd_sc_hd__or3_2          1
-     sky130_fd_sc_hd__or3b_2         1
-     sky130_fd_sc_hd__or4_2          1
-     sky130_fd_sc_hd__xnor2_2       11
-     sky130_fd_sc_hd__xor2_2         9
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__xnor2_2       14
+     sky130_fd_sc_hd__xor2_2         6
 
-   Chip area for module '\tt_um_wokwi_395567106413190145': 1367.561600
+   Chip area for module '\tt_um_wokwi_395567106413190145': 1363.808000
 
