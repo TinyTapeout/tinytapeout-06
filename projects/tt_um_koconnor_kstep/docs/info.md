@@ -18,6 +18,7 @@ W 0x11 <any>: Clear shutdown state.
 W 0x12 <step_duration>: Set the duration of step pulses (in clock ticks).
 W 0x20 <count/add>: Set count (upper 16 bits), add (lower 16 bits), and submit.
 W 0x21 <interval>: Set interval between pulses (ticks). Submit with addr 0x20.
+W 0x22 <direction>: Set stepper direction (pin uo_out[1]) during step pulses.
 W 0x30 <any>: Reset last step time to zero.
 W 0x70 <clock>: Set the current clock counter.
 R 0x70: Read the current clock counter.
