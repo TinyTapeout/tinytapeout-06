@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395618714068432897       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "32b Fibonacci Original"      # Project title
+  author:       "Felipe Serrano"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Fibonacci Serie"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: "In1"
+  ui[2]: "In2"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Out0"
+  uo[1]: "Out1"
+  uo[2]: "Out2"
+  uo[3]: "Out3"
+  uo[4]: "Out4"
+  uo[5]: "Out5"
+  uo[6]: "Out6"
+  uo[7]: "Out7"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
