@@ -353,7 +353,11 @@
     { "type": "wokwi-flip-flop-d", "id": "flop30", "top": -1958.4, "left": 988.8, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop31", "top": -1958.4, "left": 1123.2, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop32", "top": -1958.4, "left": 1276.8, "attrs": {} },
-    { "type": "wokwi-gate-not", "id": "not24", "top": -1891.2, "left": 1382.4, "attrs": {} }
+    { "type": "wokwi-gate-not", "id": "not24", "top": -1891.2, "left": 1382.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": -1459.2, "left": 287.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": -1795.2, "left": 258.6, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": 28.8, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd5", "top": 451.2, "left": 18.6, "attrs": {} }
   ],
   "connections": [
     [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
@@ -425,7 +429,7 @@
     [ "ttin:IN5", "xor3:A", "green", [ "h643.2", "v57.6", "h76.8" ] ],
     [ "ttin:IN6", "xor11:B", "green", [ "h480", "v96" ] ],
     [ "ttin:IN7", "xor1:A", "green", [ "h460.8", "v278.4", "h268.8" ] ],
-    [ "ttio0:IN", "xor12:B", "green", [ "h-19.2", "v9.6" ] ],
+    [ "ttio0:IN", "xor12:B", "green", [ "h-67.2", "v240" ] ],
     [ "nand11:B", "xor9:A", "green", [ "h-336", "v-105.6" ] ],
     [ "and1:A", "not2:OUT", "green", [ "h-24.14", "v-10.94" ] ],
     [ "and1:B", "not1:OUT", "green", [ "h-25.36", "v17.3" ] ],
@@ -531,7 +535,6 @@
     [ "xor8:B", "nand2:B", "green", [ "h-28.8", "v86.4" ] ],
     [ "xor7:OUT", "xor2:A", "green", [ "v0" ] ],
     [ "xor2:B", "nand11:B", "green", [ "h-19.2", "v19.2" ] ],
-    [ "nand11:A", "xor9:A", "green", [ "h-336", "v-76.8" ] ],
     [ "xor4:A", "xor5:OUT", "green", [ "h0" ] ],
     [ "nand8:A", "xor4:A", "green", [ "h-9.6", "v-86.4" ] ],
     [ "xor4:B", "nand8:B", "green", [ "h-38.4", "v86.4" ] ],
@@ -651,7 +654,16 @@
     [ "ttio7:OUT", "flop32:Q", "green", [ "h0" ] ],
     [ "ttio6:IN", "flop25:CLK", "green", [ "h-96", "v-86.4", "h28.8" ] ],
     [ "ttio7:IN", "not24:IN", "green", [ "h0" ] ],
-    [ "not24:OUT", "ttio7:OE", "green", [ "v0" ] ]
+    [ "not24:OUT", "ttio7:OE", "green", [ "v0" ] ],
+    [ "ttio5:OE", "gnd2:GND", "green", [ "h0" ] ],
+    [ "ttio5:OUT", "gnd2:GND", "green", [ "h-19.2", "v38.4", "h19.2" ] ],
+    [ "ttio6:OE", "gnd3:GND", "green", [ "h0" ] ],
+    [ "ttio6:OUT", "gnd3:GND", "green", [ "h-28.8", "v28.8" ] ],
+    [ "gnd4:GND", "ttio0:OE", "black", [ "v0" ] ],
+    [ "ttio0:OUT", "gnd4:GND", "green", [ "h-19.2" ] ],
+    [ "ttio1:OE", "gnd5:GND", "green", [ "h0" ] ],
+    [ "ttio1:OUT", "gnd5:GND", "green", [ "h0" ] ],
+    [ "nand11:A", "xor2:A", "green", [ "h-28.8", "v-86.4" ] ]
   ],
   "dependencies": {}
 }
