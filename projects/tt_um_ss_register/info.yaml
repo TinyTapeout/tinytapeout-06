@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "serie_serie_register"      # Project title
+  author:       "C.A. Velázquez-Morales"      # Your name
+  discord:      "serie_serie_register"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Registro Serie-Serie, con 4 registros y corrimiento hacia la izquierda o derecha"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ss_register"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_ss_register.v"
+    - "serie_serie_register.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "data_in"
+  ui[1]: "clk"
+  ui[2]: "rst"
+  ui[3]: "ena"
+  ui[4]: "leri"
+  ui[5]: "No_Used"
+  ui[6]: "No_Used"
+  ui[7]: "No_Used"
+
+  # Outputs
+  uo[0]: "Data_Out"
+  uo[1]: "No_Used"
+  uo[2]: "No_Used"
+  uo[3]: "No_Used"
+  uo[4]: "No_Used"
+  uo[5]: "No_Used"
+  uo[6]: "No_Used"
+  uo[7]: "No_Used"
+
+  # Bidirectional pins
+  uio[0]: "No_Used"
+  uio[1]: "No_Used"
+  uio[2]: "No_Used"
+  uio[3]: "No_Used"
+  uio[4]: "No_Used"
+  uio[5]: "No_Used"
+  uio[6]: "No_Used"
+  uio[7]: "No_Used"
+
+# Do not change!
+yaml_version: 6
