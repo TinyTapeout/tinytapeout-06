@@ -8,8 +8,8 @@ project:
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
-
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+ 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_chatgpt_rsnn_paolaunisa"
   
@@ -17,11 +17,14 @@ project:
   source_files:        
     - "tt_um_chatgpt_rsnn_paolaunisa.v"
     - "LeakyIntegrateFireNeuron.v"
+    - "LeakyIntegrateFireNeuron_test.v"
     - "MemoryCU.v"
     - "RecurrentSpikingNeuron.v"
+    - "RecurrentSpikingNeuron_test.v"
     - "register.v"
     - "RSNN_TopModule.v"
     - "SpikingNeuronLayer.v"
+    - "SpikingNeuronLayer_test.v"
     - "ThreeLayerNeuralNetwork.v"
     - "FIPO_Memory.v"
     
@@ -36,7 +39,7 @@ pinout:
   ui[4]: "RSNN enable"
   ui[5]: "Serial Data IN"
   ui[6]: "Parameter Load"
-  ui[7]: ""
+  ui[7]: "Test selection"
 
   # Outputs
   uo[0]: "Output Spike 0"
@@ -49,14 +52,14 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "out_test 0"
+  uio[1]: "out_test 1"
+  uio[2]: "out_test 2"
+  uio[3]: "out_test 3"
+  uio[4]: "out_test 4"
+  uio[5]: "out_test 5"
+  uio[6]: "out_test 6"
+  uio[7]: "out_test 7"
 
 # Do not change!
 yaml_version: 6

@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout tt06 c74b14ac",
+  "app": "Tiny Tapeout tt06 7f56a586",
   "repo": "https://github.com/Andreou-JHULabOrg/tinytapeout_06_chatgpt_rsnn",
-  "commit": "18a24032469430248a6924f6344e09ac1a560b0d",
-  "workflow_url": "https://github.com/Andreou-JHULabOrg/tinytapeout_06_chatgpt_rsnn/actions/runs/8749453022",
+  "commit": "790eb7954a2a6fc031cfcbc880db9f6005d58762",
+  "workflow_url": "https://github.com/Andreou-JHULabOrg/tinytapeout_06_chatgpt_rsnn/actions/runs/8757794847",
   "sort_id": 1713530432151,
   "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
   "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
