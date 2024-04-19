@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/JuanManuelLopezPasten/Multiplicador-2-bits",
+  "commit": "2b7785c78756712bc2559d37d10868bd9484ee1c",
+  "workflow_url": "https://github.com/JuanManuelLopezPasten/Multiplicador-2-bits/actions/runs/8671131120",
+  "sort_id": 1713487551862,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
