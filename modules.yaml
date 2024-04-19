@@ -6,6 +6,10 @@ modules:
   - name: "factory_test"
     x: 7
     y: 14
-#  - name: "loopback"
-#    x: 6
-#    y: 15
+  - name: urish_charge_pump
+    x: 1
+    y: 10
+    analog:
+      0: null
+    height: 2
+    width: 1
