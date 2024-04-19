@@ -8,6 +8,10 @@ You can also include images in this folder and reference them in the markdown. E
 
 -->
 
+## The Team
+
+John Cope, Kasey Hill, Matt Johnson, Jacob Reyna
+
 ## How it works
 
 Simon't involves the device playing a sequence of button-lamps, and the player needs to repeat the sequence by pressing corresponding buttons.
