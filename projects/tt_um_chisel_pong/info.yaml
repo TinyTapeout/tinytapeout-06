@@ -27,10 +27,10 @@ pinout:
   ui[1]: "left player down"
   ui[2]: "right player up"
   ui[3]: "right player down"
-  ui[4]: "engage left player AI"
-  ui[5]: "engage right player AI"
-  ui[6]: ""
-  ui[7]: ""
+  ui[4]: "engage left player autopilot"
+  ui[5]: "engage right player autopilot"
+  ui[6]: "not used"
+  ui[7]: "not used"
 
   # Outputs
   uo[0]: "r[1]"
@@ -46,11 +46,11 @@ pinout:
   uio[0]: "state[0]"
   uio[1]: "state[1]"
   uio[2]: "state[2]"
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[3]: "v-sync"
+  uio[4]: "h-sync"
+  uio[5]: "left player lost"
+  uio[6]: "right player lost"
+  uio[7]: "game tick"
 
 # Do not change!
 yaml_version: 6
