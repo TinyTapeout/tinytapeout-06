@@ -23,10 +23,115 @@ inverter inverter (
     .IN(ua[5])
     );
 
-analog_mux analog_mux (
+analog_mux analog_mux_0 (
     .VPWR(VPWR),
     .VGND(VGND),
     .ctrl(ui_in[0]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_1 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[1]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_2 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[2]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_3 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[3]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_4 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[4]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_5 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[5]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_6 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[6]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_7 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(ui_in[7]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_8 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[0]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_9 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[1]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_10 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[2]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_11 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[3]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_12 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[4]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_13 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[5]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_14 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[6]),
+    .bus(ua[0])
+    );
+
+analog_mux analog_mux_15 (
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .ctrl(uio_in[7]),
     .bus(ua[0])
     );
 
