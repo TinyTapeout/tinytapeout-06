@@ -41,7 +41,7 @@ The module expects an SPI RAM attached to the relevant SPI pins.  The onboard Ra
 
 Status byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
 ------------+---+---+---+---+---+---+---+--
-            | x | x | **E**lse | x | x | x | **N**eg | **Z**ero
+            | x | x | **E**lse | x | x | **C**arry | **N**eg | **Z**ero
 
 Impact on the status flags is documented as:
 
@@ -61,13 +61,14 @@ Drop | `0000 0011` | Drop a word from the stack | `---- ----`
 Push | `0000 0100` | Push a word to the stack | `---- ----`
 Pop  | `0000 0101` | Pop a word from the stack to the accumulator | `---- ----`
 Return | `0000 0110` | Return to the address on top of the stack | `---- ----`
-Not  | `0000 0111` | One's complement of the accumulator | `---- --##`
+Not  | `0000 0111` | One's complement of the accumulator | `---- -1##`
 Out Lo | `0000 1000` | Output the low byte of the accumulator | `---- ----`
 Out Hi | `0000 1001` | Output the high byte of the accumulator | `---- ----`
 Set DP | `0000 1010` | Set the data pointer value to the accumulator value | `---- ----`
 Test | `0000 1011` | Set the status flags based on the accumulator value | `---- --##`
 Branch Indirect | `0000 1100` | Add the accumulator to the program counter | `---- ----`
 Call Indirect | `0000 1101` | Call the subroutine address in the accumulator | `---- ----`
+Status        | `0001 0000` | Load the status flags into the accumulator | `---- ----`
 Load Indirect | `0100 01mm` | Load a word from the address in the accumulator, using addressing mode `m` (bug: modes not supported) | `---- ----`
 
 
@@ -77,12 +78,12 @@ Name | Bit Pattern | Description | Status
 -----+-------------+-------------+-------
 Load | `1000 0sss vvvv vvvv` | Load a value into the accumulator | `---- ----`
 Store | `1001 0sss vvvv vvvv` | Store a value to memory | `---- ----`
-Add | `1000 1sss vvvv vvvv` | Add a value to the accumulator | `---- --##`
-Sub | `1001 1sss vvvv vvvv` | Subtract a value from the accumulator | `---- --##`
+Add | `1000 1sss vvvv vvvv` | Add a value to the accumulator | `---- -###`
+Sub | `1001 1sss vvvv vvvv` | Subtract a value from the accumulator | `---- -###`
 And | `1010 0sss vvvv vvvv` | Bitwise and a value with the accumulator | `---- --##`
 Or  | `1010 1sss vvvv vvvv` | Bitwise or a value with the accumulator | `---- --##`
 Xor | `1011 0sss vvvv vvvv` | Bitwise exclusive or a value with the accumulator | `---- --##`
-Shift | `1011 1sss vvvv vvvv` | Shift the accumulator (see note below on direction) | `---- --##`
+Shift | `1011 1sss vvvv vvvv` | Shift the accumulator (see note below on direction) | `---- -###`
 Branch | `1100 0pp pppp pppp` | Add the offset `p` to the program counter | `---- ----`
 Call   | `1101 0pp pppp pppp` | Call the subroutine at address `p` | `---- ----`
 If     | `1111 000 0000 cccc` | Skip the following instruction if the condition doesn't hold | `---- ----`
@@ -118,10 +119,12 @@ Else      | `0010`      | Skip the next instruction if the `E` bit is cleared
 Not Else  | `0011`      | Skip the next instruction if the `E` bit is set
 Neg       | `0100`      | Skip the next instruction if the `N` bit is cleared
 Not Neg   | `0101`      | Skip the next instruction if the `N` bit is set
+Carry     | `0110`      | Skip the next instruction if the `C` bit is cleared
+Not Carry | `0111`      | Skip the next instruction if the `C` bit is set
 
 ### Three-byte instructions
 
 Name | Bit Pattern | Description | Status
 -----+-------------+-------------+-------
-Call Word | `0000 1110 wwww wwww wwww wwww` | Call the subroutine at address `w` | `---- ----`
-Load Immediate Word | `0000 1111 wwww wwww wwww wwww` | Set the accumulator to `w` | `---- ----`
+Call Word | `0011 1110 wwww wwww wwww wwww` | Call the subroutine at address `w` | `---- ----`
+Load Immediate Word | `0011 1111 wwww wwww wwww wwww` | Set the accumulator to `w` | `---- ----`
