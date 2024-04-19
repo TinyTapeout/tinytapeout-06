@@ -20,7 +20,7 @@ DJ8 is a 8-bit CPU, originally developped for XCS10XL featuring:
 | From | To | Description
 |--|--|--|
 | 0x0000 | 0x7fff | External memory
-| 0x8000 | 0xffff | Internal Test ROM (32 bytes, mirrored)
+| 0x8000 | 0xffff | Internal Test ROM (256 bytes, mirrored)
 
 #### External memory map if using the recommended setup (see [pinout](#pinout))
 
@@ -52,10 +52,31 @@ All other registers are set to 0x80.
 
 # How to test
 
-An internal test ROM is included for easy testing on the TT06 demo board, no external hardware needed. It shows a rotating indicator on the 7-segment display. Its speed can be changed with DIP switches, the internal delay loop is entirely deactivated when all switches are reset.
+An internal test ROM with two demos is included for easy testing. Just select the corresponding DIP switches at reset time to start the demo (technically, a ***jmp GH*** instruction will be seen on the data bus thanks to the DIP switches values, with GH=0x8080 at reset).
 
-To jump to the internal test ROM, set DIP8 = 0, DIP7 = 1 and reset the CPU. That way, the CPU sees a ***JMP GH*** instruction on the bus when it fetches the first instruction, and jumps to GH. At reset time GH = 0x8080 which is in internal test ROM area.
+## Demo 1: Rotating LED indicator
+| SW1 | SW2 | SW3 | SW4 | SW5 | SW6 | SW7 | SW8 |
+|--|--|--|--|--|--|--|--|
+| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+
+No external hardware needed. This demo shows a rotating indicator on the 7-segment display. Its speed can be changed with DIP switches, the internal delay loop is entirely deactivated when all switches are reset.
+
+## Demo 2: Bytebeat Synthetizer
+
+| SW1 | SW2 | SW3 | SW4 | SW5 | SW6 | SW7 | SW8 |
+|--|--|--|--|--|--|--|--|
+| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+
+Modem handshakes sound like music to your hears? It's your lucky day! Become a DJ thanks to 256 lo-fi glitchy settings.
+
+Connect a speaker to uo[4] or use [Tiny Tapeout Simon Says PMOD](https://github.com/urish/tt-simon-pmod).
+
+It is highly recommended to add a simple low-pass RC filter on the speaker line to filter out the buzzing 8kHz carrier. Ideal cut-off frequency between 3kHz and 8kHz, TBD.
+
+Set SW1 and/or SW2 at reset time to adjust speed in case the design doesn't run at 14MHz.
 
 # External hardware
 
-External parallel flash + optional SRAM
+* No external hardware needed for demos
+* Otherwise: Parallel Flash ROM + optional SRAM
+
