@@ -1,0 +1,47 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     394640918790880257       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "IFSC Keypad Locker"      # Project title
+  author:       "Roddy Romero; Gabriel Mota; Luis Davi Paganella; Vinicius Westphal De Paula; "      # Your name
+  discord:      "None"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "4 digit Locker of an ordinary 4x4 contact keypad (based on Arduino keypad)"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     100       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "VCC"
+  ui[1]: "RESET"
+  ui[2]: "GND"
+  ui[3]: "Keypad Column pin 1"
+  ui[4]: "Keypad Column pin 2"
+  ui[5]: "Keypad Column pin 3"
+  ui[6]: "Keypad Column pin 4"
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Keypad Row pin 1"
+  uo[1]: "Keypad Row pin 2"
+  uo[2]: "Keypad Row pin 3"
+  uo[3]: "Keypad Row pin 4"
+  uo[4]: ""
+  uo[5]: "Locker State (LED 1)"
+  uo[6]: "Registered Password Signal (LED 2)"
+  uo[7]: "Line Verifier (LED 3)"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
