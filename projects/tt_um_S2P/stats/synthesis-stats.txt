@@ -1,0 +1,19 @@
+
+63. Printing statistics.
+
+=== tt_um_S2P ===
+
+   Number of wires:                 12
+   Number of wire bits:             47
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 28
+     sky130_fd_sc_hd__conb_1        20
+     sky130_fd_sc_hd__dfrtp_2        4
+     sky130_fd_sc_hd__inv_2          4
+
+   Chip area for module '\tt_um_S2P': 195.187200
+
