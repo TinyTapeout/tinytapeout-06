@@ -67,7 +67,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.196500 ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 151.190 110.520 151.490 111.520 ;
@@ -156,6 +156,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uio_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met4 ;
         RECT 114.390 110.520 114.690 111.520 ;
@@ -164,6 +165,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met4 ;
         RECT 110.710 110.520 111.010 111.520 ;
@@ -220,6 +222,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uio_oe[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 26.070 110.520 26.370 111.520 ;
@@ -349,6 +352,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
     PORT
       LAYER met4 ;
         RECT 84.950 110.520 85.250 111.520 ;
@@ -357,6 +361,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 81.270 110.520 81.570 111.520 ;
@@ -365,6 +370,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
     PORT
       LAYER met4 ;
         RECT 77.590 110.520 77.890 111.520 ;
@@ -373,6 +379,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[4]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 73.910 110.520 74.210 111.520 ;
@@ -381,6 +388,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[5]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
     PORT
       LAYER met4 ;
         RECT 70.230 110.520 70.530 111.520 ;
@@ -389,6 +397,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[6]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 66.550 110.520 66.850 111.520 ;
@@ -397,6 +406,7 @@ MACRO tt_um_spiff42_exp_led_pwm
   PIN uo_out[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
     PORT
       LAYER met4 ;
         RECT 62.870 110.520 63.170 111.520 ;
@@ -427,7 +437,7 @@ MACRO tt_um_spiff42_exp_led_pwm
       LAYER li1 ;
         RECT 2.760 2.635 158.240 108.885 ;
       LAYER met1 ;
-        RECT 2.760 2.480 159.040 109.440 ;
+        RECT 2.760 2.480 159.040 109.040 ;
       LAYER met2 ;
         RECT 4.230 2.535 159.010 110.005 ;
       LAYER met3 ;
@@ -475,14 +485,14 @@ MACRO tt_um_spiff42_exp_led_pwm
         RECT 148.210 110.120 150.790 111.170 ;
         RECT 151.890 110.120 154.470 111.170 ;
         RECT 3.975 109.440 155.185 110.120 ;
-        RECT 3.975 96.055 20.995 109.440 ;
-        RECT 23.395 96.055 40.430 109.440 ;
-        RECT 42.830 96.055 59.865 109.440 ;
-        RECT 62.265 96.055 79.300 109.440 ;
-        RECT 81.700 96.055 98.735 109.440 ;
-        RECT 101.135 96.055 118.170 109.440 ;
-        RECT 120.570 96.055 137.605 109.440 ;
-        RECT 140.005 96.055 155.185 109.440 ;
+        RECT 3.975 32.135 20.995 109.440 ;
+        RECT 23.395 32.135 40.430 109.440 ;
+        RECT 42.830 32.135 59.865 109.440 ;
+        RECT 62.265 32.135 79.300 109.440 ;
+        RECT 81.700 32.135 98.735 109.440 ;
+        RECT 101.135 32.135 118.170 109.440 ;
+        RECT 120.570 32.135 137.605 109.440 ;
+        RECT 140.005 32.135 155.185 109.440 ;
   END
 END tt_um_spiff42_exp_led_pwm
 END LIBRARY

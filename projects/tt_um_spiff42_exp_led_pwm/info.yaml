@@ -15,9 +15,10 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "project.v"
+    - "tt_um_spiff42_exp_led_pwm.v"
     - "ramp_gen.v"
     - "pwm_chan.v"
+    - "i2c_slave.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
@@ -32,19 +33,19 @@ pinout:
   ui[7]: "duty[7]"
 
   # Outputs
-  uo[0]: "PWM signal"
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "PWM channel 0"
+  uo[1]: "PWM channel 1"
+  uo[2]: "PWM channel 2"
+  uo[3]: "PWM channel 3"
+  uo[4]: "PWM channel 4"
+  uo[5]: "PWM channel 5"
+  uo[6]: "PWM channel 6"
+  uo[7]: "PWM channel 7"
 
   # Bidirectional pins
   uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
+  uio[1]: "SDA"
+  uio[2]: "SCL"
   uio[3]: ""
   uio[4]: ""
   uio[5]: ""
