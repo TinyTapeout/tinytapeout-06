@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-dip-switch-8",
+      "id": "sw1",
+      "top": -338.86,
+      "left": -155.08,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-clock-generator",
+      "id": "clock1",
+      "top": -517.56,
+      "left": -175.78,
+      "attrs": { "frequency": "10000" }
+    },
+    { "type": "wokwi-gnd", "id": "pwr1", "top": 432.84, "left": 2204.42, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "pwr2", "top": -392, "left": -175.78, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 326.4,
+      "left": 2190.9,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw2",
+      "top": -532.36,
+      "left": -95.88,
+      "attrs": { "value": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -511.36,
+      "left": -41.38,
+      "attrs": { "color": "grey", "label": "Step", "bounce": "0", "key": "s" }
+    },
+    { "type": "wokwi-vcc", "id": "pwr3", "top": -536, "left": 45.02, "attrs": {} },
+    {
+      "type": "board-tt-block-input",
+      "id": "ttin1",
+      "top": -390.49,
+      "left": -55.78,
+      "attrs": { "verilogRole": "input" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -463.36,
+      "left": -194.98,
+      "attrs": { "color": "grey", "label": "RESET", "bounce": "0", "key": "r" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -421.56, "left": -224.38, "attrs": {} },
+    {
+      "type": "board-tt-block-output",
+      "id": "ttout1",
+      "top": 300.71,
+      "left": 1998.62,
+      "attrs": { "verilogRole": "output" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -456.01,
+      "left": -271.78,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-vcc", "id": "pwr4", "top": -488, "left": -290.98, "attrs": {} },
+    { "type": "wokwi-mux-2", "id": "mux1", "top": -210.36, "left": -118.18, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flipflop1", "top": -200.76, "left": 25.82, "attrs": {} },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop2",
+      "top": -200.76,
+      "left": 141.02,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop3",
+      "top": -200.76,
+      "left": 256.22,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop4",
+      "top": -200.76,
+      "left": 371.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop5",
+      "top": -200.76,
+      "left": 601.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop6",
+      "top": -200.76,
+      "left": 486.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop7",
+      "top": -200.76,
+      "left": 707.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop8",
+      "top": -200.76,
+      "left": 813.02,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop9",
+      "top": -200.76,
+      "left": 918.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop10",
+      "top": -200.76,
+      "left": 1024.22,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop11",
+      "top": -200.76,
+      "left": 1129.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop12",
+      "top": -200.76,
+      "left": 1245.02,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop13",
+      "top": -200.76,
+      "left": 1360.22,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop14",
+      "top": -200.76,
+      "left": 1475.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop15",
+      "top": -200.76,
+      "left": 1590.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop16",
+      "top": -200.76,
+      "left": 1705.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "gate1",
+      "top": -104.36,
+      "left": -434.98,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate2",
+      "top": 92.63,
+      "left": 138.73,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate3",
+      "top": -16.46,
+      "left": 182.67,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate4",
+      "top": -9.44,
+      "left": 415.63,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate5",
+      "top": -15.63,
+      "left": 639.41,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate6",
+      "top": -16.2,
+      "left": 848.64,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate7",
+      "top": -10.4,
+      "left": 1063.34,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate8",
+      "top": -1.62,
+      "left": 1283.83,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate9",
+      "top": 6.29,
+      "left": 1525.58,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate10",
+      "top": 12.62,
+      "left": 1760.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate11",
+      "top": 156.07,
+      "left": 140.98,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate12",
+      "top": 215.68,
+      "left": 139.41,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate13",
+      "top": 274.64,
+      "left": 139.46,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate14",
+      "top": 119.49,
+      "left": 10.07,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate15",
+      "top": 241.57,
+      "left": 12.32,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate16",
+      "top": 181.36,
+      "left": -84.85,
+      "rotate": 180,
+      "attrs": {}
+    },
+    { "type": "wokwi-flip-flop-d", "id": "flipflop17", "top": 432.84, "left": 35.42, "attrs": {} },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop18",
+      "top": 432.84,
+      "left": 150.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop19",
+      "top": 432.84,
+      "left": 265.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop20",
+      "top": 432.84,
+      "left": 381.02,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop21",
+      "top": 432.84,
+      "left": 611.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop22",
+      "top": 432.84,
+      "left": 496.22,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop23",
+      "top": 432.84,
+      "left": 717.02,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop24",
+      "top": 432.84,
+      "left": 822.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop25",
+      "top": 432.84,
+      "left": 928.22,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop26",
+      "top": 432.84,
+      "left": 1033.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop27",
+      "top": 432.84,
+      "left": 1139.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop28",
+      "top": 432.84,
+      "left": 1254.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop29",
+      "top": 432.84,
+      "left": 1369.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop30",
+      "top": 432.84,
+      "left": 1485.02,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop31",
+      "top": 432.84,
+      "left": 1600.22,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "flipflop32",
+      "top": 432.84,
+      "left": 1715.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate17",
+      "top": 726.23,
+      "left": 148.33,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate18",
+      "top": 617.14,
+      "left": 192.27,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate19",
+      "top": 624.16,
+      "left": 425.23,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate20",
+      "top": 617.97,
+      "left": 649.01,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate21",
+      "top": 617.4,
+      "left": 858.24,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate22",
+      "top": 623.2,
+      "left": 1072.94,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate23",
+      "top": 631.98,
+      "left": 1293.43,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate24",
+      "top": 639.89,
+      "left": 1535.18,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate25",
+      "top": 646.22,
+      "left": 1770.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate26",
+      "top": 789.67,
+      "left": 150.58,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate27",
+      "top": 849.28,
+      "left": 149.01,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate28",
+      "top": 908.24,
+      "left": 149.06,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate29",
+      "top": 753.09,
+      "left": 19.67,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate30",
+      "top": 875.17,
+      "left": 21.92,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gate31",
+      "top": 814.96,
+      "left": -75.25,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and1",
+      "top": 462.04,
+      "left": -271.78,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "xor1",
+      "top": 1143.64,
+      "left": 1273.82,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "xor2",
+      "top": 1066.84,
+      "left": 851.42,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "xor3",
+      "top": 1009.24,
+      "left": 611.42,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pwr2:VCC", "sw1:8a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:7a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:6a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:5a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:4a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:1a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:2a", "red", [ "v0" ] ],
+    [ "pwr2:VCC", "sw1:3a", "red", [ "v0" ] ],
+    [ "ttout1:EXTOUT0", "sevseg1:A", "green", [ "h21.01", "v-28.8", "h96" ] ],
+    [ "ttout1:EXTOUT1", "sevseg1:B", "green", [ "h11.41", "v-48", "h122.99", "v41.34" ] ],
+    [
+      "ttout1:EXTOUT2",
+      "sevseg1:C",
+      "green",
+      [ "h30.61", "v-38.4", "h115.2", "v105.6", "h-28.8" ]
+    ],
+    [ "ttout1:EXTOUT3", "sevseg1:D", "green", [ "h57.6", "v57.6", "h48" ] ],
+    [ "sevseg1:E", "ttout1:EXTOUT4", "green", [ "v9.6", "h-48", "v-38.4" ] ],
+    [ "ttout1:EXTOUT5", "sevseg1:F", "green", [ "h69.01", "v-57.6", "h28.8" ] ],
+    [ "ttout1:EXTOUT6", "sevseg1:G", "green", [ "h78.61", "v-57.6" ] ],
+    [ "ttout1:EXTOUT7", "sevseg1:DP", "green", [ "v28.8", "h136.21" ] ],
+    [ "pwr1:GND", "sevseg1:COM.1", "black", [ "v0" ] ],
+    [ "sw2:1", "clock1:CLK", "blue", [ "h-19.2", "v-57.6" ] ],
+    [ "sw1:1b", "ttin1:EXTIN0", "green", [ "h0" ] ],
+    [ "sw1:2b", "ttin1:EXTIN1", "green", [ "h0" ] ],
+    [ "ttin1:EXTIN2", "sw1:3b", "green", [ "h0" ] ],
+    [ "ttin1:EXTIN3", "sw1:4b", "green", [ "h0" ] ],
+    [ "sw1:5b", "ttin1:EXTIN4", "green", [ "h0" ] ],
+    [ "ttin1:EXTIN5", "sw1:6b", "green", [ "h0" ] ],
+    [ "sw1:7b", "ttin1:EXTIN6", "green", [ "h0" ] ],
+    [ "sw1:8b", "ttin1:EXTIN7", "green", [ "v0" ] ],
+    [ "sw2:2", "ttin1:EXTCLK", "blue", [ "v0" ] ],
+    [ "btn1:1.l", "sw2:3", "blue", [ "h0" ] ],
+    [ "pwr3:VCC", "btn1:2.r", "red", [ "v0" ] ],
+    [ "btn2:2.l", "gnd1:GND", "black", [ "h0" ] ],
+    [ "ttin1:EXTRST_N", "btn2:1.r", "orange", [ "h-38.4", "v-96" ] ],
+    [ "btn2:1.l", "r1:2", "green", [ "h0" ] ],
+    [ "pwr4:VCC", "r1:1", "red", [ "v0" ] ],
+    [ "flipflop1:CLK", "flipflop2:CLK", "green", [ "h-2.56", "v38.4", "h117.76" ] ],
+    [ "flipflop2:CLK", "flipflop3:CLK", "green", [ "v38.4", "h115.2" ] ],
+    [ "flipflop3:CLK", "flipflop4:CLK", "green", [ "v38.4", "h115.2" ] ],
+    [ "flipflop4:CLK", "flipflop6:CLK", "green", [ "v38.44", "h115.2" ] ],
+    [ "flipflop4:Q", "flipflop6:D", "green", [ "v0" ] ],
+    [ "flipflop6:Q", "flipflop5:D", "green", [ "v0" ] ],
+    [ "flipflop6:CLK", "flipflop5:CLK", "green", [ "h0", "v38.4", "h67.2" ] ],
+    [ "flipflop5:Q", "flipflop7:D", "green", [ "v0" ] ],
+    [ "flipflop5:CLK", "flipflop7:CLK", "green", [ "h0", "v38.4", "h76.8" ] ],
+    [ "flipflop7:Q", "flipflop8:D", "green", [ "v0" ] ],
+    [ "flipflop7:CLK", "flipflop8:CLK", "green", [ "h0", "v38.4", "h67.2" ] ],
+    [ "flipflop8:Q", "flipflop9:D", "green", [ "v0" ] ],
+    [ "flipflop8:CLK", "flipflop9:CLK", "green", [ "h0", "v38.4", "h57.6" ] ],
+    [ "flipflop9:Q", "flipflop10:D", "green", [ "v0" ] ],
+    [ "flipflop9:CLK", "flipflop10:CLK", "green", [ "h0", "v38.4", "h76.8" ] ],
+    [ "flipflop10:Q", "flipflop11:D", "green", [ "v0" ] ],
+    [ "flipflop10:CLK", "flipflop11:CLK", "green", [ "h0", "v38.4", "h105.6" ] ],
+    [ "flipflop11:Q", "flipflop12:D", "green", [ "v0" ] ],
+    [ "flipflop11:CLK", "flipflop12:CLK", "green", [ "h0", "v38.4", "h105.6" ] ],
+    [ "flipflop12:Q", "flipflop13:D", "green", [ "v0" ] ],
+    [ "flipflop12:CLK", "flipflop13:CLK", "green", [ "h0", "v38.4", "h115.2" ] ],
+    [ "flipflop13:Q", "flipflop14:D", "green", [ "v0" ] ],
+    [ "flipflop15:D", "flipflop14:Q", "green", [ "h0" ] ],
+    [ "flipflop14:CLK", "flipflop13:CLK", "green", [ "v38.4", "h-115.2" ] ],
+    [ "flipflop14:CLK", "flipflop15:CLK", "green", [ "h0", "v38.4", "h115.2" ] ],
+    [ "flipflop15:Q", "flipflop16:D", "green", [ "v0" ] ],
+    [ "flipflop15:CLK", "flipflop16:CLK", "green", [ "h0", "v38.4", "h115.2" ] ],
+    [ "flipflop3:Q", "flipflop4:D", "green", [ "v0" ] ],
+    [ "flipflop2:Q", "flipflop3:D", "green", [ "v0", "h19.2" ] ],
+    [ "flipflop1:Q", "flipflop2:D", "green", [ "v0" ] ],
+    [ "mux1:OUT", "flipflop1:D", "green", [ "v0" ] ],
+    [ "gate14:OUT", "gate16:B", "green", [ "v0" ] ],
+    [ "gate16:A", "gate15:OUT", "green", [ "h0" ] ],
+    [ "gate2:OUT", "gate14:B", "green", [ "v0" ] ],
+    [ "gate11:OUT", "gate14:A", "green", [ "v0" ] ],
+    [ "gate12:OUT", "gate15:B", "green", [ "v0" ] ],
+    [ "gate15:A", "gate13:OUT", "green", [ "h0" ] ],
+    [ "gate2:B", "gate3:OUT", "green", [ "h0" ] ],
+    [ "gate2:A", "gate4:OUT", "green", [ "h0" ] ],
+    [ "gate11:B", "gate5:OUT", "green", [ "h0" ] ],
+    [ "gate11:A", "gate6:OUT", "green", [ "h0" ] ],
+    [ "gate12:B", "gate7:OUT", "green", [ "h0" ] ],
+    [ "gate12:A", "gate8:OUT", "green", [ "h0" ] ],
+    [ "gate13:B", "gate9:OUT", "green", [ "h0" ] ],
+    [ "gate13:A", "gate10:OUT", "green", [ "h0" ] ],
+    [ "flipflop1:NOTQ", "gate3:B", "green", [ "h6", "v128.78" ] ],
+    [ "flipflop2:NOTQ", "gate3:A", "green", [ "h5.36", "v112.82" ] ],
+    [ "flipflop3:NOTQ", "gate4:B", "green", [ "h6.43", "v157.28" ] ],
+    [ "flipflop4:NOTQ", "gate4:A", "green", [ "h0" ] ],
+    [ "flipflop6:NOTQ", "gate5:B", "green", [ "h5.82", "v120.1" ] ],
+    [ "flipflop5:NOTQ", "gate5:A", "green", [ "h0" ] ],
+    [ "flipflop7:NOTQ", "gate6:B", "green", [ "h2.02", "v129.76" ] ],
+    [ "flipflop8:NOTQ", "gate6:A", "green", [ "h0" ] ],
+    [ "flipflop9:NOTQ", "gate7:B", "green", [ "h-0.06", "v156.85" ] ],
+    [ "flipflop10:NOTQ", "gate7:A", "green", [ "h0" ] ],
+    [ "flipflop11:NOTQ", "gate8:B", "green", [ "h14.9", "v144.34" ] ],
+    [ "flipflop12:NOTQ", "gate8:A", "green", [ "h0" ] ],
+    [ "flipflop13:NOTQ", "gate9:B", "green", [ "h14.66", "v168.69" ] ],
+    [ "flipflop14:NOTQ", "gate9:A", "green", [ "h14.86", "v152.25" ] ],
+    [ "flipflop15:NOTQ", "gate10:B", "green", [ "h9.81", "v159.25" ] ],
+    [ "flipflop16:NOTQ", "gate10:A", "green", [ "h0" ] ],
+    [ "gate1:OUT", "mux1:A", "green", [ "v0" ] ],
+    [ "flipflop17:CLK", "flipflop18:CLK", "green", [ "h-2.56", "v38.4", "h117.76" ] ],
+    [ "flipflop18:CLK", "flipflop19:CLK", "green", [ "v38.4", "h115.2" ] ],
+    [ "flipflop19:CLK", "flipflop20:CLK", "green", [ "v38.4", "h115.2" ] ],
+    [ "flipflop20:CLK", "flipflop22:CLK", "green", [ "v38.44", "h115.2" ] ],
+    [ "flipflop20:Q", "flipflop22:D", "green", [ "v0" ] ],
+    [ "flipflop22:Q", "flipflop21:D", "green", [ "v0" ] ],
+    [ "flipflop22:CLK", "flipflop21:CLK", "green", [ "h0", "v38.4", "h67.2" ] ],
+    [ "flipflop21:Q", "flipflop23:D", "green", [ "v0" ] ],
+    [ "flipflop21:CLK", "flipflop23:CLK", "green", [ "h0", "v38.4", "h76.8" ] ],
+    [ "flipflop23:Q", "flipflop24:D", "green", [ "v0" ] ],
+    [ "flipflop23:CLK", "flipflop24:CLK", "green", [ "h0", "v38.4", "h67.2" ] ],
+    [ "flipflop24:Q", "flipflop25:D", "green", [ "v0" ] ],
+    [ "flipflop24:CLK", "flipflop25:CLK", "green", [ "h0", "v38.4", "h57.6" ] ],
+    [ "flipflop25:Q", "flipflop26:D", "green", [ "v0" ] ],
+    [ "flipflop25:CLK", "flipflop26:CLK", "green", [ "h0", "v38.4", "h76.8" ] ],
+    [ "flipflop26:Q", "flipflop27:D", "green", [ "v0" ] ],
+    [ "flipflop26:CLK", "flipflop27:CLK", "green", [ "h0", "v38.4", "h105.6" ] ],
+    [ "flipflop27:Q", "flipflop28:D", "green", [ "v0" ] ],
+    [ "flipflop27:CLK", "flipflop28:CLK", "green", [ "h0", "v38.4", "h105.6" ] ],
+    [ "flipflop28:Q", "flipflop29:D", "green", [ "v0" ] ],
+    [ "flipflop28:CLK", "flipflop29:CLK", "green", [ "h0", "v38.4", "h115.2" ] ],
+    [ "flipflop29:Q", "flipflop30:D", "green", [ "v0" ] ],
+    [ "flipflop31:D", "flipflop30:Q", "green", [ "h0" ] ],
+    [ "flipflop30:CLK", "flipflop29:CLK", "green", [ "v38.4", "h-115.2" ] ],
+    [ "flipflop30:CLK", "flipflop31:CLK", "green", [ "h0", "v38.4", "h115.2" ] ],
+    [ "flipflop31:Q", "flipflop32:D", "green", [ "v0" ] ],
+    [ "flipflop31:CLK", "flipflop32:CLK", "green", [ "h0", "v38.4", "h115.2" ] ],
+    [ "flipflop19:Q", "flipflop20:D", "green", [ "v0" ] ],
+    [ "flipflop18:Q", "flipflop19:D", "green", [ "v0", "h19.2" ] ],
+    [ "flipflop17:Q", "flipflop18:D", "green", [ "v0" ] ],
+    [ "gate29:OUT", "gate31:B", "green", [ "v0" ] ],
+    [ "gate31:A", "gate30:OUT", "green", [ "h0" ] ],
+    [ "gate17:OUT", "gate29:B", "green", [ "v0" ] ],
+    [ "gate26:OUT", "gate29:A", "green", [ "v0" ] ],
+    [ "gate27:OUT", "gate30:B", "green", [ "v0" ] ],
+    [ "gate30:A", "gate28:OUT", "green", [ "h0" ] ],
+    [ "gate17:B", "gate18:OUT", "green", [ "h0" ] ],
+    [ "gate17:A", "gate19:OUT", "green", [ "h0" ] ],
+    [ "gate26:B", "gate20:OUT", "green", [ "h0" ] ],
+    [ "gate26:A", "gate21:OUT", "green", [ "h0" ] ],
+    [ "gate27:B", "gate22:OUT", "green", [ "h0" ] ],
+    [ "gate27:A", "gate23:OUT", "green", [ "h0" ] ],
+    [ "gate28:B", "gate24:OUT", "green", [ "h0" ] ],
+    [ "gate28:A", "gate25:OUT", "green", [ "h0" ] ],
+    [ "flipflop17:NOTQ", "gate18:B", "green", [ "h6", "v128.78" ] ],
+    [ "flipflop18:NOTQ", "gate18:A", "green", [ "h5.36", "v112.82" ] ],
+    [ "flipflop19:NOTQ", "gate19:B", "green", [ "h6.43", "v157.28" ] ],
+    [ "flipflop20:NOTQ", "gate19:A", "green", [ "h0" ] ],
+    [ "flipflop22:NOTQ", "gate20:B", "green", [ "h5.82", "v120.1" ] ],
+    [ "flipflop21:NOTQ", "gate20:A", "green", [ "h0" ] ],
+    [ "flipflop23:NOTQ", "gate21:B", "green", [ "h2.02", "v129.76" ] ],
+    [ "flipflop24:NOTQ", "gate21:A", "green", [ "h0" ] ],
+    [ "flipflop25:NOTQ", "gate22:B", "green", [ "h-0.06", "v156.85" ] ],
+    [ "flipflop26:NOTQ", "gate22:A", "green", [ "h0" ] ],
+    [ "flipflop27:NOTQ", "gate23:B", "green", [ "h14.9", "v144.34" ] ],
+    [ "flipflop28:NOTQ", "gate23:A", "green", [ "h0" ] ],
+    [ "flipflop29:NOTQ", "gate24:B", "green", [ "h14.66", "v168.69" ] ],
+    [ "flipflop30:NOTQ", "gate24:A", "green", [ "h14.86", "v152.25" ] ],
+    [ "flipflop31:NOTQ", "gate25:B", "green", [ "h9.81", "v159.25" ] ],
+    [ "flipflop32:NOTQ", "gate25:A", "green", [ "h0" ] ],
+    [ "gate16:OUT", "and1:B", "green", [ "v0" ] ],
+    [ "gate31:OUT", "and1:A", "green", [ "v0" ] ],
+    [ "gate1:A", "and1:OUT", "green", [ "v297.6", "h67.2" ] ],
+    [ "flipflop16:Q", "flipflop17:D", "green", [ "h57.6", "v595.2", "h-1824" ] ],
+    [ "flipflop1:CLK", "flipflop17:CLK", "green", [ "h-28.8", "v633.6" ] ],
+    [ "flipflop32:Q", "xor1:A", "green", [ "h86.4", "v729.6", "h-528" ] ],
+    [ "xor1:B", "flipflop30:Q", "green", [ "h249.6", "v-556.8" ] ],
+    [ "xor1:OUT", "xor2:A", "green", [ "v-57.6", "h-48" ] ],
+    [ "flipflop26:Q", "xor2:B", "green", [ "h-38.4", "v633.6" ] ],
+    [ "xor2:OUT", "xor3:A", "green", [ "v0" ] ],
+    [ "flipflop25:Q", "xor3:B", "green", [ "h-19.2", "v576" ] ],
+    [ "xor3:OUT", "gate1:B", "green", [ "h-748.8", "v-1123.2" ] ],
+    [ "ttout1:OUT7", "flipflop32:Q", "green", [ "h0" ] ],
+    [ "ttout1:OUT6", "flipflop31:Q", "green", [ "h0" ] ],
+    [ "ttout1:OUT5", "flipflop30:Q", "green", [ "h0" ] ],
+    [ "ttout1:OUT4", "flipflop29:Q", "green", [ "h0" ] ],
+    [ "ttout1:OUT3", "flipflop28:Q", "green", [ "h0" ] ],
+    [ "ttout1:OUT2", "flipflop28:D", "green", [ "h0" ] ],
+    [ "ttout1:OUT1", "flipflop26:Q", "green", [ "h-873.6", "v105.6" ] ],
+    [ "ttout1:OUT0", "flipflop25:Q", "green", [ "h0" ] ],
+    [ "ttin1:IN2", "mux1:SEL", "green", [ "h19.2", "v105.6", "h-96", "v57.6" ] ],
+    [ "ttin1:IN1", "mux1:B", "green", [ "h28.8", "v105.6", "h-96", "v76.8", "h-96" ] ],
+    [ "ttin1:CLK", "flipflop1:CLK", "green", [ "v0", "h38.4", "v153.6", "h-86.4", "v38.4" ] ]
+  ],
+  "dependencies": {}
+}
