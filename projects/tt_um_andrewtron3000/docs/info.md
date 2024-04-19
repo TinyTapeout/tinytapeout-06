@@ -7,6 +7,8 @@ Rule 30 Engine!
 
 This project is designed to run the Rule 30 cellular automata with initial starting value defined on the input bus.  Each iteration is output to the UART, which is operating as an 8N1 UART at 115,200 baud.
 
+The Rule 30 field is 56 bits wide with a boundary condition of 0 surrounding these 56 bits.
+
 ## How to build
 
 The Rule 30 driver and logic are written in Bluespec. Install the Bluespec compiler to compile these sources into Verilog.  The generated Verilog is also included in this repo as well in case you don't have the Bluespec compiler.
