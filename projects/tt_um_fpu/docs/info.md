@@ -12,25 +12,25 @@ You can also include images in this folder and reference them in the markdown. E
 
 The **Dgrid_FPU (Floating Point Unit)** is an integral component of computer hardware engineered to execute floating-point arithmetic operations. It features four 32-bit inputs organized to conduct dual multiplications followed by an addition in series. Specifically, the first pair of 32-bit inputs is multiplied, and simultaneously, the second pair is processed similarly. The results from these multiplications are then fed into a two-input adder, producing a 32-bit final output. This configuration is highly effective in applications that demand robust computing capabilities, such as high-performance computing, digital signal processing, scientific simulations, and graphics processing. The Dgrid_FPU's architecture, which enables the parallel processing of multiple arithmetic operations, significantly boosts performance in these computationally intensive tasks.
 
-                                          32bit I\P  32bit I\P                  32bit I\P  32bit I\P
-                                              |         |                           |         |
-                                        ----------------------                 ---------------------- 
-                                        \                    /                 \                    /
-                                         \       FPU        /                   \       FPU        / 
-                                          \    MULTIPLIER  /                     \    MULTIPLIER  / 
-                                           \              /                       \              /
-                                            --------------                         --------------
-                                                   |___________          ________________|
-                                                          32bit|        | 32bit
-                                                        ----------------------   
-                                                        \                    /    
-                                                         \       FPU        / 
-                                                          \     ADDER      /   
-                                                           \              /  
-                                                            -------------- 
-                                                                   |
-                                                              32bit O\P
-    
+              32bit I\P  32bit I\P                  32bit I\P  32bit I\P
+                  |         |                           |         |
+            ----------------------                 ---------------------- 
+            \                    /                 \                    /
+             \       FPU        /                   \       FPU        / 
+              \    MULTIPLIER  /                     \    MULTIPLIER  / 
+               \              /                       \              /
+                --------------                         --------------
+                       |___________          ________________|
+                              32bit|        | 32bit
+                            ----------------------   
+                            \                    /    
+                             \       FPU        / 
+                              \     ADDER      /   
+                               \              /  
+                                -------------- 
+                                       |
+                                  32bit O\P
+
 The Dgrid_FPU top module is designed with a configuration that supports 8-bit input and output interfaces, necessitating a systematic process to handle the 128-bit data (comprising four 32-bit inputs) required for operations. The input process involves 16 clock cycles to load the four 32-bit registers sequentially. Once the data is loaded, the computation begins, producing a 32-bit output over the subsequent two clock cycles.
 
 After the computation phase, the 32-bit result is output through the 8-bit interface, which requires an additional four clock cycles to read out the data thoroughly. Additionally, two clock cycles are utilized for data transfer, bringing the total cycle count to 24 for an entire operation sequence from input loading to output retrieval.
