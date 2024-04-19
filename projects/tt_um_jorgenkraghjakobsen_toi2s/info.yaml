@@ -15,8 +15,8 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:
-    - "amp_if/amp_if.v"
-    - "amp_if/amp_i2c_master.v"
+    - "amp_if/amp_if.sv.conv.v"
+    - "amp_if/amp_i2c_master.sv.conv.v"
     - "amp_if/amp_state_control.v"
     - "amp_if/clk_div.v"
     - "amp_if/timer_simple.v"
@@ -43,11 +43,11 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "amp_nenable"
-  uo[1]: "amp_nmute"
-  uo[2]: "amp_i2s_bck"
-  uo[3]: "amp_i2s_ws"
-  uo[4]: "amp_i2s_d0"
+  uo[0]: "amp_i2s_bck"
+  uo[1]: "amp_i2s_ws"
+  uo[2]: "amp_i2s_d0"
+  uo[3]: "amp_nenable"
+  uo[4]: "amp_nmute"
   uo[5]: ""
   uo[6]: ""
   uo[7]: "pwm_out"
