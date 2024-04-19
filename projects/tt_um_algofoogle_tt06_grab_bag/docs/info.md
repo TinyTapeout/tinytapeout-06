@@ -14,7 +14,6 @@ So far this is pretty basic:
 *   A big-standard CMOS inverter... maybe a bit on the large side.
 *   A simple R2R DAC.
 
-
 ## How to test
 
 For the CMOS inverter:
