@@ -23,6 +23,7 @@ project:
     - "mux.v"
     - "drive.v"
     - "demo_rom.v"
+    - "reg_ram.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
