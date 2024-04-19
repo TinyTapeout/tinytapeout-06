@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "ALU with a Gray and Octal decoders"      # Project title
+  author:       "Luis Antonio Quezada Santos, Santiago Robledo Acosta, José Miguel Rocha Pérez"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This is a simple 3 bit ALU with 4 operations: Substraction, Addition, XOR and AND which its output is conected to an Octal and Gray Decoders."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ALU_DECODERS"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_ALU_DECODERS.v"
+    - "Proyecto_Final.v"
+    - "ALU3B.v"
+    - "Decod_Octal.v"
+    - "Decod_Gray.v"
+    - "Mux2_1_14b.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Sel_A_in [0]"
+  ui[1]: "Sel_A_in [1]"
+  ui[2]: "Num_B_in [0]"
+  ui[3]: "Num_B_in [1]"
+  ui[4]: "Num_B_in [2]"
+  ui[5]: "Num_A_in [0]"
+  ui[6]: "Num_A_in [1]"
+  ui[7]: "Num_A_in [2]"
+
+  # Outputs
+  uo[0]: "Disp_out[6]"
+  uo[1]: "Disp_out[7]"
+  uo[2]: "Disp_out[8]"
+  uo[3]: "Disp_out[9]"
+  uo[4]: "Disp_out[10]"
+  uo[5]: "Disp_out[11]"
+  uo[6]: "Disp_out[12]"
+  uo[7]: "Disp_out[13]"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: "Disp_out[0]"
+  uio[2]: "Disp_out[1]"
+  uio[3]: "Disp_out[2]"
+  uio[4]: "Disp_out[3]"
+  uio[5]: "Disp_out[4]"
+  uio[6]: "Disp_out[5]"
+  uio[7]: "Sel_M_in"
+
+# Do not change!
+yaml_version: 6
