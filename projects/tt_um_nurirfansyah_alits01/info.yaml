@@ -3,7 +3,7 @@ project:
   title:        "Analog Test Circuit ITS: VCO"      # Project title
   author:       "Astria Nur Irfansyah"      # Your name
   discord:      "irfansyah_99806"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A voltage controlled ring oscillator. "      # One line description of what your project does
+  description:  "Voltage controlled ring oscillator. "      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -30,12 +30,12 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
+  uo[0]: "out5"
+  uo[1]: "out4"
+  uo[2]: "out3"
+  uo[3]: "out2"
+  uo[4]: "out1"
+  uo[5]: "out0"
   uo[6]: ""
   uo[7]: ""
 
