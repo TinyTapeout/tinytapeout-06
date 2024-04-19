@@ -1,0 +1,65 @@
+# Tiny Tapeout project information
+project:
+  title:        "USB CDC device"      # Project title
+  author:       "Maximo Balestrini"      # Your name
+  discord:      "mbalestrini"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "USB CDC device"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     48000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_mbalestrini_usb_cdc_devices"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_mbalestrini_usb_cdc_devices.v"
+    - "usb_cdc_devices.v"
+    - "prescaler.v"
+    - "device0/arcade_io_device.v"
+    - "device0/input_debouncer.v"
+    - "usb_cdc/bulk_endp.v"
+    - "usb_cdc/ctrl_endp.v"
+    - "usb_cdc/in_fifo.v"
+    - "usb_cdc/out_fifo.v"
+    - "usb_cdc/phy_rx.v"
+    - "usb_cdc/phy_tx.v"
+    - "usb_cdc/sie.v"
+    - "usb_cdc/usb_cdc.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "input_0"
+  ui[1]: "input_1"
+  ui[2]: "input_2"
+  ui[3]: "input_3"
+  ui[4]: "input_4"
+  ui[5]: "input_5"
+  ui[6]: "input_6"
+  ui[7]: "input_7"
+
+  # Outputs
+  uo[0]: "usb_pu"
+  uo[1]: "debug_led"
+  uo[2]: "debug_usb_configured"
+  uo[3]: "debug_usb_tx_en"
+  uo[4]: "debug_frame[0]"
+  uo[5]: "debug_frame[1]"
+  uo[6]: "debug_frame[2]"
+  uo[7]: "debug_frame[3]"
+
+  # Bidirectional pins
+  uio[0]: "usp_p"
+  uio[1]: "usb_n"
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
