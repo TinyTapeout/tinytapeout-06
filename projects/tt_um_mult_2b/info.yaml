@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "mult_2b"      # Project title
+  author:       "Juan Manuel Lpez Pasten"      # Your name
+  discord:      "mult_2b"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Multiplixador de 2 bits utilizando compyertas logicas"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_mult_2b"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_mult_2b.v"
+    - "mult_2b.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "a (bit 0)"
+  ui[1]: "a (bit 1)"
+  ui[2]: "b (bit 0)"
+  ui[3]: "b (bit 1)"
+  ui[4]: "not used"
+  ui[5]: "not used"
+  ui[6]: "not used"
+  ui[7]: "not used"
+
+  # Outputs
+  uo[0]: "out (bit 0)"
+  uo[1]: "out (bit 1)"
+  uo[2]: "out (bit 2)"
+  uo[3]: "out (bit 3)"
+  uo[4]: "not used"
+  uo[5]: "not used"
+  uo[6]: "not used"
+  uo[7]: "not used"
+
+  # Bidirectional pins
+  uio[0]: "not used"
+  uio[1]: "not used"
+  uio[2]: "not used"
+  uio[3]: "not used"
+  uio[4]: "not used"
+  uio[5]: "not used"
+  uio[6]: "not used"
+  uio[7]: "not used"
+
+# Do not change!
+yaml_version: 6

@@ -1,0 +1,24 @@
+
+64. Printing statistics.
+
+=== tt_um_mult_2b ===
+
+   Number of wires:                 12
+   Number of wire bits:             47
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 28
+     sky130_fd_sc_hd__a22oi_2        1
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__and4_2         1
+     sky130_fd_sc_hd__buf_1          2
+     sky130_fd_sc_hd__conb_1        20
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor2_2         1
+
+   Chip area for module '\tt_um_mult_2b': 128.873600
+
