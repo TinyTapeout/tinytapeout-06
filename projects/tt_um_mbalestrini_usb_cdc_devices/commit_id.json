@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout tt06 c74b14ac",
+  "app": "Tiny Tapeout tt06 7f56a586",
   "repo": "https://github.com/mbalestrini/tt06_usb_cdc_devices",
-  "commit": "498512c44a3f0f571ec7bc427859fb1065686d5b",
-  "workflow_url": "https://github.com/mbalestrini/tt06_usb_cdc_devices/actions/runs/8747892748",
+  "commit": "2510cb45557aa674081d3c9ba237c2a32474cae5",
+  "workflow_url": "https://github.com/mbalestrini/tt06_usb_cdc_devices/actions/runs/8757344350",
   "sort_id": 1713497521719,
   "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
   "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"

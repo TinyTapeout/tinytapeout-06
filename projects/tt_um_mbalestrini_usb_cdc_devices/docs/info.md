@@ -34,7 +34,7 @@ When the value from one of the inputs change from 0 to 1 or 1 to 0 it sends a ch
 
 ## How to test
 
-here goes a simple schematic and 
+(here goes a simple schematic some instructions)
 
 ## External hardware
 
