@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 9c7ebcb7",
+  "repo": "https://github.com/Santiago-Robledo/tt06-CDMA-2024",
+  "commit": "b2b684ab80bc665b7727627697380ec67fb67a1c",
+  "workflow_url": "https://github.com/Santiago-Robledo/tt06-CDMA-2024/actions/runs/8624139371",
+  "sort_id": 1713486993817,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}

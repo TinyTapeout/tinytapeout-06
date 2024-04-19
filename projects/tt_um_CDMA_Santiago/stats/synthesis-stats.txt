@@ -1,0 +1,31 @@
+
+64. Printing statistics.
+
+=== tt_um_CDMA_Santiago ===
+
+   Number of wires:                 49
+   Number of wire bits:             84
+   Number of public wires:          32
+   Number of public wire bits:      67
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 65
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__buf_1          9
+     sky130_fd_sc_hd__buf_2          4
+     sky130_fd_sc_hd__conb_1        20
+     sky130_fd_sc_hd__dfrtp_2       10
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2         8
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__or3_2          1
+     sky130_fd_sc_hd__xnor2_2        5
+
+   Chip area for module '\tt_um_CDMA_Santiago': 636.860800
+
