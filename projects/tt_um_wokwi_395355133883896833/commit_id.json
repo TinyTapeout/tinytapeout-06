@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 eed83093",
+  "repo": "https://github.com/felipe-SD/tt06-wokwi-template-BIT_TEST",
+  "commit": "99be8383548cbc58a266b0452e8c4537eaaab764",
+  "workflow_url": "https://github.com/felipe-SD/tt06-wokwi-template-BIT_TEST/actions/runs/8712351716",
+  "sort_id": 1713486084963,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
