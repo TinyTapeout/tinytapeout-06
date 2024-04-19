@@ -287,7 +287,6 @@
     { "type": "wokwi-flip-flop-d", "id": "flop14", "top": -1017.6, "left": 969.6, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop15", "top": -1017.6, "left": 1104, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop16", "top": -1017.6, "left": 1257.6, "attrs": {} },
-    { "type": "wokwi-gate-not", "id": "not23", "top": -960, "left": 1392, "attrs": {} },
     { "type": "wokwi-vcc", "id": "pwr6", "top": -1756.04, "left": 1430.4, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop17", "top": -1632, "left": 288, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop18", "top": -1632, "left": 441.6, "attrs": {} },
@@ -353,7 +352,6 @@
     { "type": "wokwi-flip-flop-d", "id": "flop30", "top": -1958.4, "left": 988.8, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop31", "top": -1958.4, "left": 1123.2, "attrs": {} },
     { "type": "wokwi-flip-flop-d", "id": "flop32", "top": -1958.4, "left": 1276.8, "attrs": {} },
-    { "type": "wokwi-gate-not", "id": "not24", "top": -1891.2, "left": 1382.4, "attrs": {} },
     { "type": "wokwi-gnd", "id": "gnd2", "top": -1459.2, "left": 287.4, "attrs": {} },
     { "type": "wokwi-gnd", "id": "gnd3", "top": -1795.2, "left": 258.6, "attrs": {} },
     { "type": "wokwi-gnd", "id": "gnd4", "top": 28.8, "left": -19.8, "attrs": {} },
@@ -524,7 +522,7 @@
     [ "and13:A", "xor6:OUT", "purple", [ "h-489.61", "v-520.95" ] ],
     [ "not17:IN", "xor6:OUT", "purple", [ "v-0.51", "h-295.82", "v-326.4" ] ],
     [ "and9:A", "xor6:OUT", "purple", [ "h-480.4", "v-268.37" ] ],
-    [ "not2:IN", "xor6:OUT", "purple", [ "v0.17", "h-319.54", "v268.8", "h-172.8" ] ],
+    [ "not2:IN", "xor6:OUT", "purple", [ "v0.17", "h-316.8", "v499.03" ] ],
     [ "and2:A", "xor6:OUT", "purple", [ "h-460.8", "v192" ] ],
     [ "not5:IN", "xor6:OUT", "purple", [ "v3.26", "h-395.17", "v134.4" ] ],
     [ "or7:B", "xor6:OUT", "purple", [ "h-562.72", "v-49.75" ] ],
@@ -604,8 +602,6 @@
     [ "xor19:OUT", "flop9:D", "green", [ "v19.2", "h-499.2", "v76.8" ] ],
     [ "ttin:CLK", "flop9:CLK", "green", [ "v0" ] ],
     [ "flop16:NOTQ", "ttio3:OUT", "green", [ "h0" ] ],
-    [ "not23:OUT", "ttio3:OE", "green", [ "v0" ] ],
-    [ "ttio3:IN", "not23:IN", "green", [ "h0" ] ],
     [ "ttio4:OE", "pwr6:VCC", "green", [ "h0" ] ],
     [ "flop17:Q", "flop18:D", "green", [ "v0" ] ],
     [ "flop18:CLK", "flop17:CLK", "green", [ "h0", "v38.4", "h-105.6" ] ],
@@ -653,8 +649,6 @@
     [ "xor25:OUT", "flop25:D", "green", [ "v19.2", "h-499.2", "v76.8" ] ],
     [ "ttio7:OUT", "flop32:Q", "green", [ "h0" ] ],
     [ "ttio6:IN", "flop25:CLK", "green", [ "h-96", "v-86.4", "h28.8" ] ],
-    [ "ttio7:IN", "not24:IN", "green", [ "h0" ] ],
-    [ "not24:OUT", "ttio7:OE", "green", [ "v0" ] ],
     [ "ttio5:OE", "gnd2:GND", "green", [ "h0" ] ],
     [ "ttio5:OUT", "gnd2:GND", "green", [ "h-19.2", "v38.4", "h19.2" ] ],
     [ "ttio6:OE", "gnd3:GND", "green", [ "h0" ] ],
@@ -663,7 +657,9 @@
     [ "ttio0:OUT", "gnd4:GND", "green", [ "h-19.2" ] ],
     [ "ttio1:OE", "gnd5:GND", "green", [ "h0" ] ],
     [ "ttio1:OUT", "gnd5:GND", "green", [ "h0" ] ],
-    [ "nand11:A", "xor2:A", "green", [ "h-28.8", "v-86.4" ] ]
+    [ "nand11:A", "xor2:A", "green", [ "h-28.8", "v-86.4" ] ],
+    [ "ttio2:OE", "ttio3:OE", "green", [ "h-38.4", "v268.8" ] ],
+    [ "ttio4:OE", "ttio7:OE", "green", [ "h-38.4", "v-326.4" ] ]
   ],
   "dependencies": {}
 }
