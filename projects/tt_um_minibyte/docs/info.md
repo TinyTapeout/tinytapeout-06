@@ -31,6 +31,16 @@ At some point between tapeout and silicon arriving, I intend to write a rudiment
         IR  - 8 bits wide - Instruction Register
         CCR - 2 bits wide - Condition Code Register
 
+    Memory Mapped Registers:
+        R0  - 8 bits wide - Gen Purpose Reg 0
+        R1  - 8 bits wide - Gen Purpose Reg 1
+        R2  - 8 bits wide - Gen Purpose Reg 2
+        R3  - 8 bits wide - Gen Purpose Reg 3
+        R4  - 8 bits wide - Gen Purpose Reg 4
+        R5  - 8 bits wide - Gen Purpose Reg 5
+        R6  - 8 bits wide - Gen Purpose Reg 6
+        R7  - 8 bits wide - Gen Purpose Reg 7
+
     Number of Instructions: 37
 
     ALU:
@@ -59,7 +69,7 @@ At some point between tapeout and silicon arriving, I intend to write a rudiment
 ### Pinout
 
     uio[7:0]    - DATA IN/OUT BUSS
-    ui_in[7:0]  - DFT Testmode Select
+    ui_in[7:0]  - DFT Test and Configuration Select
     uo_out[7]   - WE (Write Enable Signal)
     ou_out[6:0] - ADDR OUT BUSS
 
@@ -152,17 +162,33 @@ This program adds the numbers 0x05 and 0x03 together, and then loops back to the
 | BMI_DIR    | 0x23  | Direct    | N==SET   | Jump PC (if ALU n flag is set) to the address specified by the operand             |
 | BMI_IND    | 0x24  | Indirect  | N==SET   | Jump PC (if ALU n flag is set) to the address stored at the operand address        |
 
-### DFT Features
+### DFT and Extra Features
 
 The Minibyte CPU has a few DFT features that should prove helpful on live silicon debug/testing. All functions are enabled by an active high signal, so ui_in[7:0] should be tied to zero during normal operation
 
 | ui_in Bit   | Feature                         |
 | ---------   | -------                         |
-| ui_in [7:5] | Unused                          |
+| ui_in [7]   | Enable Gen Purpose Registers    |
+| ui_in [6:5] | Unused                          |
 | ui_in [4]   | Enable Demo ROM                 |
 | ui_in [3]   | Halt Control Unit on Next Fetch |
 | ui_in [2:0] | Debug Out Select                |
 
+#### Gen Purpose Registers
+The Gen Purpose Registers are a set of 8 memory mapped general purpose registers that can be accessed at the following addresses as long as ui_in [7] is tied high
+
+| Reg Name    | Mem Address |
+| ---------   | -------     |
+| Register R0 | 0x78        |
+| Register R1 | 0x79        |
+| Register R2 | 0x7A        |
+| Register R3 | 0x7B        |
+| Register R4 | 0x7C        |
+| Register R5 | 0x7D        |
+| Register R6 | 0x7E        |
+| Register R7 | 0x7F        |
+
+#### Debug Out Select
 The CPU has an extra mux between the normal addr out mux and the uo_out pins. To leverage this ui_in [2:0] can be used to select a debug signal to output on the uo_out[6:0] pins.
 
 | Debug Out Select    | Function                            |
@@ -192,12 +218,16 @@ To run the test suite, cd into the ./test directory of the project and run "make
 
 The easiest way to test the Minibyte CPU on live silicon is to use the built-in Demo ROM
 
-To enable the Demo ROM, make sure that ui_in[4] is held high on reset, and remains high while the program runs
+To enable the Demo ROM, make sure that ui_in[4] and ui_in[7] are held high on reset, and remains high while the program runs
+
+Holding ui_in[4] will enable the Demo Rom and holding ui_in[7] high will enable the General Purpose Registers
+
 
 The Demo ROM will run the following program
 
     PSEUDOCODE:
         WHILE FOREVER{
+            //Part 1: Binary Count
             SET A to 0
 
             WHILE A <= 255 {
@@ -206,6 +236,7 @@ The Demo ROM will run the following program
                 WRITE A to ADDRESS 0x40
             }
 
+            //Part 2: Walking 1
             SET A to 1
 
             WHILE A > 0 {
@@ -213,6 +244,14 @@ The Demo ROM will run the following program
 
                 WRITE A to ADDRESS 0x40
             }
+
+            //Part 3: Deadbeef to RAM/Gen Purpose Registers and back out
+            LOAD 0xDEADBEEF into R0->R3
+
+            WRITE R0 to ADDRESS 0x40
+            WRITE R1 to ADDRESS 0x40
+            WRITE R2 to ADDRESS 0x40
+            WRITE R3 to ADDRESS 0x40
         }
 
 
