@@ -68,7 +68,6 @@ MACRO tt_um_MichaelBell_latch_mem
     DIRECTION INPUT ;
     USE SIGNAL ;
     ANTENNAGATEAREA 0.196500 ;
-    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met4 ;
         RECT 151.190 110.520 151.490 111.520 ;
@@ -105,7 +104,6 @@ MACRO tt_um_MichaelBell_latch_mem
     DIRECTION INPUT ;
     USE SIGNAL ;
     ANTENNAGATEAREA 0.196500 ;
-    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met4 ;
         RECT 136.470 110.520 136.770 111.520 ;
@@ -114,7 +112,8 @@ MACRO tt_um_MichaelBell_latch_mem
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.126000 ;
+    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met4 ;
         RECT 132.790 110.520 133.090 111.520 ;
@@ -123,8 +122,7 @@ MACRO tt_um_MichaelBell_latch_mem
   PIN ui_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
-    ANTENNADIFFAREA 0.434700 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met4 ;
         RECT 129.110 110.520 129.410 111.520 ;
@@ -151,7 +149,6 @@ MACRO tt_um_MichaelBell_latch_mem
     DIRECTION INPUT ;
     USE SIGNAL ;
     ANTENNAGATEAREA 0.196500 ;
-    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met4 ;
         RECT 118.070 110.520 118.370 111.520 ;
@@ -424,11 +421,11 @@ MACRO tt_um_MichaelBell_latch_mem
       LAYER li1 ;
         RECT 2.760 2.635 158.240 108.885 ;
       LAYER met1 ;
-        RECT 2.370 0.040 160.930 111.480 ;
+        RECT 2.370 1.060 160.930 111.480 ;
       LAYER met2 ;
-        RECT 2.400 0.010 160.910 111.510 ;
+        RECT 2.400 1.030 160.900 111.510 ;
       LAYER met3 ;
-        RECT 3.950 2.555 160.935 110.665 ;
+        RECT 2.825 2.555 159.030 109.985 ;
       LAYER met4 ;
         RECT 4.690 110.120 7.270 111.170 ;
         RECT 8.370 110.120 10.950 111.170 ;

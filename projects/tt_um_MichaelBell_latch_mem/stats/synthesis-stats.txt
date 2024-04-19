@@ -25,7 +25,7 @@
      sky130_fd_sc_hd__conb_1        16
      sky130_fd_sc_hd__dfxtp_2       25
      sky130_fd_sc_hd__dlxtp_1      512
-     sky130_fd_sc_hd__ebufn_2       32
+     sky130_fd_sc_hd__ebufn_4       32
      sky130_fd_sc_hd__inv_2          2
      sky130_fd_sc_hd__mux2_2        14
      sky130_fd_sc_hd__nand2_2        3
@@ -47,5 +47,5 @@
    Area for cell type \sky130_fd_sc_hd__and2_1 is unknown!
    Area for cell type \sky130_fd_sc_hd__clkbuf_4 is unknown!
 
-   Chip area for module '\tt_um_MichaelBell_latch_mem': 13288.995200
+   Chip area for module '\tt_um_MichaelBell_latch_mem': 13449.148800
 
