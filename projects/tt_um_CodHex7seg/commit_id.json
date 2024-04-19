@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 d9a6d620",
+  "repo": "https://github.com/vicmcantes/decodificador-binario-a-7-segmentos-hexadecimal",
+  "commit": "64611ec92d3583bea9dfec71bc99bc6fdc0eb196",
+  "workflow_url": "https://github.com/vicmcantes/decodificador-binario-a-7-segmentos-hexadecimal/actions/runs/8671873725",
+  "sort_id": 1713487621454,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
