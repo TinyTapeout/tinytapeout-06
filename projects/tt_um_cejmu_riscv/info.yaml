@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project:
-  title:        "CEJMU"      # Project title
-  author:       "CEJMU"      # Your name
-  discord:      "CEJMU"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "CEJMU"      # One line description of what your project does
+  title:        "TinyRV1 CPU"      # Project title
+  author:       "Prof. Dr. Matthias Jung, Jonathan Hager, Philipp Wetzstein"      # Your name
+  discord:      "myzinsky"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "TinyRV1 compliant CPU that has to be attached to an external SPI memory. The ISA is described in the documentation"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     12000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -20,34 +20,34 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "SPI MISO"
+  ui[1]: "unused"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "SPI MOSI"
+  uo[1]: "SPI SCLK"
+  uo[2]: "SPI CS"
+  uo[3]: "Register_1(0)"
+  uo[4]: "Register_1(1)"
+  uo[5]: "Register_1(2)"
+  uo[6]: "Register_1(3)"
+  uo[7]: "Register_1(4)"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "Register_1(5)"
+  uio[1]: "Register_1(6)"
+  uio[2]: "Register_1(7)"
+  uio[3]: "Register_1(8)"
+  uio[4]: "Register_1(9)"
+  uio[5]: "Register_1(10)"
+  uio[6]: "Register_1(11)"
+  uio[7]: "Register_1(12)"
 
 # Do not change!
 yaml_version: 6
