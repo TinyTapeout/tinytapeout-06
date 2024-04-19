@@ -26,7 +26,7 @@ pinout:
   ui[3]: "FD-3:fo"
   ui[4]: ""
   ui[5]: ""
-  ui[6]: ""
+  ui[6]: "ref"
   ui[7]: ""
 
   # Outputs
@@ -54,6 +54,8 @@ pinout:
   ua[1]: "vout"
   ua[2]: "vctrl"
   ua[3]: "Osc_out"
+  ua[4]: "cp_bias"
+  ua[5]: "out"
 
 # Do not change!
 yaml_version: 6
