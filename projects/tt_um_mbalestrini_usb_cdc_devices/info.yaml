@@ -20,6 +20,7 @@ project:
     - "prescaler.v"
     - "device0/arcade_io_device.v"
     - "device0/input_debouncer.v"
+    - "device1/loopback_device.v"
     - "usb_cdc/bulk_endp.v"
     - "usb_cdc/ctrl_endp.v"
     - "usb_cdc/in_fifo.v"
