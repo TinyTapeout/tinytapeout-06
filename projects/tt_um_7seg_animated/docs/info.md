@@ -9,17 +9,15 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Animates the 7-segment display by reading the input switches
-to create a custom 7-segment character. Toggle input 7 to
-start the character animation sequence.
+Animates the 7-segment display by reading in the input switches to create a custom 7-segment character. Nothing will be displayed until you toggle input 7 to start the character animation sequence.
 
-The program works by iterating over the character bit pattern,
-enabling segments in an animated sequence.
+Inputs 0 through 6 map to outputs 0 though 6 (display segments a through g). Output 7 becomes active while input 7 is active.
+
+The circuit works by iterating over the character bit pattern, enabling segments sequentially at a speed of about 0.12 seconds per segment.
 
 ## How to test
 
-Toggle the input switches to create a character with inputs 0-6, toggle input 7 to
-start the character animation sequence
+Toggle the input switches to create a character with inputs 0-6, toggle input 7 to start the character animation sequence.
 
 ## External hardware
 
