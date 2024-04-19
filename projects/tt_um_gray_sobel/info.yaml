@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "Gray scale and Sobel filter"      # Project title
+  author:       "Diana Natali Maldonado Ramirez"      # Your name
+  discord:      "diana_06297"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "It takes an image, converts it to grayscale, and then applies an edge detection algorithm."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_gray_sobel"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:     
+    - "tt_um_gray_sobel.sv"   
+    - "top_gray_sobel.sv"
+    - "parameters.svh"
+    - "sobel_control.sv"
+    - "sobel_core.sv"
+    - "gray_scale_core.sv"
+    - "spi_core.sv"
+    - "spi_control.sv"
+    - "async_nreset_synchronizers.sv"
+    - 'LFSR.sv'
+    
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "spi_sck_i"
+  ui[1]: "spi_cs_i" 
+  ui[2]: "spi_sdi_i"
+  ui[3]: "select_process_i[0]"
+  ui[4]: "select_process_i[1]"
+  ui[5]: "start_sobel_i"
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "spi_sdo_o"
+  uo[1]: "lfsr_done"
+  uo[2]: "ena"
+  uo[3]: "output_px[0]"
+  uo[4]: "output_px[1]"
+  uo[5]: "output_px[2]"
+  uo[6]: "output_px[3]"
+  uo[7]: "output_px[4]"
+
+  # Bidirectional pins
+  uio[0]: "LFSR_enable_i"
+  uio[1]: "seed_stop_i"
+  uio[2]: "lfsr_en_i"
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
