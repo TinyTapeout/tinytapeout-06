@@ -3,14 +3,14 @@
 
 === tt_um_timer_counter_UGM ===
 
-   Number of wires:                216
-   Number of wire bits:            251
+   Number of wires:                217
+   Number of wire bits:            252
    Number of public wires:          68
    Number of public wire bits:     103
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                232
+   Number of cells:                233
      sky130_fd_sc_hd__a211o_2        1
      sky130_fd_sc_hd__a21boi_2       1
      sky130_fd_sc_hd__a21o_2         4
@@ -25,7 +25,7 @@
      sky130_fd_sc_hd__and4_2         4
      sky130_fd_sc_hd__and4b_2        1
      sky130_fd_sc_hd__and4bb_2       3
-     sky130_fd_sc_hd__buf_1         21
+     sky130_fd_sc_hd__buf_1         22
      sky130_fd_sc_hd__conb_1        12
      sky130_fd_sc_hd__dfrtp_2       59
      sky130_fd_sc_hd__inv_2          9
@@ -47,5 +47,5 @@
      sky130_fd_sc_hd__xnor2_2       15
      sky130_fd_sc_hd__xor2_2         7
 
-   Chip area for module '\tt_um_timer_counter_UGM': 3076.700800
+   Chip area for module '\tt_um_timer_counter_UGM': 3080.454400
 
