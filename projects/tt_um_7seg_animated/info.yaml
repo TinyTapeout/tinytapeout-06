@@ -18,6 +18,7 @@ project:
     - "tt_um_7seg_animated.v"
     - "segment_animator.v"
     - "clock_divider.v"
+    - "pwm.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
@@ -42,14 +43,14 @@ pinout:
   uo[7]: "seg7"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "pwm_bit1"
+  uio[1]: "pwm_bit2"
+  uio[2]: "pwm_bit3"
+  uio[3]: "pwm_bit4"
+  uio[4]: "pwm_bit5"
+  uio[5]: "pwm_bit6"
+  uio[6]: "pwm_bit7"
+  uio[7]: "usePwm"
 
 # Do not change!
 yaml_version: 6
