@@ -1,0 +1,41 @@
+
+63. Printing statistics.
+
+=== tt_um_voting_thingey ===
+
+   Number of wires:                 52
+   Number of wire bits:             87
+   Number of public wires:           9
+   Number of public wire bits:      44
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 68
+     sky130_fd_sc_hd__a211o_2        2
+     sky130_fd_sc_hd__a21bo_2        2
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a31o_2         2
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__conb_1        19
+     sky130_fd_sc_hd__inv_2          2
+     sky130_fd_sc_hd__nand2_2        6
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nor2_2         5
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o211ai_2       1
+     sky130_fd_sc_hd__o21ai_2        1
+     sky130_fd_sc_hd__o22a_2         2
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__o31a_2         2
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2          2
+     sky130_fd_sc_hd__or2b_2         1
+     sky130_fd_sc_hd__or3_2          2
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__xnor2_2        5
+     sky130_fd_sc_hd__xor2_2         4
+
+   Chip area for module '\tt_um_voting_thingey': 545.523200
+
