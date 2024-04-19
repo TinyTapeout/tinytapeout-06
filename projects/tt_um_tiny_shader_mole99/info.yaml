@@ -27,8 +27,8 @@ project:
 pinout:
   # Inputs
   ui[0]: "mode"
-  ui[1]: ""
-  ui[2]: ""
+  ui[1]: "debug_i[0]"
+  ui[2]: "debug_i[1]"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -50,10 +50,10 @@ pinout:
   uio[1]: "MOSI"
   uio[2]: "MISO"
   uio[3]: "SCK"
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[4]: "next_vertical"
+  uio[5]: "next_frame"
+  uio[6]: "debug_o[0]"
+  uio[7]: "debug_o[1]"
 
 # Do not change!
 yaml_version: 6
