@@ -2,7 +2,7 @@
 project:
   wokwi_id:     395599496098067457       # Set this to the ID of your Wokwi project (the number from the project's URL)
   title:        "EVEN AND ODD COUNTERS"      # Project title
-  author:       "DEVRAJ AND JUGRAJ"      # Your name
+  author:       "Dr.LIPIKA GUPTA, DEVRAJ, JUGRAJ"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "WE CAN CHOOSE TO COUNT EVEN AND ODD BCD"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
