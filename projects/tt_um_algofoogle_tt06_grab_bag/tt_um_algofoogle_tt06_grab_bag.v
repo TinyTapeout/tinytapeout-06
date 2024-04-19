@@ -19,7 +19,6 @@ module tt_um_algofoogle_tt06_grab_bag(
     wire [7:0] r;
     wire [7:0] g;
     wire [7:0] b;
-    // wire r7,g7,b7, r6,g6,b6;
 
     controller controller_0(
         .VPWR   (VPWR),
@@ -80,6 +79,20 @@ module tt_um_algofoogle_tt06_grab_bag(
         .d6     (b[6]),
         .d7     (b[7]),
         .aout   (ua[2]),
+        .GND    (VGND),
+        .VSUBS  (VGND)
+    );
+
+    r2r r2r_extra(
+        .d0     (VGND),
+        .d1     (VGND),
+        .d2     (VGND),
+        .d3     (VGND),
+        .d4     (uio_in[3]),
+        .d5     (uio_in[4]),
+        .d6     (uio_in[5]),
+        .d7     (uio_in[6]),
+        .aout   (ua[4]),
         .GND    (VGND),
         .VSUBS  (VGND)
     );
