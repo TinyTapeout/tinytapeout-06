@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 7f56a586",
+  "repo": "https://github.com/EdricOngKhaiJieh/8bitALU_verilog",
+  "commit": "f9bcfd7d3cb6da2972d1678d9ec5e9402ae9eecb",
+  "workflow_url": "https://github.com/EdricOngKhaiJieh/8bitALU_verilog/actions/runs/8755837188",
+  "sort_id": 1713539931426,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
