@@ -2,7 +2,7 @@
 project:
   title:        "ANS Encoder/Decoder" # Project title
   author:       "Davide Asnaghi & Lenny Khazan" # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  discord:      "lenny216"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Asymmetric Numeral Systems Encoder/Decoder" # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   # TODO: spend time optimizing this
@@ -24,32 +24,32 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
+  ui[0]: "input"
+  ui[1]: "input"
+  ui[2]: "input"
+  ui[3]: "input"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
+  uo[0]: "output"
+  uo[1]: "output"
+  uo[2]: "output"
+  uo[3]: "output"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
+  uio[0]: "cmd"
+  uio[1]: "cmd"
+  uio[2]: "in_vld"
+  uio[3]: "out_rdy"
+  uio[4]: "in_rdy"
+  uio[5]: "out_vld"
   uio[6]: ""
   uio[7]: ""
 
