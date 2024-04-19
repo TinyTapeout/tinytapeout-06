@@ -15,7 +15,7 @@ jobs:
   gds:
     env:
       PYTHONIOENCODING: utf-8
-      PDK_ROOT: /home/runner/pdk
+      PDK_ROOT: ${{ github.workspace }}/pdk
       TT_CONFIG: sky130.yaml
       # Uncomment the following line to build only the specified projects:
       #TT_ONLY_PROJECTS: tt_um_chip_rom,tt_um_factory_test,tt_um_duk_lif,tt_um_analog_loopback,tt_um_mattvenn_inverter,tt_um_urish_charge_pump
