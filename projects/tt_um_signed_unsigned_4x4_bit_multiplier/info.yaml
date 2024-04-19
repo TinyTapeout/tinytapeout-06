@@ -21,15 +21,15 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "multiplicand[0]"
-  ui[1]: "multiplicand[1]"
-  ui[2]: "multiplicand[2]"
-  ui[3]: "multiplicand[3]"
-  ui[4]: "multiplier[0]"
-  ui[5]: "multiplier[1]"
-  ui[6]: "multiplier[2]"
-  ui[7]: "multiplier[3]"
-
+  ui[0]: "multiplier[0]"
+  ui[1]: "multiplier[1]"
+  ui[2]: "multiplier[2]"
+  ui[3]: "multiplier[3]"
+  ui[4]: "multiplicand[0]"
+  ui[5]: "multiplicand[1]"
+  ui[6]: "multiplicand[2]"
+  ui[7]: "multiplicand[3]"
+  
   # Outputs
   uo[0]: "product[0]"
   uo[1]: "product[1]"
