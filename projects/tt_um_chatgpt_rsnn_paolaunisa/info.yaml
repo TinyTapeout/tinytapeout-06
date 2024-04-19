@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "ChatGPT designed Recurrent Spiking Neural Network"      # Project title
+  author:       "Paola Vitolo, Michael Tomlinson, ChatGPT-4, Gian Domenico Licciardo, Andreas Andreou - pvitolo1@jh.edu"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Programmable recurrent spiking neural network with 9 recurrent LIF neurons ( 3 input - 3 output ) with fully programmable weights (8-bit)"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_chatgpt_rsnn_paolaunisa"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_chatgpt_rsnn_paolaunisa.v"
+    - "LeakyIntegrateFireNeuron.v"
+    - "MemoryCU.v"
+    - "RecurrentSpikingNeuron.v"
+    - "register.v"
+    - "RSNN_TopModule.v"
+    - "SpikingNeuronLayer.v"
+    - "ThreeLayerNeuralNetwork.v"
+    - "FIPO_Memory.v"
+    
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Input Spike 0"
+  ui[1]: "Input Spike 1"
+  ui[2]: "Input Spike 2"
+  ui[3]: "Spike Input Register Enable"
+  ui[4]: "RSNN enable"
+  ui[5]: "Serial Data IN"
+  ui[6]: "Parameter Load"
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Output Spike 0"
+  uo[1]: "Output Spike 1"
+  uo[2]: "Output Spike 2"
+  uo[3]: "End of Writing Parameters into Memory"
+  uo[4]: "Parameter Data Written"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
