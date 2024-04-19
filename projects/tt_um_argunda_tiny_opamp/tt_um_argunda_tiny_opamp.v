@@ -10,7 +10,7 @@ module tt_um_argunda_tiny_opamp (
     input  wire [7:0] uio_in,   // IOs: Input path
     output wire [7:0] uio_out,  // IOs: Output path
     output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
-    inout  wire [7:0] ua, // analog pins
+    inout  wire [7:0] ua,       // analog pins
     input  wire       ena,      // will go high when the design is enabled
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
@@ -18,8 +18,20 @@ module tt_um_argunda_tiny_opamp (
 
     wire vbias_i;
 
+    tt_um_algofoogle_solo_squash pong1(
+        .vccd1  (VPWR),
+        .vssd1  (VGND),
+        .ui_in  (ui_in),
+        .uo_out (uo_out),
+        //.uio_in(),
+        //.uio_out(),
+        //.uio_oe(),
+        //.ena    (1), 
+        .clk    (clk),
+        .rst_n  (rst_n)
+    );
 
-    opamp opamp0(
+    opamp opamp1(
 	.VDD(VPWR),
 	.VSS(VGND),
 	.VBIAS(vbias_i),
@@ -28,7 +40,7 @@ module tt_um_argunda_tiny_opamp (
 	.MINUS(ua[2])
 	);
     
-    opamp opamp1(
+    opamp opamp2(
 	.VDD(VPWR),
 	.VSS(VGND),
 	.VBIAS(vbias_i),
@@ -37,21 +49,11 @@ module tt_um_argunda_tiny_opamp (
 	.MINUS(ua[5])
 	);
 
-    vbias_resistor vbias_resistor(
+    vbias_resistor vbias_resistor1(
 	.VDD(VPWR),
 	.VSS(VGND),
 	.VBIAS(vbias_i)
     );
-
-    // ties for the output enables
-    assign uo_out[0] = VGND;
-    assign uo_out[1] = VGND;
-    assign uo_out[2] = VGND;
-    assign uo_out[3] = VGND;
-    assign uo_out[4] = VGND;
-    assign uo_out[5] = VGND;
-    assign uo_out[6] = VGND;
-    assign uo_out[7] = VGND;
 
     assign uio_out[0] = VGND;
     assign uio_out[1] = VGND;

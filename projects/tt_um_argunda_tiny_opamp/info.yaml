@@ -20,24 +20,24 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
+  ui[0]: "pause"
+  ui[1]: "new_game"
+  ui[2]: "down_key"
+  ui[3]: "up_key"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "blue"
+  uo[1]: "green"
+  uo[2]: "red"
+  uo[3]: "hsync"
+  uo[4]: "vsync"
+  uo[5]: "speaker"
+  uo[6]: "col0"
+  uo[7]: "row0"
 
   # Bidirectional pins
   uio[0]: ""
@@ -50,9 +50,12 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "VOUT"
-  ua[1]: "PLUS"
-  ua[2]: "MINUS"
+  ua[0]: "VOUT1"
+  ua[1]: "PLUS1"
+  ua[2]: "MINUS1"
+  ua[3]: "VOUT2"
+  ua[4]: "PLUS2"
+  ua[5]: "MINUS2"
 
 # Do not change!
 yaml_version: 6
