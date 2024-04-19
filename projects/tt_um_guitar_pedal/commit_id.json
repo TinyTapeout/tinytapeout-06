@@ -1,9 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/nanikgeorge/IntegratedGuitarPedal",
-  "commit": "ef02a2ba3d5d3f774eb33f389b3bcb2ed655eb7b",
-  "workflow_url": "https://github.com/nanikgeorge/IntegratedGuitarPedal/actions/runs/8747841647",
+  "commit": "009113d846ce573a2a3b78ed5bc59cf5fbfb28fc",
+  "workflow_url": "https://github.com/nanikgeorge/IntegratedGuitarPedal/actions/runs/8754552864",
   "sort_id": 1713496273873,
-  "analog": true,
-  "skip": true
+  "analog": true
 }
