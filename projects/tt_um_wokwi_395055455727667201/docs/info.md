@@ -6,6 +6,13 @@ sections.
 You can also include images in this folder and reference them in the markdown. Each image must be less than
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
+## Credit
+
+My School and Instructor: [Wright State University](https://www.wright.edu/) EE-4550/6550 IC Hardware Security and Trust by [Dr. Saiyu Ren](https://people.wright.edu/saiyu.ren)
+
+My employer: [Two Six Technologies](https://twosixtech.com/)
+
+My teammates: [Celeste Irwin](https://www.linkedin.com/in/celeste-irwin-91b122225/) and [Nicholas Nissen](https://www.linkedin.com/in/nicholas-nissen-a512a823/)
 
 ## How it works
 
