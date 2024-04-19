@@ -259,7 +259,11 @@
       "rotate": 180,
       "attrs": {}
     },
-    { "type": "wokwi-gate-or-2", "id": "or7", "top": 355.2, "left": 1046.4, "attrs": {} }
+    { "type": "wokwi-gate-or-2", "id": "or7", "top": 355.2, "left": 1046.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 940.8, "left": 1113, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": 787.2, "left": 1093.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": 480, "left": 2668.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd5", "top": 105.6, "left": 3071.4, "attrs": {} }
   ],
   "connections": [
     [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
@@ -452,7 +456,19 @@
     [ "ttio7:OUT", "not9:OUT", "green", [ "h0" ] ],
     [ "or7:OUT", "or2:B", "green", [ "v0" ] ],
     [ "or7:B", "or1:OUT", "green", [ "h0" ] ],
-    [ "flop13:NOTQ", "or7:A", "green", [ "h0" ] ]
+    [ "flop13:NOTQ", "or7:A", "green", [ "h0" ] ],
+    [ "gnd2:GND", "ttio6:OE", "black", [ "v0" ] ],
+    [ "ttio6:OUT", "gnd2:GND", "green", [ "h0" ] ],
+    [ "ttio5:OUT", "gnd3:GND", "green", [ "h0" ] ],
+    [ "ttio5:OE", "gnd3:GND", "green", [ "h-28.8" ] ],
+    [ "gnd4:GND", "ttio3:OE", "black", [ "v0" ] ],
+    [ "ttio3:OUT", "gnd4:GND", "green", [ "h0" ] ],
+    [ "gnd5:GND", "ttio2:OE", "black", [ "v0" ] ],
+    [ "gnd5:GND", "ttio0:OUT", "black", [ "v0" ] ],
+    [ "gnd5:GND", "ttio0:OE", "black", [ "v0" ] ],
+    [ "gnd5:GND", "ttio1:OUT", "black", [ "v0" ] ],
+    [ "gnd5:GND", "ttio2:OUT", "black", [ "v0" ] ],
+    [ "gnd5:GND", "ttio1:OE", "black", [ "v0" ] ]
   ],
   "dependencies": {}
 }
