@@ -36,8 +36,8 @@ MACRO tt_um_obriensp_be8_nomacro
     END
   END ena
   PIN rst_n
-    ANTENNAGATEAREA 0.285000 ;
-    ANTENNADIFFAREA 0.869400 ;
+    ANTENNAGATEAREA 0.213000 ;
+    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met4 ;
         RECT 151.190 224.760 151.490 225.760 ;
@@ -174,8 +174,8 @@ MACRO tt_um_obriensp_be8_nomacro
     END
   END uio_oe[1]
   PIN uio_oe[2]
-    ANTENNAGATEAREA 0.495000 ;
-    ANTENNADIFFAREA 1.075200 ;
+    ANTENNAGATEAREA 0.373500 ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 22.390 224.760 22.690 225.760 ;
@@ -231,7 +231,7 @@ MACRO tt_um_obriensp_be8_nomacro
     END
   END uio_out[1]
   PIN uio_out[2]
-    ANTENNADIFFAREA 0.445500 ;
+    ANTENNADIFFAREA 0.795200 ;
     PORT
       LAYER met4 ;
         RECT 51.830 224.760 52.130 225.760 ;
@@ -297,7 +297,7 @@ MACRO tt_um_obriensp_be8_nomacro
     END
   END uo_out[2]
   PIN uo_out[3]
-    ANTENNAGATEAREA 0.373500 ;
+    ANTENNAGATEAREA 0.252000 ;
     ANTENNADIFFAREA 0.891000 ;
     PORT
       LAYER met4 ;
@@ -330,7 +330,7 @@ MACRO tt_um_obriensp_be8_nomacro
   END uo_out[6]
   PIN uo_out[7]
     ANTENNAGATEAREA 0.252000 ;
-    ANTENNADIFFAREA 0.891000 ;
+    ANTENNADIFFAREA 1.325700 ;
     PORT
       LAYER met4 ;
         RECT 62.870 224.760 63.170 225.760 ;
@@ -384,7 +384,7 @@ MACRO tt_um_obriensp_be8_nomacro
       LAYER met1 ;
         RECT 2.760 2.480 158.540 223.280 ;
       LAYER met2 ;
-        RECT 4.240 2.535 156.760 224.245 ;
+        RECT 6.990 2.535 156.760 224.245 ;
       LAYER met3 ;
         RECT 3.950 2.555 155.210 224.225 ;
       LAYER met4 ;
