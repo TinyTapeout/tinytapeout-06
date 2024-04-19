@@ -4,5 +4,6 @@
   "commit": "fdc74c92ec0ec2b9817f0ea6823daa62f8ca5401",
   "workflow_url": "https://github.com/davidparent/tt_resistor_test/actions/runs/8756505235",
   "sort_id": 1713491690556,
-  "analog": true
+  "analog": true,
+  "skip": true
 }
