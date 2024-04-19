@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Stepper"      # Project title
+  author:       "Miguel de Jesús Salazar Pedraza"      # Your name
+  discord:      "Msalazarp"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Stepper Control Bipolar Motor"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_stepper"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_stepper.v"
+    - "stepper.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Unused"
+  ui[1]: "Unused"
+  ui[2]: "Unused"
+  ui[3]: "Unused"
+  ui[4]: "Unused"
+  ui[5]: "Unused"
+  ui[6]: "Unused"
+  ui[7]: "Unused"
+
+  # Outputs
+  uo[0]: "Unused"
+  uo[1]: "Unused"
+  uo[2]: "Unused"
+  uo[3]: "Unused"
+  uo[4]: "Unused"
+  uo[5]: "Unused"
+  uo[6]: "Unused"
+  uo[7]: "Unused"
+
+  # Bidirectional pins
+  uio[0]: "Output Bit 0"
+  uio[1]: "Output Bit 1"
+  uio[2]: "Output Bit 2"
+  uio[3]: "Output Bit 3"
+  uio[4]: "enable"
+  uio[5]: "direction"
+  uio[6]: "Unused"
+  uio[7]: "Unused"
+
+# Do not change!
+yaml_version: 6
