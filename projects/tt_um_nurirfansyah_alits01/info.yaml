@@ -52,9 +52,9 @@ pinout:
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
   # The first pins is always ua[0], and the pin numbers must be sequential.
-  ua[0]: ""
-  ua[1]: ""
-  ua[2]: ""
+  ua[0]: "out"
+  ua[1]: "vcon_n"
+  ua[2]: "vcon_p"
 
 # Do not change!
 yaml_version: 6
