@@ -1,0 +1,57 @@
+# Tiny Tapeout project information - HSCTDC_FA2
+project:
+  title:        "UCSC HW Systems Collective, TDC - BUF2x1"
+  author:       "Phillip Marlowe, Tyler Sheaves, & Dustin Richmond"
+  discord:      "breachdat"
+  description:  "A tiny TDC constructed entirely of standard cells. Skywater130 AND-2 delay element"
+  language:     "SystemVerilog"                                                          
+  clock_hz:      17241379
+
+  tiles: "1x2"
+
+  top_module:  "tt_um_hsc_tdc_buf"
+
+  source_files:
+    - "tt_um_hsc_tdc.sv"
+    - "tdc/tdc_top.sv"
+    - "tdc/pulse_gen/tdc_pg.sv"
+    - "tdc/delay_line/tdc_delay_line.sv"
+    - "tdc/delay_line/rca.sv"
+    - "tdc/delay_line/dand.sv"
+    - "tdc/delay_line/dbuf.sv"
+    - "tdc/reg/capture_reg.sv"
+    - "tdc/pop_count/pop_count_simple.sv"
+
+pinout:
+  # Inputs
+  ui[0]: "lanuch clock"
+  ui[1]: "capture clock"
+  ui[2]: "pg_src"
+  ui[3]: "pg_bypass"
+  ui[4]: "pg_in"
+  ui[5]: "pg_tog"
+  ui[6]: "valid_in"
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "hw[0]"
+  uo[1]: "hw[1]"
+  uo[2]: "hw[2]"
+  uo[3]: "hw[3]"
+  uo[4]: "hw[4]"
+  uo[5]: "hw[5]"
+  uo[6]: "hw[6]"
+  uo[7]: "valid_out"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
