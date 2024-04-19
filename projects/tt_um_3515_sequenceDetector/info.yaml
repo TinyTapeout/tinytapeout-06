@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Sequence detector using 7-segment"      # Project title
-  author:       "Atharv Sharma"      # Your name
+  author:       "Atharv Sharma & Lipika Gupta"      # Your name
   discord:      "atharv_3515"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Detects sequence '1001' and displays '8.' on 7-segment led display, otherwise displays '-' only"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
