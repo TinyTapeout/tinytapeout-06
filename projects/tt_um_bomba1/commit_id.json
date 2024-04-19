@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 c74b14ac",
+  "repo": "https://github.com/arizaga1/Latin_bomba",
+  "commit": "62d773d6f0c1fd22684e322ba0ab0db1bfea99cb",
+  "workflow_url": "https://github.com/arizaga1/Latin_bomba/actions/runs/8749553597",
+  "sort_id": 1713530314638,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
