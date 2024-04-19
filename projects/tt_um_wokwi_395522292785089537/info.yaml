@@ -1,0 +1,45 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     395522292785089537      # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "Displays CIt"      # Project title
+  author:       "Cambridge"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "To display 'CIt' on 7 segment display"     # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1     # Clock frequency in Hz (or 0 if not applicable)
+ # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2.
+ # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+ # Inputs
+  ui[0]: "run"
+  ui[1]: "state_init[0]"
+  ui[2]: "state_init[1]"
+  ui[3]: "state_init[2]"
+  ui[4]: "state_init[3]"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+ # Outputs
+  uo[0]: "led_a"
+  uo[1]: "led_b"
+  uo[2]: "led_c"
+  uo[3]: "led_d"
+  uo[4]: "led_e"
+  uo[5]: "led_f"
+  uo[6]: "led_g"
+  uo[7]: "led_h"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
