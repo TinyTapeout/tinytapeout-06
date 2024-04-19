@@ -11,7 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 Simple NCO to generate a sine, square or sawtooth output.
 Sine wave is generated from a table and square and sawtooth from the phase accumulator.
-Note: Output is signed 8bit.
+Note: Output is unsigned 8bit.
 
 ## How to test
 
