@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-dip-switch-8",
+      "id": "sw1",
+      "top": -163.1,
+      "left": -160.84,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-vcc", "id": "pwr1", "top": -214.34, "left": -173.14, "attrs": {} },
+    {
+      "type": "board-tt-block-input",
+      "id": "chip1",
+      "top": -190.98,
+      "left": -4.8,
+      "attrs": { "verilogRole": "input" }
+    },
+    {
+      "type": "board-tt-block-output",
+      "id": "chip2",
+      "top": -202.14,
+      "left": 722.75,
+      "attrs": { "verilogRole": "output" }
+    },
+    { "type": "wokwi-gnd", "id": "pwr5", "top": -170.24, "left": 861.95, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -201.6,
+      "left": -249.6,
+      "attrs": { "text": "Alumni (1)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -182.4,
+      "left": -249.6,
+      "attrs": { "text": "Carroll (2)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -163.2,
+      "left": -259.2,
+      "attrs": { "text": "Keenan (3)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": -144,
+      "left": -249.6,
+      "attrs": { "text": "Dillon (4)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": -124.8,
+      "left": -259.2,
+      "attrs": { "text": "Flaherty (5)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text6",
+      "top": -105.6,
+      "left": -268.8,
+      "attrs": { "text": "Welsh Fam (6)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text7",
+      "top": -86.4,
+      "left": -278.4,
+      "attrs": { "text": "Pasquerilla East (7)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text8",
+      "top": -67.2,
+      "left": -278.4,
+      "attrs": { "text": "Fischer Grad (8)" }
+    },
+    { "type": "wokwi-gate-or-2", "id": "gate7", "top": -153.17, "left": 200.24, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "gate8", "top": -110.46, "left": 199.87, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "gate9", "top": -205.92, "left": 198.1, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "gate10", "top": -237.14, "left": 358.04, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "gate12", "top": -210.93, "left": 600.98, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -231.95,
+      "left": 846.41,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -285.22,
+      "left": 278.98,
+      "attrs": { "color": "white", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -233.35,
+      "left": 279.23,
+      "attrs": { "color": "purple", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -188.85,
+      "left": 279.48,
+      "attrs": { "color": "magenta", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": -137.81,
+      "left": 279.85,
+      "attrs": { "color": "limegreen", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": -277.35,
+      "left": 439.02,
+      "attrs": { "color": "white", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led7",
+      "top": -168.43,
+      "left": 439.75,
+      "rotate": 180,
+      "attrs": { "color": "cyan", "flip": "" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led8",
+      "top": -262.35,
+      "left": 556.12,
+      "attrs": { "color": "blue", "flip": "1" }
+    },
+    { "type": "wokwi-gnd", "id": "pwr2", "top": -23.2, "left": 302.43, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "pwr3", "top": -19.69, "left": 462.7, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "pwr6", "top": -22.35, "left": 573.68, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or1", "top": -259.2, "left": 182.4, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or2", "top": -192, "left": 364.8, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and1", "top": -230.4, "left": 480, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text9",
+      "top": -259.2,
+      "left": 220.8,
+      "attrs": { "text": "1" }
+    },
+    { "type": "wokwi-text", "id": "text10", "top": -201.6, "left": 240, "attrs": { "text": "2" } },
+    { "type": "wokwi-text", "id": "text11", "top": -144, "left": 240, "attrs": { "text": "3" } },
+    { "type": "wokwi-text", "id": "text12", "top": -105.6, "left": 240, "attrs": { "text": "4" } },
+    {
+      "type": "wokwi-text",
+      "id": "text13",
+      "top": -230.4,
+      "left": 403.2,
+      "attrs": { "text": "5" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text14",
+      "top": -182.4,
+      "left": 403.2,
+      "attrs": { "text": "6" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text15",
+      "top": -230.4,
+      "left": 518.4,
+      "attrs": { "text": "7" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text16",
+      "top": -211.2,
+      "left": 643.2,
+      "attrs": { "text": "8" }
+    }
+  ],
+  "connections": [
+    [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:7a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:6a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:5a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:4a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:1a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:2a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:3a", "red", [ "v0" ] ],
+    [ "chip1:EXTIN1", "sw1:2b", "orange", [ "h-27.93", "v-20.41", "h-63.41" ] ],
+    [ "sw1:3b", "chip1:EXTIN2", "gold", [ "v-0.1", "h50.43", "v20.35" ] ],
+    [ "chip1:EXTIN3", "sw1:4b", "red", [ "h-51.22", "v-20.25" ] ],
+    [ "chip1:EXTIN4", "sw1:5b", "green", [ "h-62.58", "v-20.8", "h-28.76" ] ],
+    [ "sw1:6b", "chip1:EXTIN5", "blue", [ "h20.24", "v19.95", "h71.1" ] ],
+    [ "sw1:7b", "chip1:EXTIN6", "violet", [ "h7.17", "v16.6", "h84.17" ] ],
+    [ "sw1:8b", "chip1:EXTIN7", "gray", [ "v0" ] ],
+    [ "chip1:IN4", "gate7:A", "green", [ "h71.34", "v-36.72" ] ],
+    [ "chip1:IN6", "gate7:B", "violet", [ "h91.43", "v-36.72" ] ],
+    [ "chip1:IN6", "gate8:B", "violet", [ "v-0.47", "h93.52", "v6.46" ] ],
+    [ "chip1:IN1", "gate9:A", "orange", [ "h51.93", "v-60.12", "h50.17" ] ],
+    [ "chip1:IN2", "gate9:B", "gold", [ "h65.18", "v-15.9" ] ],
+    [ "gate7:OUT", "gate10:B", "magenta", [ "v-0.65", "h43.07", "v-71.92" ] ],
+    [ "chip1:IN7", "gate12:B", "gray", [ "v-0.5", "h19.75", "v59.62", "h429.65", "v-125.87" ] ],
+    [ "gate12:OUT", "chip2:OUT0", "red", [ "v0" ] ],
+    [ "chip2:EXTOUT0", "led1:A", "red", [ "h0" ] ],
+    [ "led1:C", "pwr5:GND", "black", [ "v0" ] ],
+    [ "sw1:1b", "chip1:EXTIN0", "#8f4814", [ "h69.66", "v20.25" ] ],
+    [ "chip1:IN5", "gate8:A", "blue", [ "h15.25", "v-3.61" ] ],
+    [ "led3:A", "gate9:OUT", "purple", [ "v0" ] ],
+    [ "led4:A", "gate7:OUT", "violet", [ "v0" ] ],
+    [ "led5:A", "gate8:OUT", "limegreen", [ "v0" ] ],
+    [ "gate10:OUT", "led6:A", "yellow", [ "v0" ] ],
+    [ "pwr2:GND", "led5:C", "black", [ "v0" ] ],
+    [ "pwr2:GND", "led4:C", "black", [ "v0" ] ],
+    [ "pwr2:GND", "led3:C", "black", [ "v0" ] ],
+    [ "pwr2:GND", "led2:C", "black", [ "v0" ] ],
+    [ "pwr3:GND", "led7:C", "black", [ "v0" ] ],
+    [ "pwr3:GND", "led6:C", "black", [ "v0" ] ],
+    [ "pwr6:GND", "led8:C", "black", [ "v0" ] ],
+    [ "or1:OUT", "led2:A", "white", [ "v0" ] ],
+    [ "chip1:IN3", "or1:B", "red", [ "h38.4", "v-113.95" ] ],
+    [ "chip1:IN0", "or1:A", "#8f4814", [ "h19.2", "v-104.35", "h67.2" ] ],
+    [ "or2:OUT", "led7:A", "cyan", [ "v0" ] ],
+    [ "led2:A", "gate10:A", "white", [ "v0" ] ],
+    [ "gate8:OUT", "or2:B", "green", [ "v4.86", "h68.93" ] ],
+    [ "led3:A", "or2:A", "purple", [ "v0" ] ],
+    [ "led6:A", "and1:A", "yellow", [ "v0" ] ],
+    [ "or2:OUT", "and1:B", "cyan", [ "v-9.6", "h0", "v-19.2" ] ],
+    [ "and1:OUT", "led8:A", "blue", [ "v0" ] ],
+    [ "led8:A", "gate12:A", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
