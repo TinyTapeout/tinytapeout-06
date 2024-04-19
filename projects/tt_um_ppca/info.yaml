@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "drEEm tEEm PPCA"      # Project title
+  author:       "Calvin Sokk, William Mingham Zhu, Calvin Yeh, Eric Liu"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Projectile Positioning Calculation Accelerator"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ppca"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "controls.v"
+    - "ff_lib.v"
+    - "pos_aim.v"
+    - "target_gen.v"
+    - "trajectory_calc.v"
+    - "one_pulse.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Move Left"
+  ui[1]: "Move Right"
+  ui[2]: "Aim Left"
+  ui[3]: "Aim Right"
+  ui[4]: "Shoot"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Result Valid"
+  uo[1]: "Hit"
+  uo[2]: "Select Data"
+  uo[3]: "Select Data"
+  uo[4]: "Select Data"
+  uo[5]: "Select Data"
+  uo[6]: "Select Data"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: "target_x"
+  uio[3]: "target_x"
+  uio[4]: "target_x"
+  uio[5]: "target_x"
+  uio[6]: "target_x"
+  uio[7]: "0 ? target_y = 30 : target_y = 31"
+
+# Do not change!
+yaml_version: 6
