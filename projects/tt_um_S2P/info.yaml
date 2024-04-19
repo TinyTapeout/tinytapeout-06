@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Serial to Parallel Register"      # Project title
+  author:       "Ricardo M. Rocha Torres"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This is a simple Serial to Parallel Register"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_S2P"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_S2P.v"
+    - "Serie_Paralelo.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "no use"
+  ui[1]: "no use"
+  ui[2]: "no use"
+  ui[3]: "no use"
+  ui[4]: "no use"
+  ui[5]: "no use"
+  ui[6]: "no use"
+  ui[7]: "no use"
+
+  # Outputs
+  uo[0]: "no use"
+  uo[1]: "no use"
+  uo[2]: "no use"
+  uo[3]: "no use"
+  uo[4]: "no use"
+  uo[5]: "no use"
+  uo[6]: "no use"
+  uo[7]: "no use"
+
+  # Bidirectional pins
+  uio[0]: "Bit 0"
+  uio[1]: "Bit 1"
+  uio[2]: "Bit 2"
+  uio[3]: "Bit 3"
+  uio[4]: "no use"
+  uio[5]: "Serie_in"
+  uio[6]: "rst"
+  uio[7]: "clk"
+
+# Do not change!
+yaml_version: 6
