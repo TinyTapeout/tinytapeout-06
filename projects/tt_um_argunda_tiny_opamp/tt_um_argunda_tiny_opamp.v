@@ -18,10 +18,10 @@ module tt_um_argunda_tiny_opamp (
 
     wire vbias_i;
 
-    tt_um_algofoogle_solo_squash pong1(
-        .vccd1  (VPWR),
-        .vssd1  (VGND),
-        .ui_in  (ui_in),
+    top pong1(
+        .VPWR  (VPWR),
+        .VGND  (VGND),
+        .ui_in  (ui_in[3:0]),
         .uo_out (uo_out),
         //.uio_in(),
         //.uio_out(),
