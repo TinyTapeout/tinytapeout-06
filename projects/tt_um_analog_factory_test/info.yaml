@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title:        "TT06 Analog Factory Test"
+  author:       "Sylvain Munaut"
+  discord:      "246tnt"
+  description:  "Test structures for TT06 analog support"
+  language:     "Analog"
+  clock_hz:     0
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_analog_factory_test"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "ena0_n"
+  ui[1]: "ena1"
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+  # Analog pins - you can add more if you use them, up to 6.
+  # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
+  # The first pins is always ua[0], and the pin numbers must be sequential.
+  ua[0]: "ibias"
+  ua[1]: "vgnd_sense"
+  ua[2]: "vpwr_sense"
+  ua[3]: "loopback[0]"
+  ua[4]: "loopback[1]"
+  ua[5]: "loopback[2]"
+
+# Do not change!
+yaml_version: 6
