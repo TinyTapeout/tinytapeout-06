@@ -6,10 +6,28 @@ modules:
   - name: "factory_test"
     x: 7
     y: 14
+# Art containing modules that needs to be carefully placed so they don't get flipped/mirrored:
   - name: urish_charge_pump
     x: 1
     y: 10
     analog:
       0: null
+    height: 2
+    width: 1
+  - name: psychogenic_wowa
+    x: 4
+    y: 10
+    analog:
+      0: null
+      1: null
+      2: null
+      3: null
+      4: null
+      5: null
+    height: 2
+    width: 1
+  - name: oscillating_bones
+    x: 2
+    y: 16
     height: 2
     width: 1
