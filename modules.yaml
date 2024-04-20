@@ -6,6 +6,30 @@ modules:
   - name: "factory_test"
     x: 7
     y: 14
+  - name: analog_factory_test
+    height: 2
+    width:  1
+    x: 7
+    y: 7
+    analog:
+      0: null
+      1: null
+      2: null
+      3: null
+      4: null
+      5: null
+  - name: analog_factory_test
+    height: 2
+    width:  1
+    x: 15
+    y: 19
+    analog:
+      0: null
+      1: null
+      2: null
+      3: null
+      4: null
+      5: null
 # Art containing modules that needs to be carefully placed so they don't get flipped/mirrored:
   - name: urish_charge_pump
     x: 1
