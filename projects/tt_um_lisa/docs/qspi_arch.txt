@@ -1,0 +1,27 @@
+              +----------------------------------------------------------+ 
+              |     Configuration Registers (Debug module)          {pt} |                  
+              |     Debug    LISA1    LISA2           ------Per CE-----  |                  
+              |    CE[1:0]  CE[1:0]  CE[1:0]          Quad   Flash  16B  |                  
+              +-------+---------+-------+---------------+------+-----+---+                   
+                      v         v       v               v      v     v            
+                   +----------------------+          +------------------+                    
+                   |                      | Addr     |                  |
+  Debug Request -->|                      +--------->|                  | SPI                
+                   |                      | Data     |       QSPI       +------>                                 
+                   |         QSPI         +<-------->|      Master      |                                     
+  LISA1 Request -->|       Arbiter        | CE[1:0]  |    Controller    | QSPI                                
+        (Inst)     |                      +--------->|                  +------>                                 
+                   |                      | Control  |                  |                                      
+  LISA2 Request -->|                      +--------->|                  |CE[1:0]                              
+        (Data)     |               {pb}   |          |            {pr}  +------>                                
+                   +-----------+----------+          +------------------+                             
+                        ^      ^        ^                                                          
+                  +-----+------+--------+-----+                                                   
+                  |   Debug  LISA1    LISA2   |{pt}                                               
+                  |   Addr  BaseAddr BaseAddr |                                                   
+                  |  Configuration Registers  |                                                   
+                  +---------------------------+                                                   
+     
+                    <h4>(Q)SPI Controller Interface Diagram</h4>
+                                                                                      
+{:FILE scale 0.7 theme light font-size 10}

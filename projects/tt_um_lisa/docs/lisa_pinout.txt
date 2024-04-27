@@ -1,0 +1,18 @@
+              tt_um_lisa (974)                                       tt_um_lisa (974)              
+          +-------------------+                                  +-------------------+           
+ pa[0] ---| in[0]      out[0] |--- pb[0]                  rx2 ---| in[0]      out[0] |--- tx2    
+ pa[1] ---| in[1]      out[1] |--- pb[1]                pa[1] ---| in[1]      out[1] |--- pb[1]  
+ pa[2] ---| in[2]      out[2] |--- pb[2]                pa[2] ---| in[2]      out[2] |--- pb[2]  
+    rx ---| in[3]      out[3] |--- pb[3]                   rx ---| in[3]      out[3] |--- pb[3]  
+ pa[3] ---| in[4]      out[4] |--- tx                   pa[3] ---| in[4]      out[4] |--- tx     
+ pa[4] ---| in[5]      out[5] |--- pb[5]                pa[4] ---| in[5]      out[5] |--- pb[5]  
+ pa[5] ---| in[6]      out[6] |--- pb[6]                pa[5] ---| in[6]      out[6] |--- pb[6]  
+ pa[6] ---| in[7]      out[7] |--- pb[7]                pa[6] ---| in[7]      out[7] |--- pb[7]  
+          |                   |                                  |                   |           
+   ce0 ---| io[0]       io[4] |--- scl               ce_latch ---| io[0]       io[4] |--- scl    
+  mosi ---| io[1]       io[5] |--- sda      mosi/DQ0/ce0_latch---| io[1]       io[5] |--- sda    
+  miso ---| io[2]       io[6] |--- pc[3]    miso/DQ1/ce1_latch---| io[2]       io[6] |--- DQ3    
+  sclk ---| io[3]       io[7] |--- pc[4]                 sclk ---| io[3]       io[7] |--- DQ4    
+          +-------------------+                                  +-------------------+           
+           RP2040 Only Config                                       Mux Mode 3 Config                 
+                                                                                              

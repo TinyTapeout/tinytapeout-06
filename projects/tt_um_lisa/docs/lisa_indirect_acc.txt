@@ -1,0 +1,14 @@
+    +----------+                               +-------------+                                 
+    |          |                     +---------+    8-Bit    |                                 
+    |  Opcode  |                     v         | Accumulator |                                 
+    |          | imm     +----------------+    +-------------+                                  
+    |     [8:0]+-------->|Addr  Data      |           ^ {pr}                                          
+    |          |         |     Memory     |           |                                          
+    |       [9]+-------->|P/M     /       +-----------+                                            
+    |          | op      |     Periph     |  
+    |   [15:10]+----->   |{pb}            |
+    +----------+         +----------------+
+      {pt}                                
+          <h4>Accumulator Indirect Operations Diagram</h4>
+                                                                                      
+{:FILE scale 0.9 theme light font-size 10}
