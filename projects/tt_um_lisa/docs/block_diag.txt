@@ -1,0 +1,28 @@
+                                    +------+        {pw}                
+                            +------>|Config|  +------+     +-------+{pw}  
+                            |       | Regs |  | LISA |     | LISA  |      
+                       +----+----+  +------+  | qspi |     | qqspi | QSPI  
+                       |{pt}     |     {pt}   |      +<--->|       +--->  
+               |\      |  Debug  |            | QSPI |     | QPSI  | CEs  
+    rx1 -----*-+ |     | Control +----------->| ARB  |     | Ctrl  +--->  
+             | | |     |  +----+ |            +-+--+-+     +-------+      
+    rx2 ---*-|-+ +-----|->|UART+-|-----------+  |I |D                                      
+           | | | |   +>|  +----+ +--------+  |  |  |      +----------+                     
+    rx3 -*-|-|-+ |   | +---------+ Control|  +--(--(----->|UART1     |                     
+         | | | |/    |Baud Set            V     v  v      |      GPIO+->                   
+         | | |  |Port|  /----------\    +-+-----+--+++    |       I2C+->                    
+         V V V  |Sel |  |  HW INT  |{pb}|            |    |     UART2+->                   
+     +----------+-+  |  |  MUL/DIV |<-->|            +--->|          |                     
+     | {pt}       +--+  \----------/    |    LISA    |    |  Periph  |                     
+     |  ^Debug^   |     /----------\    |    CORE    |    |   {py}   |                     
+     | ^Autobaud^ |     |  bfloat  |{pb}|            |    |          |                     
+     +------------+     |  MUL/ADD |<-->|{pb}        +--+ |  Timer1  |                     
+                        \----------/    +-+-------+--+  | |  Timer2  |                     
+                                          |       |     | +----------+                     
+                        +-------+    +----+--+ +--+----+| +----------+                     
+                    {pr}| RAM32 +----+ DATA  | | INST  |+>|   LISA   |{pt}                 
+                        | 128B  |    | CACHE | | CACHE |  |  Debug   |                     
+                        +-------+    +-------+ +-------+  +----------+                     
+
+                   <h4>LISA Microcontroller Block Diagram</h4>
+{:FILE scale 0.8 theme light font-size 10}
