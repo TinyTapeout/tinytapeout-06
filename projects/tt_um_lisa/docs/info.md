@@ -1,6 +1,6 @@
-## What is LISA?
-                                 
-It is a Microcontroller built around a custom 8-Bit Little ISA (LISA)
+## LISA Overview?
+
+LISA is a Microcontroller built around a custom 8-Bit Little ISA (LISA)
 microprocessor core.  It includes several standard peripherals that
 would be found on commercial microcontrollers including timers, GPIO,
 UARTs and I2C.
@@ -47,7 +47,7 @@ The following is a block diagram of the LISA Microcontroller:
 It uses a 32x32 1RW [DFFRAM](https://github.com/AUCOHL/DFFRAM) macro to implement a 128 bytes (1 kilobit) RAM module.
 The 128 Byte ram can be used either as a DATA cache for the processor data bus, giving a 32K Byte address range,
 or the CACHE controller can be disabled, connecting the Lisa processor core to the RAM directly, limiting the 
-data space to 128 bytes.  Inclusion of the DFFRAM is thanks to Uri Shaked (Discord urish) and this DFFRAM example.
+data space to 128 bytes.  Inclusion of the DFFRAM is thanks to Uri Shaked (Discord urish) and his DFFRAM example.
 
 Reseting the project **does not** reset the RAM contents.
 
@@ -85,14 +85,14 @@ can be performed using any standard terminal software (such as minicom, tio. Put
 terminated using a NEWLINE (0x0A) with an optional CR (0x0D).  Responses from the debug interface are always 
 terminated with a LINFEED plus CR sequence (0x0A, 0x0D).  The commands are as follows (responsce LF/CR ommited):
 
-Command  Description
--------  -----------
-v        Report Debugger version.  Should return: lisav1.2
-wAAVVVV  Write 16-bit HEX value 'VVVV' to register at 8-bit HEX address 'AA'.
-rAA      Read 16-bit register value from 8-bit HEX address 'AA'.
-t        Reset the LISA core.
-l        Grant LISA the UART.  Further data will be ignored by the debugger.
-+++      Revoke LISA UART access.  NOTE: a 0.5s guard time before/after is required.
+ | Command   | Description                                                          |
+ | --------- | -------------------------------------------------------------------- |
+ | v         | Report Debugger version.  Should return: lisav1.2                    |
+ | wAAVVVV   | Write 16-bit HEX value 'VVVV' to register at 8-bit HEX address 'AA'. |
+ | rAA       | Read 16-bit register value from 8-bit HEX address 'AA'.              |
+ | t         | Reset the LISA core.                                                 |
+ | l         | Grant LISA the UART.  Further data will be ignored by the debugger.  |
+ | +++       | Revoke LISA UART.  NOTE: a 0.5s guard time before/after is required. |
 
 NOTE: All HEX values must be a-f and not A-F.  Uppercase is not supported.
 
@@ -100,26 +100,26 @@ NOTE: All HEX values must be a-f and not A-F.  Uppercase is not supported.
 
 The following table describes the configuration and LISA debug register addresses available via the debug 'r' and 'w'
 commands.  The individual register details will be described in the sections to follow.
-                                                                      
-ADDR  Description                  ADDR  Description 
-----  -----------                  ----  -----------                                                             
-0x00  LISA Core Run Control        0x12  LISA1 QSPI base address                                                                                   
-0x01  LISA Accumulator / FLAGS     0x13  LISA2 QSPI base address                                                 
-0x02  LISA Program Counter (PC)    0x14  LISA1 QSPI CE select                     
-0x03  LISA Stack Pointer (SP)      0x15  LISA2 QSPI CE select                     
-0x04  LISA Return Address (RA)     0x16  Debug QSPI CE select                     
-0x05  LISA Index Register (IX)     0x17  QSPI Mode (QUAD, flash, 16b)             
-0x06  LISA Data bus                0x18  QSPI Dummy read cycles                   
-0x07  LISA Data bus address        0x19  QSPI Write CMD value                     
-0x08  LISA Breakpoint 1            0x1a  The '+++' guard time count               
-0x09  LISA Breakpoint 2            0x1b  Mux bits for uo_out                      
-0x0a  LISA Breakpoint 3            0x1c  Mux bits for uio                         
-0x0b  LISA Breakpoint 4            0x1d  CACHE control                            
-0x0c  LISA Breakpoint 5            0x1e  QSPI edge / SCLK speed                   
-0x0d  LISA Breakpoint 6            0x20  Debug QSPI Read / Write                  
-0x0f  LISA Current Opcode Value    0x21  Debug QSPI custom command                
-0x10  Debug QSPI Address (LSB16)   0x22  Debug read SPI status reg                
-0x11  Debug QSPI Address (MSB8)                                                   
+
+ | ADDR | Description                | ADDR | Description                  |
+ | ---- | -------------------------- | ---- | ---------------------------- |
+ | 0x00 | LISA Core Run Control      | 0x12 | LISA1 QSPI base address      |
+ | 0x01 | LISA Accumulator / FLAGS   | 0x13 | LISA2 QSPI base address      |
+ | 0x02 | LISA Program Counter (PC)  | 0x14 | LISA1 QSPI CE select         |
+ | 0x03 | LISA Stack Pointer (SP)    | 0x15 | LISA2 QSPI CE select         |
+ | 0x04 | LISA Return Address (RA)   | 0x16 | Debug QSPI CE select         |
+ | 0x05 | LISA Index Register (IX)   | 0x17 | QSPI Mode (QUAD, flash, 16b) |
+ | 0x06 | LISA Data bus              | 0x18 | QSPI Dummy read cycles       |
+ | 0x07 | LISA Data bus address      | 0x19 | QSPI Write CMD value         |
+ | 0x08 | LISA Breakpoint 1          | 0x1a | The '+++' guard time count   |
+ | 0x09 | LISA Breakpoint 2          | 0x1b | Mux bits for uo_out          |
+ | 0x0a | LISA Breakpoint 3          | 0x1c | Mux bits for uio             |
+ | 0x0b | LISA Breakpoint 4          | 0x1d | CACHE control                |
+ | 0x0c | LISA Breakpoint 5          | 0x1e | QSPI edge / SCLK speed       |
+ | 0x0d | LISA Breakpoint 6          | 0x20 | Debug QSPI Read / Write      |
+ | 0x0f | LISA Current Opcode Value  | 0x21 | Debug QSPI custom command    |
+ | 0x10 | Debug QSPI Address (LSB16) | 0x22 | Debug read SPI status reg    |
+ | 0x11 | Debug QSPI Address (MSB8)  |      |                              |
 
 ### LISA Processor Interface Details
 
@@ -135,7 +135,6 @@ the following diagram:
 The arbiter is controlled via configuration registers (accessible by the Debug controller)
 that specify the operating mode per CE, and CE selection bits for each of the three interfaces:
 
-   
    - Debug Interface
    - LISA1 (Instruction fetch)
    - LISA2 (Data read/write)
@@ -179,16 +178,16 @@ be connected to the Tiny Tapeout PCB.  Alternately, the RP2040 controller on the
 single SPI (the details for configuring this are outside the scope of this documentation ... search the Tiny Tapeout
 website for details.).  For the CE signals, there are two operating modes, fixed CE output and Mux Mode 3 "latched" CE
 mode.  Both will be described here.  The other standard SPI signals are routed to dedicated pins as follows:
-  
-Pin     SPI     QSPI  Notes
-----    ---     ----  -----
-uio[0]  CE0     CE0
-uio[1]  MOSI    DQ0   Also MOSI prior to QUAD mode DQ0
-uio[2]  MISO    DQ1   Also MISO prior to QUAD mode DQ1
-uio[3]  SCLK    SCLK
-uio[4]  CE1     CE1   Must be enabled via uio MUX bits
-uio[6]   -      DQ2   Must be enabled via uio MUX bits
-uio[7]   -      DQ3   Must be enabled via uio MUX bits
+
+ | Pin    | SPI   | QSPI | Notes                            |
+ | ------ | ----- | ---- | -------------------------------- |
+ | uio[0] | CE0   | CE0  |                                  |
+ | uio[1] | MOSI  | DQ0  | Also MOSI prior to QUAD mode DQ0 |
+ | uio[2] | MISO  | DQ1  | Also MISO prior to QUAD mode DQ1 |
+ | uio[3] | SCLK  | SCLK |                                  |
+ | uio[4] | CE1   | CE1  | Must be enabled via uio MUX bits |
+ | uio[6] |  -    | DQ2  | Must be enabled via uio MUX bits |
+ | uio[7] |  -    | DQ3  | Must be enabled via uio MUX bits |
 
 For Special Mux Mode 3 (Debug register 0x1C uio_mux[7:6] = 2'h3), the pinout is mostly the same except the CE signals are not constant.
 Instead they are "latched" into an external 7475 type latch.  This mode is to support a PMOD board connected to the uio
@@ -197,14 +196,14 @@ nine pins would be required for continuous CE0/CE1, however only eight are avail
 CE "latch" signal and the CE0/CE1 signals are provided on uio[1]/uio[2] during the latch event.  This requires a series
 resistor as indicated to allow CE updates if the FLASH/SRAM is driving DQ0/DQ1.  The pinout then becomes:
 
-Pin     SPI/QSPI             Notes
-----    ---                  -----
-uio[0]  ce_latch             ce_latch HIGH at beginning of cycle
-uio[1]  ce0_latch/MOSI/DQ0   Connection to FLASH/SRAM via series resistor
-uio[2]  ce1_latch/MISO/DQ1   Connection to FLASH/SRAM via series resistor
-uio[3]  SCLK               
-uio[6]  -/DQ2                Must be enabled via uio MUX bits
-uio[7]  -/DQ3                Must be enabled via uio MUX bits
+ | Pin    | SPI/QSPI           | Notes                                        |
+ | ------ | ------------------ | -------------------------------------------- |
+ | uio[0] | ce_latch           | ce_latch HIGH at beginning of cycle          |
+ | uio[1] | ce0_latch/MOSI/DQ0 | Connection to FLASH/SRAM via series resistor |
+ | uio[2] | ce1_latch/MISO/DQ1 | Connection to FLASH/SRAM via series resistor |
+ | uio[3] | SCLK               |                                              |
+ | uio[6] | -/DQ2              | Must be enabled via uio MUX bits             |
+ | uio[7] | -/DQ3              | Must be enabled via uio MUX bits             |
 
 This leaves uio[4]/uio[5] available for use as either UART or I2C.
 
@@ -264,15 +263,15 @@ well as floating point operations. These will be covered in the sections to foll
 Like most processors, LISA has a few different addressing modes to get data in and out of the core.  These
 include the following:
 
-Mode      Data                   Description
-----      ----                   -----------
-Register  Rx[n -: 8]             Transfers between registers (ix, ra, facc, etc.).
-Direct    inst[n:0]              N-bit data stored directly in the instruction word.
-NextOp    (inst+1)[14:0]         Data stored in the NEXT instruction word (2 cycle).
-Indirect  mem[inst[n:0]]         The address of the data is in the instruction word.
-Periph    periph[inst[n:0]]      Accesses to the peripheral bus.
-Indexed   mem[sp/ix+inst[n:0]]   The SP or IX register is added to a fixed offset.
-Stack     mem[sp]                Current stack pointer points to the data (push/pop).
+ | Mode     | Data                 | Description                                       |
+ | -------- | -------------------- | ------------------------------------------------- |
+ | Register | Rx[n -: 8]           | Transfers between registers (ix, ra, facc, etc.). |
+ | Direct   | inst[n:0]            | N-bit data stored in the instruction word.        |
+ | NextOp   | (inst+1)[14:0]       | Data stored in the NEXT instruction word.         |
+ | Indirect | mem[inst[n:0]]       | Address of the data is in the instruction word.   |
+ | Periph   | periph[inst[n:0]]    | Accesses to the peripheral bus.                   |
+ | Indexed  | mem[sp/ix+inst[n:0]] | The SP or IX register is added to a fixed offset. |
+ | Stack    | mem[sp]              | Stack pointer points to the data (push/pop).      |
 
 ### The Control Registers
 
@@ -329,28 +328,28 @@ Legend for operations below:
  - pc_jmp = inst[14:0]
  - pc_rel = pc + sign_extend(inst[10:0])
 
-Opcode   Operation        Encoding              Description
-------   ---------        --------              -----------
-jal      pc <= pc_jmp     0aaa_aaaa_aaaa_aaaa   Jump And Link (call).
-         ra <= pc                                 
-ret      pc <= ra         1000_1010_0xxx_xxxx   Return
-reti     pc <= ra         1000_11xx_iiii_iiii   Return Immediate.
-         acc <= acc_val                         
-br       pc <= pc_rel     1011_0rrr_rrrr_rrrr   Branch Always
-bz       pc <= pc_rel     1011_1rrr_rrrr_rrrr   Branch if Zero.
-         if zero=1                              
-bnz      pc <= pc_rel     1010_1rrr_rrrr_rrrr   Branch if Not Zero.
-         if zero=0                              
-rc       pc <= ra         1000_1011_0xxx_xxxx   Return if Carry
-         if carry=1                             
-rz       pc <= ra         1000_1011_1xxx_xxxx   Return if Zero
-         if zero=1                              
-call_ix  pc <= ix         1000_1010_100x_xxxx   Call indirect via IX
-         ra <= pc                               
-jump_ix  pc <= ix         1000_1010_101x_xxxx   Jump indirect via IX
-if       cond <= ??       1010_0010_0000_0ccc   If.  See below.
-iftt     cond <= ??       1010_0010_0000_1ccc   If then-then.  See below.
-ifte     cond <= ??       1010_0010_0001_0ccc   If then-else.  See below.
+ | Opcode  | Operation      | Encoding            | Description               |
+ | ------- | -------------- | ------------------- | ------------------------- |
+ | jal     | pc <= pc_jmp   | 0aaa_aaaa_aaaa_aaaa | Jump And Link (call).     |
+ |         | ra <= pc       |                     |                           |
+ | ret     | pc <= ra       | 1000_1010_0xxx_xxxx | Return                    |
+ | reti    | pc <= ra       | 1000_11xx_iiii_iiii | Return Immediate.         |
+ |         | acc <= acc_val |                     |                           |
+ | br      | pc <= pc_rel   | 1011_0rrr_rrrr_rrrr | Branch Always             |
+ | bz      | pc <= pc_rel   | 1011_1rrr_rrrr_rrrr | Branch if Zero.           |
+ |         | if zero=1      |                     |                           |
+ | bnz     | pc <= pc_rel   | 1010_1rrr_rrrr_rrrr | Branch if Not Zero.       |
+ |         | if zero=0      |                     |                           |
+ | rc      | pc <= ra       | 1000_1011_0xxx_xxxx | Return if Carry           |
+ |         | if carry=1     |                     |                           |
+ | rz      | pc <= ra       | 1000_1011_1xxx_xxxx | Return if Zero            |
+ |         | if zero=1      |                     |                           |
+ | call_ix | pc <= ix       | 1000_1010_100x_xxxx | Call indirect via IX      |
+ |         | ra <= pc       |                     |                           |
+ | jump_ix | pc <= ix       | 1000_1010_101x_xxxx | Jump indirect via IX      |
+ | if      | cond <= ??     | 1010_0010_0000_0ccc | If.  See below.           |
+ | iftt    | cond <= ??     | 1010_0010_0000_1ccc | If then-then.  See below. |
+ | ifte    | cond <= ??     | 1010_0010_0001_0ccc | If then-else.  See below. |
 
 ### The IF Opcode
 
@@ -361,16 +360,16 @@ the cond[0] bit represents the next instruction and cond[1] represents the instr
 three "if" forms take an argument that checks the current value of the FLAGS to set the condition bits.  The
 argument is encoded as the lower three bits of the instruction word ard operate as shown in the following table:
 
-Condition    Test               Encoding    Description
----------    ----               --------    -----------
-EQ           zflag=1            3'h0        Execute if Equal
-NE           zflag=0            3'h1        Execute if Not Equal
-NC           cflag=0            3'h2        Execute if Not Carry 
-C            cflag=1            3'h3        Execute if Carry
-GT           ~cSigned & ~zflag  3'h4        Execute if Greater Than
-LT           cSigned & ~zflag   3'h5        Execute if Less Than
-GTE          ~cSigned | zflag   3'h6        Execute if Greater Than or Equal
-LTE          cSigned | zflag    3'h7        Execute if Less Than or Equal
+ | Condition | Test              | Encoding | Description                      |
+ | --------- | ----------------- | -------- | -------------------------------- |
+ | EQ        | zflag=1           | 3'h0     | Execute if Equal                 |
+ | NE        | zflag=0           | 3'h1     | Execute if Not Equal             |
+ | NC        | cflag=0           | 3'h2     | Execute if Not Carry             |
+ | C         | cflag=1           | 3'h3     | Execute if Carry                 |
+ | GT        | ~cSigned & ~zflag | 3'h4     | Execute if Greater Than          |
+ | LT        | cSigned & ~zflag  | 3'h5     | Execute if Less Than             |
+ | GTE       | ~cSigned | zflag  | 3'h6     | Execute if Greater Than or Equal |
+ | LTE       | cSigned | zflag   | 3'h7     | Execute if Less Than or Equal    |
 
 The "if" opcode will set cond[0] based on the condition above and the cond[1] bit to HIGH.  It only affects
 the single instruction following the "if" opcode.  The "iftt" opcode will set both cond[0] and cond[1] to the
@@ -402,14 +401,14 @@ data is stored directly in the opcode / instruction word:
 \clearpage
 The instructions that use direct addressing are:
 
-Opcode   Operation          Encoding              Description
-------   ---------          --------              -----------
-adc      A <= A + imm + C   1001_00xx_iiii_iiii   ADD immediate with Carry
-ads      SP <= SP + imm     1001_01ii_iiii_iiii   ADD SP + signed immediate
-adx      IX <= IX + imm     1001_10ii_iiii_iiii   ADD IX + signed immediate
-andi     A <= A & imm       1000_01xx_iiii_iiii   AND immediate with A
-cpi      Z,C <= A >= imm    1010_01xx_iiii_iiii   Compare A >= immediate
-cpi      Z,C <= A >= imm    1010_01xx_iiii_iiii   Compare A >= immediate
+ | Opcode | Operation        | Encoding            | Description               |
+ | ------ | ---------------- | ------------------- | ------------------------- |
+ | adc    | A <= A + imm + C | 1001_00xx_iiii_iiii | ADD immediate with Carry  |
+ | ads    | SP <= SP + imm   | 1001_01ii_iiii_iiii | ADD SP + signed immediate |
+ | adx    | IX <= IX + imm   | 1001_10ii_iiii_iiii | ADD IX + signed immediate |
+ | andi   | A <= A & imm     | 1000_01xx_iiii_iiii | AND immediate with A      |
+ | cpi    | Z,C <= A >= imm  | 1010_01xx_iiii_iiii | Compare A >= immediate    |
+ | cpi    | Z,C <= A >= imm  | 1010_01xx_iiii_iiii | Compare A >= immediate    |
 
 ### Accumulator Indirect Operations
 
@@ -419,12 +418,12 @@ load and store (swap) data with the accumulator.
 
 ![](lisa_indirect_acc.png)
 
-Opcode   Operation        Encoding              Description
-------   ---------        --------              -----------
-lda      A <= M[imm]      1111_01pi_iiii_iiii   Load A from Memory/Peripheral
-sta      M[imm] <= A      1111_11pi_iiii_iiii   Store A to Memory/Peripheral
-swapi    A <= M[imm]      1101_11pi_iiii_iiii   Swap Memory/Peripheral with A
-         M[imm] <= A
+ | Opcode | Operation   | Encoding            | Description                   |
+ | ------ | ----------- | ------------------- | ----------------------------- |
+ | lda    | A <= M[imm] | 1111_01pi_iiii_iiii | Load A from Memory/Peripheral |
+ | sta    | M[imm] <= A | 1111_11pi_iiii_iiii | Store A to Memory/Peripheral  |
+ | swapi  | A <= M[imm] | 1101_11pi_iiii_iiii | Swap Memory/Peripheral with A |
+ |        | M[imm] <= A |                     |                               |
 
  - p = Select Peripheral (1'b1) or RAM (1'b0)
  - iiii = Immediate data
@@ -439,24 +438,24 @@ and in both cases, negative index offsets aren't very useful.  The following is 
 
 ![](lisa_indexed.png)
 
-Opcode   Operation           Encoding              Description
-------   ---------           --------              -----------
-add      A <= A+ M[ind]      1100_00si_iiii_iiii   ADD index memory to A
-and      A <= A & M[ind]     1101_00si_iiii_iiii   AND A with index memory
-cmp      A >= M[ind]?        1110_10si_iiii_iiii   Compare A with index memory
-dcx      M[ind] -= 1         1001_11si_iiii_iiii   Decrement the value at index memory
-inx      M[ind] += 1         1110_01si_iiii_iiii   Increment the value at index memory
-ldax     A <= M[ind]         1111_00si_iiii_iiii   Load A from index memory
-ldxx     IX <= M[SP+imm]     1100_110i_iiii_iiii   Load IX from memory at SP+imm
-mul      A <= A*M[ind]L      1100_10si_iiii_iiii   Multiply index memory * A, keep LSB
-mulu     A <= A*M[ind]H      1000_01si_iiii_iiii   Multiply index memory * A, keep MSB
-or       A <= A | M[ind]     1101_10si_iiii_iiii   OR A with index memory
-stax     M[ind] <= A         1111_10si_iiii_iiii   Store A to index memory
-stxx     M[SP+imm] <= IX     1100_111i_iiii_iiii   Save IX to memory at SP+imm
-sub      A <= A-M[ind]       1100_10si_iiii_iiii   SUBtract index memory from A
-swap     A <= M[ind]         1110_11si_iiii_iiii   Swap A with index memory
-         M[ind] <= A
-xor      A <= A ^ M[ind]     1110_00si_iiii_iiii   XOR A with index memory
+ | Opcode | Operation       | Encoding            | Description                         |
+ | ------ | --------------- | ------------------- | ----------------------------------- |
+ | add    | A <= A+ M[ind]  | 1100_00si_iiii_iiii | ADD index memory to A               |
+ | and    | A <= A & M[ind] | 1101_00si_iiii_iiii | AND A with index memory             |
+ | cmp    | A >= M[ind]?    | 1110_10si_iiii_iiii | Compare A with index memory         |
+ | dcx    | M[ind] -= 1     | 1001_11si_iiii_iiii | Decrement the value at index memory |
+ | inx    | M[ind] += 1     | 1110_01si_iiii_iiii | Increment the value at index memory |
+ | ldax   | A <= M[ind]     | 1111_00si_iiii_iiii | Load A from index memory            |
+ | ldxx   | IX <= M[SP+imm] | 1100_110i_iiii_iiii | Load IX from memory at SP+imm       |
+ | mul    | A <= A*M[ind]L  | 1100_10si_iiii_iiii | Multiply index memory * A, keep LSB |
+ | mulu   | A <= A*M[ind]H  | 1000_01si_iiii_iiii | Multiply index memory * A, keep MSB |
+ | or     | A <= A | M[ind] | 1101_10si_iiii_iiii | OR A with index memory              |
+ | stax   | M[ind] <= A     | 1111_10si_iiii_iiii | Store A to index memory             |
+ | stxx   | M[SP+imm] <= IX | 1100_111i_iiii_iiii | Save IX to memory at SP+imm         |
+ | sub    | A <= A-M[ind]   | 1100_10si_iiii_iiii | SUBtract index memory from A        |
+ | swap   | A <= M[ind]     | 1110_11si_iiii_iiii | Swap A with index memory            |
+ |        | M[ind] <= A     |                     |                                     |
+ | xor    | A <= A ^ M[ind] | 1110_00si_iiii_iiii | XOR A with index memory             |
 
 \clearpage
 Legend for table above:
@@ -467,16 +466,15 @@ Legend for table above:
 
 The Zero and Carry flags are updated for most of the above operations.  The Carry flag is only updated for math operations where a Carry / Borrow could occur.
 
-Carry        Zero
------        -----------------
-adc          add    and
-add          or     xor
-sub          cmp    sub 
-cmp          dcx    inx      
-dcx          swap   ldax
-inx          mul    mulu
-             
-    
+ | Carry | Zero        |
+ | ----- | ----------- |
+ | adc   | add    and  |
+ | add   | or     xor  |
+ | sub   | cmp    sub  |
+ | cmp   | dcx    inx  |    
+ | dcx   | swap   ldax |
+ | inx   | mul    mulu |
+
 ### Stack Operations
 
 Stack operations use the current value of the SP register to PUSH and POP items to the stack in
@@ -485,20 +483,20 @@ are POPed, the SP is incremented prior to reading from RAM.
 
 ![](lisa_stack.png)
 
-Opcode   Operation           Encoding              Description
-------   ---------           --------              -----------
-lra      RA <= M[SP+1]       1010_0001_0110_01xx   Load {cond,RA} from stack
-         SP += 2
-sra      M[SP] <= RA         1010_0001_0110_00xx   Save {cond,RA} to stack
-         SP -= 2
-push_ix  M[SP] <= IX         1010_0001_0110_10xx   Save IX to stack
-         SP -= 2
-pop_ix   IX <= M[SP+1]       1010_0001_0110_11xx   Load IX from stack
-         SP += 2
-push_a   M[SP] <= A          1010_0000_100x_xxxx   Save A to stack
-         SP -= 1
-pop_a    A <= M[SP+1]        1010_0000_110x_xxxx   Load A from stack
-         SP += 1
+ | Opcode  | Operation     | Encoding            | Description               |
+ | ------- | ------------- | ------------------- | ------------------------- |
+ | lra     | RA <= M[SP+1] | 1010_0001_0110_01xx | Load {cond,RA} from stack |
+ |         | SP += 2       |                     |                           |
+ | sra     | M[SP] <= RA   | 1010_0001_0110_00xx | Save {cond,RA} to stack   |
+ |         | SP -= 2       |                     |                           |
+ | push_ix | M[SP] <= IX   | 1010_0001_0110_10xx | Save IX to stack          |
+ |         | SP -= 2       |                     |                           |
+ | pop_ix  | IX <= M[SP+1] | 1010_0001_0110_11xx | Load IX from stack        |
+ |         | SP += 2       |                     |                           |
+ | push_a  | M[SP] <= A    | 1010_0000_100x_xxxx | Save A to stack           |
+ |         | SP -= 1       |                     |                           |
+ | pop_a   | A <= M[SP+1]  | 1010_0000_110x_xxxx | Load A from stack         |
+ |         | SP += 1       |                     |                           |
 
 ## How to test
 
