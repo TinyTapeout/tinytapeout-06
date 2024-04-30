@@ -18,15 +18,19 @@ If it works, it should play a cool tune over a speaker or piezo buzzer
 
 The clock must be set to 100khz or else the speed and pitch of the song will be affected.
 
-The reset button will restart the tune.
+The reset button will restart the song.
 
 The LED segment number will indicate the current song part, which starts at 4, finishes at 6, and loops around.\
 The LED segment dot, indicates song/processor activity.
 
+If the LED segment displays ``0`` (zero), press the reset button.
+
 Connect a speaker or piezo buzzer to ``uio[0]`` bi-directional pin (output)\
+\
 ``Clock Speed: 100Khz``\
 ``Reset Button: restarts tune``\
-``LED Segment: song/processor status``
+``LED Segment: song/processor status``\
+``LED Segment == 0: press reset button``
 
 ## External hardware
 
