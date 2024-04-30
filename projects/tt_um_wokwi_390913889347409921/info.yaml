@@ -2,7 +2,7 @@
 project:
   wokwi_id:     390913889347409921       # Set this to the ID of your Wokwi project (the number from the project's URL)
   title:        "Notre Dame Dorms LED"      # Project title
-  author:       "Allison Fleming & Daniel Yu"      # Your name
+  author:       "Allison Fleming, Daniel Yu, Matthew Morrison"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Solves a puzzle based on the correct selection of Notre Dame dorms"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
