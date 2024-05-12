@@ -22,6 +22,7 @@ DAC input data is provided through `ui_in[7:0]`, and the encoder uses the projec
     out = 8*uo_out[7]+uo_out[6]) + 4*(uo_out[5]+uo_out[4]) + 2*uo_out[3]+uo_out[2]) + uo_out[1]+uo_out[0]
 
 The resistor ladder shown below sums the outputs with this weighting.  Any output network that can create this weighting will work.  
+![See source repo for resistor ladder diagram](./r-ladder.png)
 
 The DAC is free-running off the project clock, and inputs appear at the output immediately after passing through a pair of clock sync registers.  A simple dc test can be performed using the input DIP switches and the resistor ladder.  It is possible to input dynamic waveforms from the microcontroller as well. 
 
