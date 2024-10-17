@@ -3,7 +3,7 @@ project:
   title:        "Gray scale and Sobel filter"      # Project title
   author:       "Diana Natali Maldonado Ramirez"      # Your name
   discord:      "diana_06297"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "It takes an image, converts it to grayscale, and then applies an edge detection algorithm."      # One line description of what your project does
+  description:  "This project performs grayscale conversion and Sobel filtering with the aim of detecting edges in an image."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
 
