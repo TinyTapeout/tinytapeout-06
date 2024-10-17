@@ -9,12 +9,43 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-The project takes an image, converts it to grayscale, and then applies an edge detection algorithm.
+This project performs grayscale conversion and Sobel filtering with the aim of detecting edges in an image.
+
+Below is a block diagram of the implementation:
+
+<p align="center">
+    <img src=./arch.png alt="Descripción" width="410" height="270">
+</p>
+
 
 ## How to test
 
-Using cocotb 
+It is necessary for the pixels to be sent via an SPI protocol; for this purpose, the input ```ui_in[2:0]``` is designated as follows:
+
+* ```ui_in[0]``` ----> SPI Clock
+* ```ui_in[1]``` ----> Chip Select
+* ```ui_in[2]``` ----> Input Pixel
+  
+As shown in the previous image, there are some processing options:
+
+1. Bypass ----> Returns the input pixel unprocessed.
+2. Grayscale ----> Returns the pixel converted to grayscale, so it is recommended that the input pixel be RGB.
+3. Sobel ----> Returns the edge detection corresponding to the input pixel, so it is recommended that the input pixel be grayscale.
+4. Grayscale + Sobel ----> Returns the edge detection of the input pixel by performing both grayscale processing and the Sobel filter, so it is recommended that the input pixel be  RGB.
+
+To select one of the processing options, the input ```ui_in[4:3]``` is designated as follows:
+
+* ```ui_in[4:3]``` = $00$ ----> Grayscale + Sobel 
+* ```ui_in[4:3]``` = $01$ ----> Sobel
+* ```ui_in[4:3]``` = $10$ ----> Grayscale
+* ```ui_in[4:3]``` = $11$ ----> Bypass
+
+To perform the Sobel filter processing, it must be enabled according to the selected processing. This can be enabled or disabled as needed through the input ```ui_in[5]```, where $1$ enables and $0$ disables.
+
+The result of the processing corresponds to the output ```uo_out[0]```.
+
+There is also a functionality for the input to the different processing options to come from an internal LFSR block; for this purpose, the pins ```uio_in[3:2]``` are dedicated for input.
 
 ## External hardware
 
-Camera, screen
+Any device that allows sending data via an SPI protocol, like a Raspberry Pi.
