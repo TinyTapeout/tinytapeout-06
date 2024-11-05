@@ -3,9 +3,9 @@ project:
   title:        "TT06 Grab Bag"      # Project title
   author:       "algofoogle (Anton Maurovic)"      # Your name
   discord:      "algofoogle"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Hopefully assorted basic analog experiments"      # One line description of what your project does
+  description:  "A few analog/mixed-signal experiments with a 24-bit VGA pattern generator as the highlight"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     25_000_000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x2"          # Valid values: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -19,45 +19,45 @@ project:
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
-  # Inputs
-  ui[0]: "inv_in"
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  # Inputs:
+  ui[0]: "mode[0] / dac_in[0]"
+  ui[1]: "mode[1] / dac_in[1]"
+  ui[2]: "mode[2] / dac_in[2]"
+  ui[3]: "mode[3] / dac_in[3]"
+  ui[4]: "mode[4] / dac_in[4]"
+  ui[5]: "mode[5] / dac_in[5]"
+  ui[6]: "mode[6] / dac_in[6]"
+  ui[7]: "mode[7] / dac_in[7]"
 
-  # Outputs
-  uo[0]: "inv_out_d"
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  # Outputs:
+  # These are compatible with the RGB222 Tiny VGA PMOD (https://github.com/mole99/tiny-vga)
+  uo[0]: "r7"
+  uo[1]: "g7"
+  uo[2]: "b7"
+  uo[3]: "vsync"
+  uo[4]: "r6"
+  uo[5]: "g6"
+  uo[6]: "b6"
+  uo[7]: "hsync"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "vblank_out"
+  uio[1]: "hblank_out"
+  uio[2]: "inv_dout"
+  uio[3]: "dac4_in[4]"
+  uio[4]: "dac4_in[5]"
+  uio[5]: "dac4_in[6]"
+  uio[6]: "dac4_in[7]"
+  uio[7]: "inv_in"
 
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
   # The first pins is always ua[0], and the pin numbers must be sequential.
-  ua[0]: "inv_out_a"
-  ua[1]: "a1"
-  ua[2]: "a2"
-  ua[3]: "a3"
-  ua[4]: "a4"
-  ua[5]: "a5"
+  ua[0]: "r_out"
+  ua[1]: "g_out"
+  ua[2]: "b_out"
+  ua[3]: "inv_aout"
+  ua[4]: "dac4_aout"
 
 # Do not change!
 yaml_version: 6
