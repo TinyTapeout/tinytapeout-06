@@ -9,13 +9,14 @@ This is not a faithful recreation, because I did not want to convert the relay-b
 
 ## Number Representation
 
-This project uses the Zuse Z3 floating point format, but without using hidden digits. All floats must be normalized, meaning the mantissa must be within 1.0 to 1.99999... The mantissa is 15 bits long, but the MSB must always be 1.
-A number is represented via: +/- 1.x * 2 ^ e. E is the exponent: A signed 7 bit number! The sign is represented by a single bit (1 = positive, 0 = negative). X is the mantissa.
+This project uses the Zuse Z3 floating point format, but without using hidden digits. All floats must be normalized, meaning the mantissa must be within 1.0 to 1.99999. The mantissa is 15 bits long, the msb must always be 1 to comply with the previously mentioned normalization (normally, this digit is hidden and used implicitly, but not in this design).
+
+A number is represented via: `+/- x * 2 ^ e`. The sign is represented by a single bit (1 = positive, 0 = negative). X is the mantissa. E is the exponent: A signed 7 bit number!
 
 In order to convert a decimal number, for example, 42.24 to the Z3 format perform the following steps:
 1. The number is positive, so the sign bit is 1. s = 1
 2. Convert the integer part to binary. 42 = 101010
-3. The highest bit is in position 5 (counting from 0). Thus, e = 5 -> 2^5
+3. The highest bit is in position 5 (counting from 0). Thus, e = 5
 4. Now convert the fractional part to binary:
 
 0.24 * 2 = 0.48 (0)
@@ -43,15 +44,15 @@ Our number is thus: 101010.00111101
 8. Thus in general the Z3 number will be 1 (sign) | 0000101 (exponent) | 10101000111101 (mantissa)
    
 10. You can verify this by computing:
-2^5 *( 2^0 + 2^-2 + 2^-4 + 2^-8 + 2^-9 + 2^-10 + 2^-11 + 2^-13) = 42.23828125
+`2^5 *( 2^0 + 2^-2 + 2^-4 + 2^-8 + 2^-9 + 2^-10 + 2^-11 + 2^-13) = 42.23828125`
 
 This is not exactly 42.24, which is to be expected, because some decimal numbers are not representible in binary, thus inducing a rounding error.
 
 Here are some example bit strings in Python format, which you can send to the FPU:
 
-b'\x85\xab\x00' = 42.75
+`b'\x85\xab\x00' = 42.75`
 
-b'\x82\xe0\x00' = 7.0
+`b'\x82\xe0\x00' = 7.0`
 
 The number 0 is represented by any value, which has the exponent -64.
 
@@ -95,15 +96,15 @@ reading of undefined data will happen!
 
 Using the example values from above, here is a complete command sequence:
 
-b'\x82\x85\xab\x00' sends the number 42.75
+`b'\x82\x85\xab\x00'` sends the number 42.75
 
-b'\x83\x82\xe0\x00' send the number 7.0
+`b'\x83\x82\xe0\x00'` send the number 7.0
 
-b'\x88' sends the ADD command
+`b'\x88'` sends the ADD command
 
-b'\x87' reads the result register
+`b'\x87'` reads the result register
 
-The result should be b'\x85\xc7\x00'
+The result should be `b'\x85\xc7\x00'`
 
 The status register can signify the following events:
 
