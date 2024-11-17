@@ -158,45 +158,45 @@ The above program adds the numbers 0x05 and 0x03 together, and then loops back t
 | BMI_DIR    | 0x23  | Direct    | N==SET   |
 | BMI_IND    | 0x24  | Indirect  | N==SET   |
 
-| OPCODE     | Desc                                                                               |
-| ---------- | ---------------------------------------------------------------------------------- |
-| NOP        | No Operation                                                                       |
-| LDA_IMM    | Load A with immediate operand data                                                 |
-| LDA_DIR    | Load A with the data stored at the operand address                                 |
-| STA_DIR    | Store A at the operand address                                                     |
-| STA_IND    | Store A at the address contained at the operand address                            |
-| ADD_IMM    | Add the immediate operand data to A                                                |
-| ADD_DIR    | Add the data stored at the operand address to A                                    |
-| SUB_IMM    | Subtract the immediate operand data from A                                         |
-| SUB_DIR    | Subtract the data stored at the operand address from A                             |
-| AND_IMM    | And the immediate operand data with A                                              |
-| AND_DIR    | And the data stored at the operand address with A                                  |
-| OR_IMM     | Or the immediate operand data with A                                               |
-| OR_DIR     | Or the data stored at the operand address with A                                   |
-| XOR_IMM    | Xor the immediate operand data with A                                              |
-| XOR_DIR    | Xor the data stored at the operand address with A                                  |
-| LSL_IMM    | Logical shift A left by the immediate operand data                                 |
-| LSL_DIR    | Logical shift A left by the data stored at the operand address                     |
-| LSR_IMM    | Logical shift A right by the immediate operand data                                |
-| LSR_DIR    | Logical shift A right by the data stored at the operand address                    |
-| ASL_IMM    | Arithmetic shift A left by the immediate operand data                              |
-| ASL_DIR    | Arithmetic shift A left by the data stored at the operand address                  |
-| ASR_IMM    | Arithmetic shift A right by the immediate operand data                             |
-| ASR_DIR    | Arithmetic shift A right by the data stored at the operand address                 |
-| RSL_IMM    | Rotate A left by the immediate operand                                             |
-| RSL_DIR    | Rotate A left by the data stored at the operand address                            |
-| RSR_IMM    | Rotate A right by the immediate operand data                                       |
-| RSR_DIR    | Rotate A right by the data stored at the operand address                           |
-| JMP_DIR    | Jump PC to the address specified by the operand                                    |
-| JMP_IND    | Jump PC to the address stored at the operand address                               |
-| BNE_DIR    | Jump PC (if ALU z flag is clear) to the address specified by the operand           |
-| BNE_IND    | Jump PC (if ALU z flag is clear) to the address stored at the operand address      |
-| BEQ_DIR    | Jump PC (if ALU z flag is set) to the address specified by the operand             |
-| BEQ_IND    | Jump PC (if ALU z flag is set) to the address stored at the operand address        |
-| BPL_DIR    | Jump PC (if ALU n flag is clear) to the address specified by the operand           |
-| BPL_IND    | Jump PC (if ALU n flag is clear) to the address stored at the operand address      |
-| BMI_DIR    | Jump PC (if ALU n flag is set) to the address specified by the operand             |
-| BMI_IND    | Jump PC (if ALU n flag is set) to the address stored at the operand address        |
+| OPCODE     | Desc                                                           |
+| ---------- | ---------------------------------------------------------------|
+| NOP        | No Operation                                                   |
+| LDA_IMM    | Load A with immediate operand data                             |
+| LDA_DIR    | Load A with the data stored at the operand addr                |
+| STA_DIR    | Store A at the operand addr                                    |
+| STA_IND    | Store A at the addr contained at the operand addr              |
+| ADD_IMM    | Add the immediate operand data to A                            |
+| ADD_DIR    | Add the data stored at the operand addr to A                   |
+| SUB_IMM    | Subtract the immediate operand data from A                     |
+| SUB_DIR    | Subtract the data stored at the operand addr from A            |
+| AND_IMM    | And the immediate operand data with A                          |
+| AND_DIR    | And the data stored at the operand addr with A                 |
+| OR_IMM     | Or the immediate operand data with A                           |
+| OR_DIR     | Or the data stored at the operand addr with A                  |
+| XOR_IMM    | Xor the immediate operand data with A                          |
+| XOR_DIR    | Xor the data stored at the operand addr with A                 |
+| LSL_IMM    | Logical shift A left by the immediate operand data             |
+| LSL_DIR    | Logical shift A left by the data at the operand addr           |
+| LSR_IMM    | Logical shift A right by the immediate operand data            |
+| LSR_DIR    | Logical shift A right by the data at the operand addr          |
+| ASL_IMM    | Arithmetic shift A left by the immediate operand data          |
+| ASL_DIR    | Arithmetic shift A left by the data at the operand addr        |
+| ASR_IMM    | Arithmetic shift A right by the immediate operand data         |
+| ASR_DIR    | Arithmetic shift A right by the data at the operand addr       |
+| RSL_IMM    | Rotate A left by the immediate operand                         |
+| RSL_DIR    | Rotate A left by the data stored at the operand addr           |
+| RSR_IMM    | Rotate A right by the immediate operand data                   |
+| RSR_DIR    | Rotate A right by the data stored at the operand addr          |
+| JMP_DIR    | Jump PC to the operand addr                                    |
+| JMP_IND    | Jump PC to the addr stored at the operand addr                 |
+| BNE_DIR    | Jump PC (if Z is clear) to the operand addr                    |
+| BNE_IND    | Jump PC (if Z is clear) to the addr stored at the operand addr |
+| BEQ_DIR    | Jump PC (if Z is set) to the operand addr                      |
+| BEQ_IND    | Jump PC (if Z is set) to the addr stored at the operand addr   |
+| BPL_DIR    | Jump PC (if N is clear) to the operand addr                    |
+| BPL_IND    | Jump PC (if N is clear) to the addr stored at the operand addr |
+| BMI_DIR    | Jump PC (if N is set) to the operand addr                      |
+| BMI_IND    | Jump PC (if N is set) to the addr stored at the operand addr   |
 
 ### DFT and Extra Features
 
