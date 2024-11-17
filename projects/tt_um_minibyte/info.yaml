@@ -31,11 +31,11 @@ pinout:
   ui[0]: "DEBUG_OUT_SELECT_0"
   ui[1]: "DEBUG_OUT_SELECT_1"
   ui[2]: "DEBUG_OUT_SELECT_2"
-  ui[3]: "DEMO_ROM_ENABLE"
-  ui[4]: ""
+  ui[3]: "HALT_CU"
+  ui[4]: "DEMO_ROM_ENABLE"
   ui[5]: ""
   ui[6]: ""
-  ui[7]: ""
+  ui[7]: "ENABLE_GEN_REGS"
 
   # Outputs
   uo[0]: "ADDR_OUT_0"
