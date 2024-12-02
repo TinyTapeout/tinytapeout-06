@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         id: download_artifact
         with:
           workflow: gds.yaml
