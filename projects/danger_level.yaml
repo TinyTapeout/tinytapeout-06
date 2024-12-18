@@ -10,3 +10,8 @@
 tt_um_dsatizabal_opamp:
   level: medium
   reason: 'There is an error in that schematic causing an abnormally high bias current.'
+
+tt_um_MichaelBell_latch_mem:
+  level: medium
+  reason: 'There is a potential internal driver conflict after project selection until the first clock.'
+  
