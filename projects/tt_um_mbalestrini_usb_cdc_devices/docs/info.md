@@ -63,7 +63,7 @@ Buttons for the inputs or use the TT demo board switches
 TT board clock needs to be set to 48MHz
 
 Basic schematic:  
-![alt text](TT06_USB_CDC_DEVICES-Page-1.png)
+![](TT06_USB_CDC_DEVICES-Page-1.png)
 
 
 Cut output[0] LED display jumper on TT board? I haven't been able to test if this is necessary or not. 
@@ -80,7 +80,7 @@ Example connection on Linux using picocom:
 ## Extra information 
 
 ### USB Interfaces/Endpoints:
-![alt text](TT06_USB_CDC_DEVICES-Page-2.drawio.png)
+![](TT06_USB_CDC_DEVICES-Page-2.drawio.png)
 
 The device has USB vendor ID and product **ID = 0000**
 
