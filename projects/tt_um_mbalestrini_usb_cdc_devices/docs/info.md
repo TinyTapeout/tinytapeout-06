@@ -68,7 +68,7 @@ Basic schematic:
 
 Cut output[0] LED display jumper on TT board? I haven't been able to test if this is necessary or not. 
 
-Once the USB cable is connected to the PC two virutal serial ports should be available to communicate: COMX on Windows, /dev/ttyACMx on Linux and /dev/cu.usbmodemxxxx on OSX  
+Once the USB cable is connected to the PC two virtual serial ports should be available to communicate: COMX on Windows, /dev/ttyACMx on Linux and /dev/cu.usbmodemxxxx on OSX  
 Linux requires that the user account belongs to the dialout group to grant permissions for virtual COM access. You can change udev rules to fix that or add the user to the group by running: `sudo usermod -a -G dialout $USER` and restart
 
 Example connection on Linux using picocom:  
@@ -82,7 +82,7 @@ Example connection on Linux using picocom:
 ### USB Interfaces/Endpoints:
 ![](TT06_USB_CDC_DEVICES-Page-2.drawio.png)
 
-The device has USB vendor ID and product **ID = 0000**
+The device has USB vendor ID and product ID = 0000
 
 ### Useful scripts
 On the project repo there are some Linux scripts to get information about the USB devices:  
