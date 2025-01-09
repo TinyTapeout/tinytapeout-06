@@ -35,7 +35,7 @@ Set clock frequency to 32768 Hz (10-100 kHz).
 * Run these commands in the REPL tab:
 ```
 tt.uio_oe_pico.value = 0b11100000
-tt.uio_oe_out = 0b01100000
+tt.uio_out = 0b01100000
 ```
 * Reset the design
 * Flip a DIP switch down and back up to roll a die.
@@ -57,7 +57,7 @@ Multi-digit dice don't work well on the demo board.
 * Run these commands in the REPL tab:
 ```
 tt.uio_oe_pico.value = 0b11100000
-tt.uio_oe_out = 0b01100000
+tt.uio_out = 0b01100000
 ```
 * Reset the design
 * Press and release individual buttons in the interact tab to roll various dice.
