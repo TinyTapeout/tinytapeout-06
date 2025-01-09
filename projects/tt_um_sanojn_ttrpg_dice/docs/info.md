@@ -17,38 +17,61 @@ The design uses clock timing to debounce the buttons and is optimized to run at 
 
 The 'polarity' config pins sets the active level for the corresponding I/O signals. For instance: uio[7]=0 causes the digit mux signals to be active low, suitable for directly driving common cathode pins. When uio[6]=1, lit segments are high, suitable for direct segment drive of common cathode displays. Similarly, when uio[5]=0 button inputs are expected to be high when idle and low when pressed.
 
-## How to test
-
-Set clock frequency to 32768 Hz (10-100 kHz).
-Configure uio[7:5] for the appropriate signal polarity:
-
 | Seven segment                                       | uio[7:6] |
 | ----------------------------------------------------| -------- |
 | Common cathode, direct segment drive (demo board)   | 01       |
 | Common anode, direct segment drive                  | 10       |
 | Inverting common anode drive, direct segment drive  | 00       |
 
-For the demo board, set uio[7:5] to 010
+Set uio[5] to the active level of the input buttons.
 
-Press one of the buttons ui[6:0] (according to the selected button polarity) and release it.
+## How to test
+
+Set clock frequency to 32768 Hz (10-100 kHz).
+
+### To roll with DIP switches
+* Flip all DIP switches up
+* Uncheck the ui_in checkbox in the interact tab
+* Run these commands in the REPL tab:
+```
+tt.uio_oe_pico.value = 0b11100000
+tt.uio_oe_out = 0b01100000
+```
+* Reset the design
+* Flip a DIP switch down and back up to roll a die.
 The dice roll is shown on the LED display for about 8 seconds.
+    - ui[0] rolls a d4 (four sided die)
+    - ui[1] rolls a d6
+    - ui[2] rolls a d8
+    - ui[3] rolls a d10
+    - ui[4] rolls a d12
+    - ui[5] rolls a d20
+    - ui[6] rolls a d100
 
-* ui[0] rolls a d4 (four sided die).
-* ui[1] rolls a d6
-* ui[2] rolls a d8
-* ui[3] rolls a d10
-* ui[4] rolls a d12
-* ui[5] rolls a d20
-* ui[6] rolls a d100
+Multi-digit dice don't work well on the demo board.
+
+### To roll with the commander
+* Flip all DIP switches up
+* Uncheck the ui_in checkbox in the interact tab
+* Choose the momentary push button function
+* Run these commands in the REPL tab:
+```
+tt.uio_oe_pico.value = 0b11100000
+tt.uio_oe_out = 0b01100000
+```
+* Reset the design
+* Press and release individual buttons in the interact tab to roll various dice.
+
+When switching between commander and DIP switches, you have to rerun the REPL command.
 
 ## External hardware
+The demo board is sufficient to roll d4-d10.
 
-Pullups on ui[6:0] with pushbuttons closing to GND.
-
-A two-digit LED display. Common anode and/or cathode are supported using the configuraiton pins.
-Segments are connected to uo[7:0] (DP, G, F, E, D, C, B, A in that order)
-Left cathode connected to uio[1]
-Right cathode to uio[0]
+Multi-digit dice require a two-digit LED display.
+Common anode and/or cathode are supported using the configuration pins.
+* Segments are connected to uo[7:0] (DP, G, F, E, D, C, B, A in that order)
+* Left cathode connected to uio[1]
+* Right cathode to uio[0]
 
 Static configuration inputs on uio[7:5] should be connected to VDD or GND.
 
