@@ -51,6 +51,6 @@ The output voltage on `ua[0]` was measured with multimeter that has a 7.8MΩ in
 
 The following graph shows the output voltage as a function of the input frequency:
 
-[![output voltage vs frequency](silicon_graph.png)](silicon_graph.png)
+![output voltage vs frequency](silicon_graph.png)
 
 Overall, it seems that the charge pump works as expected, with the output voltage peaking at around 4.3 V when the input frequency is in the 5-10 MHz range.
