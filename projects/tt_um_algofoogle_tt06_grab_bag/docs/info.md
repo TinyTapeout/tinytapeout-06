@@ -13,30 +13,29 @@ Ideally I would use &#x2053 ('swung dash') which is technically probably the cor
 
 ## What is this thing?
 
-A simple analog/mixed-signal project I created when invited to participate in the first round of Matt Venn's Zero to ASIC **Analog Course** beta, and ultimately submitted to TT06.
+A simple analog/mixed-signal project I created when invited to participate in the first round of Matt Venn's Zero to ASIC **Analog Course** beta, and ultimately submitted to TT06. **This design has been demonstrated to work in silicon.** For comprehensive testing results, see my journal entry: https://algo.org/journal/0226
 
-It comprises the following:
+The design comprises the following:
 
 *   A bog-standard CMOS inverter. That was my very first custom layout attempt.
 *   A digital block that generates a few basic 24b-colour (RGB888) VGA test patterns.
 *   Analog RGB outputs (running digital block VGA outputs through 3x 8-bit R2R DACs).
 *   An extra 4-bit R2R DAC.
 
+
 ### VGA test pattern outputs
 
-The design's *main* purpose is to generate VGA test patterns that will hopefully look as good as these simulations:
+The design's *main* purpose is to generate VGA test patterns that were hoped to look as good as these simulations:
 
 ![Simulated VGA outputs, XOR pattern and RAMP pattern](./hhz-sim.png)
 
 The left-hand pretty pattern is "MODE_XORS" (`ui_in==8'b0011_0000`) while the right-hand gradients pattern is "MODE_RAMP" (`ui_in==8'b0001_0000`).
 
-Notice there is some horizontal smearing (more exaggerated in the right-hand image of the red/green mixes). The outputs might look better, or could look worse. There could even end up being weird banding or noise. Let's wait and see!
+Notice there is some horizontal smearing (more exaggerated in the right-hand image of the red/green mixes).
 
-The internal R2R DACs for each of the RGB outputs just go directly (unbuffered) to the analog output pins, where they are subject to the loading of the TT06 analog mux (estimated to be about 500&ohm; and 5pF). This combination means their slew rate is expected to be pretty bad (at least by VGA timing standards): On the order of 240&#126;360ns (or 6&#126;9 horizontal pixels) going from 0V to full 1.8V.
+Actual results from silicon testing are pleasing:
 
-In a future design I plan to implement internal buffering to help mitigate some of the TT analog mux load.
-
-NOTE: You will almost certainly need some sort of output buffering between this design and a VGA display, because the design outputs a high-impedance (&#126;10k&ohm; but maybe a little worse) 0&#126;1.8V range, while a VGA display expects 0&#126;0.7V at 75&ohm;. Read '**How to test**' for more info.
+![Silicon working, driving a VGA monitor](./proto-for-docs.jpg)
 
 
 ### CMOS inverter
@@ -61,6 +60,12 @@ I took one of the 8-bit R2R DAC layouts and copied it, pulling the 4 LSB to GND,
 
 TBC!
 
+![Combined VGA DACs schematics](./0226-schematics.png)
+
+The internal R2R DACs for each of the RGB outputs just go directly (unbuffered) to the analog output pins, where they are subject to the loading of the TT06 analog mux (estimated to be about 500&ohm; and 5pF). This combination means their slew rate was expected to be pretty bad (at least by VGA timing standards): On the order of 240&#126;360ns (or 6&#126;9 horizontal pixels) going from 0V to full 1.8V. In the chips I received, it was a little better than that.
+
+In a future design I plan to implement better internal buffering to help mitigate some of the TT analog mux load.
+
 Select from a few simple test patterns in the VGA controller by having different `ui_in` values asserted while coming out of reset. the VGA controller digital block generates 8-bit digital outputs per each of red, green, and blue channels. These go into 3 basic RDACs to generate analog voltage outputs on `ua[2:0]` (`{B,G,R}`) in the range 0-1.8V (probably &#126;10k&ohm; impedance).
 
 
@@ -73,10 +78,12 @@ TBC!
 3.  Assert reset -- NOTE: I didn't put a synchroniser on it, so it might (?) do a dirty reset -- if that happens, it could be worked around by slowly/manually clocking around the reset pulse, I guess.
 4.  With a scope, trigger on the `uo_out[3]` rising edge (VSYNC) and hopefully see `ua[0]` ramp from 0V to 1.8V within 10.24us
 5.  With this mode (as selected in step 2 above), `ua[1]` will also ramp, but per line (instead of per pixel), as will `ua[2]` (per frame).
+6.  For the pretty XORs pattern, set `ui_in` to `8'b0011_0000` and assert reset again.
+
+NOTE: For actual VGA output, you need the VSYNC and HSYNC signals (connecting them each with a 1k&ohm; resistor in series with their respective VGA cable connection should do). You will almost certainly need some sort of output buffering between this design and a VGA display, because the design outputs a high-impedance (&#126;10k&ohm; but maybe a little worse) 0&#126;1.8V range, while a VGA display expects 0&#126;0.7V at 75&ohm;. See https://algo.org/pcb/tt06i for an example board that covers all this.
 
 Other notes for testing:
 
-*   External buffering (opamps?) for analog RGB outputs, to match 0&#126;1.8V@10k&ohm; to 0&#126;0.7V@75&ohm;
 *   Digital block's mode selection is asserted via `ui_in` *during reset*
 *   For safety, initial test should be done with no analog output loading, and with all of `ui_in` pulled low (which selects pass-thru mode AND ensures all DAC *inputs* internally are low, so hopefully no current).
 *   RGB222 digital outputs compatible with the [Tiny VGA PMOD].
@@ -86,10 +93,8 @@ Other notes for testing:
 
 This is if you want to see an actual analog VGA display:
 
-*   10MHz-capable (or better; preferably 25MHz) opamps on each of the R, G, B outputs, to both make them into low-impedance (matching 75&ohm; typical VGA termination), and also to level-shift from 0&#126;1.8V to 0&#126;0.7V.
+*   10MHz-capable (or better; preferably 25MHz) opamps on each of the R, G, B outputs, to both make them into low-impedance (matching 75&ohm; typical VGA termination), and also to level-shift from 0&#126;1.8V to 0&#126;0.7V. See https://algo.org/pcb/tt06i for an example "interposer board" (aka "sandwich board") which uses an OPA3355 video op-amp circuit with VGA connector, and is intended to sit between the TT06 chip's breakout board (aka "carrier") and the TT06 demo board.
 *   Optionally the [Tiny VGA PMOD] plugged into the dedicated output port (`uo_out`).
-
-Come back later and I'll have a better explanation of how to hook up to a VGA display.
 
 
 [Tiny VGA PMOD]: https://github.com/mole99/tiny-vga
