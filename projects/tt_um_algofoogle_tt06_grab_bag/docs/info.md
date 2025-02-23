@@ -13,17 +13,19 @@ Ideally I would use &#x2053 ('swung dash') which is technically probably the cor
 
 ## What is this thing?
 
-A simple analog/mixed-signal project I created when invited to participate in the first round of Matt Venn's Zero to ASIC **Analog Course** beta, and ultimately submitted to TT06. **This design has been demonstrated to work in silicon.** For comprehensive testing results, see my journal entry: https://algo.org/journal/0226
+<!-- <img src="layout-portrait.png" style="float: right; margin-left: 1em;" width="40%" /> -->
 
-The design comprises the following:
+A simple analog/mixed-signal project I created in the 1st round of Matt Venn's Zero to ASIC **Analog Course** beta. **This design has been demonstrated to work in silicon.** For silicon test results, see my journal entry: https://algo.org/journal/0226
 
-*   A bog-standard CMOS inverter. That was my very first custom layout attempt.
-*   A digital block that generates a few basic 24b-colour (RGB888) VGA test patterns.
-*   Analog RGB outputs (running digital block VGA outputs through 3x 8-bit R2R DACs).
+The design comprises:
+
+*   Simple CMOS inverter. That was my very first custom layout attempt.
+*   Digital block generating a few basic 24b-colour (RGB888) VGA test patterns.
+*   Analog RGB out (digital block VGA outputs via 3x 8-bit R2R DACs).
 *   An extra 4-bit R2R DAC.
 
 
-### VGA test pattern outputs
+## VGA test pattern outputs
 
 The design's *main* purpose is to generate VGA test patterns that were hoped to look as good as these simulations:
 
@@ -33,27 +35,26 @@ The left-hand pretty pattern is "MODE_XORS" (`ui_in==8'b0011_0000`) while the ri
 
 Notice there is some horizontal smearing (more exaggerated in the right-hand image of the red/green mixes).
 
-Actual results from silicon testing are pleasing:
+![Real silicon, working, driving a VGA monitor](./proto-for-docs.jpg)
 
-![Silicon working, driving a VGA monitor](./proto-for-docs.jpg)
+Actual results from silicon testing (seen above) are pleasing.
 
+## CMOS inverter
 
-### CMOS inverter
+![Xschem simulation of my CMOS inverter](./inverter.png)
 
 Pretty simple:
 
 *   Its input is `uio_in[7]` (bidir 7).
 *   Its output goes to two places: `ua[3]` (analog) and `uio_out[2]` (digital).
-*   I would expect its digital output performance to be better, because it has more buffering (and less loading) along the TT digital mux, than what it does on the TT analog mux.
+*   I'd expect its digital out performance to be better: the TT digital mux has more buffering & less loading than the TT analog mux.
 
-The graphs below show that the simulated *analog* output is expected to be stable (enough) within 10ns. This relatively poor performance is characteristic of the TT analog mux loading. I expect bigger transistors could drive this harder and make it faster.
-
-![Xschem simulation of my CMOS inverter](./inverter.png)
+The graphs accompanying the schematics simulate *analog* out is expected to be stable (enough) within 10ns; relatively poor performance characteristic of the TT analog mux loading. I expect bigger transistors could drive this harder and make it faster.
 
 
-### Extra 4-bit R2R
+## Extra 4-bit R2R
 
-I took one of the 8-bit R2R DAC layouts and copied it, pulling the 4 LSB to GND, and connecting the 4 MSB to spare bidir inputs: `uio_in[6:4]`. This DAC outputs via `ua[4]`.
+4th instance of my 8-bit R2R DAC cell grounds the 4 LSB, connecting the 4 MSB to spare bidir inputs (`uio_in[6:4]`) with DAC output via `ua[4]`.
 
 
 ## How it works
