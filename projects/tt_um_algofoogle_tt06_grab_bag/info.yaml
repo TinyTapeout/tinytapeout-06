@@ -58,6 +58,7 @@ pinout:
   ua[2]: "b_out"
   ua[3]: "inv_aout"
   ua[4]: "dac4_aout"
+  ua[5]: ""
 
 # Do not change!
 yaml_version: 6

@@ -31,6 +31,8 @@ Apply a differential voltage with a common mode of around VDD/2 to ua[1] and
 ua[0]. If you want to measure the offset and noise of the ADC then connect ua[1]
 to ua[0] and provide 0.9 V to both. 
 
+A common mode of 0 V will not work. The comparator will not make a decision in time, and the asynchronous clock generation loop will be to slow.
+
 Apply a 4 MHz clock to clk. Typical corner should be able
 to run faster.
 
@@ -44,18 +46,15 @@ asynchronous binary search algorithm tries to find the sampled analog input
 voltage, and convert the analog value to digital.
 
 The uio\_out[0] is the "done" signal from the asynchronous binary search
-algorithm. The digital outputs are sampled on the rising edge of this "done"
-signal. 
+algorithm. The digital outputs are sampled on the rising edge of this "done" signal. 
 
 If you want to capture the output of the ADC with a logic analyzer then
-I'd recommend you sample the digital outputs on the falling edge of the "done"
-signal. 
+I'd recommend you sample the digital outputs on the falling edge of the "done" signal. 
 
 Alternatively, you could sample on the rising edge of the clk, however,
-any insertion delay between the clk source and the ADC clk has to be taken into
-account. 
+any insertion delay between the clk source and the ADC clk has to be taken into account. 
 
-If there is no "done" signal, then the clock is too fast. 
+If there is no "done" signal, then the clock is too fast, or the input common mode too low.
 
 ## How it works
 
@@ -71,16 +70,13 @@ Based on the comparator decision, parts of the capacitor
 array is switched from VPWR to VGND, or visa versa. A charge re-distribution
 will occur, which changes the differential voltage on the capacitor array. 
 
-A asynchronous custom digital logic performs a binary search to find the digital
-value. 
+A asynchronous custom digital logic performs a binary search to find the digital value. 
 
-The comparator input has the net name SARP and SARN. Observe those to see how
-the SAR operates. 
+The comparator input has the net name SARP and SARN. Observe those in a simulation to see how the SAR operates. 
 
 I would also recommend reading [A Compiled 9-bit 20-MS/s
 3.5-fJ/conv.step SAR ADC in 28-nm FDSOI for Bluetooth Low Energy
-Receivers](https://ieeexplore.ieee.org/document/7906479), which explains the operation in
-detail. 
+Receivers](https://ieeexplore.ieee.org/document/7906479), which explains the operation in detail. I've also added docs to [sun_sar9b_sky130nm](https://analogicus.com/sun_sar9b_sky130nm/) 
 
 ## Key parameters
 
@@ -177,7 +173,6 @@ Below is a Power Spectrum of a sinusoidal input signal
 | Nr | Issue                                 | Solution | Discovery  | Resolved |
 |:---|:--------------------------------------|:---------|:-----------|:---------|
 | 1  | RC extraction removes coupling caps |          | 2024-04-13 |          |
-|    |                                       |          |            |          |
 
 #### 1: RC extraction removes coupling caps 
 Extracting R and C seems to remove coupling caps, which removes both the cap in
@@ -204,6 +199,6 @@ caps to ground.
 So I'm resonably sure it's not a real issue. It's a tool issue. Let's see when
 the IC comes back.
 
-## External hardware
+
 
 

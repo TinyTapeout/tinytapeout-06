@@ -42,6 +42,9 @@ This design is an hardware implementation of SPELL with the following features:
 - 32 bytes of program memory (volatile, simulates EEPROM)
 - 32 bytes of stack memory
 - 8 bytes of internal RAM
+- 8 I/O pins (uio)
+
+Initially, all the program memory is filled with `0xFF`, and the stack and data memory are filled with `0x00`. The program counter and the stack pointer are both set to `0x00`.
 
 To load a program or inspect the internal state, the design provides access to the following registers via a simple serial interface:
 
@@ -58,7 +61,7 @@ The serial interface is implemented using a shift register, which is controlled 
 |-------------|--------|-------------------------------------------------------------------|
 | `reg_sel`   | input  | Select the register to read/write                                 |
 | `load`      | input  | Load the selected register with the value from the shift register |
-| `dump`      | output | Dump the selected register value to the shift register            |
+| `dump`      | input  | Dump the selected register value to the shift register            |
 | `shift_in`  | input  | Serial data input                                                 |
 | `shift_out` | output | Serial data output                                                |
 
@@ -80,6 +83,27 @@ Writing an opcode to the `EXEC` register will execute the opcode in place, witho
 
 The `STACK` register is used to push a value onto the stack or read the top value from the stack (for debugging purposes).
 
+### Data memory and I/O registers
+
+The data memory space is divided into two regions:
+
+| Address range | Description                                |
+|---------------|--------------------------------------------|
+| 0x00 - 0x07   | General-purpose data storage (data memory) |
+| 0x20 - 0x5F   | I/O and control registers                  |
+
+Other addresses are unmapped.
+
+The following registers are available in the data memory space:
+
+| Address | Name  | Description                                                              |
+|---------|-------|--------------------------------------------------------------------------|
+| 0x36    | PINB  | Read the value of the `portb` pins, or toggle the output when written to |
+| 0x37    | DDRB  | Set the direction of the `portb` pins (0 = input, 1 = output)            |
+| 0x38    | PORTB | Write to the `portb` pins                                                |
+
+For example, to toggle the value of the `portb[2]` (`uio[2]`) pin, you would write `0x04` to the `PINB` register.
+
 ## How to test
 
 To test SPELL, you need to load a program into the program memory and execute it. You can load the program by repeatedly executing the following steps for each byte of the program:
@@ -95,8 +119,10 @@ After loading the program, you can execute it by writing the address of the firs
 The following program which will rapidly blink an LED connected to the `uio[0]` pin. The program bytes should be loaded into the program memory starting at address 0:
 
 ```python
-[1, 56, 119, 250, 44, 1, 54, 119, 250, 44, 3, 61]
+[1, 55, 119, 1, 54, 119, 250, 44, 3, 61]
 ```
+
+For a more complex test program, see the [TT06 SPELL bringup script](https://github.com/urish/tt06-spell/blob/main/bringup/spell-spell.py).
 
 ## External hardware
 

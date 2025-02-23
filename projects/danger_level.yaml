@@ -1,0 +1,17 @@
+# This file specifies the danger level overrides for specific projects.
+#
+# The following danger levels are available:
+#
+# - safe: The project is safe to run (default for purely digital projects).
+# - medium: The project can damage the ASIC under certain conditions.
+# - high: The project will damage the ASIC.
+# - unknown: The danger level is unknown (default for analog / custom GDS projects).
+#
+tt_um_dsatizabal_opamp:
+  level: medium
+  reason: 'There is an error in that schematic causing an abnormally high bias current.'
+
+tt_um_MichaelBell_latch_mem:
+  level: medium
+  reason: 'There is a potential internal driver conflict after project selection until the first clock.'
+  

@@ -38,7 +38,7 @@ jobs:
           pdk_root: ${{ env.PDK_ROOT }}
 
       - name: Download artifact (run id = ${{ github.event.workflow_run.id }})
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         id: download_artifact
         with:
           workflow: gds.yaml

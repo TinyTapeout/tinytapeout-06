@@ -13,7 +13,7 @@ on:
 
 jobs:
   build_datasheet:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       TT_CONFIG: sky130.yaml
     steps:
