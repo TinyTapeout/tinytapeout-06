@@ -24,3 +24,33 @@ Post layout simulation showing the output voltage `x1.vout` and the divided outp
 The following graph shows the input clock, the intermediate voltages at the output of each stage, the output voltage, and the divided voltage as they rise during the first 10 us of operation.
 
 ![output voltage and intermediate voltages](sim_graph_stages.png)
+
+## Silicon measurements
+
+The output voltage on `ua[0]` was measured with multimeter that has a 7.8MΩ input impedance, at various clock frequencies. The following table summarizes the results:
+
+| Input Frequency (KHz) | ua[0] Voltage | Charge Pump Voltage \* |
+| --------------------- | ------------- | ---------------------- |
+| 0                     | 0.090         | 0.540                  |
+| 10                    | 0.107         | 0.642                  |
+| 50                    | 0.171         | 1.026                  |
+| 100                   | 0.267         | 1.602                  |
+| 250                   | 0.462         | 2.772                  |
+| 500                   | 0.604         | 3.624                  |
+| 1000                  | 0.673         | 4.038                  |
+| 2000                  | 0.704         | 4.224                  |
+| 5000                  | 0.716         | 4.296                  |
+| 7500                  | 0.716         | 4.296                  |
+| 10000                 | 0.716         | 4.296                  |
+| 15000                 | 0.714         | 4.284                  |
+| 20000                 | 0.712         | 4.272                  |
+| 40000                 | 0.698         | 4.188                  |
+| 62000                 | 0.676         | 4.056                  |
+
+\* The charge pump voltage is the ua[0] voltage measurement multiplied by 6. This is because the analog pin voltage is limited to 1.8 V, so the output voltage will be divided by 6.
+
+The following graph shows the output voltage as a function of the input frequency:
+
+![output voltage vs frequency](silicon_graph.png)
+
+Overall, it seems that the charge pump works as expected, with the output voltage peaking at around 4.3 V when the input frequency is in the 5-10 MHz range.
