@@ -20,6 +20,8 @@ The console is designed to work together with the RP2040 microcontroller on the 
 - connections to the outside world for the console (except VGA output),
 - the CPU to drive the console.
 
+A demo of the console's graphics running in silicon can be seen at https://youtu.be/j8XpiC0cEMM. The soure code is available at https://github.com/toivoh/tt06-retro-console-rp2040.
+
 Features:
 
 - PPU:
@@ -961,18 +963,10 @@ Sample out and vblank messages do not expect a response and do not increase the 
 Write register messages (RX header=3) do not affect the outstanding message counter and can be sent to the synth at any time.
 
 ## How to test
-
-A RAM emulator program for RP2040 is needed to test the console (TODO: publish source code).
-The RAM emulator code can be modified to update VRAM to test the PPU, and update synth parameters to test the synth. The RAM emulator could also receive commands to do these things over the RP2040's USB-UART.
-
-### Testing the PPU
-A Pmod is needed for VGA output, see below.
-
-Write Copper instructions to VRAM to initialize the PPU registers that don't have predefined initial values (see PPU registers).
-Set up tile planes, sprites, or both, the `displaymask` register can be used to disable tile planes or sprites if they are not used.
-TODO: example (in the RAM emulator code?)
+See https://github.com/toivoh/tt06-retro-console-rp2040 for example code that sets up a RAM emulator for the read-only memory interface and runs a demo using the PPU.
 
 ### Testing AnemoneSynth
+A RAM emulator for the TX/RX inteface is needed. (TODO: implement and release)
 Means of sound output is TBD, see below.
 
 Disable all sweeps (set the sweep parameters to all ones) and set the voice parameters to the default values described in the Voice state section.
@@ -988,5 +982,6 @@ TODO: example (in the RAM emulator code?)
 ## External hardware
 
 A Pmod for VGA is needed for video output, that can accept VGA output according to https://tinytapeout.com/specs/pinouts/#vga-output.
+
 Means of sound output is TBD. The RP2040 receives the sound samples and could output them in different ways depending on programming. The pins `ui[7:4]` (or at least `ui[7:6]`, depending on pin configuration) have been left unused in the design so that the RP2040 can drive them to output sound.
-Supporting a Pmod for I2S would be one possibility.
+Supporting a Pmod for I2S would be one possibility, PWM output (at 10 bit resolution or so) would be another.
