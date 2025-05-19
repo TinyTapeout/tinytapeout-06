@@ -418,7 +418,7 @@ The tile planes are drawn based on three VRAM regions with starting addresses co
 	map1_base        = base_map1 << 12
 
 The `scroll_x` and `scroll_y` registers for each plane are added to the raster position of the current pixel to find the pixel position in the corresponding tile map to display.
-The raster position is x=128, y=255 for the bottom right corner of the screen, increasing to the right and decreasing going up.
+The raster position is x=118, y=255 for the bottom left corner of the screen, increasing to the right and decreasing going up.
 
 The tile map for each plane is 64x64 tiles, and is stored row by row.
 Each map entry is 16 bits:
@@ -470,7 +470,7 @@ where
 
 - `m0` (`m1`) hides the sprite on even (odd) scan lines if it is set, (each output pixel is displayed on two VGA scan lines)
 - `index` is the sprite's index in OAM,
-- `y` is the sprite's y coordinate.
+- `y` is the sprite's y coordinate (255 for bottom of the screen and decreasing going up).
 
 If there are less than 64 sprites to be displayed, the remaining sorted entries should be masked by setting `m0` and `m1`, or moving the sprite to a y coordinate where it is not displayed.
 If there are more sprites than can be displayed in the same area, `m0` can be set to mask some and `m1` to mask others, showing them on alternating scan lines.
@@ -490,7 +490,7 @@ where
 - `ylsb3` is the lowest 3 bits of the sprite's y coordinate,
 - `pal` and `always_opaque` work as described in the Palette section,
 - `depth` specifies the sprite's depth relative to the tile planes,
-- `x` is the sprite's x coordinate.
+- `x` is the sprite's x coordinate (128 for the left side of the screen and increasing going right).
 
 If several visible sprites overlap, the lowest numbered sprite with an opaque pixel wins.
 The `depth` value then decides whether the winning sprite is displayed in front of the tile planes:
@@ -504,6 +504,10 @@ A sprite with a `depth` value of 3 will block sprites with higher index from bei
 
 The sprite x coordinate value starts at 128 at the left side of the screen, and increases to the right.
 The sprite y cooridnate value starts at 255 at the bottom of the screen and decreases going upward.
+
+#### Limitations
+Testing has shown that can be hard to get the PPU to reliably show more than 7 sprites on the same scan line.
+Additionally, if more than 4 sprites are placed in sequence on the same scan line in the sorted list, they might not all show up. If that happens try adding some entries in the sorted list between the sprites, that don't show up on the same scan line (or at all).
 
 ### Copper
 The Copper executes simple instructions, which can
