@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "TinyTapeout 06 Factory Test"      # Project title
+  title:        "Tiny Tapeout 6 Factory Test"      # Project title
   author:       "Sylvain Munaut"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Factory test module"      # One line description of what your project does
