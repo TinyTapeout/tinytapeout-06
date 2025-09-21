@@ -14,7 +14,3 @@ Each pair of analog pins are shorted together.
 ## How to test
 
 Measure the resistance, step response through each pair to characterise the analog mux.
-
-## External hardware
-
-n/a
