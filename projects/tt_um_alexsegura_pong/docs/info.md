@@ -7,7 +7,7 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-![screenshot](screen.png)
+![A game of pong being played](screen.png){width=60%}
 
 ## How it works
 
