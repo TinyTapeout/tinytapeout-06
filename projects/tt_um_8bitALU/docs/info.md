@@ -8,15 +8,15 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-![](images/1.png)
+![](images/1.png){width=90%}
 
 
 
 
 ## How to test
-![](images/2.png)
+![](images/2.png){width=90%}
 
-![](images/3.png)
+![](images/3.png){width=90%}
 
 
 
