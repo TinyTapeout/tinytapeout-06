@@ -19,5 +19,4 @@ Connect a clock with frequency `f_clk = 256 kHz` and apply a reset cycle to init
 
 ## External hardware
 
-An I2S DAC
-The 8-bit signed sound samples are sent out at `f_sck = 256 kHz` through this interface.
+An I2S DAC. The 8-bit signed sound samples are sent out at `f_sck = 256 kHz` through this interface.
