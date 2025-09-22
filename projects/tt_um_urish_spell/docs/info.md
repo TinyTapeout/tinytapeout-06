@@ -123,7 +123,3 @@ The following program which will rapidly blink an LED connected to the `uio[0]` 
 ```
 
 For a more complex test program, see the [TT06 SPELL bringup script](https://github.com/urish/tt06-spell/blob/main/bringup/spell-spell.py).
-
-## External hardware
-
-None
