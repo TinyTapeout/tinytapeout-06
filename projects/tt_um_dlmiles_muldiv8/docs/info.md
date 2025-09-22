@@ -31,7 +31,7 @@ iteration on from this could explore how to draw the transistors directly
 result in non-rectangular cells that interlock to improve both area density
 and timing performance.  Or it might go up in smoke... who knows.
 
-# How It Works
+## How It Works
 
 Due to the limited total IOs available at the external TT interface it is
 necessary to clock the project and setup UI_IN[0] to load each of the 2
@@ -54,7 +54,7 @@ half of the answer can be read by toggling UI_IN[0] (address bit0).
 Clocking is needed for registered output mode, but not necessarily for
 immediate mode.
 
-// FIXME please check out the original githun for any enahcnaed
+<!-- // FIXME please check out the original githun for any enahcnaed
 // documentation for this project, potentially improved information
 // nearer PCB+IC delivery (to customer) schedule but also post-production
 // post-physically testing results and information.
@@ -62,36 +62,36 @@ immediate mode.
 // reliability to show and demonstrate the cascade effect.  This assume
 // I have the design correct to allow this to happen, but there are some
 // tricked (like extending CLK on-duty cycle when latches are open) enough
-// to see result capture output.
+// to see result capture output. -->
 
-// FIXME provide wavedrom diagram (MULU, MULS, DIVU, DIVS)
+<!-- // FIXME provide wavedrom diagram (MULU, MULS, DIVU, DIVS) -->
 
-// FIXME explain IMMediate mode and REGistered mode (to pipeline)
+<!-- // FIXME explain IMMediate mode and REGistered mode (to pipeline) -->
 
-// FIXME provide blockdiagram of functional units
+<!-- // FIXME provide blockdiagram of functional units
 //    D
 //   MUX
 //   X Y registers (loaded from multiplexed D)
 //    OP -> res flags
 //   P P registers
 //  DEMUX
-//    R
+//    R -->
 
-// FIXME explain architective difference to previous example and
+<!-- // FIXME explain architective difference to previous example and
 // considerations why to change.
 
 // FIXME explain addressing mode to allow much wider units and
-//  potentially uneven input sizes.
+//  potentially uneven input sizes. -->
 
 
-Multiplier (signed/unsigned)
+### Multiplier (signed/unsigned)
 Method uses Ripple Carry Array as 'high speed multiplier'
 Setup operation mode bits MULDIV=0 and OPSIGNED(unsigned=0/signed=1)
 Setup A (multiplier 8-bit) * B (multiplicand 8-bit)
 Expect result P (product 16-bit)
 
 
-Divider (signed/unsigned)
+### Divider (signed/unsigned)
 Method uses Full Adder with Mux as 'combinational restoring array divider algorithm'.
 Setup operation mode bits MULDIV=1 and OPSIGNED(unsigned=0/signed=1)
 Setup Dend (dividend 8-bit) / Dsor (divisor 8-bit)

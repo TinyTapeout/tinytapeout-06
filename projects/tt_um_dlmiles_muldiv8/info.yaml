@@ -43,8 +43,8 @@ pinout:
 
   # Bidirectional pins
   uio[0]: "Addr bit0 HI=1/lo=0 mux of Data and Result (input only)"
-  uio[1]: "unused"
-  uio[2]: "unused"
+  uio[1]: ""
+  uio[2]: ""
   uio[3]: "Result mux registered=1/immediate=0 (input only)"
   uio[4]: "DIV error overflow (output only)"
   uio[5]: "DIV error divide-by-zero (output only)"
