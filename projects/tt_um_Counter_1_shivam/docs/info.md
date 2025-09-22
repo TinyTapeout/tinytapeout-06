@@ -14,7 +14,3 @@ The Verilog module implements a 8 bit binary counter with clock (`clk`), reset (
 ## How to test2
 
 We test it on Vivado and open sources (OpenROAD and OpenLane). 
-
-## External hardware
-
-defaults  
