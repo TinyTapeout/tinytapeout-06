@@ -15,6 +15,3 @@ I don't know how it works, yet.
 
 connect the right things
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
