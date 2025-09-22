@@ -45,7 +45,7 @@ pinout:
   uio[4]: "QSPI ROM/RAM SDO[2]."
   uio[5]: "QSPI ROM/RAM SDO[3]."
   uio[6]: "QSPI RAM chip select (low active)."
-  uio[7]: "NC."
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
