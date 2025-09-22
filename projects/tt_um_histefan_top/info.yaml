@@ -32,10 +32,10 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "none"
-  ui[1]: "none"
-  ui[2]: "none"
-  ui[3]: "none"
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
   ui[4]: "Right"
   ui[5]: "Left"
   ui[6]: "Down"
@@ -52,14 +52,14 @@ pinout:
   uo[7]: "hsync"
 
   # Bidirectional pins
-  uio[0]: "none"
-  uio[1]: "none"
-  uio[2]: "none"
-  uio[3]: "none"
-  uio[4]: "none"
-  uio[5]: "none"
-  uio[6]: "none"
-  uio[7]: "none"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
