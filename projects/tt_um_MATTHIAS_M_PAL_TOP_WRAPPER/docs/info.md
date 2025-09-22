@@ -13,18 +13,20 @@ This project is a PAL (programmable array logic device). It is programmed with a
 
 ### Taped-out configuration and pin assignment
 Because I do not want to update the text below too often I write the configuration of the physical PAL device in terms of:
+
 - Number of inputs
 - Number of itermediatory stages
 - Number of outputs
+
 ...only once. In the following this will be refered to however the exact number is only mentioned here.
+
 The numbers are:
+
 - 8 inputs
 - 11 intermediatory stages
 - 4 outputs
 
-<!---<img src="/Images/example_n4_p4_o3_no_connections.png" alt="drawing" width="600"/>-->
-There was a really convenient picture that unfortunatly I cannot include in the generated documentation.
-However if you check out the github repo of this project you can study it. 
+![Diagram showcasing the relationshiop between inputs, intermediate stages and outputs](images/1.png)
 It shows how the inputs, intermediate stages and output stages correlate to each other.
 Basically there is a matrix of inputs (N) and intermediate stages (P) with the size N*P.
 In the picture you can see numbers at the intersections of inputs/intermediate/output wires, which denote the indices of the shift register chain at this postion. The generated bitstream has a '1' at this positions if a connection is set and a '0' if no connection is set.
