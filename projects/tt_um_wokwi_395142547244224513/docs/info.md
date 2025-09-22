@@ -41,7 +41,3 @@ flip-flops during reset, and for normal operation the first (SW3)
 would be switched ON, and the other three (SW4..6) would be
 switched off.
 
-
-## External hardware
-
-None, besides the TT demo board.
