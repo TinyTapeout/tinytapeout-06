@@ -13,7 +13,7 @@ Cambio de giro de motor CD.
 
 A schematic of the circuit may be found at:
 
-https://wokwi.com/projects/395344363336889345
+<https://wokwi.com/projects/395344363336889345>
 
 The circuit has 10 inputs:
 
@@ -49,8 +49,4 @@ EN LA SALIDA B EL VALOR DE LA SEGUNDA AND EN 1 Y EL DE LA PRIMERA AND REGRESA A 
 
 A python implementation of the 32-bit Fibonacci LFSR can be found at the link below. It may be used for testing the hardware for sequences longer than the initial 100 values.
 
-https://github.com/icarislab/tt06_32bit-fibonacci-prng_cu/main/docs/32-bit-fibonacci-prng_pythong_simulation.py
-
-## External hardware
-
-No external hardware is required.
+<https://github.com/icarislab/tt06_32bit-fibonacci-prng_cu/main/docs/32-bit-fibonacci-prng_pythong_simulation.py>
