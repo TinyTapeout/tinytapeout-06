@@ -17,6 +17,4 @@ This is an analog crossbar array used as a placeholder for future ReRAM projects
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
-
 This project will need external off-the-shelf DACs and ADCs including a TIA or ADC that can convert output current into a readable voltage.
