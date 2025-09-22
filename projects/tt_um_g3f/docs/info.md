@@ -7,7 +7,7 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-How it works:
+## How it works
 
 El circuito requiere una entrada de reloj, en este caso llamada "SE", ya que no se usará el reloj del sistema, para manejar un registro de tres bits en configuración de anillo (contador Johnson), con tres salidas digitales desfasadas 120° entre ellas.
 
@@ -17,16 +17,16 @@ En el enlace siguiente se tiene el circuito en diagrama de bloques, en donde se 
 Para poder usarlo se usó un switch, en el que manualmente encenciéndolo y apagándolo, se simula la función de pulsos de entrada y se observa el desfasamiento entre los 3 leds que se tienen en la salida.
 https://wokwi.com/projects/392934671873904641
 
-![image](https://github.com/DeusJR/generador3f/assets/165088102/3dc9e98b-3402-4d18-b189-794334193555)
+![Wokwi schematic of the project](images/1.png)
 
 
 Para comprobar la funcionalidad del código en verilog de nuestro ciircuito, se simuló usando la herramienta de simulación del software Quartus II. En la imagen siguiente se puede apreciar que en las salidas "P0, P1 y P2" existe un desfasamiento de 120° entre sí, teniendo una sola señal de entrada de reloj. La señal de reloj de entrada se designó como "SE".
 De igual forma el código se probó en una FPGA Altera Cyclone II, para comprobar su funcionamiento y arrojó los resultados esperados en las simulaciones. Siguiendo el procedimiento que se describe en este mismo archivo README, en la sección llamada "How to test".
 
-![Imagen de WhatsApp 2024-03-31 a las 20 20 17_92d28c8a](https://github.com/DeusJR/generador3f/assets/163932147/93440c60-be47-4216-83eb-10290c88cc63)
+![Simulation waveform](images/2.jpg)
 
 
-How to test:
+## How to test:
 
 Para probar el circuito se requieren un generador de señales digitales y un osciloscopio, preferentemente con al menos 3 canales.
 
@@ -44,7 +44,7 @@ Una vez habiendo hecho todo lo anterior, se debería de poder observar en las sa
 
 Si se desean observar las salidas complementarias "Qa, Qb y Qc" estas se asignaron a los pines "uio[5], uio[4], uio[3]" respectivamente.  
 
-External hardware:
+## External hardware
 
 Generador de señales digitales: Para alimentar la señal de entrada del circuito. La señal debe ser un pulso (una señal cuadrada) el cual vaya de 0 a 5V, con un ciclo de trabajo del 50%. La frecuencia de la señal no debe ser necesariamente una en particular, puede ser cualquiera, mientras que el osciloscopio que se conente a las salidas sea capaz de leerlas.
 
