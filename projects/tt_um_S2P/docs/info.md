@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-A erial-parallel register, is a digital circuit used to store data sequentially and then transfer it in parallel. It works in the following way:
+A serial-parallel register, is a digital circuit used to store data sequentially and then transfer it in parallel. It works in the following way:
 
 Serial Input: Data is input sequentially, bit by bit, through a single input line. These bits move through the register, being temporarily stored in the register's memory cells.
 
@@ -25,17 +25,17 @@ The importance of this register is found in a binary search block used in conver
 
 ## How to test
 
-The testbench used was proposed, carried out in ACTIVE HDL-Student Version, the stimuli used were.
+The testbench used was proposed, carried out in ACTIVE HDL-Student Version, the stimuli used were:
 
-10ns period clock.
-Reset, through a formula which at 0 fs is 1 and 0 after 1 ns to clean the data and start with a known value with is 0.
-Serial input, a 20 ns clock.
+- 10ns period clock.
+- Reset, through a formula which at 0 fs is 1 and 0 after 1 ns to clean the data and start with a known value with is 0.
+- Serial input, a 20 ns clock.
 
 The parallel output is updated every 4 clock cycles and displays the result until it updates the next 4 clock cycles with a new result.
 
 ## External hardware
 
-Wave generator:This controls the system clock externally
+Wave generator: This controls the system clock externally
 
 Switch, connected in the reset and is used when we perform a conversion, It can also be used with a button or with a wave generator using a square pulse once. The reset switch value must be 0 to allow a value that is different from 0 on the parallel output.
 
