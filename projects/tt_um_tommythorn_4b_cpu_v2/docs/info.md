@@ -18,11 +18,13 @@ is one that relies heavily on self-modifying code, like the beloved
 DEC PDP-8.
 
 Features:
+
 - Updatable code and data storage
 - Instructions include load, store, alu, and conditional branches
 - Can execute Fibonacci
 
 CPU state
+
 - 8 words of 6-bit memory, split into 2-bit of instruction and 4-bit
   of operand.
 - 3-bit PC
