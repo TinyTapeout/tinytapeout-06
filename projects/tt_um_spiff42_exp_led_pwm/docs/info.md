@@ -11,7 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 This is an 8-channel PWM controller for LED brightness.
 
-The PWM duty cycle is generated according to an X<sup>3</sup> curve, so the 
+The PWM duty cycle is generated according to an X^3 curve, so the 
 "percieved brightness" changes linearly with the register
 setting. This design means we get the dynamic range of a 16-bit PWM but
 use only 8 bits to specify the desired output. With an input clock of 32.7
@@ -33,7 +33,3 @@ I2C mode, and the ui inputs no longer affect the registers.
 
 Play with the DIP-switches to see different segments of the 7-segment LED
 display show different brightnesses.
-
-## External hardware
-
-Currently no external hardware is supported.
