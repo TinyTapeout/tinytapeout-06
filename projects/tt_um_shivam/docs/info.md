@@ -23,6 +23,3 @@ Overall, the code provides a flexible and robust PWM signal generator with adjus
 
 We check our design with the help of OpenROAD flow script (ORFS).
 
-## External hardware
-
-default
