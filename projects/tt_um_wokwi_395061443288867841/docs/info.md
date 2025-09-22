@@ -12,11 +12,13 @@ It uses multiple logic gates to transfrom binary input to a decimal number to di
 
 ## How to test
 Input any binary number between 0-9.
-2^3=IN0 (most significant bit)
-2^2=IN1
-2^1=IN2
-2^0=IN3 (least significant bit)
+
+- 2^3=IN0 (most significant bit)
+- 2^2=IN1
+- 2^1=IN2
+- 2^0=IN3 (least significant bit)
 
 ## External hardware
 For input use a dip switch with at least 4 outputs.
+
 For output use a single 7 segment display with common cathode. 
