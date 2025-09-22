@@ -15,7 +15,3 @@ This Verilog module defines a 10-bit Linear Feedback Shift Register (LFSR). It f
 ## How to test
 
 We test it on Vivado and open sources (OpenROAD and OpenLane). 
-
-## External hardware
-
-defaults  
