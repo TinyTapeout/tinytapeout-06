@@ -21,24 +21,24 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "Unused"
-  ui[1]: "Unused"
-  ui[2]: "Unused"
-  ui[3]: "Unused"
-  ui[4]: "Unused"
-  ui[5]: "Unused"
-  ui[6]: "Unused"
-  ui[7]: "Unused"
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
-  uo[0]: "Unused"
-  uo[1]: "Unused"
-  uo[2]: "Unused"
-  uo[3]: "Unused"
-  uo[4]: "Unused"
-  uo[5]: "Unused"
-  uo[6]: "Unused"
-  uo[7]: "Unused"
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
   uio[0]: "Output Bit 0"
@@ -47,8 +47,8 @@ pinout:
   uio[3]: "Output Bit 3"
   uio[4]: "enable"
   uio[5]: "direction"
-  uio[6]: "Unused"
-  uio[7]: "Unused"
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
