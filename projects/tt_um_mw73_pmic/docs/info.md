@@ -30,8 +30,8 @@ the syncRectifierLs and syncRectifierHs and see the 180 deg out of phase square 
 
 ## External hardware
 
-https://www.analog.com/media/en/technical-documentation/data-sheets/ad7819.pdf (AD7819NZ 8-bit parallel output ADC)
-https://www.digikey.com/en/htmldatasheets/production/638815/0/0/1/mcp14700 (MCP14700 Highside Driver)
+- <https://www.analog.com/media/en/technical-documentation/data-sheets/ad7819.pdf> (AD7819NZ 8-bit parallel output ADC)
+- <https://www.digikey.com/en/htmldatasheets/production/638815/0/0/1/mcp14700> (MCP14700 Highside Driver)
 
 ## Future Versions
 
