@@ -17,5 +17,5 @@ Select die size with inputs 0-6, see that die size is displaying. roll die with 
 
 ## External hardware
 
-PMOD output splitter
-PMOD dual 7-segment display
+- PMOD output splitter
+- PMOD dual 7-segment display
