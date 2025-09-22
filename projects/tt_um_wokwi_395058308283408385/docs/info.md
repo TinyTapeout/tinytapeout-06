@@ -13,7 +13,3 @@ It does not. Don't use it.
 ## How to test
 
 If you are disappointed, it's your own fault.
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
