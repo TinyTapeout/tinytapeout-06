@@ -17,6 +17,7 @@ I decided on UART over other protocols because of its simplicity and my own fami
 This project implements a simplified RISC-V core that runs instructions from a 64-byte register file that is programmed by the user via a UART interface.
 
 The RISC-V core adheres to RV32I with the following exceptions:
+
 1. Does not implement FENCE, ECALL, or EBREAK instructions.
 2. Only 32-bit loads are implemented. LH, LHU, LB, LBU are all treated as LW.
 3. Only 32-bit stores are implemented. SH and SB are treated as SW.
@@ -29,6 +30,7 @@ The UART controller operates in two modes: "PROGRAM" and "DATA READ". Upon reset
 For those wanting to implement their own processor design, use the template TL-Verilog file `/src/tlv/uart_template.tlv` and modify line 89 with a URL pointing to your design. See `/src/tlv/cpu_custom.tlv` for an example processor design.
 
 Step-by-step usage:
+
 1. Connect the USBUART Pmod to the demo board via jumpers and a breadboard. The RX pin of the Pmod connects to in2, the TX pin to out2, and PWR/GND should be connected. No other pins of the Pmod are used.
 2. (Optional) Connect the BTN Pmod to the demo board. This Pmod should connect only to in4-in7.
 3. (Optional) Connect 8LD Pmod to out4-out7 (optional). out7 is high when reset button is pushed, out6 is high when device is in "PROGRAM" mode, out5 is high when zeros are transmitted on RX, out4 is high when zeros are transmitted on TX.
@@ -43,16 +45,19 @@ Step-by-step usage:
 12. Read data memory by sending a single packet. The content of the packet does not matter.
 13. To run a different program, repeat steps 6-12.
 
-## How to test (option 1)
+## How to test
+
+### Option 1
 
 To run cocotb tests, run `make` in `/test` directory. The cocotb test will iterate through each program name in `/test/programs.f` and load/execute each program's corresponding binary file in `/test/bin`. Data memory contents are compared to each program's corresponding text file in `/test/solutions` to determine pass/fail.
 
 To add new programs to the test, my current workflow is as follows. I did not get around to figuring out a simple, straightforward way of assembling in python, so the current workflow is admittedly cumbersome.
+
 1. Create assembly program and store in `/test/asm/[program_name].asm`. Keep in mind that there is a max of 16 instructions!
 2. Assemble `.asm` file with an online RV32I assembler. Paste output hex into a text file and save it as `/test/hexstr/[program_name].hexstr`.
 3. Run `/scripts/hexstr_to_bin.py`. This will convert the hex strings to a binary file and save to `/test/hexstr/[program_name].bin`. It will also write the UART sync word to the beginning of the file (0x55) and backfill unused instructions with ADD x0, x0, x0 instructions.
 
-## How to test (option 2)
+### Option 2
 
 Use Makerchip IDE (makerchip.com) for testing of RISC-V core only.
 
