@@ -18,14 +18,10 @@ if and only if the ith bit of b is 1.
 These bit products, i.e. (a << i) * b(i), are determined in the individual stages of the pipeline 
 and the result is calculated step by step.
 
-The full code can be found at https://github.com/SteffenReith/PiMAC
+The full code can be found at <https://github.com/SteffenReith/PiMAC>
 
 ## How to test
 
 Simply feed a, b, and c as 4 bit unsigned integer into the unit. The latency is 3 clocks, hence the
 (hopefully correct) answer can be found at the result output after 3 cycles.
-
-## External hardware
-
-No external hardware it needed.
 
