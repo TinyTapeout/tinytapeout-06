@@ -17,11 +17,11 @@ Find a 555 timer datasheet and attempt some of the suggested circuits.
 
 Connect pins to a breadboard with jumper wire. 
 
-Construct circuit shown in Figure 7-5 at: https://www.ti.com/lit/ds/symlink/lmc555.pdf?ts=1711738020668.
+Construct circuit shown in Figure 7-5 at: <https://www.ti.com/lit/ds/symlink/lmc555.pdf?ts=1711738020668>.
 
 Test 2:
 
-Duplicate circuit in Figure 6-2 at: https://www.ti.com/lit/ds/symlink/lmc555.pdf?ts=1711738020668. Compare resulting maximum frequency. The CMOS-based TI 555-Timer has a maximum frequency of 3.0MHz. Compare.
+Duplicate circuit in Figure 6-2 at: <https://www.ti.com/lit/ds/symlink/lmc555.pdf?ts=1711738020668>. Compare resulting maximum frequency. The CMOS-based TI 555-Timer has a maximum frequency of 3.0MHz. Compare.
 
 ## External hardware
 
