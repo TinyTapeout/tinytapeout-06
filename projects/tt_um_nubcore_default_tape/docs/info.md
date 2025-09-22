@@ -14,7 +14,3 @@ You mash buttons until the build doesn't fail.
 ## How to test
 
 Plug it in and turn on. If there's now smoke call it a success 
-
-## External hardware
-
-N/A
