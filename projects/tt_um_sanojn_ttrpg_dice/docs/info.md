@@ -73,6 +73,7 @@ Multi-digit dice require a two-digit LED display and require PMODs or a custom P
 Static configuration inputs on uio[7:5] should be connected to VDD or GND.
 Button inputs can close to either VCC or GND and require pullups or pulldowns. Select the active level with ui0[5].
 Common anode and common cathode displays are both supported using configuration pins uio[7:6].
+
 * Segments are connected to uo[7:0] (DP, G, F, E, D, C, B, A in that order)
 * Common pin for Left digit connects to uio[1]
 * Common pin for Right digit connects to uio[0]
