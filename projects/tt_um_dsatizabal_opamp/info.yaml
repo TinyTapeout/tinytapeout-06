@@ -3,7 +3,7 @@ project:
   title:        "Simple FET OpAmp with Sky130."      # Project title
   author:       "Diego Satizabal"      # Your name
   discord:      "diegosatizabal"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A simple FET OpAmp, credits to Fulgor Foundation as I used Diegos and Julias design as a base available at https://github.com/diegohernando/caravel_fulgor_opamp/tree/master/xschem"      # One line description of what your project does
+  description:  "A simple FET OpAmp"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 

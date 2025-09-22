@@ -7,8 +7,6 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-# Sky130 FET OpAmp
-
 This is the implementation of a simple Operational Amplifier (OpAmp) buit with FET from the Sky130 PDK. The design is based on [Diego's and Julia's design from Fulgor Foundation](https://github.com/diegohernando/caravel_fulgor_opamp/tree/master/xschem).
 
 ## How it works
@@ -19,7 +17,7 @@ Basically works as an OpAmp, that is, a high-impedance high-gain on open-loop am
 
 The following is a capture of Xschem of the internals of OpAmp:
 
-![OpAmp schematics](/docs/img/xschem.png "OpAmp schematics")
+![OpAmp schematics](img/xschem.png "OpAmp schematics")
 
 ### A note on the R1/R2 network:
 
@@ -29,11 +27,11 @@ This is to generate a virtual ground and provide a negative voltage as VDD. In T
 
 Next we show a view of the Layout created in Magic for the OpAmp cell only:
 
-![Magic layout](/docs/img/magic.png "Magic layout")
+![Magic layout](img/magic.png "Magic layout")
 
 The OpAmp cell integrated with TinyTapeout top cell shows less detail and is shown as reference:
 
-![Magic layout](/docs/img/magictop.png "Magic layout")
+![Magic layout](img/magictop.png "Magic layout"){width=60%}
 
 ## How to test
 
@@ -41,8 +39,9 @@ Two testbenches are included for the OpAmp: a [Non-Inverting amplifier](../xsche
 
 To test the Operational Amplifier any of those circuits, that are very easy to setup, can be utilized and check the corresponding output gains.
 
-/!\ Beware that the input signal ground (Vin) must not be connected to the same ground as Chip power, it must be connected to ZREF pin. /!\
-/!\ Observe that output signal will have a DC offset due to the use of a virtual ground inside the OpAmp. /!\
+/!\\ Beware that the input signal ground (Vin) must not be connected to the same ground as Chip power, it must be connected to ZREF pin. /!\\
+
+/!\\ Observe that output signal will have a DC offset due to the use of a virtual ground inside the OpAmp. /!\\
 
 ## External hardware
 
