@@ -14,6 +14,7 @@ This project uses the Zuse Z3 floating point format, but without using hidden di
 A number is represented via: `+/- x * 2 ^ e`. The sign is represented by a single bit (1 = positive, 0 = negative). X is the mantissa. E is the exponent: A signed 7 bit number!
 
 In order to convert a decimal number, for example, 42.24 to the Z3 format perform the following steps:
+
 1. The number is positive, so the sign bit is 1. s = 1
 2. Convert the integer part to binary. 42 = 101010
 3. The highest bit is in position 5 (counting from 0). Thus, e = 5
