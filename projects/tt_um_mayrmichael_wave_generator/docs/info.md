@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-![](Signals.png)
+![Signals from the wave generator](Signals.png)
 
 The Wave Generator is a project that deals with the generation of various signals. These signals are a sine function, a triangle function, a sawtooth function and a square pulse function. The desired function, which then provides the output value, can be selected using simple control signals. 
 
@@ -23,7 +23,7 @@ In general, the implemented signals can be influenced by three parameters:
 
 These three parameters allow these signals to be flexibly configured in terms of their respective properties. Depending on the type of signal, however, certain restrictions must be taken into account for the parameters. These restrictions are then described in the respective section for the corresponding signal.  
 
-In addition, the sampling frequency $f_{s}$ is linked to the internal clock frequency $f_{clk}$ of the system by a factor of 40. A value therefore requires 40 clock pulses to be calculated and output via the serial interface. This results in the following relationship: $f_s = \frac{f_{clk}}{40}$. The maximum internal clock frequency $f_{clk}$ is $66 \text{\;MHz}$ and therefore the maximum sampling frequency $f_{s}$ is $1.65 \text{\;MHz}$.
+In addition, the sampling frequency $f_{s}$ is linked to the internal clock frequency $f_{clk}$ of the system by a factor of 40. A value therefore requires 40 clock pulses to be calculated and output via the serial interface. This results in the following relationship: $f_s = \frac{f_{clk}}{40}$. The maximum internal clock frequency $f_{clk}$ is $66\text{ MHz}$ and therefore the maximum sampling frequency $f_{s}$ is $1.65 \text{ MHz}$.
 
 ### Inputs and outputs
 The Wave Generator uses all 24 digital pins. The input pins are described in the pinout section. These 8 input pins add up to the bit vector parameter. This is required to set the phase and amplitude, as the respective value is applied to it as a 2's complement in the fixed-point system Q7. The bidirectional pins "set phase" and "set amplitude" are used to adopt this value as the phase value or amplitude value in the chip. 
