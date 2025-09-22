@@ -17,12 +17,12 @@ Simply turn it on, and see the result. IO usage documented in the `info.yml`.
 
 For direct outside control (bypassing the internal measurement state machine), use the following settings:
 
-* Set `uio_in[3:0] = 0b1111` (enable debug mode 15).
-* Set the DAC by using `ui_in[5:0]` (6b direct control of `tempsens_dat[5:0]`).
-* `ui_in[6]` is connected to `tempsens_enable`.
-* `ui_in[7]` is connected to `tempsens_prechrgn`.
-* The output of the temperature sensor `tempsens_tempdelay` is connected to `uio_out[4]`.
-* Use the `clk` input to synchronize the temperature output of falling edge.
+- Set `uio_in[3:0] = 0b1111` (enable debug mode 15).
+- Set the DAC by using `ui_in[5:0]` (6b direct control of `tempsens_dat[5:0]`).
+- `ui_in[6]` is connected to `tempsens_enable`.
+- `ui_in[7]` is connected to `tempsens_prechrgn`.
+- The output of the temperature sensor `tempsens_tempdelay` is connected to `uio_out[4]`.
+- Use the `clk` input to synchronize the temperature output of falling edge.
 
 ## External hardware
 
