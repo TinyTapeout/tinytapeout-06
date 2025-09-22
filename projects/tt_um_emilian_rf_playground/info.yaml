@@ -30,24 +30,24 @@ pinout:
   ui[7]: "bit7"
 
   # Outputs
-  uo[0]: "n/a"
-  uo[1]: "n/a"
-  uo[2]: "n/a"
-  uo[3]: "n/a"
-  uo[4]: "n/a"
-  uo[5]: "n/a"
-  uo[6]: "n/a"
-  uo[7]: "n/a"
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "n/a"
-  uio[1]: "n/a"
-  uio[2]: "n/a"
-  uio[3]: "n/a"
-  uio[4]: "n/a"
-  uio[5]: "n/a"
-  uio[6]: "n/a"
-  uio[7]: "n/a"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
