@@ -20,12 +20,12 @@ The console is designed to work together with the RP2040 microcontroller on the 
 - connections to the outside world for the console (except VGA output),
 - the CPU to drive the console.
 
-A demo of the console's graphics running in silicon can be seen at https://youtu.be/j8XpiC0cEMM. The soure code is available at https://github.com/toivoh/tt06-retro-console-rp2040.
+A demo of the console's graphics running in silicon can be seen at <https://youtu.be/j8XpiC0cEMM>. The soure code is available at <https://github.com/toivoh/tt06-retro-console-rp2040>.
 
 Features:
 
 - PPU:
-  - 320x240 @60 fps VGA output (actually 640x480 @60 fps VGA)
+  - 320x240 @ 60 fps VGA output (actually 640x480 @ 60 fps VGA)
     - Some lower resolutions are also supported, useful if the design can not be clocked at the target 50.35 MHz
   - 16 color palette, choosing from 256 possible colors
   - Two independently scrolling tile planes
@@ -52,7 +52,7 @@ Features:
     - 2nd order low pass filter
       - sweepable volume, cutoff frequency, and resonance
 
-The console is designed to be clocked at 50.35 MHz, twice the pixel clock of 25.175 MHz used for VGAmode 640x480 @60 fps. (The frequency does not have to be terribly precise though, and there are ways to clock the console considerably slower and still get a useful output.)
+The console is designed to be clocked at 50.35 MHz, twice the pixel clock of 25.175 MHz used for VGAmode 640x480 @ 60 fps. (The frequency does not have to be terribly precise though, and there are ways to clock the console considerably slower and still get a useful output.)
 
 Contents:
 - Overview
@@ -68,10 +68,10 @@ Contents:
 The design target was
 
 - PPU with 2 bpp graphics, with
-	- VGA output at 640x480 @60 fps, doubled from PPU output at 320x240 @60 fps,
+	- VGA output at 640x480 @ 60 fps, doubled from PPU output at 320x240 @ 60 fps,
 	- 2 planes of 8x8 pixel tiles,
 	- at least 8 sprites per scan line.
-- Four voice analog emulation synthesizer with each voice in the style of the monosynth https://github.com/toivoh/tt05-synth.
+- Four voice analog emulation synthesizer with each voice in the style of the monosynth <https://github.com/toivoh/tt05-synth>.
 
 Design considerations:
 - On chip memory takes a lot of area, maybe 1 tile per 64 bytes
@@ -195,13 +195,13 @@ Usually, the voice steps eight 3072 kHz samples at a time, adding a single nonze
 To maintain frequency resolution, the main oscillator can periodically take a step of a single 3072 kHz sample, to pad out the period to the correct length. This results in advancing the state variable filter an eigth of the usual time step, and sending an output sample with an eigth of the usual amplitude through the FIR filter.
 The sub-oscillator does not have the same independent frequency resolution at the 3 highest octaves since it does not control the small steps, but is often used at a much lower frequency, and can often sync up harmonically with the main oscillator.
 
-The state variable filter is implemented using the same ideas as described and used in https://github.com/toivoh/tt05-synth, using a shift-adder for the main computations. The shift-adder is also time shared with the FIR filter; each FIR coefficient is stored as a sum / difference of powers of two (the FIR table was optimized to keep down the number of such terms). The shift-adder saturates the result if it would overflow, which allows to overdrive the filter.
+The state variable filter is implemented using the same ideas as described and used in <https://github.com/toivoh/tt05-synth>, using a shift-adder for the main computations. The shift-adder is also time shared with the FIR filter; each FIR coefficient is stored as a sum / difference of powers of two (the FIR table was optimized to keep down the number of such terms). The shift-adder saturates the result if it would overflow, which allows to overdrive the filter.
 
 Each oscillator uses a phase of 10 bits, forming a sawtooth wave. A clock divider is used to get the desired octave.
 To get the desired period, the phase sometimes needs to stay on the same value for two steps.
 To choose which steps, the phase value is bit reversed and compared to the mantissa of the oscillator's period value (the exponent controls the clock divider). This way, only a single additional bit is needed to keep track of the oscillator state beyond the current phase value.
 
-Each time a voice is switched in, five sweep values are read from memory to decide if the two oscillator periods and 3 control periods for the state variable filters (see https://github.com/toivoh/tt05-synth) should be incremented or decremented. A similar approach is used as for the oscillator update above, with a clock divider for the exponent part of the sweep rate, and bit reversing the swept value to decide whether to take a small or a big step when one should be taken.
+Each time a voice is switched in, five sweep values are read from memory to decide if the two oscillator periods and 3 control periods for the state variable filters (see <https://github.com/toivoh/tt05-synth>) should be incremented or decremented. A similar approach is used as for the oscillator update above, with a clock divider for the exponent part of the sweep rate, and bit reversing the swept value to decide whether to take a small or a big step when one should be taken.
 
 ## IO interfaces
 AnemoneGrafx-8 has four IO interfaces:
@@ -967,7 +967,7 @@ Sample out and vblank messages do not expect a response and do not increase the 
 Write register messages (RX header=3) do not affect the outstanding message counter and can be sent to the synth at any time.
 
 ## How to test
-See https://github.com/toivoh/tt06-retro-console-rp2040 for example code that sets up a RAM emulator for the read-only memory interface and runs a demo using the PPU.
+See <https://github.com/toivoh/tt06-retro-console-rp2040> for example code that sets up a RAM emulator for the read-only memory interface and runs a demo using the PPU.
 
 ### Testing AnemoneSynth
 A RAM emulator for the TX/RX inteface is needed. (TODO: implement and release)
@@ -985,7 +985,7 @@ TODO: example (in the RAM emulator code?)
 
 ## External hardware
 
-A Pmod for VGA is needed for video output, that can accept VGA output according to https://tinytapeout.com/specs/pinouts/#vga-output.
+A Pmod for VGA is needed for video output, that can accept VGA output according to <https://tinytapeout.com/specs/pinouts/#vga-output>.
 
 Means of sound output is TBD. The RP2040 receives the sound samples and could output them in different ways depending on programming. The pins `ui[7:4]` (or at least `ui[7:6]`, depending on pin configuration) have been left unused in the design so that the RP2040 can drive them to output sound.
 Supporting a Pmod for I2S would be one possibility, PWM output (at 10 bit resolution or so) would be another.
