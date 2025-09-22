@@ -52,8 +52,8 @@ Las entradas de los sensores pueden ser emuladas con botones o con switches cone
 
 ## Authors
 
-- [@Arízaga-Silva](https://www.researchgate.net/profile/Juan-Antonio-Arizaga-Silva)
+- [\@Arízaga-Silva](https://www.researchgate.net/profile/Juan-Antonio-Arizaga-Silva)
 
-- [@Sanchez-Rincón](https://www.researchgate.net/profile/Ismael_Rincon)
+- [\@Sanchez-Rincón](https://www.researchgate.net/profile/Ismael_Rincon)
 
-- [@Muñiz-Montero](https://www.researchgate.net/profile/Carlos-Muniz-Montero)
+- [\@Muñiz-Montero](https://www.researchgate.net/profile/Carlos-Muniz-Montero)
