@@ -14,7 +14,3 @@ It is a microchip that lights up an LED digital number and an LED light.
 ## How to test
 
 Test the project by starting the simulation in Wokwi then flicking switches.
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
