@@ -14,7 +14,3 @@ This project is center in the implementation of Verilog code for 4 bit Wallace t
 ## How to test
 
 Under test file, a wallace_tb.v code is located, this code is the testbench
-
-## External hardware
-
-You do not need any special external hardware.
