@@ -15,6 +15,3 @@ The default project just displays three segments lighting up.
 
 You can use the project as a template to build more complicated 7 segment project.
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
