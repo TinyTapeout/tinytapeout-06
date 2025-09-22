@@ -11,13 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 This is a an implementation of a classic systolic array multiplier with uart interface. 
 
-This implimention can multiply 2x2 matrix by another 2x2 matrix. The calculations are done in float16.
-
-## How to test
-
-Your "How to Test" section outlines a clear testing protocol for your systolic array multiplier with a UART interface, designed to multiply 2x2 matrices using float16 representations. To make it more structured and clear, I've refined your instructions below:
-
----
+This implementation can multiply 2x2 matrix by another 2x2 matrix. The calculations are done in float16.
 
 ## How to Test
 
@@ -35,7 +29,3 @@ Your "How to Test" section outlines a clear testing protocol for your systolic a
 4. **Interpreting the Results**:
     - Collect the 8-bit frames received from the device and reconstruct them into float16 numbers to obtain the resulting matrix elements.
     - These elements represent the resultant matrix from the multiplication of the two input matrices.
-
-## External hardware
-
-No external hardware is used for this project. 
