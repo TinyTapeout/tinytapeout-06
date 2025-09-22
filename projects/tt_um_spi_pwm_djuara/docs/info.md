@@ -11,7 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 This design is an SPI controlled PWM generator and 8-pin IO controller. IOs can be configure as output or input. Through registers we can configure number of ticks the PWM signal is ON and the cycle. Ticks are related to the system clk provided externally.
 
-![alt text](https://github.com/djuara-rbz/tt_spi_pwm/blob/main/docs/block_diagram.JPG?raw=true)
+![Block diagram](images/1.jpg)
 
 The design contain 8 registers that can be accessed by the two SPI interfaces. With these registers user can control PWM generator, allowing control of time on and cycle time. Also there are 8 IOs that can be set as inputs or outputs.
 
@@ -40,28 +40,6 @@ So configuring the registers with these values, and activating PWM (through exte
 In order to use the IOs, we just need to configure the IO_DIR register in order to set the pin as input or output.
 
 Then, if it is an input, just read the IO_VALUE register, and if it is an output, just write the desired value to the IO_VALUE register.
-
-### Ports
-
-| Port                 | in/out | Description                  |
-|----------------------|--------|------------------------------|
-|   ui_in[7]           |  in    | Input and'ed with ena and reported in bit 7 of reg 0x01 |
-|   ui_in[6]           |  in    | Control start of PWM externally |
-|   ui_in[5]           |  in    | CS signal of SPI_SAMPLED |
-|   ui_in[4]           |  in    | MOSI signal of SPI_SAMPLED |
-|   ui_in[3]           |  in    | SCLK signal of SPI_SAMPLED |
-|   ui_in[2]           |  in    | CS signal of SPI_CLK |
-|   ui_in[1]           |  in    | MOSI signal of SPI_CLK |
-|   ui_in[0]           |  in    | SCLK signal of SPI_CLK |
-|   uo_out[7:3]        |  out   | Always 0 |
-|   uo_out[2]          |  out   | PWM output |
-|   uo_out[1]          |  out   | MISO signal of SPI_SAMPLED |
-|   uio_in[7:0]        |  in    | Input signals of IOs |
-|   uio_out[7:0]       |  out   | Output signals of IOs |
-|   uio_oe[7:0]        |  out   | OE signals of IOs |
-|   ena                |  in    | Design selected signal |
-|   clk                |  in    | System clk |
-|   rst_n              |  in    | Active low reset |
 
 
 ### Registers
@@ -120,7 +98,7 @@ To write a register, 16 bits must be written.
 - Bit 10 to 8 is address
 - Bit 7 to 0 is data to be written
 
-![alt text](https://github.com/djuara-rbz/tt_spi_pwm/blob/main/docs/spi_clk_write.JPG?raw=true)
+![](images/2.jpg)
 
 To read a register, 24 bits must be sent
 
@@ -130,7 +108,7 @@ To read a register, 24 bits must be sent
 - Bit 15 to 8 is dummy bits
 - Bit 7 to 0 is data read in MISO line
 
-![alt text](https://github.com/djuara-rbz/tt_spi_pwm/blob/main/docs/spi_clk_read.JPG?raw=true)
+![](images/3.jpg)
 
 #### SPI SAMPLED
 
@@ -143,7 +121,7 @@ To write a register, 16 bits must be written.
 - Bit 10 to 8 is address
 - Bit 7 to 0 is data to be written
 
-![alt text](https://github.com/djuara-rbz/tt_spi_pwm/blob/main/docs/spi_sampled_write.JPG?raw=true)
+![](images/4.jpg)
 
 To read a register, 16 bits must be sent
 
@@ -152,7 +130,7 @@ To read a register, 16 bits must be sent
 - Bit 10 to 8 is address
 - Bit 7 to 0 is data read in MISO line
 
-![alt text](https://github.com/djuara-rbz/tt_spi_pwm/blob/main/docs/spi_sampled_read.JPG?raw=true)
+![](images/5.jpg)
 
 ## How to test
 

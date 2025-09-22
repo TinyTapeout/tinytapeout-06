@@ -24,19 +24,19 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "clk_sclk"
-  ui[1]: "clk_mosi"
-  ui[2]: "clk_cs"
-  ui[3]: "sampled_sclk"
-  ui[4]: "sampled_mosi"
-  ui[5]: "sampled_cs"
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "clk_sclk - SCLK signal of SPI_CLK"
+  ui[1]: "clk_mosi - MOSI signal of SPI_CLK"
+  ui[2]: "clk_cs - CS signal of SPI_CLK"
+  ui[3]: "sampled_sclk - SCLK signal of SPI_SAMPLED"
+  ui[4]: "sampled_mosi - MOSI signal of SPI_SAMPLED"
+  ui[5]: "sampled_cs - CS signal of SPI_SAMPLED"
+  ui[6]: "Control start of PWM externally"
+  ui[7]: "Input and'ed with ena and reported in bit 7 of reg 0x01"
 
   # Outputs
   uo[0]: "clk_miso"
-  uo[1]: "sampled_miso"
-  uo[2]: "pwm"
+  uo[1]: "sampled_miso - MISO signal of SPI_SAMPLED"
+  uo[2]: "pwm - PWM output"
   uo[3]: ""
   uo[4]: ""
   uo[5]: ""
