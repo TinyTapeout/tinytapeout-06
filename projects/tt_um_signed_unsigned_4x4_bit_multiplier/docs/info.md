@@ -30,7 +30,3 @@ C. R. Baugh and B. A. Wooley, A Two's Complement Parallel Array Multiplication A
 
 The multiplier may be tested using a TinyTapeout demoboard with various combinations of multiplicand and multipliers using the input switches and
 checking the expected product with the 7-segment LED display (with decimal point).
-
-## External hardware
-
-None beyound the TinyTapeout demoboard.

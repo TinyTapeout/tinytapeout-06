@@ -17,9 +17,9 @@ Ensuring correct installation of the LED matrix and using appropriately sized re
 
 ## How to test
 
-To test this version use waveform tests or an oscilloscop.
+To test this version use waveform tests or an oscilloscope.
 
 ## External hardware
 
 two buttons and a 8x8 Led Matrix
-https://de.aliexpress.com/item/32857281704.html?gatewayAdapt=glo2deu
+<https://de.aliexpress.com/item/32857281704.html?gatewayAdapt=glo2deu>

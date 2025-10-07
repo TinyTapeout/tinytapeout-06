@@ -21,10 +21,6 @@ After reset, program the neuron threshold, leak rate, feedback_scale and refract
 Additionally program the first, 2nd, 3rd layer weights. Once programmed activate spikes_in to represent input data, track spikes_out synchronously (1 clock cycle pulses). 
 
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
-
 ## Memory
 
 The memory block stores 39 words of 8 bits. 

@@ -15,6 +15,3 @@ Every flipflop is one letter of "HELP" (from top to buttom) the last flip flop d
 
 push the reset button and enjoy.
 
-## External hardware
-
-none.

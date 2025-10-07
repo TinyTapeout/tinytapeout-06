@@ -9,11 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Based from https://wokwi.com/projects/341279123277087315
+Based from <https://wokwi.com/projects/341279123277087315>
 
 On power-up, the 7-segment display should display the text PILIPINASLASALLE one at a time per clock cycle. The "dp" output toggles every clock cycle.
 
 Setting the input pin 7 to HIGH allows for manual override of the BCD value. In this mode, input pins 0-3 controls the BCD value. The text displayed for each BCD value are tabulated below:
+
 | **in0** | **in1** | **in2** | **in3** | **Character** |
 |:-------:|:-------:|:-------:|:-------:|:-------------:|
 |   LOW   |   LOW   |   LOW   |   LOW   |       P       |

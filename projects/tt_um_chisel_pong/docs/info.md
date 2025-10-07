@@ -14,7 +14,3 @@ This is a Chisel template
 ## How to test
 
 Currently we use cocotb, this shall change to ChiselTest
-
-## External hardware
-
-non by default

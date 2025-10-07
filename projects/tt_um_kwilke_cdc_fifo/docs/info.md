@@ -18,7 +18,7 @@ The original design can be found at [https://github.com/KennethWilke/sv-cdc-fifo
 The architecture of this design was influenced by
 [this paper](http://www.sunburst-design.com/papers/CummingsSNUG2002SJ_FIFO1.pdf)
 written by Clifford E. Cummings of
-[Sunburst Design](http://www.sunburst-design.com) by the implementation was fully written by me. 
+[Sunburst Design](http://www.sunburst-design.com) but the implementation was fully written by me. 
 
 ## How to test
 

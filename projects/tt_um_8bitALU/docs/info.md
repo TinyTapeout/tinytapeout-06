@@ -8,14 +8,15 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-<img width="860" alt="image" src="https://github.com/EdricOngKhaiJieh/8bitALU_verilog/assets/80259537/0bfb7c71-4778-402a-9428-13c1d3adae90">
+![](images/1.png){width=90%}
 
 
 
 
 ## How to test
-<img width="857" alt="image" src="https://github.com/EdricOngKhaiJieh/8bitALU_verilog/assets/80259537/a49bbcc7-b4ae-4c16-9147-324e2b67e3c3">
-<img width="859" alt="image" src="https://github.com/EdricOngKhaiJieh/8bitALU_verilog/assets/80259537/601c812a-4820-44cb-8e97-a1b2c9cc2b98">
+![](images/2.png){width=90%}
+
+![](images/3.png){width=90%}
 
 
 
@@ -31,4 +32,4 @@ You can also include images in this folder and reference them in the markdown. E
 
 
 ## External hardware
-ADALM2000. https://www.analog.com/en/resources/evaluation-hardware-and-software/evaluation-boards-kits/adalm2000.html#eb-overview
+ADALM2000. <https://www.analog.com/en/resources/evaluation-hardware-and-software/evaluation-boards-kits/adalm2000.html#eb-overview>

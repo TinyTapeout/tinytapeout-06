@@ -25,10 +25,10 @@ pinout:
   ui[1]: "Bit 1"
   ui[2]: "Bit 2"
   ui[3]: "Bit 3"
-  ui[4]: "no use"
-  ui[5]: "no use"
-  ui[6]: "no use"
-  ui[7]: "no use"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
   uo[0]: "Segmento g"
@@ -38,17 +38,17 @@ pinout:
   uo[4]: "Segmento c"
   uo[5]: "Segmento b"
   uo[6]: "Segmento a"
-  uo[7]: "no use"
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "no use"
-  uio[1]: "no use"
-  uio[2]: "no use"
-  uio[3]: "no use"
-  uio[4]: "no use"
-  uio[5]: "no use"
-  uio[6]: "no use"
-  uio[7]: "no use"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6

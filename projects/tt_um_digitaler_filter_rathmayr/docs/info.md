@@ -28,10 +28,7 @@ Originally, the filter programming was planned with four coefficients, but due t
 To read all coefficients with just one 8-bit input and store them in the corresponding register, a shift register has been implemented. Each new clock signal edge allows storing a newly read value at the desired position in the register. Once the maximum number of positions in the register is occupied, the flag is set to low, and the counter is reset. The input signal is also read using a shift register by shifting the value in the register by one position in each step.
 
 Now, for the actual filter operation: the desired coefficients are multiplied with the input signal and summed after each step. It is important to note that the two registers have different sizes and need to be adjusted accordingly. The filtered input signal is output as the output signal from a section of the bit sequence stored in the sum. These steps ensure precise signal processing and demonstrate the program's adaptability for potential future expansions.
+
 ## How to test
 
 Refer to the Testbench.
-
-## External hardware
-
-You do not need any special external hardware.

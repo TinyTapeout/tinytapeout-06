@@ -16,13 +16,11 @@ Note: Output is unsigned 8bit.
 ## How to test
 
 Modeselection is done with the uio[1:0]:
-    0: NONE, output is 0
-    1: SINE
-    2: SQUARE
-    3: SAWTOOTH
+
+- 0: NONE, output is 0
+- 1: SINE
+- 2: SQUARE
+- 3: SAWTOOTH
+
 Frequency word is 16bit and is given as split into upper and lower part. Lower part is given with by 
 uio[2]='1' and ui[7:0]=word and the upper part by uio[3]='1' and ui[7:0]=word.
-
-## External hardware
-
-None.

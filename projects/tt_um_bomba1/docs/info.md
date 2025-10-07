@@ -7,10 +7,6 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-
-# LATINPRACTICE_2024
-![Logo](https://latinpracticecom.files.wordpress.com/2023/06/logo-lp-2-1.png)
-
 Este proyecto  forma parte de la iniciativa LATINPRACTICE_2024
 con el cual se pretende que profesores universitarios y alumnos de nivel medio superior y superior, tengan acceso a herramientas de software libre para el diseño de circuitos integrados .
 
@@ -44,11 +40,11 @@ TODO
 ## External hardware
 La asignación de entradas y salidas del diseño del control de la bomba a las entradas y salidas del proyecto Latinpractice son como se indica a continuación.
 
-ck:       Conectado a   uio_in[7].
-rst_i:    Conectado a   uio_in[6].
-sensores_i: Conectado a uio_in[5:3].
-alarma_o: Conectado a uio_out[1].
-bomba_o:  Conectado a uio_out[0].
+- ck:       Conectado a   uio_in[7].
+- rst_i:    Conectado a   uio_in[6].
+- sensores_i: Conectado a uio_in[5:3].
+- alarma_o: Conectado a uio_out[1].
+- bomba_o:  Conectado a uio_out[0].
 
 Como puede notarse, el proyecto de la bomba, para hacer más legible el código, indica cuando un puerto es de entrada colocando un _i al final del nombre del puerto (rst_i) y cuando un puerto es de salida un _o (bomba_o), excepto en el puerto de reloj.
 
@@ -56,8 +52,8 @@ Las entradas de los sensores pueden ser emuladas con botones o con switches cone
 
 ## Authors
 
-- [@Arízaga-Silva](https://www.researchgate.net/profile/Juan-Antonio-Arizaga-Silva)
+- [\@Arízaga-Silva](https://www.researchgate.net/profile/Juan-Antonio-Arizaga-Silva)
 
-- [@Sanchez-Rincón](https://www.researchgate.net/profile/Ismael_Rincon)
+- [\@Sanchez-Rincón](https://www.researchgate.net/profile/Ismael_Rincon)
 
-- [@Muñiz-Montero](https://www.researchgate.net/profile/Carlos-Muniz-Montero)
+- [\@Muñiz-Montero](https://www.researchgate.net/profile/Carlos-Muniz-Montero)

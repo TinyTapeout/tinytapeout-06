@@ -2,7 +2,7 @@
 
 This project is an 8-bit computer I originally designed in Logisim Evolution, which I am now porting to TinyTapeout for manufacturing. Below is the computer’s general architecture as shown in Logisim Evolution; however, certain modifications were made to ensure compatibility with VHDL and TinyTapeout.
 
-![architecture](architecture.png)
+![General architecture of the 8-bit computer, shown in Logisim Evolution](architecture.png)
 
 The primary change includes the addition of a B register, alongside adjustments to enable ROM and RAM communication via SPI. Detailed information on these modifications is provided below.
 

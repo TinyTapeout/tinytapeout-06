@@ -7,7 +7,3 @@ This is for a safety system where redundant microcontrollers are used to control
 
 ## How to test
 Tested with the unit tests running `make -B` in test subfolder.  
-
-## External hardware
-
-N/A

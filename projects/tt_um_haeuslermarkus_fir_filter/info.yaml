@@ -44,9 +44,9 @@ pinout:
   uio[0]: "FIR Output data Bit 8"
   uio[1]: "FIR Output data Bit 9"
   uio[2]: "FIR Output data Bit 10"
-  uio[3]: "not used"
-  uio[4]: "not used"
-  uio[5]: "not used"
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
   uio[6]: "FIR CONFIG ENABLE"
   uio[7]: "FIR TVALID Input"
 

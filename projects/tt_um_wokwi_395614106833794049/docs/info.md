@@ -5,7 +5,3 @@ This project is supposed to eventually become a Wokwi port of [unigate-gf](https
 ## How to test
 
 Run the testbench in the test directory.
-
-## External hardware
-
-None

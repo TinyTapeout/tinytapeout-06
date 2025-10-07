@@ -23,7 +23,7 @@ The NLFSR contains an initialization/fail-safe feedback that prevents the LFSR f
 
 A schematic of the circuit may be found at:
 
-https://wokwi.com/projects/395357890431011841
+<https://wokwi.com/projects/395357890431011841>
 
 The circuit has 10 inputs:
 
@@ -65,8 +65,4 @@ The output allows for some self-testing, where OUT08 = OUT02 + OUT03 + OUT04 + O
 
 The circuit can be tested by powering on the circuit, and first setting the Input Select switch (DIP03) to "1" to reset/initialize the entire LFSR to all-zeros. The Input Select switch can then be switched to "0" to allow the LFSR to run from its all-zero initialized value. The output values of the NLFSR from this zeroized state may be observed using a logic analyzer, and can be compared with the values obtained for the python simulation:
 
-https://github.com/icarislab/tt06_biviumb-prng_cu/blob/main/docs/(TBD)
-
-## External hardware
-
-No external hardware is required.
+<https://github.com/icarislab/tt06_biviumb-prng_cu/blob/main/docs/(TBD)>

@@ -9,12 +9,8 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This project is centerd in the implementation of a verilog code for 4 bit Wallace tree multiplier. The design uses half adder and full adder Verilog designs.
+This project is centered in the implementation of a verilog code for 4 bit Wallace tree multiplier. The design uses half adder and full adder Verilog designs.
 
 ## How to test
 
 On file Test, there is a testbench call wallace_tb.v Use the code to test the code.
-
-## External hardware
-
-You do not need any special external hardware

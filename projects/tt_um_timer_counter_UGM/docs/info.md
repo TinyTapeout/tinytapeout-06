@@ -19,7 +19,8 @@ To test the timer_counter module, you can create a Verilog testbench that instan
 ## External hardware
 
 There are additional hardware such as:
- - 4 digits seven segment display (https://www.tokopedia.com/cncstorejogja/cnc-7-segment-pin-4-digit-clock-common-anode-red-merah?extParam=src%3Dshop%26whid%3D325343)
- - transistors (https://www.tokopedia.com/cncstorejogja/cnc-bc547-to-92-100ma-npn-amplifier-transistor?extParam=src%3Dshop%26whid%3D325343)
- - button (https://www.tokopedia.com/cncstorejogja/cnc-tactile-push-button-6x6x10mm-switch-murah?extParam=src%3Dshop%26whid%3D325343)
- - Custom PCBs (I'm still working on it, I'll update later)
+
+- 4 digits seven segment display (<https://www.tokopedia.com/cncstorejogja/cnc-7-segment-pin-4-digit-clock-common-anode-red-merah?extParam=src%3Dshop%26whid%3D325343>)
+- transistors (<https://www.tokopedia.com/cncstorejogja/cnc-bc547-to-92-100ma-npn-amplifier-transistor?extParam=src%3Dshop%26whid%3D325343>)
+- button (<https://www.tokopedia.com/cncstorejogja/cnc-tactile-push-button-6x6x10mm-switch-murah?extParam=src%3Dshop%26whid%3D325343>)
+- Custom PCBs (I'm still working on it, I'll update later)

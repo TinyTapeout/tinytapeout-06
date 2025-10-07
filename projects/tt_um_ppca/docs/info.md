@@ -42,7 +42,3 @@ After shooting the ball, wait until uo[0] ("Result Valid") is set to high. This 
 ## How to test
 
 To make sure that you hit the target, you will have to draw out the trajectory of the ball in the 32 x 32 grid.
-
-## External hardware
-
-N/A

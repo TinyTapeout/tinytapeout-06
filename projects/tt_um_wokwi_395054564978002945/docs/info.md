@@ -26,6 +26,6 @@ This circuit can drive a charlieplexed hexagonal LED matrix. This matrix has col
 
 Charlieplexed hexagonal display:
 
-![Schematic with LED numbering](https://github.com/x3e/tt06-wokwi-template/blob/main/docs/schematic.png?raw=true)
+![Schematic with LED numbering](images/1.png)
 
-(Maybe add some resistors depending on what LEDs you chose. I recommend blue LEDs because they look cool.
+(Maybe add some resistors depending on what LEDs you chose. I recommend blue LEDs because they look cool.)

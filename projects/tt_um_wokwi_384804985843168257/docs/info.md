@@ -17,4 +17,4 @@ To get even/odd numbers you have to switch on 2,4,6 and 8 (2,4,6,8 ->„1“ and
 
 ## External hardware
 
-List external hardware used in your project: seven segment display
+Seven segment display

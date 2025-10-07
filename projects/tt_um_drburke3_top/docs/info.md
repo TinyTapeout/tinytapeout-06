@@ -14,7 +14,3 @@ Takes two 8bit values in and performs addition/subtraction
 ## How to test
 
 Supply two 8bit numbers and get back sum
-
-## External hardware
-
-None needed.

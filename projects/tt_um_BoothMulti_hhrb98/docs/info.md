@@ -13,8 +13,4 @@ The Booth-4 algorithm is a multiplication algorithm that uses a combination of s
 
 ## How to test
 
-using test bench, applying phhysicial outputs and see output
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Using testbench, apply physical inputs and see output

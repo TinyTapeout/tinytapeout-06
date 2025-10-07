@@ -17,6 +17,6 @@ Only physical tests were carried out with the circuit, a Bluetooth antenna was a
 
 ## External hardware
 
--Bluetooth HC05.
--oscilloscope.
--A low pass filter.
+- Bluetooth HC05
+- Oscilloscope
+- A low pass filter

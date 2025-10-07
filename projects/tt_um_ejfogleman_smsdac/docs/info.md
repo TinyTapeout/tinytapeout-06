@@ -19,18 +19,19 @@ Ideally, this encoder would be buffered through a clean analog supply and retime
 
 DAC input data is provided through `ui_in[7:0]`, and the encoder uses the project clock for mismatch shaping.  Clock frequencies in the range of 1-10 MHz are reasonable.  Higher clock frequency increases the OSR but may increase glitch error.  The encoder output is `uo_out[7:0]`, and it can be reconstructed by summing the bits with the following weights: 
 
-    out = 8*uo_out[7]+uo_out[6]) + 4*(uo_out[5]+uo_out[4]) + 2*uo_out[3]+uo_out[2]) + uo_out[1]+uo_out[0]
+    out = 8*(uo_out[7]+uo_out[6]) + 4*(uo_out[5]+uo_out[4]) + 2*(uo_out[3]+uo_out[2]) + uo_out[1]+uo_out[0]
 
-The resistor ladder shown below sums the outputs with this weighting.  Any output network that can create this weighting will work.  
+The resistor ladder shown below sums the outputs with this weighting.  Any output network that can create this weighting will work.
+
 ![See source repo for resistor ladder diagram](./r-ladder.png)
 
 The DAC is free-running off the project clock, and inputs appear at the output immediately after passing through a pair of clock sync registers.  A simple dc test can be performed using the input DIP switches and the resistor ladder.  It is possible to input dynamic waveforms from the microcontroller as well. 
 
 The encoder has four modes of operation determined by `uio_in[1:0]`:
-* 3:  1st order mismatch-shaping with dither
-* 2:  randomization (flat spectral shaping)
-* 1:  1st order shaping, no dither
-* 0:  static encoding (no linearization)
+- 3:  1st order mismatch-shaping with dither
+- 2:  randomization (flat spectral shaping)
+- 1:  1st order shaping, no dither
+- 0:  static encoding (no linearization)
 
 ## External hardware
 

@@ -25,33 +25,33 @@ project:
 pinout:
   # Inputs
   ui[0]: "uart_rx"
-  ui[1]: "no use"
-  ui[2]: "no use"
-  ui[3]: "no use"
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
   ui[4]: "sw_11"
   ui[5]: "sw_01"
   ui[6]: "rst1"
-  ui[7]: "no use"
+  ui[7]: ""
 
   # Outputs
   uo[0]: "uart_tx"
-  uo[1]: "no use"
+  uo[1]: ""
   uo[2]: "pwm_outx"
-  uo[3]: "no use"
-  uo[4]: "no use"
-  uo[5]: "no use"
-  uo[6]: "no use"
-  uo[7]: "no use"
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "no use"
-  uio[1]: "no use"
-  uio[2]: "no use"
-  uio[3]: "no use"
-  uio[4]: "no use"
-  uio[5]: "no use"
-  uio[6]: "no use"
-  uio[7]: "no use"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6

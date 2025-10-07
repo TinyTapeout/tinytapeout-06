@@ -29,8 +29,8 @@ pinout:
   ui[3]: "right player down"
   ui[4]: "engage left player autopilot"
   ui[5]: "engage right player autopilot"
-  ui[6]: "not used"
-  ui[7]: "not used"
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
   uo[0]: "r[1]"

@@ -8,5 +8,5 @@ Connect inputs to 4-bit BCD input and LEDs to output x---y
 
 ## External hardware
 
-BCD switch or counter
-LED dot-matrix-display.
+- BCD switch or counter
+- LED dot-matrix-display.

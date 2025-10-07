@@ -30,14 +30,14 @@ pinout:
   ui[7]: "Control pin to connect one of the 16 resistors between ua[0] and ground using an analog switch"
 
   # Outputs
-  uo[0]: "Not used, grounded internally"
-  uo[1]: "Not used, grounded internally"
-  uo[2]: "Not used, grounded internally"
-  uo[3]: "Not used, grounded internally"
-  uo[4]: "Not used, grounded internally"
-  uo[5]: "Not used, grounded internally"
-  uo[6]: "Not used, grounded internally"
-  uo[7]: "Not used, grounded internally"
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins (all set to inputs by grounding uio_oe internally)
   uio[0]: "Control pin to connect one of the 16 resistors between ua[0] and ground using an analog switch"
@@ -53,9 +53,9 @@ pinout:
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
   # The first pins is always ua[0], and the pin numbers must be sequential.
   ua[0]: "Internal programmable resistor connected to this pin"
-  ua[1]: "Analog pin not used"
-  ua[2]: "Analog pin not used"
-  ua[3]: "Analog pin not used"
+  ua[1]: ""
+  ua[2]: ""
+  ua[3]: ""
   ua[4]: "Analog inverter output"
   ua[5]: "Analog inverter input"
 

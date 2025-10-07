@@ -31,23 +31,23 @@ electonic, radio and computer/CPU theory/practice that is still in use today.
 
 
 The original PCB board design used:
-* a x16 master TX CLOCK line of the data rate.
-* was based on 12v audio interface/opamps, and 74HC TTL logic
-* was capable of the range of baud rates with minor modifications, the most
+- a x16 master TX CLOCK line of the data rate.
+- was based on 12v audio interface/opamps, and 74HC TTL logic
+- was capable of the range of baud rates with minor modifications, the most
 used speed in my experience is 9600 baud
-* the TX DAC was 4 x 8-bit samples per bit, with the waveform lookup using a
+- the TX DAC was 4 x 8-bit samples per bit, with the waveform lookup using a
 12bit address that can see previous bit information sent
-* EPROM were used directly to provide waveforms, these have a number of
+- EPROM were used directly to provide waveforms, these have a number of
 jumper set modes to allow compensation for non-linear responses at the
 TX-AUDIO and RX-AUDIO
 
 Due to the need to perform ROM lookups, this is operating in 4 phases
 sharing 6-bit output from module, and 4-bit input to module.  The 4 phases
 cover a sequence of:
-* TX nibble low (6bit address)
-* TX nibble high (6bit address)
-* RX nibble low (6bit address)
-* RX nibble high (6bit address)
+- TX nibble low (6bit address)
+- TX nibble high (6bit address)
+- RX nibble low (6bit address)
+- RX nibble high (6bit address)
 It is not clear if this arrangement a good choice.
 There is also a programmable latency on the reply, of zero-cycles or
 one-cycle, the shifts the expectation of the result.
@@ -77,10 +77,10 @@ The tx clock rate is derrived from this 'CLK divide-by-4'
 The UART clocking is also derived from CLK, and each side (uart RX and uart
 tx) can be individually configured to be 1:1 or 2:1 the synchronous data
 rate:
- * Uart TX x1 = data rate x1
- * Uart TX x2 = data rate x2
- * Uart RX x1 = data rate x8 (due to majority voter, 8 sample buffer)
- * Uart RX x2 = data rate x16 (due to majority voter, 8 sample buffer)
+- Uart TX x1 = data rate x1
+- Uart TX x2 = data rate x2
+- Uart RX x1 = data rate x8 (due to majority voter, 8 sample buffer)
+- Uart RX x2 = data rate x16 (due to majority voter, 8 sample buffer)
 
 As you can see maybe there is some headroom for faster transmission speeds
 within a TT project, before needing to increase DAC resolution and explore
@@ -115,24 +115,24 @@ situation with a carrier sense channel sharing algorithym.
 
 The parts that are missing from the design:
 
-* 8bit DAC for transmit waveform shaping, using 4 samples per bit
-* opamp for transmit audio anti-aliasing (low-pass filter?) circuit to
+- 8bit DAC for transmit waveform shaping, using 4 samples per bit
+- opamp for transmit audio anti-aliasing (low-pass filter?) circuit to
   remove harmonic noise from the output audio
-* 8bit DAC for receiver clock recovery feedback, using 16 samples
+- 8bit DAC for receiver clock recovery feedback, using 16 samples
   per bit.
-* opamp for receive audio signal interface, this maybe moved to an external
+- opamp for receive audio signal interface, this maybe moved to an external
   board due to needing to protect the TT IC from over voltage from being
   attached to usuall 12v equipment or maybe 36v when using some ex-commerial
   radio trancievers.
   This may have been a comparator circuit (unsure at this time), fed into a
   DFF to synchronise the incoming data to the x16 (of datarate) clock recovery
   timing
-* 2 x opamp to provide PLL lock detection (unsure how this works atm), I
+- 2 x opamp to provide PLL lock detection (unsure how this works atm), I
   would guess it can detect when the signal is being centered and has been
   centered for some number of samples, maybe via slow capacitance charge up
   when the UP/DOWN line is managing to meet an approximate 50%/50% duty
   cycle per x16 clock recovery tick.
-* 2 x opamp to provide zero-crossing detection, this is used to provide the
+- 2 x opamp to provide zero-crossing detection, this is used to provide the
   PLL its feedback mechanism (the UP/DOWN line) to advance or retard the
   edge alightment.
 
@@ -166,5 +166,5 @@ Check back with the repo for a testing regime.
 ## External hardware
 
 At this PoC stage, testing with RP2040 and FPGA external boards to validate
-the electrical interface acrhetecture makes sense and provided the most
+the electrical interface architecture makes sense and provided the most
 options.

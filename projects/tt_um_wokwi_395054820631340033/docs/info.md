@@ -14,7 +14,3 @@ I simply refuse to do this now
 ## How to test
 
 I simply refuse to do this now
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any

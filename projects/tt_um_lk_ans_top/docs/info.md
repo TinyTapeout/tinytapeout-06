@@ -14,7 +14,3 @@ Big data goes in, small data comes out
 ## How to test
 
 TBD
-
-## External hardware
-
-None

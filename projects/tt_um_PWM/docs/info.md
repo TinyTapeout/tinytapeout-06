@@ -13,7 +13,7 @@ Pulse Width Modulation (PWM) is a technique used in electronics to control the a
 My project involves Pulse Width Modulation (PWM), allowing the duty cycle to be adjusted between 10% and 80% using 3 switches with 7 different combinations. Each combination increments the duty cycle by 10%. For example, '000' represents a 10% duty cycle, and '111' represents an 80% duty cycle. The PWM was designed for a frequency of 1KHz.
 
 
-![PWM](https://github.com/Noe-Reyes/PWM/assets/165437989/048d0be0-40ac-4368-912a-0a85abb39774)
+![Pinout diagram](images/1.jpeg){width=60%}
 
 The above image represents the PWM module that was designed.
 

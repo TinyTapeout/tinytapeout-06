@@ -19,7 +19,7 @@ These images and many more can be generated with Tiny Shader. Note, that shaders
 
 |||||
 |-|-|-|-|
-|![test2.png](images/test2.png)|![test4.png](images/test4.png)|![test5.png](images/test5.png)|![test7.png](images/test7.png)|
+|![Crosshatch pattern with bright green and red lines](images/test2.png)|![A series of scaled squares, coloured purple, blue, green and red](images/test4.png)|![Pairs of horizontal black lines, repeated for the entire height of the screen](images/test5.png)|![A rainbow coloured sine wave](images/test7.png)|
 
 The shader for the last image is shown here:
 

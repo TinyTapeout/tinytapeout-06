@@ -7,7 +7,7 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-# How it works
+## How it works
 
 TinyQV is a small Risc-V SoC, implementing the RV32EC instruction set, with a couple of caveats:
 
@@ -21,7 +21,7 @@ Code can only be executed from flash.  Data can be read from flash and RAM, and 
 
 The SoC includes a UART and an SPI controller.
 
-## Address map
+### Address map
 
 | Address range | Device |
 | ------------- | ------ |
@@ -32,7 +32,7 @@ The SoC includes a UART and an SPI controller.
 | 0x8000010 - 0x800001F | UART |
 | 0x8000020 - 0x8000027 | SPI |
 
-### GPIO
+#### GPIO
 
 | Register | Address | Description |
 | -------- | ------- | ----------- |
@@ -41,7 +41,7 @@ The SoC includes a UART and an SPI controller.
 | IN       | 0x8000004 (R) | Reads the current state of in0-7 |
 | SEL      | 0x800000C (R/W) | Enables general purpose output on the corresponding bit on out0-7 |
 
-### UART
+#### UART
 
 | Register | Address | Description |
 | -------- | ------- | ----------- |
@@ -49,14 +49,14 @@ The SoC includes a UART and an SPI controller.
 | DATA     | 0x8000010 (R) | Reads any received byte |
 | STATUS   | 0x8000014 (R) | Bit 0 indicates whether the UART TX is busy, bytes should not be written to the data register while this bit is set.  Bit 1 indicates whether a received byte is available to be read. |
 
-### Debug UART (Transmit only)
+#### Debug UART (Transmit only)
 
 | Register | Address | Description |
 | -------- | ------- | ----------- |
 | DATA     | 0x8000018 (W) | Transmits the byte |
 | STATUS   | 0x800001C (R) | Bit 0 indicates whether the UART TX is busy, bytes should not be written to the data register while this bit is set. |
 
-### SPI
+#### SPI
 
 | Register | Address | Description |
 | -------- | ------- | ----------- |
@@ -65,7 +65,7 @@ The SoC includes a UART and an SPI controller.
 | CONFIG   | 0x8000024 (W) | The low 2 bits set the clock divisor for the SPI clock to 2*(value + 1), bit 2 adds half a cycle to the read latency when set |
 | STATUS   | 0x8000024 (R) | Bit 0 indicates whether the SPI is busy, bytes should not be written or read from the data register while this bit is set. |
 
-# How to test
+## How to test
 
 Load an image into flash and then select the design.
 
@@ -86,7 +86,7 @@ The above should all be handled by some MicroPython scripts for the RP2040 on th
 
 Build programs using the riscv32-unknown-elf toolchain and the [tinyQV-sdk](https://github.com/MichaelBell/tinyQV-sdk), some examples are [here](https://github.com/MichaelBell/tinyQV-projects).
 
-# External hardware
+## External hardware
 
 The design is intended to be used with this [QSPI PMOD](https://github.com/mole99/qspi-pmod) on the bidirectional PMOD.  This has a 16MB flash and 2 8MB RAMs.
 

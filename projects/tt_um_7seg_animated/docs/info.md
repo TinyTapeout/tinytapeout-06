@@ -22,7 +22,3 @@ The circuit works by iterating over the character bit pattern, enabling segments
 Toggle the input switches to create a character with inputs 0-6, toggle input 7 to start the character animation sequence.
 
 Optionally dim the display by enabling the pwm feature described above.
-
-## External hardware
-
-none

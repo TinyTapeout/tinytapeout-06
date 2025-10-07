@@ -16,7 +16,3 @@ I'll still be shipping my GPU project, which I'll add a link to here soon - but 
 ## How to test
 
 The test bench is quite simple - just testing the addition function of the ALU.
-
-## External hardware
-
-No external hardware is needed.

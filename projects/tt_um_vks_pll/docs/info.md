@@ -15,9 +15,9 @@ This design contains individual blocks used to realize a PLL circuit. These bloc
 
 **Charge Pump (CP)**: Charge pump circuit converts the output signals from the PFD into a control voltage for Voltage-Controlled Oscillator(VCO). Charge pump circuit consists of a pair of switches and a capacitor. When the PFD generates a positive pulse, one switch connects the capacitor to a reference voltage, charging it. Conversely, when the PFD generates a negative pulse, the other switch connects the capacitor to ground, discharging it. This creates a control voltage proportional to the phase difference between the input and reference signals. ![Charge Pump ](cp.png "Charge Pump")
 
-**Voltage Controlled Oscillator(VCO)**: A ring oscillator Voltage-Controlled Oscillator (VCO) consists of odd number of inverting stages connected in a ring configuration, generating an oscillating waveform. By controlling the bias voltage of the transistors within the stages, the oscillation frequency can be adjusted. This VCO serves as the controlled oscillator in the PLL, with its frequency locked to the reference signal through the feedback loop.  ![VCO ](vco.png "VCO")
+**Voltage Controlled Oscillator (VCO)**: A ring oscillator Voltage-Controlled Oscillator (VCO) consists of odd number of inverting stages connected in a ring configuration, generating an oscillating waveform. By controlling the bias voltage of the transistors within the stages, the oscillation frequency can be adjusted. This VCO serves as the controlled oscillator in the PLL, with its frequency locked to the reference signal through the feedback loop.  ![VCO ](vco.png "VCO")
 
-**Frequency Divider(FD)**: A D flip-flop frequency divider divides the frequency of VCO output signal by a fixed integer ratio. This division process creates a feedback mechanism that compares the divided output frequency with the reference frequency. The D flip-flop's toggling action divides the frequency by 2/4/8, allowing for frequency multiplication or division within PLL loop. ![Frequency Divider](fd.png "Frequency Divider")
+**Frequency Divider (FD)**: A D flip-flop frequency divider divides the frequency of VCO output signal by a fixed integer ratio. This division process creates a feedback mechanism that compares the divided output frequency with the reference frequency. The D flip-flop's toggling action divides the frequency by 2/4/8, allowing for frequency multiplication or division within PLL loop. ![Frequency Divider](fd.png "Frequency Divider")
 
 
 | | Designer Name           | Block Name               |
@@ -44,6 +44,6 @@ This design contains individual blocks used to realize a PLL circuit. These bloc
 
 
 ## External hardware
-2-channel function/waveform generator with varying frequency and pulse time generation.
-2-channel Oscilloscope to measure output signal waveforms.
+- 2-channel function/waveform generator with varying frequency and pulse time generation.
+- 2-channel Oscilloscope to measure output signal waveforms.
 

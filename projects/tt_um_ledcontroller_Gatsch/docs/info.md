@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This tinytapeout projects implements i2c to drive ws2812b individual addressable LEDs. The IC can be addressed with the address 0x4A. The register address corrosponds with the sequential bytes of the leds as follows:
+This tinytapeout projects implements i2c to drive ws2812b individual addressable LEDs. The IC can be addressed with the address 0x4A. The register address corresponds with the sequential bytes of the leds as follows:
 
 |address | data   |
 |--------|--------|
@@ -29,7 +29,7 @@ i2c uses external pullups and open collector outputs. In order to implement this
 
 ## How to test
 
-Connect an i2c-master to the chip and write values to the desired registers. The IC supports sequetial write by auti incrementing the register address if more than one byte is sent. The LED should update immediately.
+Connect an i2c-master to the chip and write values to the desired registers. The IC supports sequetial write by auto incrementing the register address if more than one byte is sent. The LED should update immediately.
 
 ## External hardware
 

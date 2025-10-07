@@ -14,19 +14,6 @@ There is only 1 SPI controller in the design and this controller is used to inte
 
 Tested with Lattice ice40-HX8K breakout board at 24MHz clock.
 
-## Pin allocation
-
-PIN | UI_IN | UO_OUT | UIO
---|--|--|--
-0 | IN0/UART-CTS | UART-RX          | SPI-CS2
-1 | IN1          | OUT0/UART-RTS    | IO0
-2 | SPI-MISO     | OUT1             | IO1
-3 | IN2          | SPI-MOSI         | IO2
-4 | IN3          | SPI-CS1          | IO3
-5 | IN4          | SPI-SCLK         | IO4
-6 | EN_DEBUG     | OUT2             | IO5
-7 | UART-TX      | OUT3             | IO6
-
 ## Memory space
 Memory address | Description
 --|--

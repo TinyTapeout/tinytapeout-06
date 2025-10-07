@@ -9,11 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Worwi project using a D flipflop ring to display "CIt" on the 7 segment display.
+Wokwi project using a D flipflop ring to display "CIt" on the 7 segment display.
 
 ## How to test
-Turn on the required inputs ,turn off the unused inputs.
-
-## External hardware
-
-None,beside the TT demo board.
+Turn on the required inputs, turn off the unused inputs.

@@ -41,19 +41,19 @@ pinout:
   uo[2]: "Combinatorial output 2"
   uo[3]: "Combinatorial output 3"
   uo[4]: "Combinatorial output 3"
-  uo[5]: "unused - tied to 0"
-  uo[6]: "unused - tied to 0"
-  uo[7]: "unused - tied to 0"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
   uio[0]: "Config pin: This pin is used to apply the config bit that will be shifted in on a rising clock edge."
   uio[1]: "Enable pin: If HIGH (1) the result of the logic function is applied to all outputs."
   uio[2]: "Clock pin: Used for the shift register to sample in the [config pin] data (see uio[0])."
-  uio[3]: "unused"
-  uio[4]: "unused"
-  uio[5]: "unused"
-  uio[6]: "unused"
-  uio[7]: "unused"
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6

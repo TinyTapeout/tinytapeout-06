@@ -10,9 +10,9 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 The design works as Full Speed (12Mbit/s) USB communications device class (or USB CDC class). It implements the Abstract Control Model (ACM) subclass.  
-Most of the code is based on this repo: https://github.com/ulixxe/usb_cdc
+Most of the code is based on this repo: <https://github.com/ulixxe/usb_cdc>
 
-When connected to a pc the device should appear as two virtual serial ports. (COMX on Windows, /dev/ttyACMx on Linux and /dev/cu.usbmodemxxxx on OSX)  
+When connected to a pc the device should appear as two virtual serial ports. (`COMX` on Windows, `/dev/ttyACMx` on Linux and `/dev/cu.usbmodemxxxx` on OSX)  
 (Linux requires that the user account belongs to the dialout group to grant permissions for virtual COM access)
 
 Each port/channel has a different application:
@@ -25,6 +25,7 @@ USB Endpoints: EP2 (IN, INTERRUPT), EP1 (IN, BULK), EP1 (OUT, BULK)
 
 
 pin/character relation:
+
 | pin | rise | fall |
 | --- | ---- | ---- |
 |input[0] | A | a |
@@ -50,20 +51,19 @@ Without any extra OS functions, the simple way to identify them is to open one o
 
 ## External hardware
 
-USB cable with internal cables exposed or USB connector + USB cable  
-1.5k resistor  
-Computer 
+- USB cable with internal cables exposed or USB connector + USB cable  
+- 1.5k resistor  
+- Computer 
 
 Optional:  
-Buttons for the inputs or use the TT demo board switches
+- Buttons for the inputs or use the TT demo board switches
 
 
 ## How to test
 
 TT board clock needs to be set to 48MHz
 
-Basic schematic:  
-![](TT06_USB_CDC_DEVICES-Page-1.png)
+![Basic connectivity schematic](TT06_USB_CDC_DEVICES-Page-1.png)
 
 
 Cut output[0] LED display jumper on TT board? I haven't been able to test if this is necessary or not. 
@@ -93,14 +93,14 @@ On the project repo there are some Linux scripts to get information about the US
 
 This is how the device should look with the `lsusb -tv` or `list_usb_devices.sh` command:
 ```
-    |__ Port 1: Dev 42, If 2, Class=Communications, Driver=cdc_acm, 12M
-        ID 0000:0000  
-    |__ Port 1: Dev 42, If 0, Class=Communications, Driver=cdc_acm, 12M
-        ID 0000:0000  
-    |__ Port 1: Dev 42, If 3, Class=CDC Data, Driver=cdc_acm, 12M
-        ID 0000:0000  
-    |__ Port 1: Dev 42, If 1, Class=CDC Data, Driver=cdc_acm, 12M
-        ID 0000:0000  
+|__ Port 1: Dev 42, If 2, Class=Communications, Driver=cdc_acm, 12M
+    ID 0000:0000  
+|__ Port 1: Dev 42, If 0, Class=Communications, Driver=cdc_acm, 12M
+    ID 0000:0000  
+|__ Port 1: Dev 42, If 3, Class=CDC Data, Driver=cdc_acm, 12M
+    ID 0000:0000  
+|__ Port 1: Dev 42, If 1, Class=CDC Data, Driver=cdc_acm, 12M
+    ID 0000:0000  
 ```
 
 For deeper debugging and understanding of the USB protocol exchange between the device and the PC *Wireshark* app can be used
@@ -108,6 +108,7 @@ For deeper debugging and understanding of the USB protocol exchange between the 
 ### Debug pins:
 
 These are the extra pins used for development debugging:
+
 | port | name | description |
 | --- | ---- | ---- |
 |output[1] | "debug_led" | once configured lights aprox. once per second|
@@ -123,10 +124,10 @@ These are the extra pins used for development debugging:
 
 ### Some USB information resources:
 - USB in a NutShell:
-  - https://www.beyondlogic.org/usbnutshell/usb1.shtml
+  - <https://www.beyondlogic.org/usbnutshell/usb1.shtml>
 - USB Made Simple
-  - https://www.usbmadesimple.co.uk/index.html
+  - <https://www.usbmadesimple.co.uk/index.html>
 - Understanding the Universal Serial Bus (USB)
-  - https://github.com/DCC-Lab/PyHardwareLibrary/blob/939ffca7c8b3b214b77acadae2d76d5029dd0660/README-1-USB.md
+  - <https://github.com/DCC-Lab/PyHardwareLibrary/blob/939ffca7c8b3b214b77acadae2d76d5029dd0660/README-1-USB.md>
 - USB Device CDC ACM Class
-  - https://docs.silabs.com/protocol-usb/1.2.0/protocol-usb-cdc/
+  - <https://docs.silabs.com/protocol-usb/1.2.0/protocol-usb-cdc/>

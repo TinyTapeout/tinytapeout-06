@@ -15,6 +15,3 @@ This is the example project in Wokwi, used in the Hackaday Europe workshop. It d
 
 Flip switches 0-7 to changes to switch on the segments on the display
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any

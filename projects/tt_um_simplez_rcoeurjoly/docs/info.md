@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-https://github.com/Obijuan/simplez-fpga
+<https://github.com/Obijuan/simplez-fpga>
 
 ## How to test
 
-https://github.com/Obijuan/simplez-fpga
+<https://github.com/Obijuan/simplez-fpga>
 
 ## External hardware
 
-https://github.com/Obijuan/simplez-fpga
+<https://github.com/Obijuan/simplez-fpga>

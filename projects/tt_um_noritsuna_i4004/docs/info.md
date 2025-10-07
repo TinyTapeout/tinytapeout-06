@@ -5,4 +5,4 @@ This is [i4004](https://ja.wikipedia.org/wiki/Intel_4004) Chip.
 No Test.
 
 ## External hardware
--[MCS4 Memory System](https://github.com/ryomuk/tangnano-MCS4memory)
+- [MCS4 Memory System](https://github.com/ryomuk/tangnano-MCS4memory)

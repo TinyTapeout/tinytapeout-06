@@ -13,7 +13,7 @@ This project performs grayscale conversion and Sobel filtering with the aim of d
 
 Below is a block diagram of the implementation:
 
-![arc](arch.png)
+![Block diagram of the current implementation](arch.png)
 
 ## How to test
 
@@ -32,10 +32,10 @@ As shown in the previous image, there are some processing options:
 
 To select one of the processing options, the input ```ui_in[4:3]``` is designated as follows:
 
-* ```ui_in[4:3]``` = $00$ &rarr; Grayscale + Sobel 
-* ```ui_in[4:3]``` = $01$ &rarr; Sobel
-* ```ui_in[4:3]``` = $10$ &rarr; Grayscale
-* ```ui_in[4:3]``` = $11$ &rarr; Bypass
+- ```ui_in[4:3]``` = $00$ &rarr; Grayscale + Sobel 
+- ```ui_in[4:3]``` = $01$ &rarr; Sobel
+- ```ui_in[4:3]``` = $10$ &rarr; Grayscale
+- ```ui_in[4:3]``` = $11$ &rarr; Bypass
 
 To perform the Sobel filter processing, it must be enabled according to the selected processing. This can be enabled or disabled as needed through the input ```ui_in[5]```, where $1$ enables and $0$ disables.
 

@@ -41,10 +41,10 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "ModeSelectionBit0"
-  uio[1]: "ModeSelectionBit1"
-  uio[2]: "FrequencyWordLower8BitUpdateEnable"
-  uio[3]: "FrequencyWordUpper8BitUpdateEnable"
+  uio[0]: "Mode Selection Bit 0"
+  uio[1]: "Mode Selection Bit 1"
+  uio[2]: "Frequency Word Lower 8 Bit Update Enable"
+  uio[3]: "Frequency Word Upper 8 Bit Update Enable"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""

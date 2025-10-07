@@ -21,7 +21,7 @@ This project is a mixed signal design that glues together a few bits to create a
   
 While at it, I also laid out a version of the [p3 opamp from this project](https://github.com/argunda/tt06-tiny-opamp) and embedded it in for testing purposes.
 
-![wowa ADC](images/wowaADC.jpg)
+![WoWA ADC](images/wowaADC.jpg)
 
 
 The ADC uses the DAC to set the threshold on the comparator and see what it says about the input signal--is it higher or lower--to perform a search and hone in on a digital value to output.  Doing it in this way, it manages to determine a value in about 60 clock cycles ).
@@ -149,7 +149,7 @@ For your testing pleasure, there are addition inspection and manipulation ports 
   
   * ua[4]: Analog input to ADC
   
-  * ua[5]: A probe into Matt's R2R DAC output (internal threshold for comparator while running the ADC
+  * ua[5]: A probe into Matt's R2R DAC output (internal threshold for comparator while running the ADC)
   
 
 So the ADC basically only needs you to feed a signal into ua4.  You can see it in operation through ua0 and ua5.  You can use the comparator ignoring the ADC function, by setting ui[3] (use external threshold, digital input) HIGH and feeding a threshold voltage to the comparator on ua3.

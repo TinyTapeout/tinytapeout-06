@@ -17,7 +17,3 @@ dice games.
 ## How to test
 
 Play with switch
-
-## External hardware
-
--

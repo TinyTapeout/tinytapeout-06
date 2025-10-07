@@ -28,7 +28,3 @@ The circuit is composed of three watchdog modules working in lockstep. They shar
 - Set rst_n to low
 - Write a value in ui_in before 1ms after reset is released
 - Write a different value in ui_in to prevent the watchdog expiring
-
-## External hardware
-
-None

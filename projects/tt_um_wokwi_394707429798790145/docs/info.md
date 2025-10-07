@@ -13,7 +13,7 @@ The project is a hardware implementation of a maximum-cycle 32-bit Galois linear
 
 A schematic of the circuit may be found at:
 
-https://wokwi.com/projects/394707429798790145
+<https://wokwi.com/projects/394707429798790145>
 
 The circuit has 10 inputs:
 
@@ -53,6 +53,7 @@ The cicuit has 8 outputs. They output the values of the 8 right-most registers (
 
 The circuit can be tested by powering on the circuit, and first setting the Input Select switch (DIP03) to "1" to reset/initialize the entire LFSR to all-zeros. The Input Select switch can then be switched to "0" to allow the LFSR to run from its all-zero initialized value. The first 100 8-bit output values of the LFSR from this zeroized state may be observed using a logic analyzer, and should be:
 
+```
 [0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],
 [0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],
 [0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],
@@ -79,11 +80,9 @@ The circuit can be tested by powering on the circuit, and first setting the Inpu
 [0 0 0 1 0 0 0 1],[0 0 0 0 1 0 0 0],[0 0 0 0 0 1 0 0],[0 0 0 0 0 0 1 0],
 [0 0 0 0 0 0 0 1],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 0],
 [1 0 0 0 0 0 0 0]
+```
 
 A python implementation of the 32-bit Galois LFSR can be found at the link below. It may be used for testing the hardware for sequences longer than the initial 100 values.
 
-https://github.com/icarislab/tt06_32bit-fibonacci-prng_cu/main/docs/32-bit-fibonacci-prng_pythong_simulation.py
+<https://github.com/icarislab/tt06_32bit-fibonacci-prng_cu/main/docs/32-bit-fibonacci-prng_pythong_simulation.py>
 
-## External hardware
-
-No external hardware is required.

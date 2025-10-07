@@ -49,64 +49,8 @@ The results will be shown at the 6-bit output that uses 6 Leds to demonstrate th
 
 6-bit output "Results": uses 6 Leds.
 
-The mentioned inputs and outputs are respectively connected to the pins of the project circuit as follows:
+The mentioned inputs and outputs are respectively connected to the pins of the project circuit as shown in the pinout table.
+  
+For a better visualization, see the figure below.
 
- # Inputs
- 
-  ui[0]: "First bit for input 'A'(input of 3-bits)"
-  
-  ui[1]: "Second bit for input 'A'(input of 3-bits)"
-  
-  ui[2]: "Third bit for input 'A'(input of 3-bits)"
-  
-  ui[3]: "First bit for input 'B'(input of 3-bits)"
-  
-  ui[4]: "Second bit for input 'B'(input of 3-bits)"
-  
-  ui[5]: "Third bit for input 'B'(input of 3-bits)"
-  
-  ui[6]: "Unused input bit"
-  
-  ui[7]: "Unused input bit"
-
-  # Outputs
-  
-  uo[0]: "First bit for output 'Leds'(output of 6-bits)"
-  
-  uo[1]: "Second bit for output 'Leds'(output of 6-bits)"
-  
-  uo[2]: "Third bit for output 'Leds'(output of 6-bits)"
-  
-  uo[3]: "Fourth bit for output 'Leds'(output of 6-bits)"
-  
-  uo[4]: "Fifth bit for output 'Leds'(output of 6-bits)"
-  
-  uo[5]: "Sixth bit for output 'Leds'(output of 6-bits)"
-  
-  uo[6]: "Unused output bit"
-  
-  uo[7]: "Unused output bit"
-
-  # Bidirectional pins
-
-  uio[0]: "First bit for input 'ctrl'(input of 3-bits)"
-  
-  uio[1]: "Second bit for input 'ctrl'(input of 3-bits)"
-  
-  uio[2]: "Third bit for input 'ctrl'(input of 3-bits)"
-  
-  uio[3]: "Unused bidirectional I/O bit"
-  
-  uio[4]: "Unused bidirectional I/O bit"
-  
-  uio[5]: "Unused bidirectional I/O bit"
-  
-  uio[6]: "Unused bidirectional I/O bit"
-  
-  uio[7]: "Unused bidirectional I/O bit"
-  
-For a better visualization, see Figure 1.
-
-![ALU_3bits](https://github.com/JoseKaisen/ALU_3bits/assets/164433211/c92f2f1b-d5cb-41ff-97b2-62917bac8b81)
-
-Figure 1: 'External Hardware pins conections visualization'
+![The pinout of this project, illustrated on a chip outline](1.jpg)

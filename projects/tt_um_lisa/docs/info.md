@@ -6,43 +6,43 @@ would be found on commercial microcontrollers including timers, GPIO,
 UARTs and I2C.
 The following is a block diagram of the LISA Microcontroller:
 
-![](block_diag.png)
+![LISA Microcontroller Block Diagram](block_diag.png)
 
-   - The LISA Core has a minimal set of register that allow it to run C programs:
-      - Program Counter + Return Address Resister
-      - Stack Pointer and Index Register (Indexed DATA RAM access)
-      - 8-bit Accumulator + 16-bit BF16 Accumulator and 4 BF16 registers
+- The LISA Core has a minimal set of register that allow it to run C programs:
+   - Program Counter + Return Address Resister
+   - Stack Pointer and Index Register (Indexed DATA RAM access)
+   - 8-bit Accumulator + 16-bit BF16 Accumulator and 4 BF16 registers
 
 ### Deailed list of the features
-   - Harvard architecture LISA Core (16-bit instruction, 15-bit address space)
-   - Debug interface
-      * UART controlled
-      * Auto detects port from one of 3 interfaces
-      * Auto detects the baud rate
-      * Interfaces with SPI / QSPI SRAM or FLASH
-      * Can erase / program the (Q)SPI FLASH
-      * Read/write LISA core registers and peripherals
-      * Set LISA breakpoints, halt, resume, single step, etc.
-      * SPI/QSPI programmability (single/quad, port location, CE selects)
-   - (Q)SPI Arbiter with 3 access channels
-      * Debug interface for direct memory access
-      * Instruction fetch
-      * Data fetch
-      * Quad or Single SPI.  Hereafter called QSPI, but supports either.
-   - Onboard 128 Byte RAM for DATA / DATA CACHE
-   - Data bus CACHE controller with 8 16-byte CACHE lines
-   - Instruction CACHE with a single 4-instruction CACHE line
-   - Two 16-bit programmable timers (with pre-divide)
-   - Debug UART available to LISA core also
-   - Dedicated UART2 that is not shared with the debug interface
-   - 8-bit Input port (PORTA)
-   - 8-bit Output port (PORTB)
-   - 4-bit BIDIR port (PORTC)
-   - I2C Master controller
-   - Hardware 8x8 integer multiplier
-   - Hardware 16/8 or 16/16 integer divider
-   - Hardware Brain Float 16 (BF16) Multiply/Add/Negate/Int16-to-BF16
-   - Programmable I/O mux for maximum flexibility of I/O usage.
+- Harvard architecture LISA Core (16-bit instruction, 15-bit address space)
+- Debug interface
+   * UART controlled
+   * Auto detects port from one of 3 interfaces
+   * Auto detects the baud rate
+   * Interfaces with SPI / QSPI SRAM or FLASH
+   * Can erase / program the (Q)SPI FLASH
+   * Read/write LISA core registers and peripherals
+   * Set LISA breakpoints, halt, resume, single step, etc.
+   * SPI/QSPI programmability (single/quad, port location, CE selects)
+- (Q)SPI Arbiter with 3 access channels
+   * Debug interface for direct memory access
+   * Instruction fetch
+   * Data fetch
+   * Quad or Single SPI.  Hereafter called QSPI, but supports either.
+- Onboard 128 Byte RAM for DATA / DATA CACHE
+- Data bus CACHE controller with 8 16-byte CACHE lines
+- Instruction CACHE with a single 4-instruction CACHE line
+- Two 16-bit programmable timers (with pre-divide)
+- Debug UART available to LISA core also
+- Dedicated UART2 that is not shared with the debug interface
+- 8-bit Input port (PORTA)
+- 8-bit Output port (PORTB)
+- 4-bit BIDIR port (PORTC)
+- I2C Master controller
+- Hardware 8x8 integer multiplier
+- Hardware 16/8 or 16/16 integer divider
+- Hardware Brain Float 16 (BF16) Multiply/Add/Negate/Int16-to-BF16
+- Programmable I/O mux for maximum flexibility of I/O usage.
 
 It uses a 32x32 1RW [DFFRAM](https://github.com/AUCOHL/DFFRAM) macro to implement a 128 bytes (1 kilobit) RAM module.
 The 128 Byte ram can be used either as a DATA cache for the processor data bus, giving a 32K Byte address range,
@@ -55,12 +55,12 @@ Reseting the project **does not** reset the RAM contents.
 
 All communication with the microcontroller is done through a UART connected to the Debug Controller.  The UART
 I/O pins are auto-detected by the debug_autobaud module from the following choices (RX/TX):
-
-    ui_in[3]  / ui_out[4]     RP2040 UART interface   
-    uio_in[4] / uio_out[5]    LISA PMOD board (I am developing)
-    uio_in[6] / uio_out[5]    Standard UART PMOD
-
-![](debug_uart.png)
+```
+ui_in[3]  / ui_out[4]     RP2040 UART interface   
+uio_in[4] / uio_out[5]    LISA PMOD board (I am developing)
+uio_in[6] / uio_out[5]    Standard UART PMOD
+```
+![Block diagram of debug connectivity and Autobaud](debug_uart.png)
 
 The RX/TX pair port is auto-detected after reset by the autobaud circuit, and the UART baud rate can either be
 configured manually or auto detected by the autobaud module.  After reset, the ui_in[7] pin is sampled to determine
@@ -130,7 +130,7 @@ QUAD SPI, Flash or SRAM access, 16-Bit or 24-Bit addressing, and selectable Chip
 type of access.  To achieve this, a QSPI arbiter is used to allow multiple accessors as shown in
 the following diagram:
 
-![](qspi_arch.png)
+![Block diagram of the (Q)SPI controller interface](qspi_arch.png)
 
 The arbiter is controlled via configuration registers (accessible by the Debug controller)
 that specify the operating mode per CE, and CE selection bits for each of the three interfaces:
@@ -232,7 +232,7 @@ be programmed to indicate the nature of the external device(s).  This is accompi
          * [10:4] ce_delay: Number clocks between CE activations
          * [12:11] spi_mode: Per-CE FALLING SCLK edge data update
    6. Set the number of DUMMY ready required for each CE:
-      -  0x18: {8'h0, dummy1[3:0], dummy0[3:0]
+      -  0x18: {8'h0, dummy1[3:0], dummy0[3:0]}
    7. For QSPI FLASH, set the QSPI Write opcode (it is different for various Flashes):
       -  0x19: {8'h0, quad_write_cmd}
 
@@ -242,7 +242,7 @@ NOTE: For register 0x1E (SPI Clock Div and CE Delay), there is only a single reg
       So if two CE outputs are used and a CE delay is programmed, it will enforce that delay
       even if a different CE is used.  This setting is really in place for use when the RP2040
       emulation is being used in a single CE SRAM mode only (i.e. you have no external PMOD
-      with a real SRAM / FLASH chip.  In the case of real chips on a PMOD, SCLK and CE delays
+      with a real SRAM / FLASH chip).  In the case of real chips on a PMOD, SCLK and CE delays
       (most likely) are not needed.  The Tech Page on the Tiny Tapeout regarding RP2040 SPI SRAM
       emulation indicates a delay between CE activations is likely needed, so this setting is 
       provided in case it is needed.
@@ -256,7 +256,7 @@ word or from a memory location addressed by either the Stack Pointer (SP) or Ind
 There are also instructions that work on the 15-bit registers PC, SP, IX and RA (Return Address).  As
 well as floating point operations. These will be covered in the sections to follow.
 
-![](lisa_arch.png)
+![A simplified LISA processor block diagram](lisa_arch.png)
 
 ### Addressing Modes
 
@@ -510,7 +510,6 @@ Also need to download the Python based debugger.
   - C compiler is somewhat functional (no float support at the moment) but has *many* bugs in the generated code and is still a work in progress.
   - Python debugger can erase/program the FLASH, program SPI SRAM, start/stop the LISA core, read SRAM and registers.
 
-\clearpage
 ### Legend for Pinout
 
   - pa: LISA GPIO PortA Input
@@ -524,4 +523,4 @@ Also need to download the Python based debugger.
   - DQ1/2/3/4: QUAD SPI bidirection data I/O
   - pc_io: LISA GPIO Port C I/O (direction controllable by LISA)
 
-![](lisa_pinout.png)
+![LISA pinout](lisa_pinout.png)

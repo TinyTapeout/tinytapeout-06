@@ -18,7 +18,3 @@ the 7-segment display. Additionally, the DP blinks (in hhardware).
 ChiselTest is used for waveform generation.
 Currently, we use cocotb, this shall change to ChiselTest.
 But that test is disabled
-
-## External hardware
-
-non by default.
