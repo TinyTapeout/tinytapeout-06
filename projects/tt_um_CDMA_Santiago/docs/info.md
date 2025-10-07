@@ -16,6 +16,7 @@ With this PN signal and modulus 2 adding the signal we want to tranmit, we gener
 an OPAM in order to add noise to the CDMA and feed it back to the designed circuit to see the bit-error rate of this device.
 
 With this we hope to study and put to test:
+
 - CDMA
 - Gold Sequences.
 - The effect of the noise in the CDMA.
