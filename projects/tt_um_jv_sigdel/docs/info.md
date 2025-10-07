@@ -41,29 +41,29 @@ Measurement showed a missing enable signal for inx sampling.
 
 The table shows valid configuration options.
 
-| inp[6]|inp[5]|inp[4]|inp[3]|inp[2]|inp[1]|Cint|fCLK=50MHz|T=20ns|OSR|Ldmax|Bits|
+|inp[6]|inp[5]|inp[4]|inp[3]|inp[2]|inp[1]|Cint|fCLK = 50MHz|T = 20ns|OSR|Ldmax|Bits|
 |-      |-     |-     |-     |-     |-     |-   |-|-|-|-|-|
-|0|1|0|0|0|0|100pF |SINC1 fsCLK|40ns|256|LD7|8|
-|0|1|0|0|0|1|	   |SINC1 fsCLK|160ns|64|   |6|
-|0|1|0|1|0|0|100pF |SINC1 fsCLK|40ns|1024|LD9|10|
-|0|1|0|1|0|1|	   |SINC1 fsCLK|160ns|256| 	 |8|
-|0|1|0|1|1|0|	   |SINC1 fsCLK|640ns|64| 	 |6|
-|0|1|1|0|0|0|	   |SINC1 fsCLK|40ns |4096|  |12|
-|0|1|1|0|0|1|	   |SINC1 fsCLK|160ns|1024|  |10|
-|0|1|1|0|1|0|560pF |SINC1 fsCLK|640ns|256| 	 |8	ok|
-|0|1|1|0|1|1|560pF |SINC1 fsCLK|2560ns|64|LD5|6	ok|
-|0|1|1|1|0|0|      |SINC1 fsCLK|40ns|16384|  |14|
-|0|1|1|1|0|1|560pF |SINC1 fsCLK|160ns|4096| |12	ok|
-|0|1|1|1|1|0|560pF |SINC1 fsCLK|640ns|1024| |10	ok|
-|0|1|1|1|1|1|560pF |SINC1 fsCLK|2560ns|256|	|8	ok|
+|0|1|0|0|0|0|100 pF |SINC1 fsCLK|40 ns|256|LD7|8|
+|0|1|0|0|0|1|	   |SINC1 fsCLK|160 ns|64|   |6|
+|0|1|0|1|0|0|100 pF |SINC1 fsCLK|40 ns|1024|LD9|10|
+|0|1|0|1|0|1|	   |SINC1 fsCLK|160 ns|256| 	 |8|
+|0|1|0|1|1|0|	   |SINC1 fsCLK|640 ns|64| 	 |6|
+|0|1|1|0|0|0|	   |SINC1 fsCLK|40 ns |4096|  |12|
+|0|1|1|0|0|1|	   |SINC1 fsCLK|160 ns|1024|  |10|
+|0|1|1|0|1|0|560 pF |SINC1 fsCLK|640 ns|256| 	 |8	ok|
+|0|1|1|0|1|1|560 pF |SINC1 fsCLK|2560 ns|64|LD5|6	ok|
+|0|1|1|1|0|0|      |SINC1 fsCLK|40 ns|16384|  |14|
+|0|1|1|1|0|1|560 pF |SINC1 fsCLK|160 ns|4096| |12	ok|
+|0|1|1|1|1|0|560 pF |SINC1 fsCLK|640 ns|1024| |10	ok|
+|0|1|1|1|1|1|560 pF |SINC1 fsCLK|256 0ns|256|	|8	ok|
 |1|0|0|0|0|1|	   |SINC2 fsCLK|      |64|  |12|
 |1|0|0|0|1|0|	   |SINC2 fsCLK| 	  |16|	|8|
 |1|0|0|1|1|0|	   |SINC2 fsCLK|      |64|	|12|
-|1|0|0|1|1|1|560pF |SINC2 fsCLK| 	  |16|LD7|8|
-|1|0|1|0|1|1|560pF |SINC2 fsCLK| 	  |64|LD11|12|
+|1|0|0|1|1|1|560 pF |SINC2 fsCLK| 	  |16|LD7|8|
+|1|0|1|0|1|1|560 pF |SINC2 fsCLK| 	  |64|LD11|12|
 |1|1|0|0|1|0|	   |SINC3 fsCLK| 	  |16| 	  |12|
-|1|1|0|0|1|1|560pF |SINC3 fsCLK| 	  |4 |LD5 |6|
-|1|1|0|1|1|1|560pF |SINC3 fsCLK| 	  |16|LD11|12|
+|1|1|0|0|1|1|560 pF |SINC3 fsCLK| 	  |4 |LD5 |6|
+|1|1|0|1|1|1|560 pF |SINC3 fsCLK| 	  |16|LD11|12|
 
 A better configuration scheme should be chosen in the next design.<br>
 Higher fsCLK have lower capacitance.
