@@ -13,7 +13,7 @@ on:
 
 jobs:
   build_datasheet:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       TT_CONFIG: sky130.yaml
     steps:
@@ -29,20 +29,23 @@ jobs:
           cache: 'pip'
       - run: pip install -r tt/requirements.txt -r tt-multiplexer/py/requirements.txt
 
-      - name: Pandoc deps
+      - name: Install Pandoc
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y pandoc texlive-xetex librsvg2-bin
+          sudo apt-get install -y pandoc
 
-      - name: Generate datasheet
-        run: python ./tt/configure.py --dump-markdown datasheet.md --dump-pdf datasheet.pdf
-
-      - name: Check file existence and content
+      - name: Download assets
         run: |
-          if [ ! -f "datasheet.pdf" ] || [ ! -s "datasheet.pdf" ]; then
-            echo "Datasheet generation failed."
-            exit 1
-          fi
+          git clone https://github.com/TinyTapeout/tt-datasheet-artwork tt/docs/typst/resources/external
+          wget -P tt/docs/typst/resources/fonts https://github.com/google/fonts/raw/refs/heads/main/ofl/notocoloremoji/NotoColorEmoji-Regular.ttf
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
+        with:
+            typst-version: '0.13.1'
+
+      - name: Generate datasheet files
+        run: python ./tt/configure.py --build-datasheet
 
       - name: Generate hugo content
         run: mkdir hugo && python ./tt/configure.py --build-hugo-content hugo
