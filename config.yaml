@@ -19,4 +19,5 @@ datasheet_config:
     - {id: TT_POCA_01_I, rotate: 90deg}
 
   include:
-    docs/chip_map.typ
+    - docs/chip_map.typ
+    - docs/funding.typ
