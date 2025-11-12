@@ -78,6 +78,9 @@ jobs:
       - name: Copy macros
         run: python ./tt/configure.py --copy-macros
 
+      - name: Disable magic.WriteLEF
+        run: sed -i 's/Magic.WriteLEF,\s*$/#Magic.WriteLEF,/g' tt-multiplexer/ol2/tt_top/build.py
+
       - name: Harden tt_top
         working-directory: tt-multiplexer/ol2/tt_top
         run: nix-shell $GITHUB_WORKSPACE/openlane2/shell.nix --run "python build.py --skip-xor-checks"
