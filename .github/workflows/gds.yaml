@@ -28,6 +28,14 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          large-packages: false
+          docker-images: false
+          swap-storage: false
+          android: false
+
       - name: Load OpenLane environment variables
         run: cat .github/config/openlane.txt | tee -a $GITHUB_ENV
 
