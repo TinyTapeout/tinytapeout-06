@@ -4,3 +4,4 @@
 [submodule "tt"]
 	path = tt
 	url = https://github.com/TinyTapeout/tt-support-tools
+	branch = tt06
